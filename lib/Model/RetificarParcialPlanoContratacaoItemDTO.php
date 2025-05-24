@@ -58,8 +58,8 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'categoria_item_pca' => 'string',
-        'catalogo' => 'string',
+        'categoria_item_pca' => 'int',
+        'catalogo' => 'int',
         'classificacao_superior_codigo' => 'string',
         'classificacao_superior_nome' => 'string',
         'pdm_codigo' => 'string',
@@ -88,8 +88,8 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'categoria_item_pca' => null,
-        'catalogo' => null,
+        'categoria_item_pca' => 'int64',
+        'catalogo' => 'int64',
         'classificacao_superior_codigo' => null,
         'classificacao_superior_nome' => null,
         'pdm_codigo' => null,
@@ -343,50 +343,8 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
         return self::$openAPIModelName;
     }
 
-    public const CATEGORIA_ITEM_PCA__1 = '1';
-    public const CATEGORIA_ITEM_PCA__2 = '2';
-    public const CATEGORIA_ITEM_PCA__3 = '3';
-    public const CATEGORIA_ITEM_PCA__4 = '4';
-    public const CATEGORIA_ITEM_PCA__5 = '5';
-    public const CATEGORIA_ITEM_PCA__6 = '6';
-    public const CATEGORIA_ITEM_PCA__7 = '7';
-    public const CATEGORIA_ITEM_PCA__8 = '8';
-    public const CATALOGO__1 = '1';
-    public const CATALOGO__2 = '2';
     public const CLASSIFICACAO_CATALOGO__1 = '1';
     public const CLASSIFICACAO_CATALOGO__2 = '2';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCategoriaItemPcaAllowableValues()
-    {
-        return [
-            self::CATEGORIA_ITEM_PCA__1,
-            self::CATEGORIA_ITEM_PCA__2,
-            self::CATEGORIA_ITEM_PCA__3,
-            self::CATEGORIA_ITEM_PCA__4,
-            self::CATEGORIA_ITEM_PCA__5,
-            self::CATEGORIA_ITEM_PCA__6,
-            self::CATEGORIA_ITEM_PCA__7,
-            self::CATEGORIA_ITEM_PCA__8,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCatalogoAllowableValues()
-    {
-        return [
-            self::CATALOGO__1,
-            self::CATALOGO__2,
-        ];
-    }
 
     /**
      * Gets allowable values of the enum
@@ -465,24 +423,6 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getCategoriaItemPcaAllowableValues();
-        if (!is_null($this->container['categoria_item_pca']) && !in_array($this->container['categoria_item_pca'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'categoria_item_pca', must be one of '%s'",
-                $this->container['categoria_item_pca'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getCatalogoAllowableValues();
-        if (!is_null($this->container['catalogo']) && !in_array($this->container['catalogo'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'catalogo', must be one of '%s'",
-                $this->container['catalogo'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         $allowedValues = $this->getClassificacaoCatalogoAllowableValues();
         if (!is_null($this->container['classificacao_catalogo']) && !in_array($this->container['classificacao_catalogo'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -518,7 +458,7 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     /**
      * Gets categoria_item_pca
      *
-     * @return string|null
+     * @return int|null
      */
     public function getCategoriaItemPca()
     {
@@ -528,7 +468,7 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     /**
      * Sets categoria_item_pca
      *
-     * @param string|null $categoria_item_pca categoria_item_pca
+     * @param int|null $categoria_item_pca categoria_item_pca
      *
      * @return self
      */
@@ -536,16 +476,6 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     {
         if (is_null($categoria_item_pca)) {
             throw new \InvalidArgumentException('non-nullable categoria_item_pca cannot be null');
-        }
-        $allowedValues = $this->getCategoriaItemPcaAllowableValues();
-        if (!in_array($categoria_item_pca, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'categoria_item_pca', must be one of '%s'",
-                    $categoria_item_pca,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['categoria_item_pca'] = $categoria_item_pca;
 
@@ -555,7 +485,7 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     /**
      * Gets catalogo
      *
-     * @return string|null
+     * @return int|null
      */
     public function getCatalogo()
     {
@@ -565,7 +495,7 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     /**
      * Sets catalogo
      *
-     * @param string|null $catalogo catalogo
+     * @param int|null $catalogo catalogo
      *
      * @return self
      */
@@ -573,16 +503,6 @@ class RetificarParcialPlanoContratacaoItemDTO implements ModelInterface, ArrayAc
     {
         if (is_null($catalogo)) {
             throw new \InvalidArgumentException('non-nullable catalogo cannot be null');
-        }
-        $allowedValues = $this->getCatalogoAllowableValues();
-        if (!in_array($catalogo, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'catalogo', must be one of '%s'",
-                    $catalogo,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['catalogo'] = $catalogo;
 

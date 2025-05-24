@@ -117,9 +117,9 @@ class RecuperarHistoricoAtaDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "compra_orgao_cnpj"
+     * Test attribute "ata_sequencial"
      */
-    public function testPropertyCompraOrgaoCnpj()
+    public function testPropertyAtaSequencial()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -135,36 +135,9 @@ class RecuperarHistoricoAtaDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "compra_ano"
-     */
-    public function testPropertyCompraAno()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "documento_ata_titulo"
      */
     public function testPropertyDocumentoAtaTitulo()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "compra_sequencial"
-     */
-    public function testPropertyCompraSequencial()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ata_sequencial"
-     */
-    public function testPropertyAtaSequencial()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -180,9 +153,9 @@ class RecuperarHistoricoAtaDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "usuario_nome"
+     * Test attribute "compra_sequencial"
      */
-    public function testPropertyUsuarioNome()
+    public function testPropertyCompraSequencial()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -201,6 +174,33 @@ class RecuperarHistoricoAtaDTOTest extends TestCase
      * Test attribute "categoria_log_manutencao_nome"
      */
     public function testPropertyCategoriaLogManutencaoNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "compra_orgao_cnpj"
+     */
+    public function testPropertyCompraOrgaoCnpj()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "compra_ano"
+     */
+    public function testPropertyCompraAno()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "usuario_nome"
+     */
+    public function testPropertyUsuarioNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

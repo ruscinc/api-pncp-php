@@ -97,4 +97,103 @@ class OrgaoConsultaDTOTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "nome_fantasia"
+     */
+    public function testPropertyNomeFantasia()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "codigo_natureza_juridica"
+     */
+    public function testPropertyCodigoNaturezaJuridica()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "situacao_cadastral"
+     */
+    public function testPropertySituacaoCadastral()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "motivo_situacao_cadastral"
+     */
+    public function testPropertyMotivoSituacaoCadastral()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_situacao_cadastral"
+     */
+    public function testPropertyDataSituacaoCadastral()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "poder_id"
+     */
+    public function testPropertyPoderId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "esfera_id"
+     */
+    public function testPropertyEsferaId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_validacao"
+     */
+    public function testPropertyDataValidacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "validado"
+     */
+    public function testPropertyValidado()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_inclusao"
+     */
+    public function testPropertyDataInclusao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_atualizacao"
+     */
+    public function testPropertyDataAtualizacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

@@ -126,9 +126,45 @@ class RecuperarCompraItemResultadoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "data_cancelamento"
+     * Test attribute "valor_total_homologado"
      */
-    public function testPropertyDataCancelamento()
+    public function testPropertyValorTotalHomologado()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "timezone_cotacao_moeda_estrangeira"
+     */
+    public function testPropertyTimezoneCotacaoMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "moeda_estrangeira"
+     */
+    public function testPropertyMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_nominal_moeda_estrangeira"
+     */
+    public function testPropertyValorNominalMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_cotacao_moeda_estrangeira"
+     */
+    public function testPropertyDataCotacaoMoedaEstrangeira()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -180,18 +216,36 @@ class RecuperarCompraItemResultadoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "valor_total_homologado"
+     * Test attribute "percentual_desconto"
      */
-    public function testPropertyValorTotalHomologado()
+    public function testPropertyPercentualDesconto()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "percentual_desconto"
+     * Test attribute "amparo_legal_margem_preferencia"
      */
-    public function testPropertyPercentualDesconto()
+    public function testPropertyAmparoLegalMargemPreferencia()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "amparo_legal_criterio_desempate"
+     */
+    public function testPropertyAmparoLegalCriterioDesempate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "pais_origem_produto_servico"
+     */
+    public function testPropertyPaisOrigemProdutoServico()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -234,9 +288,27 @@ class RecuperarCompraItemResultadoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "porte_fornecedor_nome"
+     * Test attribute "data_cancelamento"
      */
-    public function testPropertyPorteFornecedorNome()
+    public function testPropertyDataCancelamento()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "situacao_compra_item_resultado_id"
+     */
+    public function testPropertySituacaoCompraItemResultadoId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numero_controle_pncp_compra"
+     */
+    public function testPropertyNumeroControlePncpCompra()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -246,6 +318,51 @@ class RecuperarCompraItemResultadoDTOTest extends TestCase
      * Test attribute "situacao_compra_item_resultado_nome"
      */
     public function testPropertySituacaoCompraItemResultadoNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aplicacao_margem_preferencia"
+     */
+    public function testPropertyAplicacaoMargemPreferencia()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aplicacao_beneficio_me_epp"
+     */
+    public function testPropertyAplicacaoBeneficioMeEpp()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aplicacao_criterio_desempate"
+     */
+    public function testPropertyAplicacaoCriterioDesempate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "natureza_juridica_id"
+     */
+    public function testPropertyNaturezaJuridicaId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "porte_fornecedor_nome"
+     */
+    public function testPropertyPorteFornecedorNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -264,33 +381,6 @@ class RecuperarCompraItemResultadoDTOTest extends TestCase
      * Test attribute "natureza_juridica_nome"
      */
     public function testPropertyNaturezaJuridicaNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "natureza_juridica_id"
-     */
-    public function testPropertyNaturezaJuridicaId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "numero_controle_pncp_compra"
-     */
-    public function testPropertyNumeroControlePncpCompra()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "situacao_compra_item_resultado_id"
-     */
-    public function testPropertySituacaoCompraItemResultadoId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

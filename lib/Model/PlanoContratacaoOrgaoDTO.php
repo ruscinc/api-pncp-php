@@ -66,6 +66,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'ano_pca' => 'int',
         'razao_social' => 'string',
         'data_atualizacao' => '\DateTime',
+        'data_atualizacao_global_pca' => '\DateTime',
         'esfera' => 'string',
         'poder' => 'string',
         'sequencial_pca' => 'int',
@@ -89,6 +90,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'ano_pca' => 'int32',
         'razao_social' => null,
         'data_atualizacao' => 'date-time',
+        'data_atualizacao_global_pca' => 'date-time',
         'esfera' => null,
         'poder' => null,
         'sequencial_pca' => 'int32',
@@ -110,6 +112,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
 		'ano_pca' => false,
 		'razao_social' => false,
 		'data_atualizacao' => false,
+		'data_atualizacao_global_pca' => false,
 		'esfera' => false,
 		'poder' => false,
 		'sequencial_pca' => false,
@@ -211,6 +214,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'ano_pca' => 'anoPca',
         'razao_social' => 'razaoSocial',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_atualizacao_global_pca' => 'dataAtualizacaoGlobalPCA',
         'esfera' => 'esfera',
         'poder' => 'poder',
         'sequencial_pca' => 'sequencialPca',
@@ -232,6 +236,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'ano_pca' => 'setAnoPca',
         'razao_social' => 'setRazaoSocial',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_atualizacao_global_pca' => 'setDataAtualizacaoGlobalPca',
         'esfera' => 'setEsfera',
         'poder' => 'setPoder',
         'sequencial_pca' => 'setSequencialPca',
@@ -253,6 +258,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         'ano_pca' => 'getAnoPca',
         'razao_social' => 'getRazaoSocial',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_atualizacao_global_pca' => 'getDataAtualizacaoGlobalPca',
         'esfera' => 'getEsfera',
         'poder' => 'getPoder',
         'sequencial_pca' => 'getSequencialPca',
@@ -325,6 +331,7 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('ano_pca', $data ?? [], null);
         $this->setIfExists('razao_social', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global_pca', $data ?? [], null);
         $this->setIfExists('esfera', $data ?? [], null);
         $this->setIfExists('poder', $data ?? [], null);
         $this->setIfExists('sequencial_pca', $data ?? [], null);
@@ -586,6 +593,33 @@ class PlanoContratacaoOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_atualizacao_global_pca
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobalPca()
+    {
+        return $this->container['data_atualizacao_global_pca'];
+    }
+
+    /**
+     * Sets data_atualizacao_global_pca
+     *
+     * @param \DateTime|null $data_atualizacao_global_pca data_atualizacao_global_pca
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobalPca($data_atualizacao_global_pca)
+    {
+        if (is_null($data_atualizacao_global_pca)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global_pca cannot be null');
+        }
+        $this->container['data_atualizacao_global_pca'] = $data_atualizacao_global_pca;
 
         return $this;
     }

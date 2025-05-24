@@ -63,25 +63,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
         'tipo_pessoa' => 'string',
         'data_inclusao' => '\DateTime',
         'numero_item' => 'int',
-        'data_cancelamento' => '\DateTime',
+        'valor_total_homologado' => 'float',
+        'timezone_cotacao_moeda_estrangeira' => 'string',
+        'moeda_estrangeira' => '\OpenAPI\Client\Model\MoedaResumidoDTO',
+        'valor_nominal_moeda_estrangeira' => 'float',
+        'data_cotacao_moeda_estrangeira' => '\DateTime',
         'nome_razao_social_fornecedor' => 'string',
         'codigo_pais' => 'string',
         'porte_fornecedor_id' => 'string',
         'quantidade_homologada' => 'float',
         'valor_unitario_homologado' => 'float',
-        'valor_total_homologado' => 'float',
         'percentual_desconto' => 'float',
+        'amparo_legal_margem_preferencia' => '\OpenAPI\Client\Model\DominioGenericoResumidoDTO',
+        'amparo_legal_criterio_desempate' => '\OpenAPI\Client\Model\DominioGenericoResumidoDTO',
+        'pais_origem_produto_servico' => '\OpenAPI\Client\Model\PaisResumidoDTO',
         'indicador_subcontratacao' => 'bool',
         'ordem_classificacao_srp' => 'int',
         'data_resultado' => '\DateTime',
         'motivo_cancelamento' => 'string',
-        'porte_fornecedor_nome' => 'string',
-        'situacao_compra_item_resultado_nome' => 'string',
-        'sequencial_resultado' => 'int',
-        'natureza_juridica_nome' => 'string',
-        'natureza_juridica_id' => 'string',
+        'data_cancelamento' => '\DateTime',
+        'situacao_compra_item_resultado_id' => 'string',
         'numero_controle_pncp_compra' => 'string',
-        'situacao_compra_item_resultado_id' => 'string'
+        'situacao_compra_item_resultado_nome' => 'string',
+        'aplicacao_margem_preferencia' => 'bool',
+        'aplicacao_beneficio_me_epp' => 'bool',
+        'aplicacao_criterio_desempate' => 'bool',
+        'natureza_juridica_id' => 'string',
+        'porte_fornecedor_nome' => 'string',
+        'sequencial_resultado' => 'int',
+        'natureza_juridica_nome' => 'string'
     ];
 
     /**
@@ -97,25 +107,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
         'tipo_pessoa' => null,
         'data_inclusao' => 'date-time',
         'numero_item' => 'int32',
-        'data_cancelamento' => 'date-time',
+        'valor_total_homologado' => null,
+        'timezone_cotacao_moeda_estrangeira' => null,
+        'moeda_estrangeira' => null,
+        'valor_nominal_moeda_estrangeira' => null,
+        'data_cotacao_moeda_estrangeira' => 'date-time',
         'nome_razao_social_fornecedor' => null,
         'codigo_pais' => null,
         'porte_fornecedor_id' => null,
         'quantidade_homologada' => null,
         'valor_unitario_homologado' => null,
-        'valor_total_homologado' => null,
         'percentual_desconto' => null,
+        'amparo_legal_margem_preferencia' => null,
+        'amparo_legal_criterio_desempate' => null,
+        'pais_origem_produto_servico' => null,
         'indicador_subcontratacao' => null,
         'ordem_classificacao_srp' => 'int32',
         'data_resultado' => 'date',
         'motivo_cancelamento' => null,
-        'porte_fornecedor_nome' => null,
-        'situacao_compra_item_resultado_nome' => null,
-        'sequencial_resultado' => 'int32',
-        'natureza_juridica_nome' => null,
-        'natureza_juridica_id' => null,
+        'data_cancelamento' => 'date-time',
+        'situacao_compra_item_resultado_id' => null,
         'numero_controle_pncp_compra' => null,
-        'situacao_compra_item_resultado_id' => null
+        'situacao_compra_item_resultado_nome' => null,
+        'aplicacao_margem_preferencia' => null,
+        'aplicacao_beneficio_me_epp' => null,
+        'aplicacao_criterio_desempate' => null,
+        'natureza_juridica_id' => null,
+        'porte_fornecedor_nome' => null,
+        'sequencial_resultado' => 'int32',
+        'natureza_juridica_nome' => null
     ];
 
     /**
@@ -129,25 +149,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
 		'tipo_pessoa' => false,
 		'data_inclusao' => false,
 		'numero_item' => false,
-		'data_cancelamento' => false,
+		'valor_total_homologado' => false,
+		'timezone_cotacao_moeda_estrangeira' => false,
+		'moeda_estrangeira' => false,
+		'valor_nominal_moeda_estrangeira' => false,
+		'data_cotacao_moeda_estrangeira' => false,
 		'nome_razao_social_fornecedor' => false,
 		'codigo_pais' => false,
 		'porte_fornecedor_id' => false,
 		'quantidade_homologada' => false,
 		'valor_unitario_homologado' => false,
-		'valor_total_homologado' => false,
 		'percentual_desconto' => false,
+		'amparo_legal_margem_preferencia' => false,
+		'amparo_legal_criterio_desempate' => false,
+		'pais_origem_produto_servico' => false,
 		'indicador_subcontratacao' => false,
 		'ordem_classificacao_srp' => false,
 		'data_resultado' => false,
 		'motivo_cancelamento' => false,
-		'porte_fornecedor_nome' => false,
-		'situacao_compra_item_resultado_nome' => false,
-		'sequencial_resultado' => false,
-		'natureza_juridica_nome' => false,
-		'natureza_juridica_id' => false,
+		'data_cancelamento' => false,
+		'situacao_compra_item_resultado_id' => false,
 		'numero_controle_pncp_compra' => false,
-		'situacao_compra_item_resultado_id' => false
+		'situacao_compra_item_resultado_nome' => false,
+		'aplicacao_margem_preferencia' => false,
+		'aplicacao_beneficio_me_epp' => false,
+		'aplicacao_criterio_desempate' => false,
+		'natureza_juridica_id' => false,
+		'porte_fornecedor_nome' => false,
+		'sequencial_resultado' => false,
+		'natureza_juridica_nome' => false
     ];
 
     /**
@@ -241,25 +271,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
         'tipo_pessoa' => 'tipoPessoa',
         'data_inclusao' => 'dataInclusao',
         'numero_item' => 'numeroItem',
-        'data_cancelamento' => 'dataCancelamento',
+        'valor_total_homologado' => 'valorTotalHomologado',
+        'timezone_cotacao_moeda_estrangeira' => 'timezoneCotacaoMoedaEstrangeira',
+        'moeda_estrangeira' => 'moedaEstrangeira',
+        'valor_nominal_moeda_estrangeira' => 'valorNominalMoedaEstrangeira',
+        'data_cotacao_moeda_estrangeira' => 'dataCotacaoMoedaEstrangeira',
         'nome_razao_social_fornecedor' => 'nomeRazaoSocialFornecedor',
         'codigo_pais' => 'codigoPais',
         'porte_fornecedor_id' => 'porteFornecedorId',
         'quantidade_homologada' => 'quantidadeHomologada',
         'valor_unitario_homologado' => 'valorUnitarioHomologado',
-        'valor_total_homologado' => 'valorTotalHomologado',
         'percentual_desconto' => 'percentualDesconto',
+        'amparo_legal_margem_preferencia' => 'amparoLegalMargemPreferencia',
+        'amparo_legal_criterio_desempate' => 'amparoLegalCriterioDesempate',
+        'pais_origem_produto_servico' => 'paisOrigemProdutoServico',
         'indicador_subcontratacao' => 'indicadorSubcontratacao',
         'ordem_classificacao_srp' => 'ordemClassificacaoSrp',
         'data_resultado' => 'dataResultado',
         'motivo_cancelamento' => 'motivoCancelamento',
-        'porte_fornecedor_nome' => 'porteFornecedorNome',
-        'situacao_compra_item_resultado_nome' => 'situacaoCompraItemResultadoNome',
-        'sequencial_resultado' => 'sequencialResultado',
-        'natureza_juridica_nome' => 'naturezaJuridicaNome',
-        'natureza_juridica_id' => 'naturezaJuridicaId',
+        'data_cancelamento' => 'dataCancelamento',
+        'situacao_compra_item_resultado_id' => 'situacaoCompraItemResultadoId',
         'numero_controle_pncp_compra' => 'numeroControlePNCPCompra',
-        'situacao_compra_item_resultado_id' => 'situacaoCompraItemResultadoId'
+        'situacao_compra_item_resultado_nome' => 'situacaoCompraItemResultadoNome',
+        'aplicacao_margem_preferencia' => 'aplicacaoMargemPreferencia',
+        'aplicacao_beneficio_me_epp' => 'aplicacaoBeneficioMeEpp',
+        'aplicacao_criterio_desempate' => 'aplicacaoCriterioDesempate',
+        'natureza_juridica_id' => 'naturezaJuridicaId',
+        'porte_fornecedor_nome' => 'porteFornecedorNome',
+        'sequencial_resultado' => 'sequencialResultado',
+        'natureza_juridica_nome' => 'naturezaJuridicaNome'
     ];
 
     /**
@@ -273,25 +313,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
         'tipo_pessoa' => 'setTipoPessoa',
         'data_inclusao' => 'setDataInclusao',
         'numero_item' => 'setNumeroItem',
-        'data_cancelamento' => 'setDataCancelamento',
+        'valor_total_homologado' => 'setValorTotalHomologado',
+        'timezone_cotacao_moeda_estrangeira' => 'setTimezoneCotacaoMoedaEstrangeira',
+        'moeda_estrangeira' => 'setMoedaEstrangeira',
+        'valor_nominal_moeda_estrangeira' => 'setValorNominalMoedaEstrangeira',
+        'data_cotacao_moeda_estrangeira' => 'setDataCotacaoMoedaEstrangeira',
         'nome_razao_social_fornecedor' => 'setNomeRazaoSocialFornecedor',
         'codigo_pais' => 'setCodigoPais',
         'porte_fornecedor_id' => 'setPorteFornecedorId',
         'quantidade_homologada' => 'setQuantidadeHomologada',
         'valor_unitario_homologado' => 'setValorUnitarioHomologado',
-        'valor_total_homologado' => 'setValorTotalHomologado',
         'percentual_desconto' => 'setPercentualDesconto',
+        'amparo_legal_margem_preferencia' => 'setAmparoLegalMargemPreferencia',
+        'amparo_legal_criterio_desempate' => 'setAmparoLegalCriterioDesempate',
+        'pais_origem_produto_servico' => 'setPaisOrigemProdutoServico',
         'indicador_subcontratacao' => 'setIndicadorSubcontratacao',
         'ordem_classificacao_srp' => 'setOrdemClassificacaoSrp',
         'data_resultado' => 'setDataResultado',
         'motivo_cancelamento' => 'setMotivoCancelamento',
-        'porte_fornecedor_nome' => 'setPorteFornecedorNome',
-        'situacao_compra_item_resultado_nome' => 'setSituacaoCompraItemResultadoNome',
-        'sequencial_resultado' => 'setSequencialResultado',
-        'natureza_juridica_nome' => 'setNaturezaJuridicaNome',
-        'natureza_juridica_id' => 'setNaturezaJuridicaId',
+        'data_cancelamento' => 'setDataCancelamento',
+        'situacao_compra_item_resultado_id' => 'setSituacaoCompraItemResultadoId',
         'numero_controle_pncp_compra' => 'setNumeroControlePncpCompra',
-        'situacao_compra_item_resultado_id' => 'setSituacaoCompraItemResultadoId'
+        'situacao_compra_item_resultado_nome' => 'setSituacaoCompraItemResultadoNome',
+        'aplicacao_margem_preferencia' => 'setAplicacaoMargemPreferencia',
+        'aplicacao_beneficio_me_epp' => 'setAplicacaoBeneficioMeEpp',
+        'aplicacao_criterio_desempate' => 'setAplicacaoCriterioDesempate',
+        'natureza_juridica_id' => 'setNaturezaJuridicaId',
+        'porte_fornecedor_nome' => 'setPorteFornecedorNome',
+        'sequencial_resultado' => 'setSequencialResultado',
+        'natureza_juridica_nome' => 'setNaturezaJuridicaNome'
     ];
 
     /**
@@ -305,25 +355,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
         'tipo_pessoa' => 'getTipoPessoa',
         'data_inclusao' => 'getDataInclusao',
         'numero_item' => 'getNumeroItem',
-        'data_cancelamento' => 'getDataCancelamento',
+        'valor_total_homologado' => 'getValorTotalHomologado',
+        'timezone_cotacao_moeda_estrangeira' => 'getTimezoneCotacaoMoedaEstrangeira',
+        'moeda_estrangeira' => 'getMoedaEstrangeira',
+        'valor_nominal_moeda_estrangeira' => 'getValorNominalMoedaEstrangeira',
+        'data_cotacao_moeda_estrangeira' => 'getDataCotacaoMoedaEstrangeira',
         'nome_razao_social_fornecedor' => 'getNomeRazaoSocialFornecedor',
         'codigo_pais' => 'getCodigoPais',
         'porte_fornecedor_id' => 'getPorteFornecedorId',
         'quantidade_homologada' => 'getQuantidadeHomologada',
         'valor_unitario_homologado' => 'getValorUnitarioHomologado',
-        'valor_total_homologado' => 'getValorTotalHomologado',
         'percentual_desconto' => 'getPercentualDesconto',
+        'amparo_legal_margem_preferencia' => 'getAmparoLegalMargemPreferencia',
+        'amparo_legal_criterio_desempate' => 'getAmparoLegalCriterioDesempate',
+        'pais_origem_produto_servico' => 'getPaisOrigemProdutoServico',
         'indicador_subcontratacao' => 'getIndicadorSubcontratacao',
         'ordem_classificacao_srp' => 'getOrdemClassificacaoSrp',
         'data_resultado' => 'getDataResultado',
         'motivo_cancelamento' => 'getMotivoCancelamento',
-        'porte_fornecedor_nome' => 'getPorteFornecedorNome',
-        'situacao_compra_item_resultado_nome' => 'getSituacaoCompraItemResultadoNome',
-        'sequencial_resultado' => 'getSequencialResultado',
-        'natureza_juridica_nome' => 'getNaturezaJuridicaNome',
-        'natureza_juridica_id' => 'getNaturezaJuridicaId',
+        'data_cancelamento' => 'getDataCancelamento',
+        'situacao_compra_item_resultado_id' => 'getSituacaoCompraItemResultadoId',
         'numero_controle_pncp_compra' => 'getNumeroControlePncpCompra',
-        'situacao_compra_item_resultado_id' => 'getSituacaoCompraItemResultadoId'
+        'situacao_compra_item_resultado_nome' => 'getSituacaoCompraItemResultadoNome',
+        'aplicacao_margem_preferencia' => 'getAplicacaoMargemPreferencia',
+        'aplicacao_beneficio_me_epp' => 'getAplicacaoBeneficioMeEpp',
+        'aplicacao_criterio_desempate' => 'getAplicacaoCriterioDesempate',
+        'natureza_juridica_id' => 'getNaturezaJuridicaId',
+        'porte_fornecedor_nome' => 'getPorteFornecedorNome',
+        'sequencial_resultado' => 'getSequencialResultado',
+        'natureza_juridica_nome' => 'getNaturezaJuridicaNome'
     ];
 
     /**
@@ -441,25 +501,35 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
         $this->setIfExists('tipo_pessoa', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('numero_item', $data ?? [], null);
-        $this->setIfExists('data_cancelamento', $data ?? [], null);
+        $this->setIfExists('valor_total_homologado', $data ?? [], null);
+        $this->setIfExists('timezone_cotacao_moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('valor_nominal_moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('data_cotacao_moeda_estrangeira', $data ?? [], null);
         $this->setIfExists('nome_razao_social_fornecedor', $data ?? [], null);
         $this->setIfExists('codigo_pais', $data ?? [], null);
         $this->setIfExists('porte_fornecedor_id', $data ?? [], null);
         $this->setIfExists('quantidade_homologada', $data ?? [], null);
         $this->setIfExists('valor_unitario_homologado', $data ?? [], null);
-        $this->setIfExists('valor_total_homologado', $data ?? [], null);
         $this->setIfExists('percentual_desconto', $data ?? [], null);
+        $this->setIfExists('amparo_legal_margem_preferencia', $data ?? [], null);
+        $this->setIfExists('amparo_legal_criterio_desempate', $data ?? [], null);
+        $this->setIfExists('pais_origem_produto_servico', $data ?? [], null);
         $this->setIfExists('indicador_subcontratacao', $data ?? [], null);
         $this->setIfExists('ordem_classificacao_srp', $data ?? [], null);
         $this->setIfExists('data_resultado', $data ?? [], null);
         $this->setIfExists('motivo_cancelamento', $data ?? [], null);
-        $this->setIfExists('porte_fornecedor_nome', $data ?? [], null);
+        $this->setIfExists('data_cancelamento', $data ?? [], null);
+        $this->setIfExists('situacao_compra_item_resultado_id', $data ?? [], null);
+        $this->setIfExists('numero_controle_pncp_compra', $data ?? [], null);
         $this->setIfExists('situacao_compra_item_resultado_nome', $data ?? [], null);
+        $this->setIfExists('aplicacao_margem_preferencia', $data ?? [], null);
+        $this->setIfExists('aplicacao_beneficio_me_epp', $data ?? [], null);
+        $this->setIfExists('aplicacao_criterio_desempate', $data ?? [], null);
+        $this->setIfExists('natureza_juridica_id', $data ?? [], null);
+        $this->setIfExists('porte_fornecedor_nome', $data ?? [], null);
         $this->setIfExists('sequencial_resultado', $data ?? [], null);
         $this->setIfExists('natureza_juridica_nome', $data ?? [], null);
-        $this->setIfExists('natureza_juridica_id', $data ?? [], null);
-        $this->setIfExists('numero_controle_pncp_compra', $data ?? [], null);
-        $this->setIfExists('situacao_compra_item_resultado_id', $data ?? [], null);
     }
 
     /**
@@ -677,28 +747,136 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
     }
 
     /**
-     * Gets data_cancelamento
+     * Gets valor_total_homologado
      *
-     * @return \DateTime|null
+     * @return float|null
      */
-    public function getDataCancelamento()
+    public function getValorTotalHomologado()
     {
-        return $this->container['data_cancelamento'];
+        return $this->container['valor_total_homologado'];
     }
 
     /**
-     * Sets data_cancelamento
+     * Sets valor_total_homologado
      *
-     * @param \DateTime|null $data_cancelamento data_cancelamento
+     * @param float|null $valor_total_homologado valor_total_homologado
      *
      * @return self
      */
-    public function setDataCancelamento($data_cancelamento)
+    public function setValorTotalHomologado($valor_total_homologado)
     {
-        if (is_null($data_cancelamento)) {
-            throw new \InvalidArgumentException('non-nullable data_cancelamento cannot be null');
+        if (is_null($valor_total_homologado)) {
+            throw new \InvalidArgumentException('non-nullable valor_total_homologado cannot be null');
         }
-        $this->container['data_cancelamento'] = $data_cancelamento;
+        $this->container['valor_total_homologado'] = $valor_total_homologado;
+
+        return $this;
+    }
+
+    /**
+     * Gets timezone_cotacao_moeda_estrangeira
+     *
+     * @return string|null
+     */
+    public function getTimezoneCotacaoMoedaEstrangeira()
+    {
+        return $this->container['timezone_cotacao_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets timezone_cotacao_moeda_estrangeira
+     *
+     * @param string|null $timezone_cotacao_moeda_estrangeira timezone_cotacao_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setTimezoneCotacaoMoedaEstrangeira($timezone_cotacao_moeda_estrangeira)
+    {
+        if (is_null($timezone_cotacao_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable timezone_cotacao_moeda_estrangeira cannot be null');
+        }
+        $this->container['timezone_cotacao_moeda_estrangeira'] = $timezone_cotacao_moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets moeda_estrangeira
+     *
+     * @return \OpenAPI\Client\Model\MoedaResumidoDTO|null
+     */
+    public function getMoedaEstrangeira()
+    {
+        return $this->container['moeda_estrangeira'];
+    }
+
+    /**
+     * Sets moeda_estrangeira
+     *
+     * @param \OpenAPI\Client\Model\MoedaResumidoDTO|null $moeda_estrangeira moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setMoedaEstrangeira($moeda_estrangeira)
+    {
+        if (is_null($moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable moeda_estrangeira cannot be null');
+        }
+        $this->container['moeda_estrangeira'] = $moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_nominal_moeda_estrangeira
+     *
+     * @return float|null
+     */
+    public function getValorNominalMoedaEstrangeira()
+    {
+        return $this->container['valor_nominal_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets valor_nominal_moeda_estrangeira
+     *
+     * @param float|null $valor_nominal_moeda_estrangeira valor_nominal_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setValorNominalMoedaEstrangeira($valor_nominal_moeda_estrangeira)
+    {
+        if (is_null($valor_nominal_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable valor_nominal_moeda_estrangeira cannot be null');
+        }
+        $this->container['valor_nominal_moeda_estrangeira'] = $valor_nominal_moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_cotacao_moeda_estrangeira
+     *
+     * @return \DateTime|null
+     */
+    public function getDataCotacaoMoedaEstrangeira()
+    {
+        return $this->container['data_cotacao_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets data_cotacao_moeda_estrangeira
+     *
+     * @param \DateTime|null $data_cotacao_moeda_estrangeira data_cotacao_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setDataCotacaoMoedaEstrangeira($data_cotacao_moeda_estrangeira)
+    {
+        if (is_null($data_cotacao_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable data_cotacao_moeda_estrangeira cannot be null');
+        }
+        $this->container['data_cotacao_moeda_estrangeira'] = $data_cotacao_moeda_estrangeira;
 
         return $this;
     }
@@ -849,33 +1027,6 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
     }
 
     /**
-     * Gets valor_total_homologado
-     *
-     * @return float|null
-     */
-    public function getValorTotalHomologado()
-    {
-        return $this->container['valor_total_homologado'];
-    }
-
-    /**
-     * Sets valor_total_homologado
-     *
-     * @param float|null $valor_total_homologado valor_total_homologado
-     *
-     * @return self
-     */
-    public function setValorTotalHomologado($valor_total_homologado)
-    {
-        if (is_null($valor_total_homologado)) {
-            throw new \InvalidArgumentException('non-nullable valor_total_homologado cannot be null');
-        }
-        $this->container['valor_total_homologado'] = $valor_total_homologado;
-
-        return $this;
-    }
-
-    /**
      * Gets percentual_desconto
      *
      * @return float|null
@@ -898,6 +1049,87 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
             throw new \InvalidArgumentException('non-nullable percentual_desconto cannot be null');
         }
         $this->container['percentual_desconto'] = $percentual_desconto;
+
+        return $this;
+    }
+
+    /**
+     * Gets amparo_legal_margem_preferencia
+     *
+     * @return \OpenAPI\Client\Model\DominioGenericoResumidoDTO|null
+     */
+    public function getAmparoLegalMargemPreferencia()
+    {
+        return $this->container['amparo_legal_margem_preferencia'];
+    }
+
+    /**
+     * Sets amparo_legal_margem_preferencia
+     *
+     * @param \OpenAPI\Client\Model\DominioGenericoResumidoDTO|null $amparo_legal_margem_preferencia amparo_legal_margem_preferencia
+     *
+     * @return self
+     */
+    public function setAmparoLegalMargemPreferencia($amparo_legal_margem_preferencia)
+    {
+        if (is_null($amparo_legal_margem_preferencia)) {
+            throw new \InvalidArgumentException('non-nullable amparo_legal_margem_preferencia cannot be null');
+        }
+        $this->container['amparo_legal_margem_preferencia'] = $amparo_legal_margem_preferencia;
+
+        return $this;
+    }
+
+    /**
+     * Gets amparo_legal_criterio_desempate
+     *
+     * @return \OpenAPI\Client\Model\DominioGenericoResumidoDTO|null
+     */
+    public function getAmparoLegalCriterioDesempate()
+    {
+        return $this->container['amparo_legal_criterio_desempate'];
+    }
+
+    /**
+     * Sets amparo_legal_criterio_desempate
+     *
+     * @param \OpenAPI\Client\Model\DominioGenericoResumidoDTO|null $amparo_legal_criterio_desempate amparo_legal_criterio_desempate
+     *
+     * @return self
+     */
+    public function setAmparoLegalCriterioDesempate($amparo_legal_criterio_desempate)
+    {
+        if (is_null($amparo_legal_criterio_desempate)) {
+            throw new \InvalidArgumentException('non-nullable amparo_legal_criterio_desempate cannot be null');
+        }
+        $this->container['amparo_legal_criterio_desempate'] = $amparo_legal_criterio_desempate;
+
+        return $this;
+    }
+
+    /**
+     * Gets pais_origem_produto_servico
+     *
+     * @return \OpenAPI\Client\Model\PaisResumidoDTO|null
+     */
+    public function getPaisOrigemProdutoServico()
+    {
+        return $this->container['pais_origem_produto_servico'];
+    }
+
+    /**
+     * Sets pais_origem_produto_servico
+     *
+     * @param \OpenAPI\Client\Model\PaisResumidoDTO|null $pais_origem_produto_servico pais_origem_produto_servico
+     *
+     * @return self
+     */
+    public function setPaisOrigemProdutoServico($pais_origem_produto_servico)
+    {
+        if (is_null($pais_origem_produto_servico)) {
+            throw new \InvalidArgumentException('non-nullable pais_origem_produto_servico cannot be null');
+        }
+        $this->container['pais_origem_produto_servico'] = $pais_origem_produto_servico;
 
         return $this;
     }
@@ -1011,28 +1243,92 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
     }
 
     /**
-     * Gets porte_fornecedor_nome
+     * Gets data_cancelamento
      *
-     * @return string|null
+     * @return \DateTime|null
      */
-    public function getPorteFornecedorNome()
+    public function getDataCancelamento()
     {
-        return $this->container['porte_fornecedor_nome'];
+        return $this->container['data_cancelamento'];
     }
 
     /**
-     * Sets porte_fornecedor_nome
+     * Sets data_cancelamento
      *
-     * @param string|null $porte_fornecedor_nome porte_fornecedor_nome
+     * @param \DateTime|null $data_cancelamento data_cancelamento
      *
      * @return self
      */
-    public function setPorteFornecedorNome($porte_fornecedor_nome)
+    public function setDataCancelamento($data_cancelamento)
     {
-        if (is_null($porte_fornecedor_nome)) {
-            throw new \InvalidArgumentException('non-nullable porte_fornecedor_nome cannot be null');
+        if (is_null($data_cancelamento)) {
+            throw new \InvalidArgumentException('non-nullable data_cancelamento cannot be null');
         }
-        $this->container['porte_fornecedor_nome'] = $porte_fornecedor_nome;
+        $this->container['data_cancelamento'] = $data_cancelamento;
+
+        return $this;
+    }
+
+    /**
+     * Gets situacao_compra_item_resultado_id
+     *
+     * @return string|null
+     */
+    public function getSituacaoCompraItemResultadoId()
+    {
+        return $this->container['situacao_compra_item_resultado_id'];
+    }
+
+    /**
+     * Sets situacao_compra_item_resultado_id
+     *
+     * @param string|null $situacao_compra_item_resultado_id situacao_compra_item_resultado_id
+     *
+     * @return self
+     */
+    public function setSituacaoCompraItemResultadoId($situacao_compra_item_resultado_id)
+    {
+        if (is_null($situacao_compra_item_resultado_id)) {
+            throw new \InvalidArgumentException('non-nullable situacao_compra_item_resultado_id cannot be null');
+        }
+        $allowedValues = $this->getSituacaoCompraItemResultadoIdAllowableValues();
+        if (!in_array($situacao_compra_item_resultado_id, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'situacao_compra_item_resultado_id', must be one of '%s'",
+                    $situacao_compra_item_resultado_id,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['situacao_compra_item_resultado_id'] = $situacao_compra_item_resultado_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets numero_controle_pncp_compra
+     *
+     * @return string|null
+     */
+    public function getNumeroControlePncpCompra()
+    {
+        return $this->container['numero_controle_pncp_compra'];
+    }
+
+    /**
+     * Sets numero_controle_pncp_compra
+     *
+     * @param string|null $numero_controle_pncp_compra numero_controle_pncp_compra
+     *
+     * @return self
+     */
+    public function setNumeroControlePncpCompra($numero_controle_pncp_compra)
+    {
+        if (is_null($numero_controle_pncp_compra)) {
+            throw new \InvalidArgumentException('non-nullable numero_controle_pncp_compra cannot be null');
+        }
+        $this->container['numero_controle_pncp_compra'] = $numero_controle_pncp_compra;
 
         return $this;
     }
@@ -1060,6 +1356,141 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
             throw new \InvalidArgumentException('non-nullable situacao_compra_item_resultado_nome cannot be null');
         }
         $this->container['situacao_compra_item_resultado_nome'] = $situacao_compra_item_resultado_nome;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicacao_margem_preferencia
+     *
+     * @return bool|null
+     */
+    public function getAplicacaoMargemPreferencia()
+    {
+        return $this->container['aplicacao_margem_preferencia'];
+    }
+
+    /**
+     * Sets aplicacao_margem_preferencia
+     *
+     * @param bool|null $aplicacao_margem_preferencia aplicacao_margem_preferencia
+     *
+     * @return self
+     */
+    public function setAplicacaoMargemPreferencia($aplicacao_margem_preferencia)
+    {
+        if (is_null($aplicacao_margem_preferencia)) {
+            throw new \InvalidArgumentException('non-nullable aplicacao_margem_preferencia cannot be null');
+        }
+        $this->container['aplicacao_margem_preferencia'] = $aplicacao_margem_preferencia;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicacao_beneficio_me_epp
+     *
+     * @return bool|null
+     */
+    public function getAplicacaoBeneficioMeEpp()
+    {
+        return $this->container['aplicacao_beneficio_me_epp'];
+    }
+
+    /**
+     * Sets aplicacao_beneficio_me_epp
+     *
+     * @param bool|null $aplicacao_beneficio_me_epp aplicacao_beneficio_me_epp
+     *
+     * @return self
+     */
+    public function setAplicacaoBeneficioMeEpp($aplicacao_beneficio_me_epp)
+    {
+        if (is_null($aplicacao_beneficio_me_epp)) {
+            throw new \InvalidArgumentException('non-nullable aplicacao_beneficio_me_epp cannot be null');
+        }
+        $this->container['aplicacao_beneficio_me_epp'] = $aplicacao_beneficio_me_epp;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicacao_criterio_desempate
+     *
+     * @return bool|null
+     */
+    public function getAplicacaoCriterioDesempate()
+    {
+        return $this->container['aplicacao_criterio_desempate'];
+    }
+
+    /**
+     * Sets aplicacao_criterio_desempate
+     *
+     * @param bool|null $aplicacao_criterio_desempate aplicacao_criterio_desempate
+     *
+     * @return self
+     */
+    public function setAplicacaoCriterioDesempate($aplicacao_criterio_desempate)
+    {
+        if (is_null($aplicacao_criterio_desempate)) {
+            throw new \InvalidArgumentException('non-nullable aplicacao_criterio_desempate cannot be null');
+        }
+        $this->container['aplicacao_criterio_desempate'] = $aplicacao_criterio_desempate;
+
+        return $this;
+    }
+
+    /**
+     * Gets natureza_juridica_id
+     *
+     * @return string|null
+     */
+    public function getNaturezaJuridicaId()
+    {
+        return $this->container['natureza_juridica_id'];
+    }
+
+    /**
+     * Sets natureza_juridica_id
+     *
+     * @param string|null $natureza_juridica_id natureza_juridica_id
+     *
+     * @return self
+     */
+    public function setNaturezaJuridicaId($natureza_juridica_id)
+    {
+        if (is_null($natureza_juridica_id)) {
+            throw new \InvalidArgumentException('non-nullable natureza_juridica_id cannot be null');
+        }
+        $this->container['natureza_juridica_id'] = $natureza_juridica_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets porte_fornecedor_nome
+     *
+     * @return string|null
+     */
+    public function getPorteFornecedorNome()
+    {
+        return $this->container['porte_fornecedor_nome'];
+    }
+
+    /**
+     * Sets porte_fornecedor_nome
+     *
+     * @param string|null $porte_fornecedor_nome porte_fornecedor_nome
+     *
+     * @return self
+     */
+    public function setPorteFornecedorNome($porte_fornecedor_nome)
+    {
+        if (is_null($porte_fornecedor_nome)) {
+            throw new \InvalidArgumentException('non-nullable porte_fornecedor_nome cannot be null');
+        }
+        $this->container['porte_fornecedor_nome'] = $porte_fornecedor_nome;
 
         return $this;
     }
@@ -1114,97 +1545,6 @@ class RecuperarCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \J
             throw new \InvalidArgumentException('non-nullable natureza_juridica_nome cannot be null');
         }
         $this->container['natureza_juridica_nome'] = $natureza_juridica_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets natureza_juridica_id
-     *
-     * @return string|null
-     */
-    public function getNaturezaJuridicaId()
-    {
-        return $this->container['natureza_juridica_id'];
-    }
-
-    /**
-     * Sets natureza_juridica_id
-     *
-     * @param string|null $natureza_juridica_id natureza_juridica_id
-     *
-     * @return self
-     */
-    public function setNaturezaJuridicaId($natureza_juridica_id)
-    {
-        if (is_null($natureza_juridica_id)) {
-            throw new \InvalidArgumentException('non-nullable natureza_juridica_id cannot be null');
-        }
-        $this->container['natureza_juridica_id'] = $natureza_juridica_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets numero_controle_pncp_compra
-     *
-     * @return string|null
-     */
-    public function getNumeroControlePncpCompra()
-    {
-        return $this->container['numero_controle_pncp_compra'];
-    }
-
-    /**
-     * Sets numero_controle_pncp_compra
-     *
-     * @param string|null $numero_controle_pncp_compra numero_controle_pncp_compra
-     *
-     * @return self
-     */
-    public function setNumeroControlePncpCompra($numero_controle_pncp_compra)
-    {
-        if (is_null($numero_controle_pncp_compra)) {
-            throw new \InvalidArgumentException('non-nullable numero_controle_pncp_compra cannot be null');
-        }
-        $this->container['numero_controle_pncp_compra'] = $numero_controle_pncp_compra;
-
-        return $this;
-    }
-
-    /**
-     * Gets situacao_compra_item_resultado_id
-     *
-     * @return string|null
-     */
-    public function getSituacaoCompraItemResultadoId()
-    {
-        return $this->container['situacao_compra_item_resultado_id'];
-    }
-
-    /**
-     * Sets situacao_compra_item_resultado_id
-     *
-     * @param string|null $situacao_compra_item_resultado_id situacao_compra_item_resultado_id
-     *
-     * @return self
-     */
-    public function setSituacaoCompraItemResultadoId($situacao_compra_item_resultado_id)
-    {
-        if (is_null($situacao_compra_item_resultado_id)) {
-            throw new \InvalidArgumentException('non-nullable situacao_compra_item_resultado_id cannot be null');
-        }
-        $allowedValues = $this->getSituacaoCompraItemResultadoIdAllowableValues();
-        if (!in_array($situacao_compra_item_resultado_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'situacao_compra_item_resultado_id', must be one of '%s'",
-                    $situacao_compra_item_resultado_id,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['situacao_compra_item_resultado_id'] = $situacao_compra_item_resultado_id;
 
         return $this;
     }

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ano_pca** | **int** |  | [optional]
 **razao_social** | **string** |  | [optional]
 **data_atualizacao** | **\DateTime** |  | [optional]
+**data_atualizacao_global_pca** | **\DateTime** |  | [optional]
 **esfera** | **string** |  | [optional]
 **poder** | **string** |  | [optional]
 **sequencial_pca** | **int** |  | [optional]

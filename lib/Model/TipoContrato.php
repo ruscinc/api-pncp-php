@@ -59,7 +59,8 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'nome' => 'string'
+        'nome' => 'string',
+        'status_ativo' => 'bool'
     ];
 
     /**
@@ -71,7 +72,8 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int64',
-        'nome' => null
+        'nome' => null,
+        'status_ativo' => null
     ];
 
     /**
@@ -81,7 +83,8 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'nome' => false
+		'nome' => false,
+		'status_ativo' => false
     ];
 
     /**
@@ -171,7 +174,8 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'nome' => 'nome'
+        'nome' => 'nome',
+        'status_ativo' => 'statusAtivo'
     ];
 
     /**
@@ -181,7 +185,8 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'nome' => 'setNome'
+        'nome' => 'setNome',
+        'status_ativo' => 'setStatusAtivo'
     ];
 
     /**
@@ -191,7 +196,8 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'nome' => 'getNome'
+        'nome' => 'getNome',
+        'status_ativo' => 'getStatusAtivo'
     ];
 
     /**
@@ -253,6 +259,7 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('nome', $data ?? [], null);
+        $this->setIfExists('status_ativo', $data ?? [], null);
     }
 
     /**
@@ -347,6 +354,33 @@ class TipoContrato implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable nome cannot be null');
         }
         $this->container['nome'] = $nome;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_ativo
+     *
+     * @return bool|null
+     */
+    public function getStatusAtivo()
+    {
+        return $this->container['status_ativo'];
+    }
+
+    /**
+     * Sets status_ativo
+     *
+     * @param bool|null $status_ativo status_ativo
+     *
+     * @return self
+     */
+    public function setStatusAtivo($status_ativo)
+    {
+        if (is_null($status_ativo)) {
+            throw new \InvalidArgumentException('non-nullable status_ativo cannot be null');
+        }
+        $this->container['status_ativo'] = $status_ativo;
 
         return $this;
     }

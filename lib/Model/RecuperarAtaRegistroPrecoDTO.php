@@ -68,9 +68,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
         'data_publicacao_pncp' => '\DateTime',
         'data_inclusao' => '\DateTime',
         'data_atualizacao' => '\DateTime',
+        'data_atualizacao_global' => '\DateTime',
         'sequencial_ata' => 'int',
         'numero_controle_pncp' => 'string',
-        'ata' => '\OpenAPI\Client\Model\AtaRegistroPreco',
         'orgao_entidade' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'orgao_sub_rogado' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'unidade_orgao' => '\OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO',
@@ -100,9 +100,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
         'data_publicacao_pncp' => 'date-time',
         'data_inclusao' => 'date-time',
         'data_atualizacao' => 'date-time',
+        'data_atualizacao_global' => 'date-time',
         'sequencial_ata' => 'int32',
         'numero_controle_pncp' => null,
-        'ata' => null,
         'orgao_entidade' => null,
         'orgao_sub_rogado' => null,
         'unidade_orgao' => null,
@@ -130,9 +130,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
 		'data_publicacao_pncp' => false,
 		'data_inclusao' => false,
 		'data_atualizacao' => false,
+		'data_atualizacao_global' => false,
 		'sequencial_ata' => false,
 		'numero_controle_pncp' => false,
-		'ata' => false,
 		'orgao_entidade' => false,
 		'orgao_sub_rogado' => false,
 		'unidade_orgao' => false,
@@ -240,9 +240,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
         'data_inclusao' => 'dataInclusao',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_atualizacao_global' => 'dataAtualizacaoGlobal',
         'sequencial_ata' => 'sequencialAta',
         'numero_controle_pncp' => 'numeroControlePNCP',
-        'ata' => 'ata',
         'orgao_entidade' => 'orgaoEntidade',
         'orgao_sub_rogado' => 'orgaoSubRogado',
         'unidade_orgao' => 'unidadeOrgao',
@@ -270,9 +270,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
         'data_inclusao' => 'setDataInclusao',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_atualizacao_global' => 'setDataAtualizacaoGlobal',
         'sequencial_ata' => 'setSequencialAta',
         'numero_controle_pncp' => 'setNumeroControlePncp',
-        'ata' => 'setAta',
         'orgao_entidade' => 'setOrgaoEntidade',
         'orgao_sub_rogado' => 'setOrgaoSubRogado',
         'unidade_orgao' => 'setUnidadeOrgao',
@@ -300,9 +300,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
         'data_inclusao' => 'getDataInclusao',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_atualizacao_global' => 'getDataAtualizacaoGlobal',
         'sequencial_ata' => 'getSequencialAta',
         'numero_controle_pncp' => 'getNumeroControlePncp',
-        'ata' => 'getAta',
         'orgao_entidade' => 'getOrgaoEntidade',
         'orgao_sub_rogado' => 'getOrgaoSubRogado',
         'unidade_orgao' => 'getUnidadeOrgao',
@@ -381,9 +381,9 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global', $data ?? [], null);
         $this->setIfExists('sequencial_ata', $data ?? [], null);
         $this->setIfExists('numero_controle_pncp', $data ?? [], null);
-        $this->setIfExists('ata', $data ?? [], null);
         $this->setIfExists('orgao_entidade', $data ?? [], null);
         $this->setIfExists('orgao_sub_rogado', $data ?? [], null);
         $this->setIfExists('unidade_orgao', $data ?? [], null);
@@ -708,6 +708,33 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
     }
 
     /**
+     * Gets data_atualizacao_global
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobal()
+    {
+        return $this->container['data_atualizacao_global'];
+    }
+
+    /**
+     * Sets data_atualizacao_global
+     *
+     * @param \DateTime|null $data_atualizacao_global data_atualizacao_global
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobal($data_atualizacao_global)
+    {
+        if (is_null($data_atualizacao_global)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global cannot be null');
+        }
+        $this->container['data_atualizacao_global'] = $data_atualizacao_global;
+
+        return $this;
+    }
+
+    /**
      * Gets sequencial_ata
      *
      * @return int|null
@@ -757,33 +784,6 @@ class RecuperarAtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable numero_controle_pncp cannot be null');
         }
         $this->container['numero_controle_pncp'] = $numero_controle_pncp;
-
-        return $this;
-    }
-
-    /**
-     * Gets ata
-     *
-     * @return \OpenAPI\Client\Model\AtaRegistroPreco|null
-     */
-    public function getAta()
-    {
-        return $this->container['ata'];
-    }
-
-    /**
-     * Sets ata
-     *
-     * @param \OpenAPI\Client\Model\AtaRegistroPreco|null $ata ata
-     *
-     * @return self
-     */
-    public function setAta($ata)
-    {
-        if (is_null($ata)) {
-            throw new \InvalidArgumentException('non-nullable ata cannot be null');
-        }
-        $this->container['ata'] = $ata;
 
         return $this;
     }

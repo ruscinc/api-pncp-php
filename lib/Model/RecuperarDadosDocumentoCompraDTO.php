@@ -61,15 +61,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         'uri' => 'string',
         'url' => 'string',
         'sequencial_documento' => 'int',
-        'cnpj' => 'string',
         'data_publicacao_pncp' => '\DateTime',
+        'cnpj' => 'string',
         'ano_compra' => 'int',
         'sequencial_compra' => 'int',
-        'titulo' => 'string',
         'status_ativo' => 'bool',
+        'titulo' => 'string',
         'tipo_documento_nome' => 'string',
-        'tipo_documento_descricao' => 'string',
-        'tipo_documento_id' => 'int'
+        'tipo_documento_id' => 'int',
+        'tipo_documento_descricao' => 'string'
     ];
 
     /**
@@ -83,15 +83,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         'uri' => 'uri',
         'url' => null,
         'sequencial_documento' => 'int32',
-        'cnpj' => null,
         'data_publicacao_pncp' => 'date-time',
+        'cnpj' => null,
         'ano_compra' => 'int32',
         'sequencial_compra' => 'int32',
-        'titulo' => null,
         'status_ativo' => null,
+        'titulo' => null,
         'tipo_documento_nome' => null,
-        'tipo_documento_descricao' => null,
-        'tipo_documento_id' => 'int64'
+        'tipo_documento_id' => 'int64',
+        'tipo_documento_descricao' => null
     ];
 
     /**
@@ -103,15 +103,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         'uri' => false,
 		'url' => false,
 		'sequencial_documento' => false,
-		'cnpj' => false,
 		'data_publicacao_pncp' => false,
+		'cnpj' => false,
 		'ano_compra' => false,
 		'sequencial_compra' => false,
-		'titulo' => false,
 		'status_ativo' => false,
+		'titulo' => false,
 		'tipo_documento_nome' => false,
-		'tipo_documento_descricao' => false,
-		'tipo_documento_id' => false
+		'tipo_documento_id' => false,
+		'tipo_documento_descricao' => false
     ];
 
     /**
@@ -203,15 +203,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         'uri' => 'uri',
         'url' => 'url',
         'sequencial_documento' => 'sequencialDocumento',
-        'cnpj' => 'cnpj',
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
+        'cnpj' => 'cnpj',
         'ano_compra' => 'anoCompra',
         'sequencial_compra' => 'sequencialCompra',
-        'titulo' => 'titulo',
         'status_ativo' => 'statusAtivo',
+        'titulo' => 'titulo',
         'tipo_documento_nome' => 'tipoDocumentoNome',
-        'tipo_documento_descricao' => 'tipoDocumentoDescricao',
-        'tipo_documento_id' => 'tipoDocumentoId'
+        'tipo_documento_id' => 'tipoDocumentoId',
+        'tipo_documento_descricao' => 'tipoDocumentoDescricao'
     ];
 
     /**
@@ -223,15 +223,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         'uri' => 'setUri',
         'url' => 'setUrl',
         'sequencial_documento' => 'setSequencialDocumento',
-        'cnpj' => 'setCnpj',
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
+        'cnpj' => 'setCnpj',
         'ano_compra' => 'setAnoCompra',
         'sequencial_compra' => 'setSequencialCompra',
-        'titulo' => 'setTitulo',
         'status_ativo' => 'setStatusAtivo',
+        'titulo' => 'setTitulo',
         'tipo_documento_nome' => 'setTipoDocumentoNome',
-        'tipo_documento_descricao' => 'setTipoDocumentoDescricao',
-        'tipo_documento_id' => 'setTipoDocumentoId'
+        'tipo_documento_id' => 'setTipoDocumentoId',
+        'tipo_documento_descricao' => 'setTipoDocumentoDescricao'
     ];
 
     /**
@@ -243,15 +243,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         'uri' => 'getUri',
         'url' => 'getUrl',
         'sequencial_documento' => 'getSequencialDocumento',
-        'cnpj' => 'getCnpj',
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
+        'cnpj' => 'getCnpj',
         'ano_compra' => 'getAnoCompra',
         'sequencial_compra' => 'getSequencialCompra',
-        'titulo' => 'getTitulo',
         'status_ativo' => 'getStatusAtivo',
+        'titulo' => 'getTitulo',
         'tipo_documento_nome' => 'getTipoDocumentoNome',
-        'tipo_documento_descricao' => 'getTipoDocumentoDescricao',
-        'tipo_documento_id' => 'getTipoDocumentoId'
+        'tipo_documento_id' => 'getTipoDocumentoId',
+        'tipo_documento_descricao' => 'getTipoDocumentoDescricao'
     ];
 
     /**
@@ -314,15 +314,15 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
         $this->setIfExists('uri', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
         $this->setIfExists('sequencial_documento', $data ?? [], null);
-        $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('ano_compra', $data ?? [], null);
         $this->setIfExists('sequencial_compra', $data ?? [], null);
-        $this->setIfExists('titulo', $data ?? [], null);
         $this->setIfExists('status_ativo', $data ?? [], null);
+        $this->setIfExists('titulo', $data ?? [], null);
         $this->setIfExists('tipo_documento_nome', $data ?? [], null);
-        $this->setIfExists('tipo_documento_descricao', $data ?? [], null);
         $this->setIfExists('tipo_documento_id', $data ?? [], null);
+        $this->setIfExists('tipo_documento_descricao', $data ?? [], null);
     }
 
     /**
@@ -449,33 +449,6 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
     }
 
     /**
-     * Gets cnpj
-     *
-     * @return string|null
-     */
-    public function getCnpj()
-    {
-        return $this->container['cnpj'];
-    }
-
-    /**
-     * Sets cnpj
-     *
-     * @param string|null $cnpj cnpj
-     *
-     * @return self
-     */
-    public function setCnpj($cnpj)
-    {
-        if (is_null($cnpj)) {
-            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
-        }
-        $this->container['cnpj'] = $cnpj;
-
-        return $this;
-    }
-
-    /**
      * Gets data_publicacao_pncp
      *
      * @return \DateTime|null
@@ -498,6 +471,33 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
             throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
         }
         $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+
+        return $this;
+    }
+
+    /**
+     * Gets cnpj
+     *
+     * @return string|null
+     */
+    public function getCnpj()
+    {
+        return $this->container['cnpj'];
+    }
+
+    /**
+     * Sets cnpj
+     *
+     * @param string|null $cnpj cnpj
+     *
+     * @return self
+     */
+    public function setCnpj($cnpj)
+    {
+        if (is_null($cnpj)) {
+            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
+        }
+        $this->container['cnpj'] = $cnpj;
 
         return $this;
     }
@@ -557,33 +557,6 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
     }
 
     /**
-     * Gets titulo
-     *
-     * @return string|null
-     */
-    public function getTitulo()
-    {
-        return $this->container['titulo'];
-    }
-
-    /**
-     * Sets titulo
-     *
-     * @param string|null $titulo titulo
-     *
-     * @return self
-     */
-    public function setTitulo($titulo)
-    {
-        if (is_null($titulo)) {
-            throw new \InvalidArgumentException('non-nullable titulo cannot be null');
-        }
-        $this->container['titulo'] = $titulo;
-
-        return $this;
-    }
-
-    /**
      * Gets status_ativo
      *
      * @return bool|null
@@ -606,6 +579,33 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
             throw new \InvalidArgumentException('non-nullable status_ativo cannot be null');
         }
         $this->container['status_ativo'] = $status_ativo;
+
+        return $this;
+    }
+
+    /**
+     * Gets titulo
+     *
+     * @return string|null
+     */
+    public function getTitulo()
+    {
+        return $this->container['titulo'];
+    }
+
+    /**
+     * Sets titulo
+     *
+     * @param string|null $titulo titulo
+     *
+     * @return self
+     */
+    public function setTitulo($titulo)
+    {
+        if (is_null($titulo)) {
+            throw new \InvalidArgumentException('non-nullable titulo cannot be null');
+        }
+        $this->container['titulo'] = $titulo;
 
         return $this;
     }
@@ -638,33 +638,6 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
     }
 
     /**
-     * Gets tipo_documento_descricao
-     *
-     * @return string|null
-     */
-    public function getTipoDocumentoDescricao()
-    {
-        return $this->container['tipo_documento_descricao'];
-    }
-
-    /**
-     * Sets tipo_documento_descricao
-     *
-     * @param string|null $tipo_documento_descricao tipo_documento_descricao
-     *
-     * @return self
-     */
-    public function setTipoDocumentoDescricao($tipo_documento_descricao)
-    {
-        if (is_null($tipo_documento_descricao)) {
-            throw new \InvalidArgumentException('non-nullable tipo_documento_descricao cannot be null');
-        }
-        $this->container['tipo_documento_descricao'] = $tipo_documento_descricao;
-
-        return $this;
-    }
-
-    /**
      * Gets tipo_documento_id
      *
      * @return int|null
@@ -687,6 +660,33 @@ class RecuperarDadosDocumentoCompraDTO implements ModelInterface, ArrayAccess, \
             throw new \InvalidArgumentException('non-nullable tipo_documento_id cannot be null');
         }
         $this->container['tipo_documento_id'] = $tipo_documento_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tipo_documento_descricao
+     *
+     * @return string|null
+     */
+    public function getTipoDocumentoDescricao()
+    {
+        return $this->container['tipo_documento_descricao'];
+    }
+
+    /**
+     * Sets tipo_documento_descricao
+     *
+     * @param string|null $tipo_documento_descricao tipo_documento_descricao
+     *
+     * @return self
+     */
+    public function setTipoDocumentoDescricao($tipo_documento_descricao)
+    {
+        if (is_null($tipo_documento_descricao)) {
+            throw new \InvalidArgumentException('non-nullable tipo_documento_descricao cannot be null');
+        }
+        $this->container['tipo_documento_descricao'] = $tipo_documento_descricao;
 
         return $this;
     }

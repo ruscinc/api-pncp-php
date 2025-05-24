@@ -58,15 +58,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'valor_total' => 'float',
+        'data_atualizacao' => '\DateTime',
+        'data_publicacao_pncp' => '\DateTime',
         'cnpj' => 'string',
+        'quantidade' => 'float',
+        'valor_total' => 'float',
         'ano_pca' => 'int',
         'razao_social' => 'string',
-        'data_atualizacao' => '\DateTime',
-        'esfera' => 'string',
         'poder' => 'string',
-        'quantidade' => 'float',
-        'data_publicacao_pncp' => '\DateTime'
+        'esfera' => 'string'
     ];
 
     /**
@@ -77,15 +77,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'valor_total' => null,
+        'data_atualizacao' => 'date-time',
+        'data_publicacao_pncp' => 'date-time',
         'cnpj' => null,
+        'quantidade' => null,
+        'valor_total' => null,
         'ano_pca' => 'int32',
         'razao_social' => null,
-        'data_atualizacao' => 'date-time',
-        'esfera' => null,
         'poder' => null,
-        'quantidade' => null,
-        'data_publicacao_pncp' => 'date-time'
+        'esfera' => null
     ];
 
     /**
@@ -94,15 +94,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'valor_total' => false,
+        'data_atualizacao' => false,
+		'data_publicacao_pncp' => false,
 		'cnpj' => false,
+		'quantidade' => false,
+		'valor_total' => false,
 		'ano_pca' => false,
 		'razao_social' => false,
-		'data_atualizacao' => false,
-		'esfera' => false,
 		'poder' => false,
-		'quantidade' => false,
-		'data_publicacao_pncp' => false
+		'esfera' => false
     ];
 
     /**
@@ -191,15 +191,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'valor_total' => 'valorTotal',
+        'data_atualizacao' => 'dataAtualizacao',
+        'data_publicacao_pncp' => 'dataPublicacaoPncp',
         'cnpj' => 'cnpj',
+        'quantidade' => 'quantidade',
+        'valor_total' => 'valorTotal',
         'ano_pca' => 'anoPca',
         'razao_social' => 'razaoSocial',
-        'data_atualizacao' => 'dataAtualizacao',
-        'esfera' => 'esfera',
         'poder' => 'poder',
-        'quantidade' => 'quantidade',
-        'data_publicacao_pncp' => 'dataPublicacaoPncp'
+        'esfera' => 'esfera'
     ];
 
     /**
@@ -208,15 +208,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'valor_total' => 'setValorTotal',
+        'data_atualizacao' => 'setDataAtualizacao',
+        'data_publicacao_pncp' => 'setDataPublicacaoPncp',
         'cnpj' => 'setCnpj',
+        'quantidade' => 'setQuantidade',
+        'valor_total' => 'setValorTotal',
         'ano_pca' => 'setAnoPca',
         'razao_social' => 'setRazaoSocial',
-        'data_atualizacao' => 'setDataAtualizacao',
-        'esfera' => 'setEsfera',
         'poder' => 'setPoder',
-        'quantidade' => 'setQuantidade',
-        'data_publicacao_pncp' => 'setDataPublicacaoPncp'
+        'esfera' => 'setEsfera'
     ];
 
     /**
@@ -225,15 +225,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'valor_total' => 'getValorTotal',
+        'data_atualizacao' => 'getDataAtualizacao',
+        'data_publicacao_pncp' => 'getDataPublicacaoPncp',
         'cnpj' => 'getCnpj',
+        'quantidade' => 'getQuantidade',
+        'valor_total' => 'getValorTotal',
         'ano_pca' => 'getAnoPca',
         'razao_social' => 'getRazaoSocial',
-        'data_atualizacao' => 'getDataAtualizacao',
-        'esfera' => 'getEsfera',
         'poder' => 'getPoder',
-        'quantidade' => 'getQuantidade',
-        'data_publicacao_pncp' => 'getDataPublicacaoPncp'
+        'esfera' => 'getEsfera'
     ];
 
     /**
@@ -293,15 +293,15 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('valor_total', $data ?? [], null);
+        $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
         $this->setIfExists('cnpj', $data ?? [], null);
+        $this->setIfExists('quantidade', $data ?? [], null);
+        $this->setIfExists('valor_total', $data ?? [], null);
         $this->setIfExists('ano_pca', $data ?? [], null);
         $this->setIfExists('razao_social', $data ?? [], null);
-        $this->setIfExists('data_atualizacao', $data ?? [], null);
-        $this->setIfExists('esfera', $data ?? [], null);
         $this->setIfExists('poder', $data ?? [], null);
-        $this->setIfExists('quantidade', $data ?? [], null);
-        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('esfera', $data ?? [], null);
     }
 
     /**
@@ -347,28 +347,55 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets valor_total
+     * Gets data_atualizacao
      *
-     * @return float|null
+     * @return \DateTime|null
      */
-    public function getValorTotal()
+    public function getDataAtualizacao()
     {
-        return $this->container['valor_total'];
+        return $this->container['data_atualizacao'];
     }
 
     /**
-     * Sets valor_total
+     * Sets data_atualizacao
      *
-     * @param float|null $valor_total valor_total
+     * @param \DateTime|null $data_atualizacao data_atualizacao
      *
      * @return self
      */
-    public function setValorTotal($valor_total)
+    public function setDataAtualizacao($data_atualizacao)
     {
-        if (is_null($valor_total)) {
-            throw new \InvalidArgumentException('non-nullable valor_total cannot be null');
+        if (is_null($data_atualizacao)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
-        $this->container['valor_total'] = $valor_total;
+        $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_publicacao_pncp
+     *
+     * @return \DateTime|null
+     */
+    public function getDataPublicacaoPncp()
+    {
+        return $this->container['data_publicacao_pncp'];
+    }
+
+    /**
+     * Sets data_publicacao_pncp
+     *
+     * @param \DateTime|null $data_publicacao_pncp data_publicacao_pncp
+     *
+     * @return self
+     */
+    public function setDataPublicacaoPncp($data_publicacao_pncp)
+    {
+        if (is_null($data_publicacao_pncp)) {
+            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
+        }
+        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
 
         return $this;
     }
@@ -396,6 +423,60 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
         }
         $this->container['cnpj'] = $cnpj;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantidade
+     *
+     * @return float|null
+     */
+    public function getQuantidade()
+    {
+        return $this->container['quantidade'];
+    }
+
+    /**
+     * Sets quantidade
+     *
+     * @param float|null $quantidade quantidade
+     *
+     * @return self
+     */
+    public function setQuantidade($quantidade)
+    {
+        if (is_null($quantidade)) {
+            throw new \InvalidArgumentException('non-nullable quantidade cannot be null');
+        }
+        $this->container['quantidade'] = $quantidade;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_total
+     *
+     * @return float|null
+     */
+    public function getValorTotal()
+    {
+        return $this->container['valor_total'];
+    }
+
+    /**
+     * Sets valor_total
+     *
+     * @param float|null $valor_total valor_total
+     *
+     * @return self
+     */
+    public function setValorTotal($valor_total)
+    {
+        if (is_null($valor_total)) {
+            throw new \InvalidArgumentException('non-nullable valor_total cannot be null');
+        }
+        $this->container['valor_total'] = $valor_total;
 
         return $this;
     }
@@ -455,60 +536,6 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets data_atualizacao
-     *
-     * @return \DateTime|null
-     */
-    public function getDataAtualizacao()
-    {
-        return $this->container['data_atualizacao'];
-    }
-
-    /**
-     * Sets data_atualizacao
-     *
-     * @param \DateTime|null $data_atualizacao data_atualizacao
-     *
-     * @return self
-     */
-    public function setDataAtualizacao($data_atualizacao)
-    {
-        if (is_null($data_atualizacao)) {
-            throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
-        }
-        $this->container['data_atualizacao'] = $data_atualizacao;
-
-        return $this;
-    }
-
-    /**
-     * Gets esfera
-     *
-     * @return string|null
-     */
-    public function getEsfera()
-    {
-        return $this->container['esfera'];
-    }
-
-    /**
-     * Sets esfera
-     *
-     * @param string|null $esfera esfera
-     *
-     * @return self
-     */
-    public function setEsfera($esfera)
-    {
-        if (is_null($esfera)) {
-            throw new \InvalidArgumentException('non-nullable esfera cannot be null');
-        }
-        $this->container['esfera'] = $esfera;
-
-        return $this;
-    }
-
-    /**
      * Gets poder
      *
      * @return string|null
@@ -536,55 +563,28 @@ class PlanoContratacaoItemOrgaoToDTO implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets quantidade
+     * Gets esfera
      *
-     * @return float|null
+     * @return string|null
      */
-    public function getQuantidade()
+    public function getEsfera()
     {
-        return $this->container['quantidade'];
+        return $this->container['esfera'];
     }
 
     /**
-     * Sets quantidade
+     * Sets esfera
      *
-     * @param float|null $quantidade quantidade
+     * @param string|null $esfera esfera
      *
      * @return self
      */
-    public function setQuantidade($quantidade)
+    public function setEsfera($esfera)
     {
-        if (is_null($quantidade)) {
-            throw new \InvalidArgumentException('non-nullable quantidade cannot be null');
+        if (is_null($esfera)) {
+            throw new \InvalidArgumentException('non-nullable esfera cannot be null');
         }
-        $this->container['quantidade'] = $quantidade;
-
-        return $this;
-    }
-
-    /**
-     * Gets data_publicacao_pncp
-     *
-     * @return \DateTime|null
-     */
-    public function getDataPublicacaoPncp()
-    {
-        return $this->container['data_publicacao_pncp'];
-    }
-
-    /**
-     * Sets data_publicacao_pncp
-     *
-     * @param \DateTime|null $data_publicacao_pncp data_publicacao_pncp
-     *
-     * @return self
-     */
-    public function setDataPublicacaoPncp($data_publicacao_pncp)
-    {
-        if (is_null($data_publicacao_pncp)) {
-            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
-        }
-        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+        $this->container['esfera'] = $esfera;
 
         return $this;
     }

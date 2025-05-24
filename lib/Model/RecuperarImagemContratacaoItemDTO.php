@@ -59,13 +59,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPITypes = [
         'url' => 'string',
-        'legenda' => 'string',
-        'id_contratacao_pncp' => 'string',
-        'sequencial_imagem' => 'int',
         'data_publicacao_pncp' => 'string',
         'numero_item' => 'int',
+        'titulo' => 'string',
         'texto_alternativo' => 'string',
-        'titulo' => 'string'
+        'legenda' => 'string',
+        'id_contratacao_pncp' => 'string',
+        'sequencial_imagem' => 'int'
     ];
 
     /**
@@ -77,13 +77,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPIFormats = [
         'url' => null,
-        'legenda' => null,
-        'id_contratacao_pncp' => null,
-        'sequencial_imagem' => 'int32',
         'data_publicacao_pncp' => null,
         'numero_item' => 'int32',
+        'titulo' => null,
         'texto_alternativo' => null,
-        'titulo' => null
+        'legenda' => null,
+        'id_contratacao_pncp' => null,
+        'sequencial_imagem' => 'int32'
     ];
 
     /**
@@ -93,13 +93,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
       */
     protected static array $openAPINullables = [
         'url' => false,
-		'legenda' => false,
-		'id_contratacao_pncp' => false,
-		'sequencial_imagem' => false,
 		'data_publicacao_pncp' => false,
 		'numero_item' => false,
+		'titulo' => false,
 		'texto_alternativo' => false,
-		'titulo' => false
+		'legenda' => false,
+		'id_contratacao_pncp' => false,
+		'sequencial_imagem' => false
     ];
 
     /**
@@ -189,13 +189,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
      */
     protected static $attributeMap = [
         'url' => 'url',
-        'legenda' => 'legenda',
-        'id_contratacao_pncp' => 'idContratacaoPncp',
-        'sequencial_imagem' => 'sequencialImagem',
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
         'numero_item' => 'numeroItem',
+        'titulo' => 'titulo',
         'texto_alternativo' => 'textoAlternativo',
-        'titulo' => 'titulo'
+        'legenda' => 'legenda',
+        'id_contratacao_pncp' => 'idContratacaoPncp',
+        'sequencial_imagem' => 'sequencialImagem'
     ];
 
     /**
@@ -205,13 +205,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
      */
     protected static $setters = [
         'url' => 'setUrl',
-        'legenda' => 'setLegenda',
-        'id_contratacao_pncp' => 'setIdContratacaoPncp',
-        'sequencial_imagem' => 'setSequencialImagem',
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
         'numero_item' => 'setNumeroItem',
+        'titulo' => 'setTitulo',
         'texto_alternativo' => 'setTextoAlternativo',
-        'titulo' => 'setTitulo'
+        'legenda' => 'setLegenda',
+        'id_contratacao_pncp' => 'setIdContratacaoPncp',
+        'sequencial_imagem' => 'setSequencialImagem'
     ];
 
     /**
@@ -221,13 +221,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
      */
     protected static $getters = [
         'url' => 'getUrl',
-        'legenda' => 'getLegenda',
-        'id_contratacao_pncp' => 'getIdContratacaoPncp',
-        'sequencial_imagem' => 'getSequencialImagem',
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
         'numero_item' => 'getNumeroItem',
+        'titulo' => 'getTitulo',
         'texto_alternativo' => 'getTextoAlternativo',
-        'titulo' => 'getTitulo'
+        'legenda' => 'getLegenda',
+        'id_contratacao_pncp' => 'getIdContratacaoPncp',
+        'sequencial_imagem' => 'getSequencialImagem'
     ];
 
     /**
@@ -288,13 +288,13 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
     public function __construct(array $data = null)
     {
         $this->setIfExists('url', $data ?? [], null);
+        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('numero_item', $data ?? [], null);
+        $this->setIfExists('titulo', $data ?? [], null);
+        $this->setIfExists('texto_alternativo', $data ?? [], null);
         $this->setIfExists('legenda', $data ?? [], null);
         $this->setIfExists('id_contratacao_pncp', $data ?? [], null);
         $this->setIfExists('sequencial_imagem', $data ?? [], null);
-        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
-        $this->setIfExists('numero_item', $data ?? [], null);
-        $this->setIfExists('texto_alternativo', $data ?? [], null);
-        $this->setIfExists('titulo', $data ?? [], null);
     }
 
     /**
@@ -362,6 +362,114 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
             throw new \InvalidArgumentException('non-nullable url cannot be null');
         }
         $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_publicacao_pncp
+     *
+     * @return string|null
+     */
+    public function getDataPublicacaoPncp()
+    {
+        return $this->container['data_publicacao_pncp'];
+    }
+
+    /**
+     * Sets data_publicacao_pncp
+     *
+     * @param string|null $data_publicacao_pncp data_publicacao_pncp
+     *
+     * @return self
+     */
+    public function setDataPublicacaoPncp($data_publicacao_pncp)
+    {
+        if (is_null($data_publicacao_pncp)) {
+            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
+        }
+        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+
+        return $this;
+    }
+
+    /**
+     * Gets numero_item
+     *
+     * @return int|null
+     */
+    public function getNumeroItem()
+    {
+        return $this->container['numero_item'];
+    }
+
+    /**
+     * Sets numero_item
+     *
+     * @param int|null $numero_item numero_item
+     *
+     * @return self
+     */
+    public function setNumeroItem($numero_item)
+    {
+        if (is_null($numero_item)) {
+            throw new \InvalidArgumentException('non-nullable numero_item cannot be null');
+        }
+        $this->container['numero_item'] = $numero_item;
+
+        return $this;
+    }
+
+    /**
+     * Gets titulo
+     *
+     * @return string|null
+     */
+    public function getTitulo()
+    {
+        return $this->container['titulo'];
+    }
+
+    /**
+     * Sets titulo
+     *
+     * @param string|null $titulo titulo
+     *
+     * @return self
+     */
+    public function setTitulo($titulo)
+    {
+        if (is_null($titulo)) {
+            throw new \InvalidArgumentException('non-nullable titulo cannot be null');
+        }
+        $this->container['titulo'] = $titulo;
+
+        return $this;
+    }
+
+    /**
+     * Gets texto_alternativo
+     *
+     * @return string|null
+     */
+    public function getTextoAlternativo()
+    {
+        return $this->container['texto_alternativo'];
+    }
+
+    /**
+     * Sets texto_alternativo
+     *
+     * @param string|null $texto_alternativo texto_alternativo
+     *
+     * @return self
+     */
+    public function setTextoAlternativo($texto_alternativo)
+    {
+        if (is_null($texto_alternativo)) {
+            throw new \InvalidArgumentException('non-nullable texto_alternativo cannot be null');
+        }
+        $this->container['texto_alternativo'] = $texto_alternativo;
 
         return $this;
     }
@@ -443,114 +551,6 @@ class RecuperarImagemContratacaoItemDTO implements ModelInterface, ArrayAccess, 
             throw new \InvalidArgumentException('non-nullable sequencial_imagem cannot be null');
         }
         $this->container['sequencial_imagem'] = $sequencial_imagem;
-
-        return $this;
-    }
-
-    /**
-     * Gets data_publicacao_pncp
-     *
-     * @return string|null
-     */
-    public function getDataPublicacaoPncp()
-    {
-        return $this->container['data_publicacao_pncp'];
-    }
-
-    /**
-     * Sets data_publicacao_pncp
-     *
-     * @param string|null $data_publicacao_pncp data_publicacao_pncp
-     *
-     * @return self
-     */
-    public function setDataPublicacaoPncp($data_publicacao_pncp)
-    {
-        if (is_null($data_publicacao_pncp)) {
-            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
-        }
-        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
-
-        return $this;
-    }
-
-    /**
-     * Gets numero_item
-     *
-     * @return int|null
-     */
-    public function getNumeroItem()
-    {
-        return $this->container['numero_item'];
-    }
-
-    /**
-     * Sets numero_item
-     *
-     * @param int|null $numero_item numero_item
-     *
-     * @return self
-     */
-    public function setNumeroItem($numero_item)
-    {
-        if (is_null($numero_item)) {
-            throw new \InvalidArgumentException('non-nullable numero_item cannot be null');
-        }
-        $this->container['numero_item'] = $numero_item;
-
-        return $this;
-    }
-
-    /**
-     * Gets texto_alternativo
-     *
-     * @return string|null
-     */
-    public function getTextoAlternativo()
-    {
-        return $this->container['texto_alternativo'];
-    }
-
-    /**
-     * Sets texto_alternativo
-     *
-     * @param string|null $texto_alternativo texto_alternativo
-     *
-     * @return self
-     */
-    public function setTextoAlternativo($texto_alternativo)
-    {
-        if (is_null($texto_alternativo)) {
-            throw new \InvalidArgumentException('non-nullable texto_alternativo cannot be null');
-        }
-        $this->container['texto_alternativo'] = $texto_alternativo;
-
-        return $this;
-    }
-
-    /**
-     * Gets titulo
-     *
-     * @return string|null
-     */
-    public function getTitulo()
-    {
-        return $this->container['titulo'];
-    }
-
-    /**
-     * Sets titulo
-     *
-     * @param string|null $titulo titulo
-     *
-     * @return self
-     */
-    public function setTitulo($titulo)
-    {
-        if (is_null($titulo)) {
-            throw new \InvalidArgumentException('non-nullable titulo cannot be null');
-        }
-        $this->container['titulo'] = $titulo;
 
         return $this;
     }

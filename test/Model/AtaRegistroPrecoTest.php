@@ -162,6 +162,15 @@ class AtaRegistroPrecoTest extends TestCase
     }
 
     /**
+     * Test attribute "data_atualizacao_global"
+     */
+    public function testPropertyDataAtualizacaoGlobal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "data_vigencia_inicio"
      */
     public function testPropertyDataVigenciaInicio()

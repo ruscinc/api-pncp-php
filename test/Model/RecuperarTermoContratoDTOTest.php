@@ -81,36 +81,36 @@ class RecuperarTermoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "qualificacao_fornecedor"
-     */
-    public function testPropertyQualificacaoFornecedor()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "qualificacao_reajuste"
-     */
-    public function testPropertyQualificacaoReajuste()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "informativo_observacao"
-     */
-    public function testPropertyInformativoObservacao()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "data_atualizacao"
      */
     public function testPropertyDataAtualizacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_publicacao_pncp"
+     */
+    public function testPropertyDataPublicacaoPncp()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "informacao_complementar"
+     */
+    public function testPropertyInformacaoComplementar()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "orgao_entidade"
+     */
+    public function testPropertyOrgaoEntidade()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -144,15 +144,6 @@ class RecuperarTermoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "fornecedor_sub_contratado"
-     */
-    public function testPropertyFornecedorSubContratado()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "tipo_pessoa_sub_contratada"
      */
     public function testPropertyTipoPessoaSubContratada()
@@ -180,63 +171,9 @@ class RecuperarTermoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "data_publicacao_pncp"
+     * Test attribute "fornecedor_sub_contratado"
      */
-    public function testPropertyDataPublicacaoPncp()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "fundamento_legal"
-     */
-    public function testPropertyFundamentoLegal()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "valor_acrescido"
-     */
-    public function testPropertyValorAcrescido()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "prazo_aditado_dias"
-     */
-    public function testPropertyPrazoAditadoDias()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "qualificacao_acrescimo_supressao"
-     */
-    public function testPropertyQualificacaoAcrescimoSupressao()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "qualificacao_vigencia"
-     */
-    public function testPropertyQualificacaoVigencia()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "orgao_entidade"
-     */
-    public function testPropertyOrgaoEntidade()
+    public function testPropertyFornecedorSubContratado()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -288,9 +225,36 @@ class RecuperarTermoContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "processo"
+     */
+    public function testPropertyProcesso()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "nome_razao_social_fornecedor"
      */
     public function testPropertyNomeRazaoSocialFornecedor()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numero_termo_contrato"
+     */
+    public function testPropertyNumeroTermoContrato()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numero_parcelas"
+     */
+    public function testPropertyNumeroParcelas()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -315,42 +279,6 @@ class RecuperarTermoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "numero_termo_contrato"
-     */
-    public function testPropertyNumeroTermoContrato()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "informacao_complementar"
-     */
-    public function testPropertyInformacaoComplementar()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "processo"
-     */
-    public function testPropertyProcesso()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "numero_parcelas"
-     */
-    public function testPropertyNumeroParcelas()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "valor_parcela"
      */
     public function testPropertyValorParcela()
@@ -369,6 +297,60 @@ class RecuperarTermoContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "qualificacao_acrescimo_supressao"
+     */
+    public function testPropertyQualificacaoAcrescimoSupressao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "qualificacao_vigencia"
+     */
+    public function testPropertyQualificacaoVigencia()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "qualificacao_fornecedor"
+     */
+    public function testPropertyQualificacaoFornecedor()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "qualificacao_reajuste"
+     */
+    public function testPropertyQualificacaoReajuste()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "prazo_aditado_dias"
+     */
+    public function testPropertyPrazoAditadoDias()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "informativo_observacao"
+     */
+    public function testPropertyInformativoObservacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "orgao_subrogado"
      */
     public function testPropertyOrgaoSubrogado()
@@ -381,6 +363,24 @@ class RecuperarTermoContratoDTOTest extends TestCase
      * Test attribute "objeto_termo_contrato"
      */
     public function testPropertyObjetoTermoContrato()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fundamento_legal"
+     */
+    public function testPropertyFundamentoLegal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_acrescido"
+     */
+    public function testPropertyValorAcrescido()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

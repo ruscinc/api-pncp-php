@@ -59,11 +59,11 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'modalidade' => 'string',
+        'modalidade' => '\OpenAPI\Client\Model\Modalidade',
         'numero_compra' => 'string',
         'ano_compra' => 'int',
         'processo' => 'string',
-        'tipo_instrumento_convocatorio' => 'string',
+        'tipo_instrumento_convocatorio' => '\OpenAPI\Client\Model\TipoInstrumentoConvocatorio',
         'situacao_compra' => 'string',
         'objeto_compra' => 'string',
         'informacao_complementar' => 'string',
@@ -73,6 +73,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'data_publicacao_pncp' => '\DateTime',
         'data_inclusao' => '\DateTime',
         'data_atualizacao' => '\DateTime',
+        'data_atualizacao_global' => '\DateTime',
         'sequencial_compra' => 'int',
         'lista_itens_descricao' => 'string',
         'orgao_entidade' => '\OpenAPI\Client\Model\OrgaoEntidade',
@@ -80,11 +81,15 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'orgao_sub_rogado' => '\OpenAPI\Client\Model\OrgaoEntidade',
         'unidade_sub_rogada' => '\OpenAPI\Client\Model\UnidadeOrgao',
         'amparo_legal' => '\OpenAPI\Client\Model\AmparoLegal',
-        'modo_disputa' => 'string',
+        'modo_disputa' => '\OpenAPI\Client\Model\ModoDisputa',
         'link_sistema_origem' => 'string',
+        'link_processo_eletronico' => 'string',
         'excluido' => 'bool',
         'atributo_controle' => 'int',
         'justificativa_presencial' => 'string',
+        'valor_total' => 'float',
+        'valor_total_homologado' => 'float',
+        'indicador_orcamento_sigiloso' => 'string',
         'existe_resultado' => 'bool',
         'numero_controle' => 'string'
     ];
@@ -112,6 +117,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'data_publicacao_pncp' => 'date-time',
         'data_inclusao' => 'date-time',
         'data_atualizacao' => 'date-time',
+        'data_atualizacao_global' => 'date-time',
         'sequencial_compra' => 'int32',
         'lista_itens_descricao' => null,
         'orgao_entidade' => null,
@@ -121,9 +127,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'amparo_legal' => null,
         'modo_disputa' => null,
         'link_sistema_origem' => null,
+        'link_processo_eletronico' => null,
         'excluido' => null,
         'atributo_controle' => 'int64',
         'justificativa_presencial' => null,
+        'valor_total' => null,
+        'valor_total_homologado' => null,
+        'indicador_orcamento_sigiloso' => null,
         'existe_resultado' => null,
         'numero_controle' => null
     ];
@@ -149,6 +159,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
 		'data_publicacao_pncp' => false,
 		'data_inclusao' => false,
 		'data_atualizacao' => false,
+		'data_atualizacao_global' => false,
 		'sequencial_compra' => false,
 		'lista_itens_descricao' => false,
 		'orgao_entidade' => false,
@@ -158,9 +169,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
 		'amparo_legal' => false,
 		'modo_disputa' => false,
 		'link_sistema_origem' => false,
+		'link_processo_eletronico' => false,
 		'excluido' => false,
 		'atributo_controle' => false,
 		'justificativa_presencial' => false,
+		'valor_total' => false,
+		'valor_total_homologado' => false,
+		'indicador_orcamento_sigiloso' => false,
 		'existe_resultado' => false,
 		'numero_controle' => false
     ];
@@ -266,6 +281,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
         'data_inclusao' => 'dataInclusao',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_atualizacao_global' => 'dataAtualizacaoGlobal',
         'sequencial_compra' => 'sequencialCompra',
         'lista_itens_descricao' => 'listaItensDescricao',
         'orgao_entidade' => 'orgaoEntidade',
@@ -275,9 +291,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'amparo_legal' => 'amparoLegal',
         'modo_disputa' => 'modoDisputa',
         'link_sistema_origem' => 'linkSistemaOrigem',
+        'link_processo_eletronico' => 'linkProcessoEletronico',
         'excluido' => 'excluido',
         'atributo_controle' => 'atributoControle',
         'justificativa_presencial' => 'justificativaPresencial',
+        'valor_total' => 'valorTotal',
+        'valor_total_homologado' => 'valorTotalHomologado',
+        'indicador_orcamento_sigiloso' => 'indicadorOrcamentoSigiloso',
         'existe_resultado' => 'existeResultado',
         'numero_controle' => 'numeroControle'
     ];
@@ -303,6 +323,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
         'data_inclusao' => 'setDataInclusao',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_atualizacao_global' => 'setDataAtualizacaoGlobal',
         'sequencial_compra' => 'setSequencialCompra',
         'lista_itens_descricao' => 'setListaItensDescricao',
         'orgao_entidade' => 'setOrgaoEntidade',
@@ -312,9 +333,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'amparo_legal' => 'setAmparoLegal',
         'modo_disputa' => 'setModoDisputa',
         'link_sistema_origem' => 'setLinkSistemaOrigem',
+        'link_processo_eletronico' => 'setLinkProcessoEletronico',
         'excluido' => 'setExcluido',
         'atributo_controle' => 'setAtributoControle',
         'justificativa_presencial' => 'setJustificativaPresencial',
+        'valor_total' => 'setValorTotal',
+        'valor_total_homologado' => 'setValorTotalHomologado',
+        'indicador_orcamento_sigiloso' => 'setIndicadorOrcamentoSigiloso',
         'existe_resultado' => 'setExisteResultado',
         'numero_controle' => 'setNumeroControle'
     ];
@@ -340,6 +365,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
         'data_inclusao' => 'getDataInclusao',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_atualizacao_global' => 'getDataAtualizacaoGlobal',
         'sequencial_compra' => 'getSequencialCompra',
         'lista_itens_descricao' => 'getListaItensDescricao',
         'orgao_entidade' => 'getOrgaoEntidade',
@@ -349,9 +375,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         'amparo_legal' => 'getAmparoLegal',
         'modo_disputa' => 'getModoDisputa',
         'link_sistema_origem' => 'getLinkSistemaOrigem',
+        'link_processo_eletronico' => 'getLinkProcessoEletronico',
         'excluido' => 'getExcluido',
         'atributo_controle' => 'getAtributoControle',
         'justificativa_presencial' => 'getJustificativaPresencial',
+        'valor_total' => 'getValorTotal',
+        'valor_total_homologado' => 'getValorTotalHomologado',
+        'indicador_orcamento_sigiloso' => 'getIndicadorOrcamentoSigiloso',
         'existe_resultado' => 'getExisteResultado',
         'numero_controle' => 'getNumeroControle'
     ];
@@ -397,72 +427,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    public const MODALIDADE__1 = '1';
-    public const MODALIDADE__2 = '2';
-    public const MODALIDADE__3 = '3';
-    public const MODALIDADE__4 = '4';
-    public const MODALIDADE__5 = '5';
-    public const MODALIDADE__6 = '6';
-    public const MODALIDADE__7 = '7';
-    public const MODALIDADE__8 = '8';
-    public const MODALIDADE__9 = '9';
-    public const MODALIDADE__10 = '10';
-    public const MODALIDADE__11 = '11';
-    public const MODALIDADE__12 = '12';
-    public const MODALIDADE__13 = '13';
-    public const MODALIDADE__14 = '14';
-    public const TIPO_INSTRUMENTO_CONVOCATORIO__1 = '1';
-    public const TIPO_INSTRUMENTO_CONVOCATORIO__2 = '2';
-    public const TIPO_INSTRUMENTO_CONVOCATORIO__3 = '3';
     public const SITUACAO_COMPRA__1 = '1';
     public const SITUACAO_COMPRA__2 = '2';
     public const SITUACAO_COMPRA__3 = '3';
     public const SITUACAO_COMPRA__4 = '4';
-    public const MODO_DISPUTA__1 = '1';
-    public const MODO_DISPUTA__2 = '2';
-    public const MODO_DISPUTA__3 = '3';
-    public const MODO_DISPUTA__4 = '4';
-    public const MODO_DISPUTA__5 = '5';
-    public const MODO_DISPUTA__6 = '6';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getModalidadeAllowableValues()
-    {
-        return [
-            self::MODALIDADE__1,
-            self::MODALIDADE__2,
-            self::MODALIDADE__3,
-            self::MODALIDADE__4,
-            self::MODALIDADE__5,
-            self::MODALIDADE__6,
-            self::MODALIDADE__7,
-            self::MODALIDADE__8,
-            self::MODALIDADE__9,
-            self::MODALIDADE__10,
-            self::MODALIDADE__11,
-            self::MODALIDADE__12,
-            self::MODALIDADE__13,
-            self::MODALIDADE__14,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTipoInstrumentoConvocatorioAllowableValues()
-    {
-        return [
-            self::TIPO_INSTRUMENTO_CONVOCATORIO__1,
-            self::TIPO_INSTRUMENTO_CONVOCATORIO__2,
-            self::TIPO_INSTRUMENTO_CONVOCATORIO__3,
-        ];
-    }
+    public const INDICADOR_ORCAMENTO_SIGILOSO_SEM_SIGILO_CODIGO1_DESCRICAOCOMPRA_SEM_SIGILO = 'IndicadorOrcamentoSigiloso.COMPRA_SEM_SIGILO(codigo=1, descricao=Compra sem sigilo)';
+    public const INDICADOR_ORCAMENTO_SIGILOSO_PARCIALMENTE_SIGILOSA_CODIGO2_DESCRICAOCOMPRA_PARCIALMENTE_SIGILOSA = 'IndicadorOrcamentoSigiloso.COMPRA_PARCIALMENTE_SIGILOSA(codigo=2, descricao=Compra parcialmente sigilosa)';
+    public const INDICADOR_ORCAMENTO_SIGILOSO_TOTALMENTE_SIGILOSA_CODIGO3_DESCRICAOCOMPRA_TOTALMENTE_SIGILOSA = 'IndicadorOrcamentoSigiloso.COMPRA_TOTALMENTE_SIGILOSA(codigo=3, descricao=Compra totalmente sigilosa)';
 
     /**
      * Gets allowable values of the enum
@@ -484,15 +455,12 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]
      */
-    public function getModoDisputaAllowableValues()
+    public function getIndicadorOrcamentoSigilosoAllowableValues()
     {
         return [
-            self::MODO_DISPUTA__1,
-            self::MODO_DISPUTA__2,
-            self::MODO_DISPUTA__3,
-            self::MODO_DISPUTA__4,
-            self::MODO_DISPUTA__5,
-            self::MODO_DISPUTA__6,
+            self::INDICADOR_ORCAMENTO_SIGILOSO_SEM_SIGILO_CODIGO1_DESCRICAOCOMPRA_SEM_SIGILO,
+            self::INDICADOR_ORCAMENTO_SIGILOSO_PARCIALMENTE_SIGILOSA_CODIGO2_DESCRICAOCOMPRA_PARCIALMENTE_SIGILOSA,
+            self::INDICADOR_ORCAMENTO_SIGILOSO_TOTALMENTE_SIGILOSA_CODIGO3_DESCRICAOCOMPRA_TOTALMENTE_SIGILOSA,
         ];
     }
 
@@ -526,6 +494,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global', $data ?? [], null);
         $this->setIfExists('sequencial_compra', $data ?? [], null);
         $this->setIfExists('lista_itens_descricao', $data ?? [], null);
         $this->setIfExists('orgao_entidade', $data ?? [], null);
@@ -535,9 +504,13 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('amparo_legal', $data ?? [], null);
         $this->setIfExists('modo_disputa', $data ?? [], null);
         $this->setIfExists('link_sistema_origem', $data ?? [], null);
+        $this->setIfExists('link_processo_eletronico', $data ?? [], null);
         $this->setIfExists('excluido', $data ?? [], null);
         $this->setIfExists('atributo_controle', $data ?? [], null);
         $this->setIfExists('justificativa_presencial', $data ?? [], null);
+        $this->setIfExists('valor_total', $data ?? [], null);
+        $this->setIfExists('valor_total_homologado', $data ?? [], null);
+        $this->setIfExists('indicador_orcamento_sigiloso', $data ?? [], null);
         $this->setIfExists('existe_resultado', $data ?? [], null);
         $this->setIfExists('numero_controle', $data ?? [], null);
     }
@@ -569,38 +542,11 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getModalidadeAllowableValues();
-        if (!is_null($this->container['modalidade']) && !in_array($this->container['modalidade'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'modalidade', must be one of '%s'",
-                $this->container['modalidade'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getTipoInstrumentoConvocatorioAllowableValues();
-        if (!is_null($this->container['tipo_instrumento_convocatorio']) && !in_array($this->container['tipo_instrumento_convocatorio'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'tipo_instrumento_convocatorio', must be one of '%s'",
-                $this->container['tipo_instrumento_convocatorio'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         $allowedValues = $this->getSituacaoCompraAllowableValues();
         if (!is_null($this->container['situacao_compra']) && !in_array($this->container['situacao_compra'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'situacao_compra', must be one of '%s'",
                 $this->container['situacao_compra'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getModoDisputaAllowableValues();
-        if (!is_null($this->container['modo_disputa']) && !in_array($this->container['modo_disputa'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'modo_disputa', must be one of '%s'",
-                $this->container['modo_disputa'],
                 implode("', '", $allowedValues)
             );
         }
@@ -611,6 +557,15 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if (!is_null($this->container['justificativa_presencial']) && (mb_strlen($this->container['justificativa_presencial']) < 0)) {
             $invalidProperties[] = "invalid value for 'justificativa_presencial', the character length must be bigger than or equal to 0.";
+        }
+
+        $allowedValues = $this->getIndicadorOrcamentoSigilosoAllowableValues();
+        if (!is_null($this->container['indicador_orcamento_sigiloso']) && !in_array($this->container['indicador_orcamento_sigiloso'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'indicador_orcamento_sigiloso', must be one of '%s'",
+                $this->container['indicador_orcamento_sigiloso'],
+                implode("', '", $allowedValues)
+            );
         }
 
         return $invalidProperties;
@@ -658,7 +613,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets modalidade
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\Modalidade|null
      */
     public function getModalidade()
     {
@@ -668,7 +623,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets modalidade
      *
-     * @param string|null $modalidade modalidade
+     * @param \OpenAPI\Client\Model\Modalidade|null $modalidade modalidade
      *
      * @return self
      */
@@ -676,16 +631,6 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         if (is_null($modalidade)) {
             throw new \InvalidArgumentException('non-nullable modalidade cannot be null');
-        }
-        $allowedValues = $this->getModalidadeAllowableValues();
-        if (!in_array($modalidade, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'modalidade', must be one of '%s'",
-                    $modalidade,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['modalidade'] = $modalidade;
 
@@ -776,7 +721,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tipo_instrumento_convocatorio
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\TipoInstrumentoConvocatorio|null
      */
     public function getTipoInstrumentoConvocatorio()
     {
@@ -786,7 +731,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tipo_instrumento_convocatorio
      *
-     * @param string|null $tipo_instrumento_convocatorio tipo_instrumento_convocatorio
+     * @param \OpenAPI\Client\Model\TipoInstrumentoConvocatorio|null $tipo_instrumento_convocatorio tipo_instrumento_convocatorio
      *
      * @return self
      */
@@ -794,16 +739,6 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         if (is_null($tipo_instrumento_convocatorio)) {
             throw new \InvalidArgumentException('non-nullable tipo_instrumento_convocatorio cannot be null');
-        }
-        $allowedValues = $this->getTipoInstrumentoConvocatorioAllowableValues();
-        if (!in_array($tipo_instrumento_convocatorio, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'tipo_instrumento_convocatorio', must be one of '%s'",
-                    $tipo_instrumento_convocatorio,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['tipo_instrumento_convocatorio'] = $tipo_instrumento_convocatorio;
 
@@ -1064,6 +999,33 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets data_atualizacao_global
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobal()
+    {
+        return $this->container['data_atualizacao_global'];
+    }
+
+    /**
+     * Sets data_atualizacao_global
+     *
+     * @param \DateTime|null $data_atualizacao_global data_atualizacao_global
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobal($data_atualizacao_global)
+    {
+        if (is_null($data_atualizacao_global)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global cannot be null');
+        }
+        $this->container['data_atualizacao_global'] = $data_atualizacao_global;
+
+        return $this;
+    }
+
+    /**
      * Gets sequencial_compra
      *
      * @return int|null
@@ -1255,7 +1217,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets modo_disputa
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\ModoDisputa|null
      */
     public function getModoDisputa()
     {
@@ -1265,7 +1227,7 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets modo_disputa
      *
-     * @param string|null $modo_disputa modo_disputa
+     * @param \OpenAPI\Client\Model\ModoDisputa|null $modo_disputa modo_disputa
      *
      * @return self
      */
@@ -1273,16 +1235,6 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         if (is_null($modo_disputa)) {
             throw new \InvalidArgumentException('non-nullable modo_disputa cannot be null');
-        }
-        $allowedValues = $this->getModoDisputaAllowableValues();
-        if (!in_array($modo_disputa, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'modo_disputa', must be one of '%s'",
-                    $modo_disputa,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['modo_disputa'] = $modo_disputa;
 
@@ -1312,6 +1264,33 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable link_sistema_origem cannot be null');
         }
         $this->container['link_sistema_origem'] = $link_sistema_origem;
+
+        return $this;
+    }
+
+    /**
+     * Gets link_processo_eletronico
+     *
+     * @return string|null
+     */
+    public function getLinkProcessoEletronico()
+    {
+        return $this->container['link_processo_eletronico'];
+    }
+
+    /**
+     * Sets link_processo_eletronico
+     *
+     * @param string|null $link_processo_eletronico link_processo_eletronico
+     *
+     * @return self
+     */
+    public function setLinkProcessoEletronico($link_processo_eletronico)
+    {
+        if (is_null($link_processo_eletronico)) {
+            throw new \InvalidArgumentException('non-nullable link_processo_eletronico cannot be null');
+        }
+        $this->container['link_processo_eletronico'] = $link_processo_eletronico;
 
         return $this;
     }
@@ -1400,6 +1379,97 @@ class Compra implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['justificativa_presencial'] = $justificativa_presencial;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_total
+     *
+     * @return float|null
+     */
+    public function getValorTotal()
+    {
+        return $this->container['valor_total'];
+    }
+
+    /**
+     * Sets valor_total
+     *
+     * @param float|null $valor_total valor_total
+     *
+     * @return self
+     */
+    public function setValorTotal($valor_total)
+    {
+        if (is_null($valor_total)) {
+            throw new \InvalidArgumentException('non-nullable valor_total cannot be null');
+        }
+        $this->container['valor_total'] = $valor_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_total_homologado
+     *
+     * @return float|null
+     */
+    public function getValorTotalHomologado()
+    {
+        return $this->container['valor_total_homologado'];
+    }
+
+    /**
+     * Sets valor_total_homologado
+     *
+     * @param float|null $valor_total_homologado valor_total_homologado
+     *
+     * @return self
+     */
+    public function setValorTotalHomologado($valor_total_homologado)
+    {
+        if (is_null($valor_total_homologado)) {
+            throw new \InvalidArgumentException('non-nullable valor_total_homologado cannot be null');
+        }
+        $this->container['valor_total_homologado'] = $valor_total_homologado;
+
+        return $this;
+    }
+
+    /**
+     * Gets indicador_orcamento_sigiloso
+     *
+     * @return string|null
+     */
+    public function getIndicadorOrcamentoSigiloso()
+    {
+        return $this->container['indicador_orcamento_sigiloso'];
+    }
+
+    /**
+     * Sets indicador_orcamento_sigiloso
+     *
+     * @param string|null $indicador_orcamento_sigiloso indicador_orcamento_sigiloso
+     *
+     * @return self
+     */
+    public function setIndicadorOrcamentoSigiloso($indicador_orcamento_sigiloso)
+    {
+        if (is_null($indicador_orcamento_sigiloso)) {
+            throw new \InvalidArgumentException('non-nullable indicador_orcamento_sigiloso cannot be null');
+        }
+        $allowedValues = $this->getIndicadorOrcamentoSigilosoAllowableValues();
+        if (!in_array($indicador_orcamento_sigiloso, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'indicador_orcamento_sigiloso', must be one of '%s'",
+                    $indicador_orcamento_sigiloso,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['indicador_orcamento_sigiloso'] = $indicador_orcamento_sigiloso;
 
         return $this;
     }

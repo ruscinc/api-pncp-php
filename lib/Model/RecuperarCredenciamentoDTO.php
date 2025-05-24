@@ -58,46 +58,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'usuario_deferimento' => 'string',
-        'usuario_analise_processo' => 'string',
         'status' => 'string',
         'cnpj' => 'string',
-        'data_inclusao' => '\DateTime',
         'ano_credenciamento' => 'int',
         'sequencial_credenciamento' => 'int',
+        'data_inclusao' => '\DateTime',
         'excluido' => 'bool',
+        'urledital_credenciamento' => 'string',
+        'responsavel_cadastro_telefone' => 'string',
+        'url_contrato' => 'string',
+        'responsavel_cadastro_cpf' => 'string',
+        'responsavel_cadastro_nome' => 'string',
         'contrato' => 'bool',
         'nome_razao_social' => 'string',
         'ata' => 'bool',
-        'email' => 'string',
-        'responsavel_cadastro_email' => 'string',
-        'nome_sistema' => 'string',
-        'justificativa_analise' => 'string',
-        'data_deferimento' => '\DateTime',
-        'usuario_treinamento_id' => 'int',
-        'data_analise_processo' => '\DateTime',
-        'login_treinamento' => 'string',
-        'justificativa_deferimento' => 'string',
-        'termos_declaracao_aceite' => 'bool',
-        'url_sistema' => 'string',
-        'responsavel_cadastro_nome' => 'string',
-        'responsavel_cadastro_cpf' => 'string',
-        'responsavel_cadastro_telefone' => 'string',
-        'esfera_federal' => 'bool',
-        'ufs' => 'string[]',
-        'esfera_estadual' => 'bool',
-        'esfera_municipal' => 'bool',
-        'edital_credenciamento' => 'bool',
-        'urledital_credenciamento' => 'string',
-        'aviso_contratacao_direta' => 'bool',
-        'url_aviso_contratacao_direta' => 'string',
-        'edital_licitacao' => 'bool',
-        'url_edital_licitacao' => 'string',
         'url_ata' => 'string',
-        'url_contrato' => 'string',
-        'esfera_distrital' => 'bool',
+        'data_analise_processo' => '\DateTime',
+        'url_sistema' => 'string',
+        'edital_licitacao' => 'bool',
+        'aviso_contratacao_direta' => 'bool',
+        'edital_credenciamento' => 'bool',
+        'login_treinamento' => 'string',
         'disponibiliza_artefato_licitacao' => 'bool',
-        'usuario_credenciado' => '\OpenAPI\Client\Model\RecuperarCredenciamentoUsuarioDTO'
+        'email' => 'string',
+        'esfera_distrital' => 'bool',
+        'esfera_municipal' => 'bool',
+        'esfera_estadual' => 'bool',
+        'nome_sistema' => 'string',
+        'data_deferimento' => '\DateTime',
+        'justificativa_analise' => 'string',
+        'usuario_treinamento_id' => 'int',
+        'responsavel_cadastro_email' => 'string',
+        'url_edital_licitacao' => 'string',
+        'url_aviso_contratacao_direta' => 'string',
+        'justificativa_deferimento' => 'string',
+        'ufs' => 'string[]',
+        'esfera_federal' => 'bool',
+        'termos_declaracao_aceite' => 'bool',
+        'usuario_analise_processo' => 'string',
+        'usuario_credenciado' => '\OpenAPI\Client\Model\RecuperarCredenciamentoUsuarioDTO',
+        'usuario_deferimento' => 'string'
     ];
 
     /**
@@ -108,46 +108,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'usuario_deferimento' => null,
-        'usuario_analise_processo' => null,
         'status' => null,
         'cnpj' => null,
-        'data_inclusao' => 'date-time',
         'ano_credenciamento' => 'int32',
         'sequencial_credenciamento' => 'int32',
+        'data_inclusao' => 'date-time',
         'excluido' => null,
+        'urledital_credenciamento' => null,
+        'responsavel_cadastro_telefone' => null,
+        'url_contrato' => null,
+        'responsavel_cadastro_cpf' => null,
+        'responsavel_cadastro_nome' => null,
         'contrato' => null,
         'nome_razao_social' => null,
         'ata' => null,
-        'email' => null,
-        'responsavel_cadastro_email' => null,
-        'nome_sistema' => null,
-        'justificativa_analise' => null,
-        'data_deferimento' => 'date-time',
-        'usuario_treinamento_id' => 'int64',
-        'data_analise_processo' => 'date-time',
-        'login_treinamento' => null,
-        'justificativa_deferimento' => null,
-        'termos_declaracao_aceite' => null,
-        'url_sistema' => null,
-        'responsavel_cadastro_nome' => null,
-        'responsavel_cadastro_cpf' => null,
-        'responsavel_cadastro_telefone' => null,
-        'esfera_federal' => null,
-        'ufs' => null,
-        'esfera_estadual' => null,
-        'esfera_municipal' => null,
-        'edital_credenciamento' => null,
-        'urledital_credenciamento' => null,
-        'aviso_contratacao_direta' => null,
-        'url_aviso_contratacao_direta' => null,
-        'edital_licitacao' => null,
-        'url_edital_licitacao' => null,
         'url_ata' => null,
-        'url_contrato' => null,
-        'esfera_distrital' => null,
+        'data_analise_processo' => 'date-time',
+        'url_sistema' => null,
+        'edital_licitacao' => null,
+        'aviso_contratacao_direta' => null,
+        'edital_credenciamento' => null,
+        'login_treinamento' => null,
         'disponibiliza_artefato_licitacao' => null,
-        'usuario_credenciado' => null
+        'email' => null,
+        'esfera_distrital' => null,
+        'esfera_municipal' => null,
+        'esfera_estadual' => null,
+        'nome_sistema' => null,
+        'data_deferimento' => 'date-time',
+        'justificativa_analise' => null,
+        'usuario_treinamento_id' => 'int64',
+        'responsavel_cadastro_email' => null,
+        'url_edital_licitacao' => null,
+        'url_aviso_contratacao_direta' => null,
+        'justificativa_deferimento' => null,
+        'ufs' => null,
+        'esfera_federal' => null,
+        'termos_declaracao_aceite' => null,
+        'usuario_analise_processo' => null,
+        'usuario_credenciado' => null,
+        'usuario_deferimento' => null
     ];
 
     /**
@@ -156,46 +156,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'usuario_deferimento' => false,
-		'usuario_analise_processo' => false,
-		'status' => false,
+        'status' => false,
 		'cnpj' => false,
-		'data_inclusao' => false,
 		'ano_credenciamento' => false,
 		'sequencial_credenciamento' => false,
+		'data_inclusao' => false,
 		'excluido' => false,
+		'urledital_credenciamento' => false,
+		'responsavel_cadastro_telefone' => false,
+		'url_contrato' => false,
+		'responsavel_cadastro_cpf' => false,
+		'responsavel_cadastro_nome' => false,
 		'contrato' => false,
 		'nome_razao_social' => false,
 		'ata' => false,
-		'email' => false,
-		'responsavel_cadastro_email' => false,
-		'nome_sistema' => false,
-		'justificativa_analise' => false,
-		'data_deferimento' => false,
-		'usuario_treinamento_id' => false,
-		'data_analise_processo' => false,
-		'login_treinamento' => false,
-		'justificativa_deferimento' => false,
-		'termos_declaracao_aceite' => false,
-		'url_sistema' => false,
-		'responsavel_cadastro_nome' => false,
-		'responsavel_cadastro_cpf' => false,
-		'responsavel_cadastro_telefone' => false,
-		'esfera_federal' => false,
-		'ufs' => false,
-		'esfera_estadual' => false,
-		'esfera_municipal' => false,
-		'edital_credenciamento' => false,
-		'urledital_credenciamento' => false,
-		'aviso_contratacao_direta' => false,
-		'url_aviso_contratacao_direta' => false,
-		'edital_licitacao' => false,
-		'url_edital_licitacao' => false,
 		'url_ata' => false,
-		'url_contrato' => false,
-		'esfera_distrital' => false,
+		'data_analise_processo' => false,
+		'url_sistema' => false,
+		'edital_licitacao' => false,
+		'aviso_contratacao_direta' => false,
+		'edital_credenciamento' => false,
+		'login_treinamento' => false,
 		'disponibiliza_artefato_licitacao' => false,
-		'usuario_credenciado' => false
+		'email' => false,
+		'esfera_distrital' => false,
+		'esfera_municipal' => false,
+		'esfera_estadual' => false,
+		'nome_sistema' => false,
+		'data_deferimento' => false,
+		'justificativa_analise' => false,
+		'usuario_treinamento_id' => false,
+		'responsavel_cadastro_email' => false,
+		'url_edital_licitacao' => false,
+		'url_aviso_contratacao_direta' => false,
+		'justificativa_deferimento' => false,
+		'ufs' => false,
+		'esfera_federal' => false,
+		'termos_declaracao_aceite' => false,
+		'usuario_analise_processo' => false,
+		'usuario_credenciado' => false,
+		'usuario_deferimento' => false
     ];
 
     /**
@@ -284,46 +284,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'usuario_deferimento' => 'usuarioDeferimento',
-        'usuario_analise_processo' => 'usuarioAnaliseProcesso',
         'status' => 'status',
         'cnpj' => 'cnpj',
-        'data_inclusao' => 'dataInclusao',
         'ano_credenciamento' => 'anoCredenciamento',
         'sequencial_credenciamento' => 'sequencialCredenciamento',
+        'data_inclusao' => 'dataInclusao',
         'excluido' => 'excluido',
+        'urledital_credenciamento' => 'urleditalCredenciamento',
+        'responsavel_cadastro_telefone' => 'responsavelCadastroTelefone',
+        'url_contrato' => 'urlContrato',
+        'responsavel_cadastro_cpf' => 'responsavelCadastroCpf',
+        'responsavel_cadastro_nome' => 'responsavelCadastroNome',
         'contrato' => 'contrato',
         'nome_razao_social' => 'nomeRazaoSocial',
         'ata' => 'ata',
-        'email' => 'email',
-        'responsavel_cadastro_email' => 'responsavelCadastroEmail',
-        'nome_sistema' => 'nomeSistema',
-        'justificativa_analise' => 'justificativaAnalise',
-        'data_deferimento' => 'dataDeferimento',
-        'usuario_treinamento_id' => 'usuarioTreinamentoId',
-        'data_analise_processo' => 'dataAnaliseProcesso',
-        'login_treinamento' => 'loginTreinamento',
-        'justificativa_deferimento' => 'justificativaDeferimento',
-        'termos_declaracao_aceite' => 'termosDeclaracaoAceite',
-        'url_sistema' => 'urlSistema',
-        'responsavel_cadastro_nome' => 'responsavelCadastroNome',
-        'responsavel_cadastro_cpf' => 'responsavelCadastroCpf',
-        'responsavel_cadastro_telefone' => 'responsavelCadastroTelefone',
-        'esfera_federal' => 'esferaFederal',
-        'ufs' => 'ufs',
-        'esfera_estadual' => 'esferaEstadual',
-        'esfera_municipal' => 'esferaMunicipal',
-        'edital_credenciamento' => 'editalCredenciamento',
-        'urledital_credenciamento' => 'urleditalCredenciamento',
-        'aviso_contratacao_direta' => 'avisoContratacaoDireta',
-        'url_aviso_contratacao_direta' => 'urlAvisoContratacaoDireta',
-        'edital_licitacao' => 'editalLicitacao',
-        'url_edital_licitacao' => 'urlEditalLicitacao',
         'url_ata' => 'urlAta',
-        'url_contrato' => 'urlContrato',
-        'esfera_distrital' => 'esferaDistrital',
+        'data_analise_processo' => 'dataAnaliseProcesso',
+        'url_sistema' => 'urlSistema',
+        'edital_licitacao' => 'editalLicitacao',
+        'aviso_contratacao_direta' => 'avisoContratacaoDireta',
+        'edital_credenciamento' => 'editalCredenciamento',
+        'login_treinamento' => 'loginTreinamento',
         'disponibiliza_artefato_licitacao' => 'disponibilizaArtefatoLicitacao',
-        'usuario_credenciado' => 'usuarioCredenciado'
+        'email' => 'email',
+        'esfera_distrital' => 'esferaDistrital',
+        'esfera_municipal' => 'esferaMunicipal',
+        'esfera_estadual' => 'esferaEstadual',
+        'nome_sistema' => 'nomeSistema',
+        'data_deferimento' => 'dataDeferimento',
+        'justificativa_analise' => 'justificativaAnalise',
+        'usuario_treinamento_id' => 'usuarioTreinamentoId',
+        'responsavel_cadastro_email' => 'responsavelCadastroEmail',
+        'url_edital_licitacao' => 'urlEditalLicitacao',
+        'url_aviso_contratacao_direta' => 'urlAvisoContratacaoDireta',
+        'justificativa_deferimento' => 'justificativaDeferimento',
+        'ufs' => 'ufs',
+        'esfera_federal' => 'esferaFederal',
+        'termos_declaracao_aceite' => 'termosDeclaracaoAceite',
+        'usuario_analise_processo' => 'usuarioAnaliseProcesso',
+        'usuario_credenciado' => 'usuarioCredenciado',
+        'usuario_deferimento' => 'usuarioDeferimento'
     ];
 
     /**
@@ -332,46 +332,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'usuario_deferimento' => 'setUsuarioDeferimento',
-        'usuario_analise_processo' => 'setUsuarioAnaliseProcesso',
         'status' => 'setStatus',
         'cnpj' => 'setCnpj',
-        'data_inclusao' => 'setDataInclusao',
         'ano_credenciamento' => 'setAnoCredenciamento',
         'sequencial_credenciamento' => 'setSequencialCredenciamento',
+        'data_inclusao' => 'setDataInclusao',
         'excluido' => 'setExcluido',
+        'urledital_credenciamento' => 'setUrleditalCredenciamento',
+        'responsavel_cadastro_telefone' => 'setResponsavelCadastroTelefone',
+        'url_contrato' => 'setUrlContrato',
+        'responsavel_cadastro_cpf' => 'setResponsavelCadastroCpf',
+        'responsavel_cadastro_nome' => 'setResponsavelCadastroNome',
         'contrato' => 'setContrato',
         'nome_razao_social' => 'setNomeRazaoSocial',
         'ata' => 'setAta',
-        'email' => 'setEmail',
-        'responsavel_cadastro_email' => 'setResponsavelCadastroEmail',
-        'nome_sistema' => 'setNomeSistema',
-        'justificativa_analise' => 'setJustificativaAnalise',
-        'data_deferimento' => 'setDataDeferimento',
-        'usuario_treinamento_id' => 'setUsuarioTreinamentoId',
-        'data_analise_processo' => 'setDataAnaliseProcesso',
-        'login_treinamento' => 'setLoginTreinamento',
-        'justificativa_deferimento' => 'setJustificativaDeferimento',
-        'termos_declaracao_aceite' => 'setTermosDeclaracaoAceite',
-        'url_sistema' => 'setUrlSistema',
-        'responsavel_cadastro_nome' => 'setResponsavelCadastroNome',
-        'responsavel_cadastro_cpf' => 'setResponsavelCadastroCpf',
-        'responsavel_cadastro_telefone' => 'setResponsavelCadastroTelefone',
-        'esfera_federal' => 'setEsferaFederal',
-        'ufs' => 'setUfs',
-        'esfera_estadual' => 'setEsferaEstadual',
-        'esfera_municipal' => 'setEsferaMunicipal',
-        'edital_credenciamento' => 'setEditalCredenciamento',
-        'urledital_credenciamento' => 'setUrleditalCredenciamento',
-        'aviso_contratacao_direta' => 'setAvisoContratacaoDireta',
-        'url_aviso_contratacao_direta' => 'setUrlAvisoContratacaoDireta',
-        'edital_licitacao' => 'setEditalLicitacao',
-        'url_edital_licitacao' => 'setUrlEditalLicitacao',
         'url_ata' => 'setUrlAta',
-        'url_contrato' => 'setUrlContrato',
-        'esfera_distrital' => 'setEsferaDistrital',
+        'data_analise_processo' => 'setDataAnaliseProcesso',
+        'url_sistema' => 'setUrlSistema',
+        'edital_licitacao' => 'setEditalLicitacao',
+        'aviso_contratacao_direta' => 'setAvisoContratacaoDireta',
+        'edital_credenciamento' => 'setEditalCredenciamento',
+        'login_treinamento' => 'setLoginTreinamento',
         'disponibiliza_artefato_licitacao' => 'setDisponibilizaArtefatoLicitacao',
-        'usuario_credenciado' => 'setUsuarioCredenciado'
+        'email' => 'setEmail',
+        'esfera_distrital' => 'setEsferaDistrital',
+        'esfera_municipal' => 'setEsferaMunicipal',
+        'esfera_estadual' => 'setEsferaEstadual',
+        'nome_sistema' => 'setNomeSistema',
+        'data_deferimento' => 'setDataDeferimento',
+        'justificativa_analise' => 'setJustificativaAnalise',
+        'usuario_treinamento_id' => 'setUsuarioTreinamentoId',
+        'responsavel_cadastro_email' => 'setResponsavelCadastroEmail',
+        'url_edital_licitacao' => 'setUrlEditalLicitacao',
+        'url_aviso_contratacao_direta' => 'setUrlAvisoContratacaoDireta',
+        'justificativa_deferimento' => 'setJustificativaDeferimento',
+        'ufs' => 'setUfs',
+        'esfera_federal' => 'setEsferaFederal',
+        'termos_declaracao_aceite' => 'setTermosDeclaracaoAceite',
+        'usuario_analise_processo' => 'setUsuarioAnaliseProcesso',
+        'usuario_credenciado' => 'setUsuarioCredenciado',
+        'usuario_deferimento' => 'setUsuarioDeferimento'
     ];
 
     /**
@@ -380,46 +380,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'usuario_deferimento' => 'getUsuarioDeferimento',
-        'usuario_analise_processo' => 'getUsuarioAnaliseProcesso',
         'status' => 'getStatus',
         'cnpj' => 'getCnpj',
-        'data_inclusao' => 'getDataInclusao',
         'ano_credenciamento' => 'getAnoCredenciamento',
         'sequencial_credenciamento' => 'getSequencialCredenciamento',
+        'data_inclusao' => 'getDataInclusao',
         'excluido' => 'getExcluido',
+        'urledital_credenciamento' => 'getUrleditalCredenciamento',
+        'responsavel_cadastro_telefone' => 'getResponsavelCadastroTelefone',
+        'url_contrato' => 'getUrlContrato',
+        'responsavel_cadastro_cpf' => 'getResponsavelCadastroCpf',
+        'responsavel_cadastro_nome' => 'getResponsavelCadastroNome',
         'contrato' => 'getContrato',
         'nome_razao_social' => 'getNomeRazaoSocial',
         'ata' => 'getAta',
-        'email' => 'getEmail',
-        'responsavel_cadastro_email' => 'getResponsavelCadastroEmail',
-        'nome_sistema' => 'getNomeSistema',
-        'justificativa_analise' => 'getJustificativaAnalise',
-        'data_deferimento' => 'getDataDeferimento',
-        'usuario_treinamento_id' => 'getUsuarioTreinamentoId',
-        'data_analise_processo' => 'getDataAnaliseProcesso',
-        'login_treinamento' => 'getLoginTreinamento',
-        'justificativa_deferimento' => 'getJustificativaDeferimento',
-        'termos_declaracao_aceite' => 'getTermosDeclaracaoAceite',
-        'url_sistema' => 'getUrlSistema',
-        'responsavel_cadastro_nome' => 'getResponsavelCadastroNome',
-        'responsavel_cadastro_cpf' => 'getResponsavelCadastroCpf',
-        'responsavel_cadastro_telefone' => 'getResponsavelCadastroTelefone',
-        'esfera_federal' => 'getEsferaFederal',
-        'ufs' => 'getUfs',
-        'esfera_estadual' => 'getEsferaEstadual',
-        'esfera_municipal' => 'getEsferaMunicipal',
-        'edital_credenciamento' => 'getEditalCredenciamento',
-        'urledital_credenciamento' => 'getUrleditalCredenciamento',
-        'aviso_contratacao_direta' => 'getAvisoContratacaoDireta',
-        'url_aviso_contratacao_direta' => 'getUrlAvisoContratacaoDireta',
-        'edital_licitacao' => 'getEditalLicitacao',
-        'url_edital_licitacao' => 'getUrlEditalLicitacao',
         'url_ata' => 'getUrlAta',
-        'url_contrato' => 'getUrlContrato',
-        'esfera_distrital' => 'getEsferaDistrital',
+        'data_analise_processo' => 'getDataAnaliseProcesso',
+        'url_sistema' => 'getUrlSistema',
+        'edital_licitacao' => 'getEditalLicitacao',
+        'aviso_contratacao_direta' => 'getAvisoContratacaoDireta',
+        'edital_credenciamento' => 'getEditalCredenciamento',
+        'login_treinamento' => 'getLoginTreinamento',
         'disponibiliza_artefato_licitacao' => 'getDisponibilizaArtefatoLicitacao',
-        'usuario_credenciado' => 'getUsuarioCredenciado'
+        'email' => 'getEmail',
+        'esfera_distrital' => 'getEsferaDistrital',
+        'esfera_municipal' => 'getEsferaMunicipal',
+        'esfera_estadual' => 'getEsferaEstadual',
+        'nome_sistema' => 'getNomeSistema',
+        'data_deferimento' => 'getDataDeferimento',
+        'justificativa_analise' => 'getJustificativaAnalise',
+        'usuario_treinamento_id' => 'getUsuarioTreinamentoId',
+        'responsavel_cadastro_email' => 'getResponsavelCadastroEmail',
+        'url_edital_licitacao' => 'getUrlEditalLicitacao',
+        'url_aviso_contratacao_direta' => 'getUrlAvisoContratacaoDireta',
+        'justificativa_deferimento' => 'getJustificativaDeferimento',
+        'ufs' => 'getUfs',
+        'esfera_federal' => 'getEsferaFederal',
+        'termos_declaracao_aceite' => 'getTermosDeclaracaoAceite',
+        'usuario_analise_processo' => 'getUsuarioAnaliseProcesso',
+        'usuario_credenciado' => 'getUsuarioCredenciado',
+        'usuario_deferimento' => 'getUsuarioDeferimento'
     ];
 
     /**
@@ -496,46 +496,46 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('usuario_deferimento', $data ?? [], null);
-        $this->setIfExists('usuario_analise_processo', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('cnpj', $data ?? [], null);
-        $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('ano_credenciamento', $data ?? [], null);
         $this->setIfExists('sequencial_credenciamento', $data ?? [], null);
+        $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('excluido', $data ?? [], null);
+        $this->setIfExists('urledital_credenciamento', $data ?? [], null);
+        $this->setIfExists('responsavel_cadastro_telefone', $data ?? [], null);
+        $this->setIfExists('url_contrato', $data ?? [], null);
+        $this->setIfExists('responsavel_cadastro_cpf', $data ?? [], null);
+        $this->setIfExists('responsavel_cadastro_nome', $data ?? [], null);
         $this->setIfExists('contrato', $data ?? [], null);
         $this->setIfExists('nome_razao_social', $data ?? [], null);
         $this->setIfExists('ata', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('responsavel_cadastro_email', $data ?? [], null);
-        $this->setIfExists('nome_sistema', $data ?? [], null);
-        $this->setIfExists('justificativa_analise', $data ?? [], null);
-        $this->setIfExists('data_deferimento', $data ?? [], null);
-        $this->setIfExists('usuario_treinamento_id', $data ?? [], null);
-        $this->setIfExists('data_analise_processo', $data ?? [], null);
-        $this->setIfExists('login_treinamento', $data ?? [], null);
-        $this->setIfExists('justificativa_deferimento', $data ?? [], null);
-        $this->setIfExists('termos_declaracao_aceite', $data ?? [], null);
-        $this->setIfExists('url_sistema', $data ?? [], null);
-        $this->setIfExists('responsavel_cadastro_nome', $data ?? [], null);
-        $this->setIfExists('responsavel_cadastro_cpf', $data ?? [], null);
-        $this->setIfExists('responsavel_cadastro_telefone', $data ?? [], null);
-        $this->setIfExists('esfera_federal', $data ?? [], null);
-        $this->setIfExists('ufs', $data ?? [], null);
-        $this->setIfExists('esfera_estadual', $data ?? [], null);
-        $this->setIfExists('esfera_municipal', $data ?? [], null);
-        $this->setIfExists('edital_credenciamento', $data ?? [], null);
-        $this->setIfExists('urledital_credenciamento', $data ?? [], null);
-        $this->setIfExists('aviso_contratacao_direta', $data ?? [], null);
-        $this->setIfExists('url_aviso_contratacao_direta', $data ?? [], null);
-        $this->setIfExists('edital_licitacao', $data ?? [], null);
-        $this->setIfExists('url_edital_licitacao', $data ?? [], null);
         $this->setIfExists('url_ata', $data ?? [], null);
-        $this->setIfExists('url_contrato', $data ?? [], null);
-        $this->setIfExists('esfera_distrital', $data ?? [], null);
+        $this->setIfExists('data_analise_processo', $data ?? [], null);
+        $this->setIfExists('url_sistema', $data ?? [], null);
+        $this->setIfExists('edital_licitacao', $data ?? [], null);
+        $this->setIfExists('aviso_contratacao_direta', $data ?? [], null);
+        $this->setIfExists('edital_credenciamento', $data ?? [], null);
+        $this->setIfExists('login_treinamento', $data ?? [], null);
         $this->setIfExists('disponibiliza_artefato_licitacao', $data ?? [], null);
+        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('esfera_distrital', $data ?? [], null);
+        $this->setIfExists('esfera_municipal', $data ?? [], null);
+        $this->setIfExists('esfera_estadual', $data ?? [], null);
+        $this->setIfExists('nome_sistema', $data ?? [], null);
+        $this->setIfExists('data_deferimento', $data ?? [], null);
+        $this->setIfExists('justificativa_analise', $data ?? [], null);
+        $this->setIfExists('usuario_treinamento_id', $data ?? [], null);
+        $this->setIfExists('responsavel_cadastro_email', $data ?? [], null);
+        $this->setIfExists('url_edital_licitacao', $data ?? [], null);
+        $this->setIfExists('url_aviso_contratacao_direta', $data ?? [], null);
+        $this->setIfExists('justificativa_deferimento', $data ?? [], null);
+        $this->setIfExists('ufs', $data ?? [], null);
+        $this->setIfExists('esfera_federal', $data ?? [], null);
+        $this->setIfExists('termos_declaracao_aceite', $data ?? [], null);
+        $this->setIfExists('usuario_analise_processo', $data ?? [], null);
         $this->setIfExists('usuario_credenciado', $data ?? [], null);
+        $this->setIfExists('usuario_deferimento', $data ?? [], null);
     }
 
     /**
@@ -588,60 +588,6 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets usuario_deferimento
-     *
-     * @return string|null
-     */
-    public function getUsuarioDeferimento()
-    {
-        return $this->container['usuario_deferimento'];
-    }
-
-    /**
-     * Sets usuario_deferimento
-     *
-     * @param string|null $usuario_deferimento usuario_deferimento
-     *
-     * @return self
-     */
-    public function setUsuarioDeferimento($usuario_deferimento)
-    {
-        if (is_null($usuario_deferimento)) {
-            throw new \InvalidArgumentException('non-nullable usuario_deferimento cannot be null');
-        }
-        $this->container['usuario_deferimento'] = $usuario_deferimento;
-
-        return $this;
-    }
-
-    /**
-     * Gets usuario_analise_processo
-     *
-     * @return string|null
-     */
-    public function getUsuarioAnaliseProcesso()
-    {
-        return $this->container['usuario_analise_processo'];
-    }
-
-    /**
-     * Sets usuario_analise_processo
-     *
-     * @param string|null $usuario_analise_processo usuario_analise_processo
-     *
-     * @return self
-     */
-    public function setUsuarioAnaliseProcesso($usuario_analise_processo)
-    {
-        if (is_null($usuario_analise_processo)) {
-            throw new \InvalidArgumentException('non-nullable usuario_analise_processo cannot be null');
-        }
-        $this->container['usuario_analise_processo'] = $usuario_analise_processo;
-
-        return $this;
-    }
 
     /**
      * Gets status
@@ -708,33 +654,6 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets data_inclusao
-     *
-     * @return \DateTime|null
-     */
-    public function getDataInclusao()
-    {
-        return $this->container['data_inclusao'];
-    }
-
-    /**
-     * Sets data_inclusao
-     *
-     * @param \DateTime|null $data_inclusao data_inclusao
-     *
-     * @return self
-     */
-    public function setDataInclusao($data_inclusao)
-    {
-        if (is_null($data_inclusao)) {
-            throw new \InvalidArgumentException('non-nullable data_inclusao cannot be null');
-        }
-        $this->container['data_inclusao'] = $data_inclusao;
-
-        return $this;
-    }
-
-    /**
      * Gets ano_credenciamento
      *
      * @return int|null
@@ -789,6 +708,33 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
+     * Gets data_inclusao
+     *
+     * @return \DateTime|null
+     */
+    public function getDataInclusao()
+    {
+        return $this->container['data_inclusao'];
+    }
+
+    /**
+     * Sets data_inclusao
+     *
+     * @param \DateTime|null $data_inclusao data_inclusao
+     *
+     * @return self
+     */
+    public function setDataInclusao($data_inclusao)
+    {
+        if (is_null($data_inclusao)) {
+            throw new \InvalidArgumentException('non-nullable data_inclusao cannot be null');
+        }
+        $this->container['data_inclusao'] = $data_inclusao;
+
+        return $this;
+    }
+
+    /**
      * Gets excluido
      *
      * @return bool|null
@@ -811,6 +757,141 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable excluido cannot be null');
         }
         $this->container['excluido'] = $excluido;
+
+        return $this;
+    }
+
+    /**
+     * Gets urledital_credenciamento
+     *
+     * @return string|null
+     */
+    public function getUrleditalCredenciamento()
+    {
+        return $this->container['urledital_credenciamento'];
+    }
+
+    /**
+     * Sets urledital_credenciamento
+     *
+     * @param string|null $urledital_credenciamento urledital_credenciamento
+     *
+     * @return self
+     */
+    public function setUrleditalCredenciamento($urledital_credenciamento)
+    {
+        if (is_null($urledital_credenciamento)) {
+            throw new \InvalidArgumentException('non-nullable urledital_credenciamento cannot be null');
+        }
+        $this->container['urledital_credenciamento'] = $urledital_credenciamento;
+
+        return $this;
+    }
+
+    /**
+     * Gets responsavel_cadastro_telefone
+     *
+     * @return string|null
+     */
+    public function getResponsavelCadastroTelefone()
+    {
+        return $this->container['responsavel_cadastro_telefone'];
+    }
+
+    /**
+     * Sets responsavel_cadastro_telefone
+     *
+     * @param string|null $responsavel_cadastro_telefone responsavel_cadastro_telefone
+     *
+     * @return self
+     */
+    public function setResponsavelCadastroTelefone($responsavel_cadastro_telefone)
+    {
+        if (is_null($responsavel_cadastro_telefone)) {
+            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_telefone cannot be null');
+        }
+        $this->container['responsavel_cadastro_telefone'] = $responsavel_cadastro_telefone;
+
+        return $this;
+    }
+
+    /**
+     * Gets url_contrato
+     *
+     * @return string|null
+     */
+    public function getUrlContrato()
+    {
+        return $this->container['url_contrato'];
+    }
+
+    /**
+     * Sets url_contrato
+     *
+     * @param string|null $url_contrato url_contrato
+     *
+     * @return self
+     */
+    public function setUrlContrato($url_contrato)
+    {
+        if (is_null($url_contrato)) {
+            throw new \InvalidArgumentException('non-nullable url_contrato cannot be null');
+        }
+        $this->container['url_contrato'] = $url_contrato;
+
+        return $this;
+    }
+
+    /**
+     * Gets responsavel_cadastro_cpf
+     *
+     * @return string|null
+     */
+    public function getResponsavelCadastroCpf()
+    {
+        return $this->container['responsavel_cadastro_cpf'];
+    }
+
+    /**
+     * Sets responsavel_cadastro_cpf
+     *
+     * @param string|null $responsavel_cadastro_cpf responsavel_cadastro_cpf
+     *
+     * @return self
+     */
+    public function setResponsavelCadastroCpf($responsavel_cadastro_cpf)
+    {
+        if (is_null($responsavel_cadastro_cpf)) {
+            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_cpf cannot be null');
+        }
+        $this->container['responsavel_cadastro_cpf'] = $responsavel_cadastro_cpf;
+
+        return $this;
+    }
+
+    /**
+     * Gets responsavel_cadastro_nome
+     *
+     * @return string|null
+     */
+    public function getResponsavelCadastroNome()
+    {
+        return $this->container['responsavel_cadastro_nome'];
+    }
+
+    /**
+     * Sets responsavel_cadastro_nome
+     *
+     * @param string|null $responsavel_cadastro_nome responsavel_cadastro_nome
+     *
+     * @return self
+     */
+    public function setResponsavelCadastroNome($responsavel_cadastro_nome)
+    {
+        if (is_null($responsavel_cadastro_nome)) {
+            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_nome cannot be null');
+        }
+        $this->container['responsavel_cadastro_nome'] = $responsavel_cadastro_nome;
 
         return $this;
     }
@@ -897,163 +978,28 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets email
+     * Gets url_ata
      *
      * @return string|null
      */
-    public function getEmail()
+    public function getUrlAta()
     {
-        return $this->container['email'];
+        return $this->container['url_ata'];
     }
 
     /**
-     * Sets email
+     * Sets url_ata
      *
-     * @param string|null $email email
+     * @param string|null $url_ata url_ata
      *
      * @return self
      */
-    public function setEmail($email)
+    public function setUrlAta($url_ata)
     {
-        if (is_null($email)) {
-            throw new \InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($url_ata)) {
+            throw new \InvalidArgumentException('non-nullable url_ata cannot be null');
         }
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets responsavel_cadastro_email
-     *
-     * @return string|null
-     */
-    public function getResponsavelCadastroEmail()
-    {
-        return $this->container['responsavel_cadastro_email'];
-    }
-
-    /**
-     * Sets responsavel_cadastro_email
-     *
-     * @param string|null $responsavel_cadastro_email responsavel_cadastro_email
-     *
-     * @return self
-     */
-    public function setResponsavelCadastroEmail($responsavel_cadastro_email)
-    {
-        if (is_null($responsavel_cadastro_email)) {
-            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_email cannot be null');
-        }
-        $this->container['responsavel_cadastro_email'] = $responsavel_cadastro_email;
-
-        return $this;
-    }
-
-    /**
-     * Gets nome_sistema
-     *
-     * @return string|null
-     */
-    public function getNomeSistema()
-    {
-        return $this->container['nome_sistema'];
-    }
-
-    /**
-     * Sets nome_sistema
-     *
-     * @param string|null $nome_sistema nome_sistema
-     *
-     * @return self
-     */
-    public function setNomeSistema($nome_sistema)
-    {
-        if (is_null($nome_sistema)) {
-            throw new \InvalidArgumentException('non-nullable nome_sistema cannot be null');
-        }
-        $this->container['nome_sistema'] = $nome_sistema;
-
-        return $this;
-    }
-
-    /**
-     * Gets justificativa_analise
-     *
-     * @return string|null
-     */
-    public function getJustificativaAnalise()
-    {
-        return $this->container['justificativa_analise'];
-    }
-
-    /**
-     * Sets justificativa_analise
-     *
-     * @param string|null $justificativa_analise justificativa_analise
-     *
-     * @return self
-     */
-    public function setJustificativaAnalise($justificativa_analise)
-    {
-        if (is_null($justificativa_analise)) {
-            throw new \InvalidArgumentException('non-nullable justificativa_analise cannot be null');
-        }
-        $this->container['justificativa_analise'] = $justificativa_analise;
-
-        return $this;
-    }
-
-    /**
-     * Gets data_deferimento
-     *
-     * @return \DateTime|null
-     */
-    public function getDataDeferimento()
-    {
-        return $this->container['data_deferimento'];
-    }
-
-    /**
-     * Sets data_deferimento
-     *
-     * @param \DateTime|null $data_deferimento data_deferimento
-     *
-     * @return self
-     */
-    public function setDataDeferimento($data_deferimento)
-    {
-        if (is_null($data_deferimento)) {
-            throw new \InvalidArgumentException('non-nullable data_deferimento cannot be null');
-        }
-        $this->container['data_deferimento'] = $data_deferimento;
-
-        return $this;
-    }
-
-    /**
-     * Gets usuario_treinamento_id
-     *
-     * @return int|null
-     */
-    public function getUsuarioTreinamentoId()
-    {
-        return $this->container['usuario_treinamento_id'];
-    }
-
-    /**
-     * Sets usuario_treinamento_id
-     *
-     * @param int|null $usuario_treinamento_id usuario_treinamento_id
-     *
-     * @return self
-     */
-    public function setUsuarioTreinamentoId($usuario_treinamento_id)
-    {
-        if (is_null($usuario_treinamento_id)) {
-            throw new \InvalidArgumentException('non-nullable usuario_treinamento_id cannot be null');
-        }
-        $this->container['usuario_treinamento_id'] = $usuario_treinamento_id;
+        $this->container['url_ata'] = $url_ata;
 
         return $this;
     }
@@ -1086,87 +1032,6 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets login_treinamento
-     *
-     * @return string|null
-     */
-    public function getLoginTreinamento()
-    {
-        return $this->container['login_treinamento'];
-    }
-
-    /**
-     * Sets login_treinamento
-     *
-     * @param string|null $login_treinamento login_treinamento
-     *
-     * @return self
-     */
-    public function setLoginTreinamento($login_treinamento)
-    {
-        if (is_null($login_treinamento)) {
-            throw new \InvalidArgumentException('non-nullable login_treinamento cannot be null');
-        }
-        $this->container['login_treinamento'] = $login_treinamento;
-
-        return $this;
-    }
-
-    /**
-     * Gets justificativa_deferimento
-     *
-     * @return string|null
-     */
-    public function getJustificativaDeferimento()
-    {
-        return $this->container['justificativa_deferimento'];
-    }
-
-    /**
-     * Sets justificativa_deferimento
-     *
-     * @param string|null $justificativa_deferimento justificativa_deferimento
-     *
-     * @return self
-     */
-    public function setJustificativaDeferimento($justificativa_deferimento)
-    {
-        if (is_null($justificativa_deferimento)) {
-            throw new \InvalidArgumentException('non-nullable justificativa_deferimento cannot be null');
-        }
-        $this->container['justificativa_deferimento'] = $justificativa_deferimento;
-
-        return $this;
-    }
-
-    /**
-     * Gets termos_declaracao_aceite
-     *
-     * @return bool|null
-     */
-    public function getTermosDeclaracaoAceite()
-    {
-        return $this->container['termos_declaracao_aceite'];
-    }
-
-    /**
-     * Sets termos_declaracao_aceite
-     *
-     * @param bool|null $termos_declaracao_aceite termos_declaracao_aceite
-     *
-     * @return self
-     */
-    public function setTermosDeclaracaoAceite($termos_declaracao_aceite)
-    {
-        if (is_null($termos_declaracao_aceite)) {
-            throw new \InvalidArgumentException('non-nullable termos_declaracao_aceite cannot be null');
-        }
-        $this->container['termos_declaracao_aceite'] = $termos_declaracao_aceite;
-
-        return $this;
-    }
-
-    /**
      * Gets url_sistema
      *
      * @return string|null
@@ -1189,303 +1054,6 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable url_sistema cannot be null');
         }
         $this->container['url_sistema'] = $url_sistema;
-
-        return $this;
-    }
-
-    /**
-     * Gets responsavel_cadastro_nome
-     *
-     * @return string|null
-     */
-    public function getResponsavelCadastroNome()
-    {
-        return $this->container['responsavel_cadastro_nome'];
-    }
-
-    /**
-     * Sets responsavel_cadastro_nome
-     *
-     * @param string|null $responsavel_cadastro_nome responsavel_cadastro_nome
-     *
-     * @return self
-     */
-    public function setResponsavelCadastroNome($responsavel_cadastro_nome)
-    {
-        if (is_null($responsavel_cadastro_nome)) {
-            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_nome cannot be null');
-        }
-        $this->container['responsavel_cadastro_nome'] = $responsavel_cadastro_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets responsavel_cadastro_cpf
-     *
-     * @return string|null
-     */
-    public function getResponsavelCadastroCpf()
-    {
-        return $this->container['responsavel_cadastro_cpf'];
-    }
-
-    /**
-     * Sets responsavel_cadastro_cpf
-     *
-     * @param string|null $responsavel_cadastro_cpf responsavel_cadastro_cpf
-     *
-     * @return self
-     */
-    public function setResponsavelCadastroCpf($responsavel_cadastro_cpf)
-    {
-        if (is_null($responsavel_cadastro_cpf)) {
-            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_cpf cannot be null');
-        }
-        $this->container['responsavel_cadastro_cpf'] = $responsavel_cadastro_cpf;
-
-        return $this;
-    }
-
-    /**
-     * Gets responsavel_cadastro_telefone
-     *
-     * @return string|null
-     */
-    public function getResponsavelCadastroTelefone()
-    {
-        return $this->container['responsavel_cadastro_telefone'];
-    }
-
-    /**
-     * Sets responsavel_cadastro_telefone
-     *
-     * @param string|null $responsavel_cadastro_telefone responsavel_cadastro_telefone
-     *
-     * @return self
-     */
-    public function setResponsavelCadastroTelefone($responsavel_cadastro_telefone)
-    {
-        if (is_null($responsavel_cadastro_telefone)) {
-            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_telefone cannot be null');
-        }
-        $this->container['responsavel_cadastro_telefone'] = $responsavel_cadastro_telefone;
-
-        return $this;
-    }
-
-    /**
-     * Gets esfera_federal
-     *
-     * @return bool|null
-     */
-    public function getEsferaFederal()
-    {
-        return $this->container['esfera_federal'];
-    }
-
-    /**
-     * Sets esfera_federal
-     *
-     * @param bool|null $esfera_federal esfera_federal
-     *
-     * @return self
-     */
-    public function setEsferaFederal($esfera_federal)
-    {
-        if (is_null($esfera_federal)) {
-            throw new \InvalidArgumentException('non-nullable esfera_federal cannot be null');
-        }
-        $this->container['esfera_federal'] = $esfera_federal;
-
-        return $this;
-    }
-
-    /**
-     * Gets ufs
-     *
-     * @return string[]|null
-     */
-    public function getUfs()
-    {
-        return $this->container['ufs'];
-    }
-
-    /**
-     * Sets ufs
-     *
-     * @param string[]|null $ufs ufs
-     *
-     * @return self
-     */
-    public function setUfs($ufs)
-    {
-        if (is_null($ufs)) {
-            throw new \InvalidArgumentException('non-nullable ufs cannot be null');
-        }
-        $this->container['ufs'] = $ufs;
-
-        return $this;
-    }
-
-    /**
-     * Gets esfera_estadual
-     *
-     * @return bool|null
-     */
-    public function getEsferaEstadual()
-    {
-        return $this->container['esfera_estadual'];
-    }
-
-    /**
-     * Sets esfera_estadual
-     *
-     * @param bool|null $esfera_estadual esfera_estadual
-     *
-     * @return self
-     */
-    public function setEsferaEstadual($esfera_estadual)
-    {
-        if (is_null($esfera_estadual)) {
-            throw new \InvalidArgumentException('non-nullable esfera_estadual cannot be null');
-        }
-        $this->container['esfera_estadual'] = $esfera_estadual;
-
-        return $this;
-    }
-
-    /**
-     * Gets esfera_municipal
-     *
-     * @return bool|null
-     */
-    public function getEsferaMunicipal()
-    {
-        return $this->container['esfera_municipal'];
-    }
-
-    /**
-     * Sets esfera_municipal
-     *
-     * @param bool|null $esfera_municipal esfera_municipal
-     *
-     * @return self
-     */
-    public function setEsferaMunicipal($esfera_municipal)
-    {
-        if (is_null($esfera_municipal)) {
-            throw new \InvalidArgumentException('non-nullable esfera_municipal cannot be null');
-        }
-        $this->container['esfera_municipal'] = $esfera_municipal;
-
-        return $this;
-    }
-
-    /**
-     * Gets edital_credenciamento
-     *
-     * @return bool|null
-     */
-    public function getEditalCredenciamento()
-    {
-        return $this->container['edital_credenciamento'];
-    }
-
-    /**
-     * Sets edital_credenciamento
-     *
-     * @param bool|null $edital_credenciamento edital_credenciamento
-     *
-     * @return self
-     */
-    public function setEditalCredenciamento($edital_credenciamento)
-    {
-        if (is_null($edital_credenciamento)) {
-            throw new \InvalidArgumentException('non-nullable edital_credenciamento cannot be null');
-        }
-        $this->container['edital_credenciamento'] = $edital_credenciamento;
-
-        return $this;
-    }
-
-    /**
-     * Gets urledital_credenciamento
-     *
-     * @return string|null
-     */
-    public function getUrleditalCredenciamento()
-    {
-        return $this->container['urledital_credenciamento'];
-    }
-
-    /**
-     * Sets urledital_credenciamento
-     *
-     * @param string|null $urledital_credenciamento urledital_credenciamento
-     *
-     * @return self
-     */
-    public function setUrleditalCredenciamento($urledital_credenciamento)
-    {
-        if (is_null($urledital_credenciamento)) {
-            throw new \InvalidArgumentException('non-nullable urledital_credenciamento cannot be null');
-        }
-        $this->container['urledital_credenciamento'] = $urledital_credenciamento;
-
-        return $this;
-    }
-
-    /**
-     * Gets aviso_contratacao_direta
-     *
-     * @return bool|null
-     */
-    public function getAvisoContratacaoDireta()
-    {
-        return $this->container['aviso_contratacao_direta'];
-    }
-
-    /**
-     * Sets aviso_contratacao_direta
-     *
-     * @param bool|null $aviso_contratacao_direta aviso_contratacao_direta
-     *
-     * @return self
-     */
-    public function setAvisoContratacaoDireta($aviso_contratacao_direta)
-    {
-        if (is_null($aviso_contratacao_direta)) {
-            throw new \InvalidArgumentException('non-nullable aviso_contratacao_direta cannot be null');
-        }
-        $this->container['aviso_contratacao_direta'] = $aviso_contratacao_direta;
-
-        return $this;
-    }
-
-    /**
-     * Gets url_aviso_contratacao_direta
-     *
-     * @return string|null
-     */
-    public function getUrlAvisoContratacaoDireta()
-    {
-        return $this->container['url_aviso_contratacao_direta'];
-    }
-
-    /**
-     * Sets url_aviso_contratacao_direta
-     *
-     * @param string|null $url_aviso_contratacao_direta url_aviso_contratacao_direta
-     *
-     * @return self
-     */
-    public function setUrlAvisoContratacaoDireta($url_aviso_contratacao_direta)
-    {
-        if (is_null($url_aviso_contratacao_direta)) {
-            throw new \InvalidArgumentException('non-nullable url_aviso_contratacao_direta cannot be null');
-        }
-        $this->container['url_aviso_contratacao_direta'] = $url_aviso_contratacao_direta;
 
         return $this;
     }
@@ -1518,109 +1086,82 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets url_edital_licitacao
-     *
-     * @return string|null
-     */
-    public function getUrlEditalLicitacao()
-    {
-        return $this->container['url_edital_licitacao'];
-    }
-
-    /**
-     * Sets url_edital_licitacao
-     *
-     * @param string|null $url_edital_licitacao url_edital_licitacao
-     *
-     * @return self
-     */
-    public function setUrlEditalLicitacao($url_edital_licitacao)
-    {
-        if (is_null($url_edital_licitacao)) {
-            throw new \InvalidArgumentException('non-nullable url_edital_licitacao cannot be null');
-        }
-        $this->container['url_edital_licitacao'] = $url_edital_licitacao;
-
-        return $this;
-    }
-
-    /**
-     * Gets url_ata
-     *
-     * @return string|null
-     */
-    public function getUrlAta()
-    {
-        return $this->container['url_ata'];
-    }
-
-    /**
-     * Sets url_ata
-     *
-     * @param string|null $url_ata url_ata
-     *
-     * @return self
-     */
-    public function setUrlAta($url_ata)
-    {
-        if (is_null($url_ata)) {
-            throw new \InvalidArgumentException('non-nullable url_ata cannot be null');
-        }
-        $this->container['url_ata'] = $url_ata;
-
-        return $this;
-    }
-
-    /**
-     * Gets url_contrato
-     *
-     * @return string|null
-     */
-    public function getUrlContrato()
-    {
-        return $this->container['url_contrato'];
-    }
-
-    /**
-     * Sets url_contrato
-     *
-     * @param string|null $url_contrato url_contrato
-     *
-     * @return self
-     */
-    public function setUrlContrato($url_contrato)
-    {
-        if (is_null($url_contrato)) {
-            throw new \InvalidArgumentException('non-nullable url_contrato cannot be null');
-        }
-        $this->container['url_contrato'] = $url_contrato;
-
-        return $this;
-    }
-
-    /**
-     * Gets esfera_distrital
+     * Gets aviso_contratacao_direta
      *
      * @return bool|null
      */
-    public function getEsferaDistrital()
+    public function getAvisoContratacaoDireta()
     {
-        return $this->container['esfera_distrital'];
+        return $this->container['aviso_contratacao_direta'];
     }
 
     /**
-     * Sets esfera_distrital
+     * Sets aviso_contratacao_direta
      *
-     * @param bool|null $esfera_distrital esfera_distrital
+     * @param bool|null $aviso_contratacao_direta aviso_contratacao_direta
      *
      * @return self
      */
-    public function setEsferaDistrital($esfera_distrital)
+    public function setAvisoContratacaoDireta($aviso_contratacao_direta)
     {
-        if (is_null($esfera_distrital)) {
-            throw new \InvalidArgumentException('non-nullable esfera_distrital cannot be null');
+        if (is_null($aviso_contratacao_direta)) {
+            throw new \InvalidArgumentException('non-nullable aviso_contratacao_direta cannot be null');
         }
-        $this->container['esfera_distrital'] = $esfera_distrital;
+        $this->container['aviso_contratacao_direta'] = $aviso_contratacao_direta;
+
+        return $this;
+    }
+
+    /**
+     * Gets edital_credenciamento
+     *
+     * @return bool|null
+     */
+    public function getEditalCredenciamento()
+    {
+        return $this->container['edital_credenciamento'];
+    }
+
+    /**
+     * Sets edital_credenciamento
+     *
+     * @param bool|null $edital_credenciamento edital_credenciamento
+     *
+     * @return self
+     */
+    public function setEditalCredenciamento($edital_credenciamento)
+    {
+        if (is_null($edital_credenciamento)) {
+            throw new \InvalidArgumentException('non-nullable edital_credenciamento cannot be null');
+        }
+        $this->container['edital_credenciamento'] = $edital_credenciamento;
+
+        return $this;
+    }
+
+    /**
+     * Gets login_treinamento
+     *
+     * @return string|null
+     */
+    public function getLoginTreinamento()
+    {
+        return $this->container['login_treinamento'];
+    }
+
+    /**
+     * Sets login_treinamento
+     *
+     * @param string|null $login_treinamento login_treinamento
+     *
+     * @return self
+     */
+    public function setLoginTreinamento($login_treinamento)
+    {
+        if (is_null($login_treinamento)) {
+            throw new \InvalidArgumentException('non-nullable login_treinamento cannot be null');
+        }
+        $this->container['login_treinamento'] = $login_treinamento;
 
         return $this;
     }
@@ -1653,6 +1194,438 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
+     * Gets email
+     *
+     * @return string|null
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     *
+     * @param string|null $email email
+     *
+     * @return self
+     */
+    public function setEmail($email)
+    {
+        if (is_null($email)) {
+            throw new \InvalidArgumentException('non-nullable email cannot be null');
+        }
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets esfera_distrital
+     *
+     * @return bool|null
+     */
+    public function getEsferaDistrital()
+    {
+        return $this->container['esfera_distrital'];
+    }
+
+    /**
+     * Sets esfera_distrital
+     *
+     * @param bool|null $esfera_distrital esfera_distrital
+     *
+     * @return self
+     */
+    public function setEsferaDistrital($esfera_distrital)
+    {
+        if (is_null($esfera_distrital)) {
+            throw new \InvalidArgumentException('non-nullable esfera_distrital cannot be null');
+        }
+        $this->container['esfera_distrital'] = $esfera_distrital;
+
+        return $this;
+    }
+
+    /**
+     * Gets esfera_municipal
+     *
+     * @return bool|null
+     */
+    public function getEsferaMunicipal()
+    {
+        return $this->container['esfera_municipal'];
+    }
+
+    /**
+     * Sets esfera_municipal
+     *
+     * @param bool|null $esfera_municipal esfera_municipal
+     *
+     * @return self
+     */
+    public function setEsferaMunicipal($esfera_municipal)
+    {
+        if (is_null($esfera_municipal)) {
+            throw new \InvalidArgumentException('non-nullable esfera_municipal cannot be null');
+        }
+        $this->container['esfera_municipal'] = $esfera_municipal;
+
+        return $this;
+    }
+
+    /**
+     * Gets esfera_estadual
+     *
+     * @return bool|null
+     */
+    public function getEsferaEstadual()
+    {
+        return $this->container['esfera_estadual'];
+    }
+
+    /**
+     * Sets esfera_estadual
+     *
+     * @param bool|null $esfera_estadual esfera_estadual
+     *
+     * @return self
+     */
+    public function setEsferaEstadual($esfera_estadual)
+    {
+        if (is_null($esfera_estadual)) {
+            throw new \InvalidArgumentException('non-nullable esfera_estadual cannot be null');
+        }
+        $this->container['esfera_estadual'] = $esfera_estadual;
+
+        return $this;
+    }
+
+    /**
+     * Gets nome_sistema
+     *
+     * @return string|null
+     */
+    public function getNomeSistema()
+    {
+        return $this->container['nome_sistema'];
+    }
+
+    /**
+     * Sets nome_sistema
+     *
+     * @param string|null $nome_sistema nome_sistema
+     *
+     * @return self
+     */
+    public function setNomeSistema($nome_sistema)
+    {
+        if (is_null($nome_sistema)) {
+            throw new \InvalidArgumentException('non-nullable nome_sistema cannot be null');
+        }
+        $this->container['nome_sistema'] = $nome_sistema;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_deferimento
+     *
+     * @return \DateTime|null
+     */
+    public function getDataDeferimento()
+    {
+        return $this->container['data_deferimento'];
+    }
+
+    /**
+     * Sets data_deferimento
+     *
+     * @param \DateTime|null $data_deferimento data_deferimento
+     *
+     * @return self
+     */
+    public function setDataDeferimento($data_deferimento)
+    {
+        if (is_null($data_deferimento)) {
+            throw new \InvalidArgumentException('non-nullable data_deferimento cannot be null');
+        }
+        $this->container['data_deferimento'] = $data_deferimento;
+
+        return $this;
+    }
+
+    /**
+     * Gets justificativa_analise
+     *
+     * @return string|null
+     */
+    public function getJustificativaAnalise()
+    {
+        return $this->container['justificativa_analise'];
+    }
+
+    /**
+     * Sets justificativa_analise
+     *
+     * @param string|null $justificativa_analise justificativa_analise
+     *
+     * @return self
+     */
+    public function setJustificativaAnalise($justificativa_analise)
+    {
+        if (is_null($justificativa_analise)) {
+            throw new \InvalidArgumentException('non-nullable justificativa_analise cannot be null');
+        }
+        $this->container['justificativa_analise'] = $justificativa_analise;
+
+        return $this;
+    }
+
+    /**
+     * Gets usuario_treinamento_id
+     *
+     * @return int|null
+     */
+    public function getUsuarioTreinamentoId()
+    {
+        return $this->container['usuario_treinamento_id'];
+    }
+
+    /**
+     * Sets usuario_treinamento_id
+     *
+     * @param int|null $usuario_treinamento_id usuario_treinamento_id
+     *
+     * @return self
+     */
+    public function setUsuarioTreinamentoId($usuario_treinamento_id)
+    {
+        if (is_null($usuario_treinamento_id)) {
+            throw new \InvalidArgumentException('non-nullable usuario_treinamento_id cannot be null');
+        }
+        $this->container['usuario_treinamento_id'] = $usuario_treinamento_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets responsavel_cadastro_email
+     *
+     * @return string|null
+     */
+    public function getResponsavelCadastroEmail()
+    {
+        return $this->container['responsavel_cadastro_email'];
+    }
+
+    /**
+     * Sets responsavel_cadastro_email
+     *
+     * @param string|null $responsavel_cadastro_email responsavel_cadastro_email
+     *
+     * @return self
+     */
+    public function setResponsavelCadastroEmail($responsavel_cadastro_email)
+    {
+        if (is_null($responsavel_cadastro_email)) {
+            throw new \InvalidArgumentException('non-nullable responsavel_cadastro_email cannot be null');
+        }
+        $this->container['responsavel_cadastro_email'] = $responsavel_cadastro_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets url_edital_licitacao
+     *
+     * @return string|null
+     */
+    public function getUrlEditalLicitacao()
+    {
+        return $this->container['url_edital_licitacao'];
+    }
+
+    /**
+     * Sets url_edital_licitacao
+     *
+     * @param string|null $url_edital_licitacao url_edital_licitacao
+     *
+     * @return self
+     */
+    public function setUrlEditalLicitacao($url_edital_licitacao)
+    {
+        if (is_null($url_edital_licitacao)) {
+            throw new \InvalidArgumentException('non-nullable url_edital_licitacao cannot be null');
+        }
+        $this->container['url_edital_licitacao'] = $url_edital_licitacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets url_aviso_contratacao_direta
+     *
+     * @return string|null
+     */
+    public function getUrlAvisoContratacaoDireta()
+    {
+        return $this->container['url_aviso_contratacao_direta'];
+    }
+
+    /**
+     * Sets url_aviso_contratacao_direta
+     *
+     * @param string|null $url_aviso_contratacao_direta url_aviso_contratacao_direta
+     *
+     * @return self
+     */
+    public function setUrlAvisoContratacaoDireta($url_aviso_contratacao_direta)
+    {
+        if (is_null($url_aviso_contratacao_direta)) {
+            throw new \InvalidArgumentException('non-nullable url_aviso_contratacao_direta cannot be null');
+        }
+        $this->container['url_aviso_contratacao_direta'] = $url_aviso_contratacao_direta;
+
+        return $this;
+    }
+
+    /**
+     * Gets justificativa_deferimento
+     *
+     * @return string|null
+     */
+    public function getJustificativaDeferimento()
+    {
+        return $this->container['justificativa_deferimento'];
+    }
+
+    /**
+     * Sets justificativa_deferimento
+     *
+     * @param string|null $justificativa_deferimento justificativa_deferimento
+     *
+     * @return self
+     */
+    public function setJustificativaDeferimento($justificativa_deferimento)
+    {
+        if (is_null($justificativa_deferimento)) {
+            throw new \InvalidArgumentException('non-nullable justificativa_deferimento cannot be null');
+        }
+        $this->container['justificativa_deferimento'] = $justificativa_deferimento;
+
+        return $this;
+    }
+
+    /**
+     * Gets ufs
+     *
+     * @return string[]|null
+     */
+    public function getUfs()
+    {
+        return $this->container['ufs'];
+    }
+
+    /**
+     * Sets ufs
+     *
+     * @param string[]|null $ufs ufs
+     *
+     * @return self
+     */
+    public function setUfs($ufs)
+    {
+        if (is_null($ufs)) {
+            throw new \InvalidArgumentException('non-nullable ufs cannot be null');
+        }
+        $this->container['ufs'] = $ufs;
+
+        return $this;
+    }
+
+    /**
+     * Gets esfera_federal
+     *
+     * @return bool|null
+     */
+    public function getEsferaFederal()
+    {
+        return $this->container['esfera_federal'];
+    }
+
+    /**
+     * Sets esfera_federal
+     *
+     * @param bool|null $esfera_federal esfera_federal
+     *
+     * @return self
+     */
+    public function setEsferaFederal($esfera_federal)
+    {
+        if (is_null($esfera_federal)) {
+            throw new \InvalidArgumentException('non-nullable esfera_federal cannot be null');
+        }
+        $this->container['esfera_federal'] = $esfera_federal;
+
+        return $this;
+    }
+
+    /**
+     * Gets termos_declaracao_aceite
+     *
+     * @return bool|null
+     */
+    public function getTermosDeclaracaoAceite()
+    {
+        return $this->container['termos_declaracao_aceite'];
+    }
+
+    /**
+     * Sets termos_declaracao_aceite
+     *
+     * @param bool|null $termos_declaracao_aceite termos_declaracao_aceite
+     *
+     * @return self
+     */
+    public function setTermosDeclaracaoAceite($termos_declaracao_aceite)
+    {
+        if (is_null($termos_declaracao_aceite)) {
+            throw new \InvalidArgumentException('non-nullable termos_declaracao_aceite cannot be null');
+        }
+        $this->container['termos_declaracao_aceite'] = $termos_declaracao_aceite;
+
+        return $this;
+    }
+
+    /**
+     * Gets usuario_analise_processo
+     *
+     * @return string|null
+     */
+    public function getUsuarioAnaliseProcesso()
+    {
+        return $this->container['usuario_analise_processo'];
+    }
+
+    /**
+     * Sets usuario_analise_processo
+     *
+     * @param string|null $usuario_analise_processo usuario_analise_processo
+     *
+     * @return self
+     */
+    public function setUsuarioAnaliseProcesso($usuario_analise_processo)
+    {
+        if (is_null($usuario_analise_processo)) {
+            throw new \InvalidArgumentException('non-nullable usuario_analise_processo cannot be null');
+        }
+        $this->container['usuario_analise_processo'] = $usuario_analise_processo;
+
+        return $this;
+    }
+
+    /**
      * Gets usuario_credenciado
      *
      * @return \OpenAPI\Client\Model\RecuperarCredenciamentoUsuarioDTO|null
@@ -1675,6 +1648,33 @@ class RecuperarCredenciamentoDTO implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable usuario_credenciado cannot be null');
         }
         $this->container['usuario_credenciado'] = $usuario_credenciado;
+
+        return $this;
+    }
+
+    /**
+     * Gets usuario_deferimento
+     *
+     * @return string|null
+     */
+    public function getUsuarioDeferimento()
+    {
+        return $this->container['usuario_deferimento'];
+    }
+
+    /**
+     * Sets usuario_deferimento
+     *
+     * @param string|null $usuario_deferimento usuario_deferimento
+     *
+     * @return self
+     */
+    public function setUsuarioDeferimento($usuario_deferimento)
+    {
+        if (is_null($usuario_deferimento)) {
+            throw new \InvalidArgumentException('non-nullable usuario_deferimento cannot be null');
+        }
+        $this->container['usuario_deferimento'] = $usuario_deferimento;
 
         return $this;
     }

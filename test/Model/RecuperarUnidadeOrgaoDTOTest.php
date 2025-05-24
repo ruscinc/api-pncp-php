@@ -81,15 +81,6 @@ class RecuperarUnidadeOrgaoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "uf_nome"
-     */
-    public function testPropertyUfNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "codigo_unidade"
      */
     public function testPropertyCodigoUnidade()
@@ -108,15 +99,6 @@ class RecuperarUnidadeOrgaoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "uf_sigla"
-     */
-    public function testPropertyUfSigla()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "municipio_nome"
      */
     public function testPropertyMunicipioNome()
@@ -129,6 +111,24 @@ class RecuperarUnidadeOrgaoDTOTest extends TestCase
      * Test attribute "codigo_ibge"
      */
     public function testPropertyCodigoIbge()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "uf_sigla"
+     */
+    public function testPropertyUfSigla()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "uf_nome"
+     */
+    public function testPropertyUfNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

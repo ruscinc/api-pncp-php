@@ -68,11 +68,21 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         'valor_total' => 'float',
         'orcamento_sigiloso' => 'bool',
         'situacao_compra_item_id' => 'string',
-        'criterio_julgamento_id' => 'string',
+        'criterio_julgamento_id' => 'int',
         'patrimonio' => 'string',
         'codigo_registro_imobiliario' => 'string',
         'item_categoria_id' => 'int',
-        'justificativa' => 'string'
+        'justificativa' => 'string',
+        'aplicabilidade_margem_preferencia_normal' => 'bool',
+        'aplicabilidade_margem_preferencia_adicional' => 'bool',
+        'percentual_margem_preferencia_normal' => 'float',
+        'percentual_margem_preferencia_adicional' => 'float',
+        'ncm_nbs_codigo' => 'string',
+        'ncm_nbs_descricao' => 'string',
+        'catalogo_id' => 'int',
+        'categoria_item_catalogo_id' => 'int',
+        'catalogo_codigo_item' => 'string',
+        'informacao_complementar' => 'string'
     ];
 
     /**
@@ -93,11 +103,21 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         'valor_total' => null,
         'orcamento_sigiloso' => null,
         'situacao_compra_item_id' => null,
-        'criterio_julgamento_id' => null,
+        'criterio_julgamento_id' => 'int64',
         'patrimonio' => null,
         'codigo_registro_imobiliario' => null,
         'item_categoria_id' => 'int64',
-        'justificativa' => null
+        'justificativa' => null,
+        'aplicabilidade_margem_preferencia_normal' => null,
+        'aplicabilidade_margem_preferencia_adicional' => null,
+        'percentual_margem_preferencia_normal' => null,
+        'percentual_margem_preferencia_adicional' => null,
+        'ncm_nbs_codigo' => null,
+        'ncm_nbs_descricao' => null,
+        'catalogo_id' => 'int64',
+        'categoria_item_catalogo_id' => 'int64',
+        'catalogo_codigo_item' => null,
+        'informacao_complementar' => null
     ];
 
     /**
@@ -120,7 +140,17 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
 		'patrimonio' => false,
 		'codigo_registro_imobiliario' => false,
 		'item_categoria_id' => false,
-		'justificativa' => false
+		'justificativa' => false,
+		'aplicabilidade_margem_preferencia_normal' => false,
+		'aplicabilidade_margem_preferencia_adicional' => false,
+		'percentual_margem_preferencia_normal' => false,
+		'percentual_margem_preferencia_adicional' => false,
+		'ncm_nbs_codigo' => false,
+		'ncm_nbs_descricao' => false,
+		'catalogo_id' => false,
+		'categoria_item_catalogo_id' => false,
+		'catalogo_codigo_item' => false,
+		'informacao_complementar' => false
     ];
 
     /**
@@ -223,7 +253,17 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         'patrimonio' => 'patrimonio',
         'codigo_registro_imobiliario' => 'codigoRegistroImobiliario',
         'item_categoria_id' => 'itemCategoriaId',
-        'justificativa' => 'justificativa'
+        'justificativa' => 'justificativa',
+        'aplicabilidade_margem_preferencia_normal' => 'aplicabilidadeMargemPreferenciaNormal',
+        'aplicabilidade_margem_preferencia_adicional' => 'aplicabilidadeMargemPreferenciaAdicional',
+        'percentual_margem_preferencia_normal' => 'percentualMargemPreferenciaNormal',
+        'percentual_margem_preferencia_adicional' => 'percentualMargemPreferenciaAdicional',
+        'ncm_nbs_codigo' => 'ncmNbsCodigo',
+        'ncm_nbs_descricao' => 'ncmNbsDescricao',
+        'catalogo_id' => 'catalogoId',
+        'categoria_item_catalogo_id' => 'categoriaItemCatalogoId',
+        'catalogo_codigo_item' => 'catalogoCodigoItem',
+        'informacao_complementar' => 'informacaoComplementar'
     ];
 
     /**
@@ -246,7 +286,17 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         'patrimonio' => 'setPatrimonio',
         'codigo_registro_imobiliario' => 'setCodigoRegistroImobiliario',
         'item_categoria_id' => 'setItemCategoriaId',
-        'justificativa' => 'setJustificativa'
+        'justificativa' => 'setJustificativa',
+        'aplicabilidade_margem_preferencia_normal' => 'setAplicabilidadeMargemPreferenciaNormal',
+        'aplicabilidade_margem_preferencia_adicional' => 'setAplicabilidadeMargemPreferenciaAdicional',
+        'percentual_margem_preferencia_normal' => 'setPercentualMargemPreferenciaNormal',
+        'percentual_margem_preferencia_adicional' => 'setPercentualMargemPreferenciaAdicional',
+        'ncm_nbs_codigo' => 'setNcmNbsCodigo',
+        'ncm_nbs_descricao' => 'setNcmNbsDescricao',
+        'catalogo_id' => 'setCatalogoId',
+        'categoria_item_catalogo_id' => 'setCategoriaItemCatalogoId',
+        'catalogo_codigo_item' => 'setCatalogoCodigoItem',
+        'informacao_complementar' => 'setInformacaoComplementar'
     ];
 
     /**
@@ -269,7 +319,17 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         'patrimonio' => 'getPatrimonio',
         'codigo_registro_imobiliario' => 'getCodigoRegistroImobiliario',
         'item_categoria_id' => 'getItemCategoriaId',
-        'justificativa' => 'getJustificativa'
+        'justificativa' => 'getJustificativa',
+        'aplicabilidade_margem_preferencia_normal' => 'getAplicabilidadeMargemPreferenciaNormal',
+        'aplicabilidade_margem_preferencia_adicional' => 'getAplicabilidadeMargemPreferenciaAdicional',
+        'percentual_margem_preferencia_normal' => 'getPercentualMargemPreferenciaNormal',
+        'percentual_margem_preferencia_adicional' => 'getPercentualMargemPreferenciaAdicional',
+        'ncm_nbs_codigo' => 'getNcmNbsCodigo',
+        'ncm_nbs_descricao' => 'getNcmNbsDescricao',
+        'catalogo_id' => 'getCatalogoId',
+        'categoria_item_catalogo_id' => 'getCategoriaItemCatalogoId',
+        'catalogo_codigo_item' => 'getCatalogoCodigoItem',
+        'informacao_complementar' => 'getInformacaoComplementar'
     ];
 
     /**
@@ -325,15 +385,6 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
     public const SITUACAO_COMPRA_ITEM_ID__3 = '3';
     public const SITUACAO_COMPRA_ITEM_ID__4 = '4';
     public const SITUACAO_COMPRA_ITEM_ID__5 = '5';
-    public const CRITERIO_JULGAMENTO_ID__1 = '1';
-    public const CRITERIO_JULGAMENTO_ID__2 = '2';
-    public const CRITERIO_JULGAMENTO_ID__3 = '3';
-    public const CRITERIO_JULGAMENTO_ID__4 = '4';
-    public const CRITERIO_JULGAMENTO_ID__5 = '5';
-    public const CRITERIO_JULGAMENTO_ID__6 = '6';
-    public const CRITERIO_JULGAMENTO_ID__7 = '7';
-    public const CRITERIO_JULGAMENTO_ID__8 = '8';
-    public const CRITERIO_JULGAMENTO_ID__9 = '9';
 
     /**
      * Gets allowable values of the enum
@@ -381,26 +432,6 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCriterioJulgamentoIdAllowableValues()
-    {
-        return [
-            self::CRITERIO_JULGAMENTO_ID__1,
-            self::CRITERIO_JULGAMENTO_ID__2,
-            self::CRITERIO_JULGAMENTO_ID__3,
-            self::CRITERIO_JULGAMENTO_ID__4,
-            self::CRITERIO_JULGAMENTO_ID__5,
-            self::CRITERIO_JULGAMENTO_ID__6,
-            self::CRITERIO_JULGAMENTO_ID__7,
-            self::CRITERIO_JULGAMENTO_ID__8,
-            self::CRITERIO_JULGAMENTO_ID__9,
-        ];
-    }
-
-    /**
      * Associative array for storing property values
      *
      * @var mixed[]
@@ -430,6 +461,16 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         $this->setIfExists('codigo_registro_imobiliario', $data ?? [], null);
         $this->setIfExists('item_categoria_id', $data ?? [], null);
         $this->setIfExists('justificativa', $data ?? [], null);
+        $this->setIfExists('aplicabilidade_margem_preferencia_normal', $data ?? [], null);
+        $this->setIfExists('aplicabilidade_margem_preferencia_adicional', $data ?? [], null);
+        $this->setIfExists('percentual_margem_preferencia_normal', $data ?? [], null);
+        $this->setIfExists('percentual_margem_preferencia_adicional', $data ?? [], null);
+        $this->setIfExists('ncm_nbs_codigo', $data ?? [], null);
+        $this->setIfExists('ncm_nbs_descricao', $data ?? [], null);
+        $this->setIfExists('catalogo_id', $data ?? [], null);
+        $this->setIfExists('categoria_item_catalogo_id', $data ?? [], null);
+        $this->setIfExists('catalogo_codigo_item', $data ?? [], null);
+        $this->setIfExists('informacao_complementar', $data ?? [], null);
     }
 
     /**
@@ -482,15 +523,6 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'situacao_compra_item_id', must be one of '%s'",
                 $this->container['situacao_compra_item_id'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getCriterioJulgamentoIdAllowableValues();
-        if (!is_null($this->container['criterio_julgamento_id']) && !in_array($this->container['criterio_julgamento_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'criterio_julgamento_id', must be one of '%s'",
-                $this->container['criterio_julgamento_id'],
                 implode("', '", $allowedValues)
             );
         }
@@ -821,7 +853,7 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets criterio_julgamento_id
      *
-     * @return string|null
+     * @return int|null
      */
     public function getCriterioJulgamentoId()
     {
@@ -831,7 +863,7 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets criterio_julgamento_id
      *
-     * @param string|null $criterio_julgamento_id criterio_julgamento_id
+     * @param int|null $criterio_julgamento_id criterio_julgamento_id
      *
      * @return self
      */
@@ -839,16 +871,6 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
     {
         if (is_null($criterio_julgamento_id)) {
             throw new \InvalidArgumentException('non-nullable criterio_julgamento_id cannot be null');
-        }
-        $allowedValues = $this->getCriterioJulgamentoIdAllowableValues();
-        if (!in_array($criterio_julgamento_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'criterio_julgamento_id', must be one of '%s'",
-                    $criterio_julgamento_id,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['criterio_julgamento_id'] = $criterio_julgamento_id;
 
@@ -966,6 +988,276 @@ class AlterarCompraItemParcialDTO implements ModelInterface, ArrayAccess, \JsonS
         }
 
         $this->container['justificativa'] = $justificativa;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicabilidade_margem_preferencia_normal
+     *
+     * @return bool|null
+     */
+    public function getAplicabilidadeMargemPreferenciaNormal()
+    {
+        return $this->container['aplicabilidade_margem_preferencia_normal'];
+    }
+
+    /**
+     * Sets aplicabilidade_margem_preferencia_normal
+     *
+     * @param bool|null $aplicabilidade_margem_preferencia_normal aplicabilidade_margem_preferencia_normal
+     *
+     * @return self
+     */
+    public function setAplicabilidadeMargemPreferenciaNormal($aplicabilidade_margem_preferencia_normal)
+    {
+        if (is_null($aplicabilidade_margem_preferencia_normal)) {
+            throw new \InvalidArgumentException('non-nullable aplicabilidade_margem_preferencia_normal cannot be null');
+        }
+        $this->container['aplicabilidade_margem_preferencia_normal'] = $aplicabilidade_margem_preferencia_normal;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicabilidade_margem_preferencia_adicional
+     *
+     * @return bool|null
+     */
+    public function getAplicabilidadeMargemPreferenciaAdicional()
+    {
+        return $this->container['aplicabilidade_margem_preferencia_adicional'];
+    }
+
+    /**
+     * Sets aplicabilidade_margem_preferencia_adicional
+     *
+     * @param bool|null $aplicabilidade_margem_preferencia_adicional aplicabilidade_margem_preferencia_adicional
+     *
+     * @return self
+     */
+    public function setAplicabilidadeMargemPreferenciaAdicional($aplicabilidade_margem_preferencia_adicional)
+    {
+        if (is_null($aplicabilidade_margem_preferencia_adicional)) {
+            throw new \InvalidArgumentException('non-nullable aplicabilidade_margem_preferencia_adicional cannot be null');
+        }
+        $this->container['aplicabilidade_margem_preferencia_adicional'] = $aplicabilidade_margem_preferencia_adicional;
+
+        return $this;
+    }
+
+    /**
+     * Gets percentual_margem_preferencia_normal
+     *
+     * @return float|null
+     */
+    public function getPercentualMargemPreferenciaNormal()
+    {
+        return $this->container['percentual_margem_preferencia_normal'];
+    }
+
+    /**
+     * Sets percentual_margem_preferencia_normal
+     *
+     * @param float|null $percentual_margem_preferencia_normal percentual_margem_preferencia_normal
+     *
+     * @return self
+     */
+    public function setPercentualMargemPreferenciaNormal($percentual_margem_preferencia_normal)
+    {
+        if (is_null($percentual_margem_preferencia_normal)) {
+            throw new \InvalidArgumentException('non-nullable percentual_margem_preferencia_normal cannot be null');
+        }
+        $this->container['percentual_margem_preferencia_normal'] = $percentual_margem_preferencia_normal;
+
+        return $this;
+    }
+
+    /**
+     * Gets percentual_margem_preferencia_adicional
+     *
+     * @return float|null
+     */
+    public function getPercentualMargemPreferenciaAdicional()
+    {
+        return $this->container['percentual_margem_preferencia_adicional'];
+    }
+
+    /**
+     * Sets percentual_margem_preferencia_adicional
+     *
+     * @param float|null $percentual_margem_preferencia_adicional percentual_margem_preferencia_adicional
+     *
+     * @return self
+     */
+    public function setPercentualMargemPreferenciaAdicional($percentual_margem_preferencia_adicional)
+    {
+        if (is_null($percentual_margem_preferencia_adicional)) {
+            throw new \InvalidArgumentException('non-nullable percentual_margem_preferencia_adicional cannot be null');
+        }
+        $this->container['percentual_margem_preferencia_adicional'] = $percentual_margem_preferencia_adicional;
+
+        return $this;
+    }
+
+    /**
+     * Gets ncm_nbs_codigo
+     *
+     * @return string|null
+     */
+    public function getNcmNbsCodigo()
+    {
+        return $this->container['ncm_nbs_codigo'];
+    }
+
+    /**
+     * Sets ncm_nbs_codigo
+     *
+     * @param string|null $ncm_nbs_codigo ncm_nbs_codigo
+     *
+     * @return self
+     */
+    public function setNcmNbsCodigo($ncm_nbs_codigo)
+    {
+        if (is_null($ncm_nbs_codigo)) {
+            throw new \InvalidArgumentException('non-nullable ncm_nbs_codigo cannot be null');
+        }
+        $this->container['ncm_nbs_codigo'] = $ncm_nbs_codigo;
+
+        return $this;
+    }
+
+    /**
+     * Gets ncm_nbs_descricao
+     *
+     * @return string|null
+     */
+    public function getNcmNbsDescricao()
+    {
+        return $this->container['ncm_nbs_descricao'];
+    }
+
+    /**
+     * Sets ncm_nbs_descricao
+     *
+     * @param string|null $ncm_nbs_descricao ncm_nbs_descricao
+     *
+     * @return self
+     */
+    public function setNcmNbsDescricao($ncm_nbs_descricao)
+    {
+        if (is_null($ncm_nbs_descricao)) {
+            throw new \InvalidArgumentException('non-nullable ncm_nbs_descricao cannot be null');
+        }
+        $this->container['ncm_nbs_descricao'] = $ncm_nbs_descricao;
+
+        return $this;
+    }
+
+    /**
+     * Gets catalogo_id
+     *
+     * @return int|null
+     */
+    public function getCatalogoId()
+    {
+        return $this->container['catalogo_id'];
+    }
+
+    /**
+     * Sets catalogo_id
+     *
+     * @param int|null $catalogo_id catalogo_id
+     *
+     * @return self
+     */
+    public function setCatalogoId($catalogo_id)
+    {
+        if (is_null($catalogo_id)) {
+            throw new \InvalidArgumentException('non-nullable catalogo_id cannot be null');
+        }
+        $this->container['catalogo_id'] = $catalogo_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets categoria_item_catalogo_id
+     *
+     * @return int|null
+     */
+    public function getCategoriaItemCatalogoId()
+    {
+        return $this->container['categoria_item_catalogo_id'];
+    }
+
+    /**
+     * Sets categoria_item_catalogo_id
+     *
+     * @param int|null $categoria_item_catalogo_id categoria_item_catalogo_id
+     *
+     * @return self
+     */
+    public function setCategoriaItemCatalogoId($categoria_item_catalogo_id)
+    {
+        if (is_null($categoria_item_catalogo_id)) {
+            throw new \InvalidArgumentException('non-nullable categoria_item_catalogo_id cannot be null');
+        }
+        $this->container['categoria_item_catalogo_id'] = $categoria_item_catalogo_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets catalogo_codigo_item
+     *
+     * @return string|null
+     */
+    public function getCatalogoCodigoItem()
+    {
+        return $this->container['catalogo_codigo_item'];
+    }
+
+    /**
+     * Sets catalogo_codigo_item
+     *
+     * @param string|null $catalogo_codigo_item catalogo_codigo_item
+     *
+     * @return self
+     */
+    public function setCatalogoCodigoItem($catalogo_codigo_item)
+    {
+        if (is_null($catalogo_codigo_item)) {
+            throw new \InvalidArgumentException('non-nullable catalogo_codigo_item cannot be null');
+        }
+        $this->container['catalogo_codigo_item'] = $catalogo_codigo_item;
+
+        return $this;
+    }
+
+    /**
+     * Gets informacao_complementar
+     *
+     * @return string|null
+     */
+    public function getInformacaoComplementar()
+    {
+        return $this->container['informacao_complementar'];
+    }
+
+    /**
+     * Sets informacao_complementar
+     *
+     * @param string|null $informacao_complementar informacao_complementar
+     *
+     * @return self
+     */
+    public function setInformacaoComplementar($informacao_complementar)
+    {
+        if (is_null($informacao_complementar)) {
+            throw new \InvalidArgumentException('non-nullable informacao_complementar cannot be null');
+        }
+        $this->container['informacao_complementar'] = $informacao_complementar;
 
         return $this;
     }

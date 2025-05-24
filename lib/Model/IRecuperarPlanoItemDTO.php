@@ -58,36 +58,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
+        'pdm_codigo' => 'string',
+        'categoria_item_pca_nome' => 'string',
         'codigo_unidade' => 'string',
         'nome_unidade' => 'string',
-        'valor_total' => 'float',
-        'cnpj' => 'string',
-        'ano_pca' => 'int',
         'data_atualizacao' => '\DateTime',
-        'sequencial_pca' => 'int',
-        'quantidade' => 'float',
-        'data_inclusao' => '\DateTime',
         'data_publicacao_pncp' => '\DateTime',
+        'sequencial_pca' => 'int',
+        'cnpj' => 'string',
+        'quantidade' => 'float',
+        'valor_total' => 'float',
+        'ano_pca' => 'int',
         'data_desejada' => '\DateTime',
+        'descricao' => 'string',
+        'data_inclusao' => '\DateTime',
         'numero_item' => 'int',
-        'pdm_codigo' => 'string',
         'pdm_descricao' => 'string',
         'codigo_item' => 'string',
         'unidade_requisitante' => 'string',
         'grupo_contratacao_codigo' => 'string',
         'grupo_contratacao_nome' => 'string',
-        'descricao' => 'string',
         'classificacao_superior_codigo' => 'string',
         'classificacao_superior_nome' => 'string',
         'unidade_fornecimento' => 'string',
         'valor_unitario' => 'float',
         'valor_orcamento_exercicio' => 'float',
-        'nome_classificacao' => 'string',
-        'categoria_item_pcaid' => 'int',
-        'catalogo_id' => 'int',
-        'classificacao_catalogo_id' => 'int',
         'nome_catalogo' => 'string',
-        'categoria_item_pca_nome' => 'string'
+        'nome_classificacao' => 'string',
+        'catalogo_id' => 'int',
+        'categoria_item_pcaid' => 'int',
+        'classificacao_catalogo_id' => 'int'
     ];
 
     /**
@@ -98,36 +98,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'pdm_codigo' => null,
+        'categoria_item_pca_nome' => null,
         'codigo_unidade' => null,
         'nome_unidade' => null,
-        'valor_total' => null,
-        'cnpj' => null,
-        'ano_pca' => 'int32',
         'data_atualizacao' => 'date-time',
-        'sequencial_pca' => 'int32',
-        'quantidade' => null,
-        'data_inclusao' => 'date-time',
         'data_publicacao_pncp' => 'date-time',
+        'sequencial_pca' => 'int32',
+        'cnpj' => null,
+        'quantidade' => null,
+        'valor_total' => null,
+        'ano_pca' => 'int32',
         'data_desejada' => 'date',
+        'descricao' => null,
+        'data_inclusao' => 'date-time',
         'numero_item' => 'int32',
-        'pdm_codigo' => null,
         'pdm_descricao' => null,
         'codigo_item' => null,
         'unidade_requisitante' => null,
         'grupo_contratacao_codigo' => null,
         'grupo_contratacao_nome' => null,
-        'descricao' => null,
         'classificacao_superior_codigo' => null,
         'classificacao_superior_nome' => null,
         'unidade_fornecimento' => null,
         'valor_unitario' => null,
         'valor_orcamento_exercicio' => null,
-        'nome_classificacao' => null,
-        'categoria_item_pcaid' => 'int32',
-        'catalogo_id' => 'int32',
-        'classificacao_catalogo_id' => 'int32',
         'nome_catalogo' => null,
-        'categoria_item_pca_nome' => null
+        'nome_classificacao' => null,
+        'catalogo_id' => 'int32',
+        'categoria_item_pcaid' => 'int32',
+        'classificacao_catalogo_id' => 'int32'
     ];
 
     /**
@@ -136,36 +136,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'codigo_unidade' => false,
+        'pdm_codigo' => false,
+		'categoria_item_pca_nome' => false,
+		'codigo_unidade' => false,
 		'nome_unidade' => false,
-		'valor_total' => false,
-		'cnpj' => false,
-		'ano_pca' => false,
 		'data_atualizacao' => false,
-		'sequencial_pca' => false,
-		'quantidade' => false,
-		'data_inclusao' => false,
 		'data_publicacao_pncp' => false,
+		'sequencial_pca' => false,
+		'cnpj' => false,
+		'quantidade' => false,
+		'valor_total' => false,
+		'ano_pca' => false,
 		'data_desejada' => false,
+		'descricao' => false,
+		'data_inclusao' => false,
 		'numero_item' => false,
-		'pdm_codigo' => false,
 		'pdm_descricao' => false,
 		'codigo_item' => false,
 		'unidade_requisitante' => false,
 		'grupo_contratacao_codigo' => false,
 		'grupo_contratacao_nome' => false,
-		'descricao' => false,
 		'classificacao_superior_codigo' => false,
 		'classificacao_superior_nome' => false,
 		'unidade_fornecimento' => false,
 		'valor_unitario' => false,
 		'valor_orcamento_exercicio' => false,
-		'nome_classificacao' => false,
-		'categoria_item_pcaid' => false,
-		'catalogo_id' => false,
-		'classificacao_catalogo_id' => false,
 		'nome_catalogo' => false,
-		'categoria_item_pca_nome' => false
+		'nome_classificacao' => false,
+		'catalogo_id' => false,
+		'categoria_item_pcaid' => false,
+		'classificacao_catalogo_id' => false
     ];
 
     /**
@@ -254,36 +254,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
+        'pdm_codigo' => 'pdmCodigo',
+        'categoria_item_pca_nome' => 'categoriaItemPcaNome',
         'codigo_unidade' => 'codigoUnidade',
         'nome_unidade' => 'nomeUnidade',
-        'valor_total' => 'valorTotal',
-        'cnpj' => 'cnpj',
-        'ano_pca' => 'anoPca',
         'data_atualizacao' => 'dataAtualizacao',
-        'sequencial_pca' => 'sequencialPca',
-        'quantidade' => 'quantidade',
-        'data_inclusao' => 'dataInclusao',
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
+        'sequencial_pca' => 'sequencialPca',
+        'cnpj' => 'cnpj',
+        'quantidade' => 'quantidade',
+        'valor_total' => 'valorTotal',
+        'ano_pca' => 'anoPca',
         'data_desejada' => 'dataDesejada',
+        'descricao' => 'descricao',
+        'data_inclusao' => 'dataInclusao',
         'numero_item' => 'numeroItem',
-        'pdm_codigo' => 'pdmCodigo',
         'pdm_descricao' => 'pdmDescricao',
         'codigo_item' => 'codigoItem',
         'unidade_requisitante' => 'unidadeRequisitante',
         'grupo_contratacao_codigo' => 'grupoContratacaoCodigo',
         'grupo_contratacao_nome' => 'grupoContratacaoNome',
-        'descricao' => 'descricao',
         'classificacao_superior_codigo' => 'classificacaoSuperiorCodigo',
         'classificacao_superior_nome' => 'classificacaoSuperiorNome',
         'unidade_fornecimento' => 'unidadeFornecimento',
         'valor_unitario' => 'valorUnitario',
         'valor_orcamento_exercicio' => 'valorOrcamentoExercicio',
-        'nome_classificacao' => 'nomeClassificacao',
-        'categoria_item_pcaid' => 'categoriaItemPcaid',
-        'catalogo_id' => 'catalogoId',
-        'classificacao_catalogo_id' => 'classificacaoCatalogoId',
         'nome_catalogo' => 'nomeCatalogo',
-        'categoria_item_pca_nome' => 'categoriaItemPcaNome'
+        'nome_classificacao' => 'nomeClassificacao',
+        'catalogo_id' => 'catalogoId',
+        'categoria_item_pcaid' => 'categoriaItemPcaid',
+        'classificacao_catalogo_id' => 'classificacaoCatalogoId'
     ];
 
     /**
@@ -292,36 +292,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
+        'pdm_codigo' => 'setPdmCodigo',
+        'categoria_item_pca_nome' => 'setCategoriaItemPcaNome',
         'codigo_unidade' => 'setCodigoUnidade',
         'nome_unidade' => 'setNomeUnidade',
-        'valor_total' => 'setValorTotal',
-        'cnpj' => 'setCnpj',
-        'ano_pca' => 'setAnoPca',
         'data_atualizacao' => 'setDataAtualizacao',
-        'sequencial_pca' => 'setSequencialPca',
-        'quantidade' => 'setQuantidade',
-        'data_inclusao' => 'setDataInclusao',
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
+        'sequencial_pca' => 'setSequencialPca',
+        'cnpj' => 'setCnpj',
+        'quantidade' => 'setQuantidade',
+        'valor_total' => 'setValorTotal',
+        'ano_pca' => 'setAnoPca',
         'data_desejada' => 'setDataDesejada',
+        'descricao' => 'setDescricao',
+        'data_inclusao' => 'setDataInclusao',
         'numero_item' => 'setNumeroItem',
-        'pdm_codigo' => 'setPdmCodigo',
         'pdm_descricao' => 'setPdmDescricao',
         'codigo_item' => 'setCodigoItem',
         'unidade_requisitante' => 'setUnidadeRequisitante',
         'grupo_contratacao_codigo' => 'setGrupoContratacaoCodigo',
         'grupo_contratacao_nome' => 'setGrupoContratacaoNome',
-        'descricao' => 'setDescricao',
         'classificacao_superior_codigo' => 'setClassificacaoSuperiorCodigo',
         'classificacao_superior_nome' => 'setClassificacaoSuperiorNome',
         'unidade_fornecimento' => 'setUnidadeFornecimento',
         'valor_unitario' => 'setValorUnitario',
         'valor_orcamento_exercicio' => 'setValorOrcamentoExercicio',
-        'nome_classificacao' => 'setNomeClassificacao',
-        'categoria_item_pcaid' => 'setCategoriaItemPcaid',
-        'catalogo_id' => 'setCatalogoId',
-        'classificacao_catalogo_id' => 'setClassificacaoCatalogoId',
         'nome_catalogo' => 'setNomeCatalogo',
-        'categoria_item_pca_nome' => 'setCategoriaItemPcaNome'
+        'nome_classificacao' => 'setNomeClassificacao',
+        'catalogo_id' => 'setCatalogoId',
+        'categoria_item_pcaid' => 'setCategoriaItemPcaid',
+        'classificacao_catalogo_id' => 'setClassificacaoCatalogoId'
     ];
 
     /**
@@ -330,36 +330,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
+        'pdm_codigo' => 'getPdmCodigo',
+        'categoria_item_pca_nome' => 'getCategoriaItemPcaNome',
         'codigo_unidade' => 'getCodigoUnidade',
         'nome_unidade' => 'getNomeUnidade',
-        'valor_total' => 'getValorTotal',
-        'cnpj' => 'getCnpj',
-        'ano_pca' => 'getAnoPca',
         'data_atualizacao' => 'getDataAtualizacao',
-        'sequencial_pca' => 'getSequencialPca',
-        'quantidade' => 'getQuantidade',
-        'data_inclusao' => 'getDataInclusao',
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
+        'sequencial_pca' => 'getSequencialPca',
+        'cnpj' => 'getCnpj',
+        'quantidade' => 'getQuantidade',
+        'valor_total' => 'getValorTotal',
+        'ano_pca' => 'getAnoPca',
         'data_desejada' => 'getDataDesejada',
+        'descricao' => 'getDescricao',
+        'data_inclusao' => 'getDataInclusao',
         'numero_item' => 'getNumeroItem',
-        'pdm_codigo' => 'getPdmCodigo',
         'pdm_descricao' => 'getPdmDescricao',
         'codigo_item' => 'getCodigoItem',
         'unidade_requisitante' => 'getUnidadeRequisitante',
         'grupo_contratacao_codigo' => 'getGrupoContratacaoCodigo',
         'grupo_contratacao_nome' => 'getGrupoContratacaoNome',
-        'descricao' => 'getDescricao',
         'classificacao_superior_codigo' => 'getClassificacaoSuperiorCodigo',
         'classificacao_superior_nome' => 'getClassificacaoSuperiorNome',
         'unidade_fornecimento' => 'getUnidadeFornecimento',
         'valor_unitario' => 'getValorUnitario',
         'valor_orcamento_exercicio' => 'getValorOrcamentoExercicio',
-        'nome_classificacao' => 'getNomeClassificacao',
-        'categoria_item_pcaid' => 'getCategoriaItemPcaid',
-        'catalogo_id' => 'getCatalogoId',
-        'classificacao_catalogo_id' => 'getClassificacaoCatalogoId',
         'nome_catalogo' => 'getNomeCatalogo',
-        'categoria_item_pca_nome' => 'getCategoriaItemPcaNome'
+        'nome_classificacao' => 'getNomeClassificacao',
+        'catalogo_id' => 'getCatalogoId',
+        'categoria_item_pcaid' => 'getCategoriaItemPcaid',
+        'classificacao_catalogo_id' => 'getClassificacaoCatalogoId'
     ];
 
     /**
@@ -419,36 +419,36 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('pdm_codigo', $data ?? [], null);
+        $this->setIfExists('categoria_item_pca_nome', $data ?? [], null);
         $this->setIfExists('codigo_unidade', $data ?? [], null);
         $this->setIfExists('nome_unidade', $data ?? [], null);
-        $this->setIfExists('valor_total', $data ?? [], null);
-        $this->setIfExists('cnpj', $data ?? [], null);
-        $this->setIfExists('ano_pca', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
-        $this->setIfExists('sequencial_pca', $data ?? [], null);
-        $this->setIfExists('quantidade', $data ?? [], null);
-        $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('sequencial_pca', $data ?? [], null);
+        $this->setIfExists('cnpj', $data ?? [], null);
+        $this->setIfExists('quantidade', $data ?? [], null);
+        $this->setIfExists('valor_total', $data ?? [], null);
+        $this->setIfExists('ano_pca', $data ?? [], null);
         $this->setIfExists('data_desejada', $data ?? [], null);
+        $this->setIfExists('descricao', $data ?? [], null);
+        $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('numero_item', $data ?? [], null);
-        $this->setIfExists('pdm_codigo', $data ?? [], null);
         $this->setIfExists('pdm_descricao', $data ?? [], null);
         $this->setIfExists('codigo_item', $data ?? [], null);
         $this->setIfExists('unidade_requisitante', $data ?? [], null);
         $this->setIfExists('grupo_contratacao_codigo', $data ?? [], null);
         $this->setIfExists('grupo_contratacao_nome', $data ?? [], null);
-        $this->setIfExists('descricao', $data ?? [], null);
         $this->setIfExists('classificacao_superior_codigo', $data ?? [], null);
         $this->setIfExists('classificacao_superior_nome', $data ?? [], null);
         $this->setIfExists('unidade_fornecimento', $data ?? [], null);
         $this->setIfExists('valor_unitario', $data ?? [], null);
         $this->setIfExists('valor_orcamento_exercicio', $data ?? [], null);
-        $this->setIfExists('nome_classificacao', $data ?? [], null);
-        $this->setIfExists('categoria_item_pcaid', $data ?? [], null);
-        $this->setIfExists('catalogo_id', $data ?? [], null);
-        $this->setIfExists('classificacao_catalogo_id', $data ?? [], null);
         $this->setIfExists('nome_catalogo', $data ?? [], null);
-        $this->setIfExists('categoria_item_pca_nome', $data ?? [], null);
+        $this->setIfExists('nome_classificacao', $data ?? [], null);
+        $this->setIfExists('catalogo_id', $data ?? [], null);
+        $this->setIfExists('categoria_item_pcaid', $data ?? [], null);
+        $this->setIfExists('classificacao_catalogo_id', $data ?? [], null);
     }
 
     /**
@@ -492,6 +492,60 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets pdm_codigo
+     *
+     * @return string|null
+     */
+    public function getPdmCodigo()
+    {
+        return $this->container['pdm_codigo'];
+    }
+
+    /**
+     * Sets pdm_codigo
+     *
+     * @param string|null $pdm_codigo pdm_codigo
+     *
+     * @return self
+     */
+    public function setPdmCodigo($pdm_codigo)
+    {
+        if (is_null($pdm_codigo)) {
+            throw new \InvalidArgumentException('non-nullable pdm_codigo cannot be null');
+        }
+        $this->container['pdm_codigo'] = $pdm_codigo;
+
+        return $this;
+    }
+
+    /**
+     * Gets categoria_item_pca_nome
+     *
+     * @return string|null
+     */
+    public function getCategoriaItemPcaNome()
+    {
+        return $this->container['categoria_item_pca_nome'];
+    }
+
+    /**
+     * Sets categoria_item_pca_nome
+     *
+     * @param string|null $categoria_item_pca_nome categoria_item_pca_nome
+     *
+     * @return self
+     */
+    public function setCategoriaItemPcaNome($categoria_item_pca_nome)
+    {
+        if (is_null($categoria_item_pca_nome)) {
+            throw new \InvalidArgumentException('non-nullable categoria_item_pca_nome cannot be null');
+        }
+        $this->container['categoria_item_pca_nome'] = $categoria_item_pca_nome;
+
+        return $this;
+    }
 
     /**
      * Gets codigo_unidade
@@ -548,87 +602,6 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets valor_total
-     *
-     * @return float|null
-     */
-    public function getValorTotal()
-    {
-        return $this->container['valor_total'];
-    }
-
-    /**
-     * Sets valor_total
-     *
-     * @param float|null $valor_total valor_total
-     *
-     * @return self
-     */
-    public function setValorTotal($valor_total)
-    {
-        if (is_null($valor_total)) {
-            throw new \InvalidArgumentException('non-nullable valor_total cannot be null');
-        }
-        $this->container['valor_total'] = $valor_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets cnpj
-     *
-     * @return string|null
-     */
-    public function getCnpj()
-    {
-        return $this->container['cnpj'];
-    }
-
-    /**
-     * Sets cnpj
-     *
-     * @param string|null $cnpj cnpj
-     *
-     * @return self
-     */
-    public function setCnpj($cnpj)
-    {
-        if (is_null($cnpj)) {
-            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
-        }
-        $this->container['cnpj'] = $cnpj;
-
-        return $this;
-    }
-
-    /**
-     * Gets ano_pca
-     *
-     * @return int|null
-     */
-    public function getAnoPca()
-    {
-        return $this->container['ano_pca'];
-    }
-
-    /**
-     * Sets ano_pca
-     *
-     * @param int|null $ano_pca ano_pca
-     *
-     * @return self
-     */
-    public function setAnoPca($ano_pca)
-    {
-        if (is_null($ano_pca)) {
-            throw new \InvalidArgumentException('non-nullable ano_pca cannot be null');
-        }
-        $this->container['ano_pca'] = $ano_pca;
-
-        return $this;
-    }
-
-    /**
      * Gets data_atualizacao
      *
      * @return \DateTime|null
@@ -651,87 +624,6 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
-
-        return $this;
-    }
-
-    /**
-     * Gets sequencial_pca
-     *
-     * @return int|null
-     */
-    public function getSequencialPca()
-    {
-        return $this->container['sequencial_pca'];
-    }
-
-    /**
-     * Sets sequencial_pca
-     *
-     * @param int|null $sequencial_pca sequencial_pca
-     *
-     * @return self
-     */
-    public function setSequencialPca($sequencial_pca)
-    {
-        if (is_null($sequencial_pca)) {
-            throw new \InvalidArgumentException('non-nullable sequencial_pca cannot be null');
-        }
-        $this->container['sequencial_pca'] = $sequencial_pca;
-
-        return $this;
-    }
-
-    /**
-     * Gets quantidade
-     *
-     * @return float|null
-     */
-    public function getQuantidade()
-    {
-        return $this->container['quantidade'];
-    }
-
-    /**
-     * Sets quantidade
-     *
-     * @param float|null $quantidade quantidade
-     *
-     * @return self
-     */
-    public function setQuantidade($quantidade)
-    {
-        if (is_null($quantidade)) {
-            throw new \InvalidArgumentException('non-nullable quantidade cannot be null');
-        }
-        $this->container['quantidade'] = $quantidade;
-
-        return $this;
-    }
-
-    /**
-     * Gets data_inclusao
-     *
-     * @return \DateTime|null
-     */
-    public function getDataInclusao()
-    {
-        return $this->container['data_inclusao'];
-    }
-
-    /**
-     * Sets data_inclusao
-     *
-     * @param \DateTime|null $data_inclusao data_inclusao
-     *
-     * @return self
-     */
-    public function setDataInclusao($data_inclusao)
-    {
-        if (is_null($data_inclusao)) {
-            throw new \InvalidArgumentException('non-nullable data_inclusao cannot be null');
-        }
-        $this->container['data_inclusao'] = $data_inclusao;
 
         return $this;
     }
@@ -764,6 +656,141 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets sequencial_pca
+     *
+     * @return int|null
+     */
+    public function getSequencialPca()
+    {
+        return $this->container['sequencial_pca'];
+    }
+
+    /**
+     * Sets sequencial_pca
+     *
+     * @param int|null $sequencial_pca sequencial_pca
+     *
+     * @return self
+     */
+    public function setSequencialPca($sequencial_pca)
+    {
+        if (is_null($sequencial_pca)) {
+            throw new \InvalidArgumentException('non-nullable sequencial_pca cannot be null');
+        }
+        $this->container['sequencial_pca'] = $sequencial_pca;
+
+        return $this;
+    }
+
+    /**
+     * Gets cnpj
+     *
+     * @return string|null
+     */
+    public function getCnpj()
+    {
+        return $this->container['cnpj'];
+    }
+
+    /**
+     * Sets cnpj
+     *
+     * @param string|null $cnpj cnpj
+     *
+     * @return self
+     */
+    public function setCnpj($cnpj)
+    {
+        if (is_null($cnpj)) {
+            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
+        }
+        $this->container['cnpj'] = $cnpj;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantidade
+     *
+     * @return float|null
+     */
+    public function getQuantidade()
+    {
+        return $this->container['quantidade'];
+    }
+
+    /**
+     * Sets quantidade
+     *
+     * @param float|null $quantidade quantidade
+     *
+     * @return self
+     */
+    public function setQuantidade($quantidade)
+    {
+        if (is_null($quantidade)) {
+            throw new \InvalidArgumentException('non-nullable quantidade cannot be null');
+        }
+        $this->container['quantidade'] = $quantidade;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_total
+     *
+     * @return float|null
+     */
+    public function getValorTotal()
+    {
+        return $this->container['valor_total'];
+    }
+
+    /**
+     * Sets valor_total
+     *
+     * @param float|null $valor_total valor_total
+     *
+     * @return self
+     */
+    public function setValorTotal($valor_total)
+    {
+        if (is_null($valor_total)) {
+            throw new \InvalidArgumentException('non-nullable valor_total cannot be null');
+        }
+        $this->container['valor_total'] = $valor_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets ano_pca
+     *
+     * @return int|null
+     */
+    public function getAnoPca()
+    {
+        return $this->container['ano_pca'];
+    }
+
+    /**
+     * Sets ano_pca
+     *
+     * @param int|null $ano_pca ano_pca
+     *
+     * @return self
+     */
+    public function setAnoPca($ano_pca)
+    {
+        if (is_null($ano_pca)) {
+            throw new \InvalidArgumentException('non-nullable ano_pca cannot be null');
+        }
+        $this->container['ano_pca'] = $ano_pca;
+
+        return $this;
+    }
+
+    /**
      * Gets data_desejada
      *
      * @return \DateTime|null
@@ -791,6 +818,60 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets descricao
+     *
+     * @return string|null
+     */
+    public function getDescricao()
+    {
+        return $this->container['descricao'];
+    }
+
+    /**
+     * Sets descricao
+     *
+     * @param string|null $descricao descricao
+     *
+     * @return self
+     */
+    public function setDescricao($descricao)
+    {
+        if (is_null($descricao)) {
+            throw new \InvalidArgumentException('non-nullable descricao cannot be null');
+        }
+        $this->container['descricao'] = $descricao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_inclusao
+     *
+     * @return \DateTime|null
+     */
+    public function getDataInclusao()
+    {
+        return $this->container['data_inclusao'];
+    }
+
+    /**
+     * Sets data_inclusao
+     *
+     * @param \DateTime|null $data_inclusao data_inclusao
+     *
+     * @return self
+     */
+    public function setDataInclusao($data_inclusao)
+    {
+        if (is_null($data_inclusao)) {
+            throw new \InvalidArgumentException('non-nullable data_inclusao cannot be null');
+        }
+        $this->container['data_inclusao'] = $data_inclusao;
+
+        return $this;
+    }
+
+    /**
      * Gets numero_item
      *
      * @return int|null
@@ -813,33 +894,6 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable numero_item cannot be null');
         }
         $this->container['numero_item'] = $numero_item;
-
-        return $this;
-    }
-
-    /**
-     * Gets pdm_codigo
-     *
-     * @return string|null
-     */
-    public function getPdmCodigo()
-    {
-        return $this->container['pdm_codigo'];
-    }
-
-    /**
-     * Sets pdm_codigo
-     *
-     * @param string|null $pdm_codigo pdm_codigo
-     *
-     * @return self
-     */
-    public function setPdmCodigo($pdm_codigo)
-    {
-        if (is_null($pdm_codigo)) {
-            throw new \InvalidArgumentException('non-nullable pdm_codigo cannot be null');
-        }
-        $this->container['pdm_codigo'] = $pdm_codigo;
 
         return $this;
     }
@@ -980,33 +1034,6 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets descricao
-     *
-     * @return string|null
-     */
-    public function getDescricao()
-    {
-        return $this->container['descricao'];
-    }
-
-    /**
-     * Sets descricao
-     *
-     * @param string|null $descricao descricao
-     *
-     * @return self
-     */
-    public function setDescricao($descricao)
-    {
-        if (is_null($descricao)) {
-            throw new \InvalidArgumentException('non-nullable descricao cannot be null');
-        }
-        $this->container['descricao'] = $descricao;
-
-        return $this;
-    }
-
-    /**
      * Gets classificacao_superior_codigo
      *
      * @return string|null
@@ -1142,6 +1169,33 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets nome_catalogo
+     *
+     * @return string|null
+     */
+    public function getNomeCatalogo()
+    {
+        return $this->container['nome_catalogo'];
+    }
+
+    /**
+     * Sets nome_catalogo
+     *
+     * @param string|null $nome_catalogo nome_catalogo
+     *
+     * @return self
+     */
+    public function setNomeCatalogo($nome_catalogo)
+    {
+        if (is_null($nome_catalogo)) {
+            throw new \InvalidArgumentException('non-nullable nome_catalogo cannot be null');
+        }
+        $this->container['nome_catalogo'] = $nome_catalogo;
+
+        return $this;
+    }
+
+    /**
      * Gets nome_classificacao
      *
      * @return string|null
@@ -1164,33 +1218,6 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable nome_classificacao cannot be null');
         }
         $this->container['nome_classificacao'] = $nome_classificacao;
-
-        return $this;
-    }
-
-    /**
-     * Gets categoria_item_pcaid
-     *
-     * @return int|null
-     */
-    public function getCategoriaItemPcaid()
-    {
-        return $this->container['categoria_item_pcaid'];
-    }
-
-    /**
-     * Sets categoria_item_pcaid
-     *
-     * @param int|null $categoria_item_pcaid categoria_item_pcaid
-     *
-     * @return self
-     */
-    public function setCategoriaItemPcaid($categoria_item_pcaid)
-    {
-        if (is_null($categoria_item_pcaid)) {
-            throw new \InvalidArgumentException('non-nullable categoria_item_pcaid cannot be null');
-        }
-        $this->container['categoria_item_pcaid'] = $categoria_item_pcaid;
 
         return $this;
     }
@@ -1223,6 +1250,33 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets categoria_item_pcaid
+     *
+     * @return int|null
+     */
+    public function getCategoriaItemPcaid()
+    {
+        return $this->container['categoria_item_pcaid'];
+    }
+
+    /**
+     * Sets categoria_item_pcaid
+     *
+     * @param int|null $categoria_item_pcaid categoria_item_pcaid
+     *
+     * @return self
+     */
+    public function setCategoriaItemPcaid($categoria_item_pcaid)
+    {
+        if (is_null($categoria_item_pcaid)) {
+            throw new \InvalidArgumentException('non-nullable categoria_item_pcaid cannot be null');
+        }
+        $this->container['categoria_item_pcaid'] = $categoria_item_pcaid;
+
+        return $this;
+    }
+
+    /**
      * Gets classificacao_catalogo_id
      *
      * @return int|null
@@ -1245,60 +1299,6 @@ class IRecuperarPlanoItemDTO implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable classificacao_catalogo_id cannot be null');
         }
         $this->container['classificacao_catalogo_id'] = $classificacao_catalogo_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets nome_catalogo
-     *
-     * @return string|null
-     */
-    public function getNomeCatalogo()
-    {
-        return $this->container['nome_catalogo'];
-    }
-
-    /**
-     * Sets nome_catalogo
-     *
-     * @param string|null $nome_catalogo nome_catalogo
-     *
-     * @return self
-     */
-    public function setNomeCatalogo($nome_catalogo)
-    {
-        if (is_null($nome_catalogo)) {
-            throw new \InvalidArgumentException('non-nullable nome_catalogo cannot be null');
-        }
-        $this->container['nome_catalogo'] = $nome_catalogo;
-
-        return $this;
-    }
-
-    /**
-     * Gets categoria_item_pca_nome
-     *
-     * @return string|null
-     */
-    public function getCategoriaItemPcaNome()
-    {
-        return $this->container['categoria_item_pca_nome'];
-    }
-
-    /**
-     * Sets categoria_item_pca_nome
-     *
-     * @param string|null $categoria_item_pca_nome categoria_item_pca_nome
-     *
-     * @return self
-     */
-    public function setCategoriaItemPcaNome($categoria_item_pca_nome)
-    {
-        if (is_null($categoria_item_pca_nome)) {
-            throw new \InvalidArgumentException('non-nullable categoria_item_pca_nome cannot be null');
-        }
-        $this->container['categoria_item_pca_nome'] = $categoria_item_pca_nome;
 
         return $this;
     }

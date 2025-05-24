@@ -81,9 +81,18 @@ class PlanoContratacaoItemOrgaoToDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "valor_total"
+     * Test attribute "data_atualizacao"
      */
-    public function testPropertyValorTotal()
+    public function testPropertyDataAtualizacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_publicacao_pncp"
+     */
+    public function testPropertyDataPublicacaoPncp()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -93,6 +102,24 @@ class PlanoContratacaoItemOrgaoToDTOTest extends TestCase
      * Test attribute "cnpj"
      */
     public function testPropertyCnpj()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "quantidade"
+     */
+    public function testPropertyQuantidade()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_total"
+     */
+    public function testPropertyValorTotal()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -117,24 +144,6 @@ class PlanoContratacaoItemOrgaoToDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "data_atualizacao"
-     */
-    public function testPropertyDataAtualizacao()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "esfera"
-     */
-    public function testPropertyEsfera()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "poder"
      */
     public function testPropertyPoder()
@@ -144,18 +153,9 @@ class PlanoContratacaoItemOrgaoToDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "quantidade"
+     * Test attribute "esfera"
      */
-    public function testPropertyQuantidade()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data_publicacao_pncp"
-     */
-    public function testPropertyDataPublicacaoPncp()
+    public function testPropertyEsfera()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

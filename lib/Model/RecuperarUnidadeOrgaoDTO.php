@@ -58,12 +58,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uf_nome' => 'string',
         'codigo_unidade' => 'string',
         'nome_unidade' => 'string',
-        'uf_sigla' => 'string',
         'municipio_nome' => 'string',
-        'codigo_ibge' => 'string'
+        'codigo_ibge' => 'string',
+        'uf_sigla' => 'string',
+        'uf_nome' => 'string'
     ];
 
     /**
@@ -74,12 +74,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'uf_nome' => null,
         'codigo_unidade' => null,
         'nome_unidade' => null,
-        'uf_sigla' => null,
         'municipio_nome' => null,
-        'codigo_ibge' => null
+        'codigo_ibge' => null,
+        'uf_sigla' => null,
+        'uf_nome' => null
     ];
 
     /**
@@ -88,12 +88,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'uf_nome' => false,
-		'codigo_unidade' => false,
+        'codigo_unidade' => false,
 		'nome_unidade' => false,
-		'uf_sigla' => false,
 		'municipio_nome' => false,
-		'codigo_ibge' => false
+		'codigo_ibge' => false,
+		'uf_sigla' => false,
+		'uf_nome' => false
     ];
 
     /**
@@ -182,12 +182,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'uf_nome' => 'ufNome',
         'codigo_unidade' => 'codigoUnidade',
         'nome_unidade' => 'nomeUnidade',
-        'uf_sigla' => 'ufSigla',
         'municipio_nome' => 'municipioNome',
-        'codigo_ibge' => 'codigoIbge'
+        'codigo_ibge' => 'codigoIbge',
+        'uf_sigla' => 'ufSigla',
+        'uf_nome' => 'ufNome'
     ];
 
     /**
@@ -196,12 +196,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'uf_nome' => 'setUfNome',
         'codigo_unidade' => 'setCodigoUnidade',
         'nome_unidade' => 'setNomeUnidade',
-        'uf_sigla' => 'setUfSigla',
         'municipio_nome' => 'setMunicipioNome',
-        'codigo_ibge' => 'setCodigoIbge'
+        'codigo_ibge' => 'setCodigoIbge',
+        'uf_sigla' => 'setUfSigla',
+        'uf_nome' => 'setUfNome'
     ];
 
     /**
@@ -210,12 +210,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'uf_nome' => 'getUfNome',
         'codigo_unidade' => 'getCodigoUnidade',
         'nome_unidade' => 'getNomeUnidade',
-        'uf_sigla' => 'getUfSigla',
         'municipio_nome' => 'getMunicipioNome',
-        'codigo_ibge' => 'getCodigoIbge'
+        'codigo_ibge' => 'getCodigoIbge',
+        'uf_sigla' => 'getUfSigla',
+        'uf_nome' => 'getUfNome'
     ];
 
     /**
@@ -275,12 +275,12 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('uf_nome', $data ?? [], null);
         $this->setIfExists('codigo_unidade', $data ?? [], null);
         $this->setIfExists('nome_unidade', $data ?? [], null);
-        $this->setIfExists('uf_sigla', $data ?? [], null);
         $this->setIfExists('municipio_nome', $data ?? [], null);
         $this->setIfExists('codigo_ibge', $data ?? [], null);
+        $this->setIfExists('uf_sigla', $data ?? [], null);
+        $this->setIfExists('uf_nome', $data ?? [], null);
     }
 
     /**
@@ -324,33 +324,6 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets uf_nome
-     *
-     * @return string|null
-     */
-    public function getUfNome()
-    {
-        return $this->container['uf_nome'];
-    }
-
-    /**
-     * Sets uf_nome
-     *
-     * @param string|null $uf_nome uf_nome
-     *
-     * @return self
-     */
-    public function setUfNome($uf_nome)
-    {
-        if (is_null($uf_nome)) {
-            throw new \InvalidArgumentException('non-nullable uf_nome cannot be null');
-        }
-        $this->container['uf_nome'] = $uf_nome;
-
-        return $this;
-    }
 
     /**
      * Gets codigo_unidade
@@ -407,33 +380,6 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets uf_sigla
-     *
-     * @return string|null
-     */
-    public function getUfSigla()
-    {
-        return $this->container['uf_sigla'];
-    }
-
-    /**
-     * Sets uf_sigla
-     *
-     * @param string|null $uf_sigla uf_sigla
-     *
-     * @return self
-     */
-    public function setUfSigla($uf_sigla)
-    {
-        if (is_null($uf_sigla)) {
-            throw new \InvalidArgumentException('non-nullable uf_sigla cannot be null');
-        }
-        $this->container['uf_sigla'] = $uf_sigla;
-
-        return $this;
-    }
-
-    /**
      * Gets municipio_nome
      *
      * @return string|null
@@ -483,6 +429,60 @@ class RecuperarUnidadeOrgaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable codigo_ibge cannot be null');
         }
         $this->container['codigo_ibge'] = $codigo_ibge;
+
+        return $this;
+    }
+
+    /**
+     * Gets uf_sigla
+     *
+     * @return string|null
+     */
+    public function getUfSigla()
+    {
+        return $this->container['uf_sigla'];
+    }
+
+    /**
+     * Sets uf_sigla
+     *
+     * @param string|null $uf_sigla uf_sigla
+     *
+     * @return self
+     */
+    public function setUfSigla($uf_sigla)
+    {
+        if (is_null($uf_sigla)) {
+            throw new \InvalidArgumentException('non-nullable uf_sigla cannot be null');
+        }
+        $this->container['uf_sigla'] = $uf_sigla;
+
+        return $this;
+    }
+
+    /**
+     * Gets uf_nome
+     *
+     * @return string|null
+     */
+    public function getUfNome()
+    {
+        return $this->container['uf_nome'];
+    }
+
+    /**
+     * Sets uf_nome
+     *
+     * @param string|null $uf_nome uf_nome
+     *
+     * @return self
+     */
+    public function setUfNome($uf_nome)
+    {
+        if (is_null($uf_nome)) {
+            throw new \InvalidArgumentException('non-nullable uf_nome cannot be null');
+        }
+        $this->container['uf_nome'] = $uf_nome;
 
         return $this;
     }

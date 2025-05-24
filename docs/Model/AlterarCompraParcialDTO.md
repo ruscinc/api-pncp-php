@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tipo_instrumento_convocatorio_id** | **string** |  | [optional]
-**modalidade_id** | **string** |  | [optional]
-**modo_disputa_id** | **string** |  | [optional]
+**tipo_instrumento_convocatorio_id** | **int** |  | [optional]
+**modalidade_id** | **int** |  | [optional]
+**modo_disputa_id** | **int** |  | [optional]
 **numero_compra** | **string** |  | [optional]
 **numero_processo** | **string** |  | [optional]
 **situacao_compra_id** | **string** |  | [optional]
@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **data_encerramento_proposta** | **\DateTime** |  | [optional]
 **codigo_unidade_compradora** | **string** |  | [optional]
 **link_sistema_origem** | **string** |  | [optional]
+**link_processo_eletronico** | **string** |  | [optional]
 **justificativa** | **string** |  | [optional]
 **justificativa_presencial** | **string** |  | [optional]
 

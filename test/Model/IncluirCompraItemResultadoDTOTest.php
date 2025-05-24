@@ -117,6 +117,96 @@ class IncluirCompraItemResultadoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "aplicacao_margem_preferencia"
+     */
+    public function testPropertyAplicacaoMargemPreferencia()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "amparo_legal_margem_preferencia_id"
+     */
+    public function testPropertyAmparoLegalMargemPreferenciaId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aplicacao_beneficio_me_epp"
+     */
+    public function testPropertyAplicacaoBeneficioMeEpp()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aplicacao_criterio_desempate"
+     */
+    public function testPropertyAplicacaoCriterioDesempate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "amparo_legal_criterio_desempate_id"
+     */
+    public function testPropertyAmparoLegalCriterioDesempateId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "simbolo_moeda_estrangeira"
+     */
+    public function testPropertySimboloMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_cotacao_moeda_estrangeira"
+     */
+    public function testPropertyDataCotacaoMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "timezone_cotacao_moeda_estrangeira"
+     */
+    public function testPropertyTimezoneCotacaoMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_nominal_moeda_estrangeira"
+     */
+    public function testPropertyValorNominalMoedaEstrangeira()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "pais_origem_produto_servico_id"
+     */
+    public function testPropertyPaisOrigemProdutoServicoId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "tipo_pessoa_id"
      */
     public function testPropertyTipoPessoaId()

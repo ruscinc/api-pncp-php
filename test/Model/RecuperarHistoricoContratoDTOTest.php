@@ -135,36 +135,18 @@ class RecuperarHistoricoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "usuario_nome"
+     * Test attribute "sequencial_instrumento_cobranca"
      */
-    public function testPropertyUsuarioNome()
+    public function testPropertySequencialInstrumentoCobranca()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "titulo_documento_termo_contrato"
+     * Test attribute "sequencial_documento_termo_contrato"
      */
-    public function testPropertyTituloDocumentoTermoContrato()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tipo_log_manutencao_nome"
-     */
-    public function testPropertyTipoLogManutencaoNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "categoria_log_manutencao_nome"
-     */
-    public function testPropertyCategoriaLogManutencaoNome()
+    public function testPropertySequencialDocumentoTermoContrato()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -207,6 +189,24 @@ class RecuperarHistoricoContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "tipo_log_manutencao_nome"
+     */
+    public function testPropertyTipoLogManutencaoNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "categoria_log_manutencao_nome"
+     */
+    public function testPropertyCategoriaLogManutencaoNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "titulo_documento_contrato"
      */
     public function testPropertyTituloDocumentoContrato()
@@ -216,9 +216,18 @@ class RecuperarHistoricoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "sequencial_documento_termo_contrato"
+     * Test attribute "titulo_documento_termo_contrato"
      */
-    public function testPropertySequencialDocumentoTermoContrato()
+    public function testPropertyTituloDocumentoTermoContrato()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "usuario_nome"
+     */
+    public function testPropertyUsuarioNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

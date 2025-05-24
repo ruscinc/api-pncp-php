@@ -58,7 +58,7 @@ class RespostaErroValidacaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'erros' => '\OpenAPI\Client\Model\ErroValidacaoDTO[]'
+        'erros' => 'object[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class RespostaErroValidacaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets erros
      *
-     * @return \OpenAPI\Client\Model\ErroValidacaoDTO[]|null
+     * @return object[]|null
      */
     public function getErros()
     {
@@ -303,7 +303,7 @@ class RespostaErroValidacaoDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets erros
      *
-     * @param \OpenAPI\Client\Model\ErroValidacaoDTO[]|null $erros erros
+     * @param object[]|null $erros erros
      *
      * @return self
      */

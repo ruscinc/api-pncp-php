@@ -68,6 +68,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         'data_publicacao_pncp' => '\DateTime',
         'data_inclusao' => '\DateTime',
         'data_atualizacao' => '\DateTime',
+        'data_atualizacao_global' => '\DateTime',
         'sequencial_ata' => 'int',
         'numero_controle_pncp' => 'string',
         'orgao_entidade' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
@@ -98,6 +99,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         'data_publicacao_pncp' => 'date-time',
         'data_inclusao' => 'date-time',
         'data_atualizacao' => 'date-time',
+        'data_atualizacao_global' => 'date-time',
         'sequencial_ata' => 'int32',
         'numero_controle_pncp' => null,
         'orgao_entidade' => null,
@@ -126,6 +128,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
 		'data_publicacao_pncp' => false,
 		'data_inclusao' => false,
 		'data_atualizacao' => false,
+		'data_atualizacao_global' => false,
 		'sequencial_ata' => false,
 		'numero_controle_pncp' => false,
 		'orgao_entidade' => false,
@@ -234,6 +237,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
         'data_inclusao' => 'dataInclusao',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_atualizacao_global' => 'dataAtualizacaoGlobal',
         'sequencial_ata' => 'sequencialAta',
         'numero_controle_pncp' => 'numeroControlePNCP',
         'orgao_entidade' => 'orgaoEntidade',
@@ -262,6 +266,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
         'data_inclusao' => 'setDataInclusao',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_atualizacao_global' => 'setDataAtualizacaoGlobal',
         'sequencial_ata' => 'setSequencialAta',
         'numero_controle_pncp' => 'setNumeroControlePncp',
         'orgao_entidade' => 'setOrgaoEntidade',
@@ -290,6 +295,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
         'data_inclusao' => 'getDataInclusao',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_atualizacao_global' => 'getDataAtualizacaoGlobal',
         'sequencial_ata' => 'getSequencialAta',
         'numero_controle_pncp' => 'getNumeroControlePncp',
         'orgao_entidade' => 'getOrgaoEntidade',
@@ -369,6 +375,7 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global', $data ?? [], null);
         $this->setIfExists('sequencial_ata', $data ?? [], null);
         $this->setIfExists('numero_controle_pncp', $data ?? [], null);
         $this->setIfExists('orgao_entidade', $data ?? [], null);
@@ -689,6 +696,33 @@ class AtaRegistroPrecoDTO implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_atualizacao_global
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobal()
+    {
+        return $this->container['data_atualizacao_global'];
+    }
+
+    /**
+     * Sets data_atualizacao_global
+     *
+     * @param \DateTime|null $data_atualizacao_global data_atualizacao_global
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobal($data_atualizacao_global)
+    {
+        if (is_null($data_atualizacao_global)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global cannot be null');
+        }
+        $this->container['data_atualizacao_global'] = $data_atualizacao_global;
 
         return $this;
     }

@@ -81,6 +81,15 @@ class RecuperarContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "unidade_sub_rogada"
+     */
+    public function testPropertyUnidadeSubRogada()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "orgao_sub_rogado"
      */
     public function testPropertyOrgaoSubRogado()
@@ -99,18 +108,36 @@ class RecuperarContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "unidade_sub_rogada"
+     * Test attribute "data_atualizacao"
      */
-    public function testPropertyUnidadeSubRogada()
+    public function testPropertyDataAtualizacao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data_atualizacao"
+     * Test attribute "data_publicacao_pncp"
      */
-    public function testPropertyDataAtualizacao()
+    public function testPropertyDataPublicacaoPncp()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "informacao_complementar"
+     */
+    public function testPropertyInformacaoComplementar()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "orgao_entidade"
+     */
+    public function testPropertyOrgaoEntidade()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -138,24 +165,6 @@ class RecuperarContratoDTOTest extends TestCase
      * Test attribute "tipo_pessoa_sub_contratada"
      */
     public function testPropertyTipoPessoaSubContratada()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data_publicacao_pncp"
-     */
-    public function testPropertyDataPublicacaoPncp()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "orgao_entidade"
-     */
-    public function testPropertyOrgaoEntidade()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -243,9 +252,36 @@ class RecuperarContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "processo"
+     */
+    public function testPropertyProcesso()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "nome_razao_social_fornecedor"
      */
     public function testPropertyNomeRazaoSocialFornecedor()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "receita"
+     */
+    public function testPropertyReceita()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numero_parcelas"
+     */
+    public function testPropertyNumeroParcelas()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -270,45 +306,9 @@ class RecuperarContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "informacao_complementar"
+     * Test attribute "objeto_contrato"
      */
-    public function testPropertyInformacaoComplementar()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "processo"
-     */
-    public function testPropertyProcesso()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "valor_acumulado"
-     */
-    public function testPropertyValorAcumulado()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "identificador_cipi"
-     */
-    public function testPropertyIdentificadorCipi()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "url_cipi"
-     */
-    public function testPropertyUrlCipi()
+    public function testPropertyObjetoContrato()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -318,15 +318,6 @@ class RecuperarContratoDTOTest extends TestCase
      * Test attribute "valor_inicial"
      */
     public function testPropertyValorInicial()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "numero_parcelas"
-     */
-    public function testPropertyNumeroParcelas()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -351,6 +342,42 @@ class RecuperarContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "valor_acumulado"
+     */
+    public function testPropertyValorAcumulado()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_atualizacao_global"
+     */
+    public function testPropertyDataAtualizacaoGlobal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "identificador_cipi"
+     */
+    public function testPropertyIdentificadorCipi()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "url_cipi"
+     */
+    public function testPropertyUrlCipi()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "numero_controle_pncp"
      */
     public function testPropertyNumeroControlePncp()
@@ -360,18 +387,9 @@ class RecuperarContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "receita"
+     * Test attribute "numero_controle_pncp_compra"
      */
-    public function testPropertyReceita()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "objeto_contrato"
-     */
-    public function testPropertyObjetoContrato()
+    public function testPropertyNumeroControlePncpCompra()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -381,15 +399,6 @@ class RecuperarContratoDTOTest extends TestCase
      * Test attribute "usuario_nome"
      */
     public function testPropertyUsuarioNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "numero_controle_pncp_compra"
-     */
-    public function testPropertyNumeroControlePncpCompra()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

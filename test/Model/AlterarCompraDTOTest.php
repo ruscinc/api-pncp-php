@@ -225,6 +225,15 @@ class AlterarCompraDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "link_processo_eletronico"
+     */
+    public function testPropertyLinkProcessoEletronico()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "justificativa"
      */
     public function testPropertyJustificativa()

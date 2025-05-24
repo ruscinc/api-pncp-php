@@ -90,6 +90,15 @@ class RecuperarDadosDocumentoTermoContratoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "url"
      */
     public function testPropertyUrl()
@@ -108,18 +117,18 @@ class RecuperarDadosDocumentoTermoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "cnpj"
+     * Test attribute "data_publicacao_pncp"
      */
-    public function testPropertyCnpj()
+    public function testPropertyDataPublicacaoPncp()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data_publicacao_pncp"
+     * Test attribute "cnpj"
      */
-    public function testPropertyDataPublicacaoPncp()
+    public function testPropertyCnpj()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -156,15 +165,6 @@ class RecuperarDadosDocumentoTermoContratoDTOTest extends TestCase
      * Test attribute "tipo_documento_nome"
      */
     public function testPropertyTipoDocumentoNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

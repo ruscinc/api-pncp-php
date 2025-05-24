@@ -59,15 +59,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'uri' => 'string',
+        'id' => 'int',
         'url' => 'string',
         'sequencial_documento' => 'int',
-        'cnpj' => 'string',
         'data_publicacao_pncp' => '\DateTime',
+        'cnpj' => 'string',
         'ano_compra' => 'int',
         'sequencial_compra' => 'int',
         'titulo' => 'string',
-        'tipo_documento_nome' => 'string',
-        'id' => 'int'
+        'tipo_documento_nome' => 'string'
     ];
 
     /**
@@ -79,15 +79,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
       */
     protected static $openAPIFormats = [
         'uri' => 'uri',
+        'id' => 'int64',
         'url' => null,
         'sequencial_documento' => 'int32',
-        'cnpj' => null,
         'data_publicacao_pncp' => 'date-time',
+        'cnpj' => null,
         'ano_compra' => 'int32',
         'sequencial_compra' => 'int32',
         'titulo' => null,
-        'tipo_documento_nome' => null,
-        'id' => 'int64'
+        'tipo_documento_nome' => null
     ];
 
     /**
@@ -97,15 +97,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
       */
     protected static array $openAPINullables = [
         'uri' => false,
+		'id' => false,
 		'url' => false,
 		'sequencial_documento' => false,
-		'cnpj' => false,
 		'data_publicacao_pncp' => false,
+		'cnpj' => false,
 		'ano_compra' => false,
 		'sequencial_compra' => false,
 		'titulo' => false,
-		'tipo_documento_nome' => false,
-		'id' => false
+		'tipo_documento_nome' => false
     ];
 
     /**
@@ -195,15 +195,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
      */
     protected static $attributeMap = [
         'uri' => 'uri',
+        'id' => 'id',
         'url' => 'url',
         'sequencial_documento' => 'sequencialDocumento',
-        'cnpj' => 'cnpj',
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
+        'cnpj' => 'cnpj',
         'ano_compra' => 'anoCompra',
         'sequencial_compra' => 'sequencialCompra',
         'titulo' => 'titulo',
-        'tipo_documento_nome' => 'tipoDocumentoNome',
-        'id' => 'id'
+        'tipo_documento_nome' => 'tipoDocumentoNome'
     ];
 
     /**
@@ -213,15 +213,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
      */
     protected static $setters = [
         'uri' => 'setUri',
+        'id' => 'setId',
         'url' => 'setUrl',
         'sequencial_documento' => 'setSequencialDocumento',
-        'cnpj' => 'setCnpj',
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
+        'cnpj' => 'setCnpj',
         'ano_compra' => 'setAnoCompra',
         'sequencial_compra' => 'setSequencialCompra',
         'titulo' => 'setTitulo',
-        'tipo_documento_nome' => 'setTipoDocumentoNome',
-        'id' => 'setId'
+        'tipo_documento_nome' => 'setTipoDocumentoNome'
     ];
 
     /**
@@ -231,15 +231,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
      */
     protected static $getters = [
         'uri' => 'getUri',
+        'id' => 'getId',
         'url' => 'getUrl',
         'sequencial_documento' => 'getSequencialDocumento',
-        'cnpj' => 'getCnpj',
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
+        'cnpj' => 'getCnpj',
         'ano_compra' => 'getAnoCompra',
         'sequencial_compra' => 'getSequencialCompra',
         'titulo' => 'getTitulo',
-        'tipo_documento_nome' => 'getTipoDocumentoNome',
-        'id' => 'getId'
+        'tipo_documento_nome' => 'getTipoDocumentoNome'
     ];
 
     /**
@@ -300,15 +300,15 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
     public function __construct(array $data = null)
     {
         $this->setIfExists('uri', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
         $this->setIfExists('sequencial_documento', $data ?? [], null);
-        $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('ano_compra', $data ?? [], null);
         $this->setIfExists('sequencial_compra', $data ?? [], null);
         $this->setIfExists('titulo', $data ?? [], null);
         $this->setIfExists('tipo_documento_nome', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -381,6 +381,33 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
     }
 
     /**
+     * Gets id
+     *
+     * @return int|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
      * Gets url
      *
      * @return string|null
@@ -435,33 +462,6 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
     }
 
     /**
-     * Gets cnpj
-     *
-     * @return string|null
-     */
-    public function getCnpj()
-    {
-        return $this->container['cnpj'];
-    }
-
-    /**
-     * Sets cnpj
-     *
-     * @param string|null $cnpj cnpj
-     *
-     * @return self
-     */
-    public function setCnpj($cnpj)
-    {
-        if (is_null($cnpj)) {
-            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
-        }
-        $this->container['cnpj'] = $cnpj;
-
-        return $this;
-    }
-
-    /**
      * Gets data_publicacao_pncp
      *
      * @return \DateTime|null
@@ -484,6 +484,33 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
             throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
         }
         $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+
+        return $this;
+    }
+
+    /**
+     * Gets cnpj
+     *
+     * @return string|null
+     */
+    public function getCnpj()
+    {
+        return $this->container['cnpj'];
+    }
+
+    /**
+     * Sets cnpj
+     *
+     * @param string|null $cnpj cnpj
+     *
+     * @return self
+     */
+    public function setCnpj($cnpj)
+    {
+        if (is_null($cnpj)) {
+            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
+        }
+        $this->container['cnpj'] = $cnpj;
 
         return $this;
     }
@@ -592,33 +619,6 @@ class RecuperarDadosDocumentoTermoContratoDTO implements ModelInterface, ArrayAc
             throw new \InvalidArgumentException('non-nullable tipo_documento_nome cannot be null');
         }
         $this->container['tipo_documento_nome'] = $tipo_documento_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

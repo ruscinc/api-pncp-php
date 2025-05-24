@@ -20,11 +20,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/SHJordan/api-pncp-php.git"
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
     }
   ],
   "require": {
-    "shjordan/api-pncp-php": "*@dev"
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
   }
 }
 ```
@@ -50,24 +50,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new OpenAPI\Client\Api\AtaApi(
+
+$apiInstance = new OpenAPI\Client\Api\AmparoLegalApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
-$cnpj = 'cnpj_example'; // string
-$ano = 56; // int
-$sequencial = 56; // int
-$sequencial_ata = 56; // int
-$pagina = 56; // int
-$tamanho_pagina = 56; // int
+$id = 56; // int
+$alterar_parcial_amparo_legal_dto = new \OpenAPI\Client\Model\AlterarParcialAmparoLegalDTO(); // \OpenAPI\Client\Model\AlterarParcialAmparoLegalDTO
 
 try {
-    $result = $apiInstance->consultarHistoricoAta($cnpj, $ano, $sequencial, $sequencial_ata, $pagina, $tamanho_pagina);
+    $result = $apiInstance->alterarParcialmenteRegistro8($id, $alterar_parcial_amparo_legal_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AtaApi->consultarHistoricoAta: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AmparoLegalApi->alterarParcialmenteRegistro8: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -78,6 +78,10 @@ All URIs are relative to *https://treina.pncp.gov.br/api/pncp*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AmparoLegalApi* | [**alterarParcialmenteRegistro8**](docs/Api/AmparoLegalApi.md#alterarparcialmenteregistro8) | **PATCH** /v1/amparos-legais/{id} | Alterar amparo legal
+*AmparoLegalApi* | [**incluirRegistro10**](docs/Api/AmparoLegalApi.md#incluirregistro10) | **POST** /v1/amparos-legais | Inserir amparo legal
+*AmparoLegalApi* | [**obterRegistro11**](docs/Api/AmparoLegalApi.md#obterregistro11) | **GET** /v1/amparos-legais/{id} | Consultar amparo legal por código
+*AmparoLegalApi* | [**obterTodosRegistros8**](docs/Api/AmparoLegalApi.md#obtertodosregistros8) | **GET** /v1/amparos-legais | Consultar amparos legais
 *AtaApi* | [**consultarHistoricoAta**](docs/Api/AtaApi.md#consultarhistoricoata) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/atas/{sequencialAta}/historico | Consultar Histórico de Ata
 *AtaApi* | [**consultarHistoricoAtaQuantidade**](docs/Api/AtaApi.md#consultarhistoricoataquantidade) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/atas/{sequencialAta}/historico/quantidade | Consultar Quantidade Histórico de Ata
 *AtaApi* | [**deleteAta**](docs/Api/AtaApi.md#deleteata) | **DELETE** /v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta} | Excluir Ata de Registro de Preço
@@ -90,8 +94,31 @@ Class | Method | HTTP request | Description
 *AtaApi* | [**recuperarAtasPorFiltros**](docs/Api/AtaApi.md#recuperaratasporfiltros) | **GET** /v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas | Consultar Atas de Registro de Preço por Compra
 *AtaApi* | [**recuperarInformacoesDocumentosAta**](docs/Api/AtaApi.md#recuperarinformacoesdocumentosata) | **GET** /v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta}/arquivos | Consultar Dados de Todos os Documentos de uma Ata de Registro de Preço
 *AtaApi* | [**retificarAta**](docs/Api/AtaApi.md#retificarata) | **PUT** /v1/orgaos/{cnpj}/compras/{anoCompra}/{sequencialCompra}/atas/{sequencialAta} | Retificar Ata de Registro de Preço
-*ContrataoApi* | [**consultarCompra**](docs/Api/ContrataoApi.md#consultarcompra) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial} | Consultar Contratação
-*ContrataoApi* | [**consultarCompra1**](docs/Api/ContrataoApi.md#consultarcompra1) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico | Consultar Histórico de Contratação
+*CategoriaDeItemApi* | [**alterarParcialmenteRegistro6**](docs/Api/CategoriaDeItemApi.md#alterarparcialmenteregistro6) | **PATCH** /v1/categoriaItemPcas/{id} | Alterar categoria de item
+*CategoriaDeItemApi* | [**incluirRegistro8**](docs/Api/CategoriaDeItemApi.md#incluirregistro8) | **POST** /v1/categoriaItemPcas | Inserir categoria de item
+*CategoriaDeItemApi* | [**obterRegistro9**](docs/Api/CategoriaDeItemApi.md#obterregistro9) | **GET** /v1/categoriaItemPcas/{id} | Consultar categoria de item por código
+*CategoriaDeItemApi* | [**obterTodosRegistros6**](docs/Api/CategoriaDeItemApi.md#obtertodosregistros6) | **GET** /v1/categoriaItemPcas | Consultar categorias de item
+*CatlogoApi* | [**alterarParcialmenteRegistro7**](docs/Api/CatlogoApi.md#alterarparcialmenteregistro7) | **PATCH** /v1/catalogos/{id} | Alterar catálogo
+*CatlogoApi* | [**incluirRegistro9**](docs/Api/CatlogoApi.md#incluirregistro9) | **POST** /v1/catalogos | Inserir catálogo
+*CatlogoApi* | [**obterRegistro10**](docs/Api/CatlogoApi.md#obterregistro10) | **GET** /v1/catalogos/{id} | Consultar catálogo por código
+*CatlogoApi* | [**obterTodosRegistros7**](docs/Api/CatlogoApi.md#obtertodosregistros7) | **GET** /v1/catalogos | Consultar catálogos
+*ConformidadeInstrumentoConvocatrioEModoDeDisputaApi* | [**excluirRegistro**](docs/Api/ConformidadeInstrumentoConvocatrioEModoDeDisputaApi.md#excluirregistro) | **DELETE** /v1/tipo-instrumento-convocatorio-modo-disputa/{tipoInstrumentoConvocatorioId}/{modoDisputaId} | Excluir conformidade entre instrumento convocatório e modo de disputa
+*ConformidadeInstrumentoConvocatrioEModoDeDisputaApi* | [**incluirRegistro2**](docs/Api/ConformidadeInstrumentoConvocatrioEModoDeDisputaApi.md#incluirregistro2) | **POST** /v1/tipo-instrumento-convocatorio-modo-disputa | Inserir conformidade entre instrumentos convocatórios e modos de disputa
+*ConformidadeInstrumentoConvocatrioEModoDeDisputaApi* | [**obterRegistro2**](docs/Api/ConformidadeInstrumentoConvocatrioEModoDeDisputaApi.md#obterregistro2) | **GET** /v1/tipo-instrumento-convocatorio-modo-disputa/{tipoInstrumentoConvocatorioId}/{modoDisputaId} | Consultar conformidade entre instrumentos convocatórios e modos de disputa por código
+*ConformidadeInstrumentoConvocatrioEModoDeDisputaApi* | [**obterRegistros**](docs/Api/ConformidadeInstrumentoConvocatrioEModoDeDisputaApi.md#obterregistros) | **GET** /v1/tipo-instrumento-convocatorio-modo-disputa | Consultar conformidade entre instrumentos convocatórios e modos de disputa
+*ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi* | [**consultar**](docs/Api/ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi.md#consultar) | **GET** /v1/instrumento-convocatorio-modalidade-amparo-legal | Consultar Conformidade Instrumento Convocatório, Modalidade de Contratação e Amparo Legal
+*ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi* | [**deletarRegistro**](docs/Api/ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi.md#deletarregistro) | **DELETE** /v1/instrumento-convocatorio-modalidade-amparo-legal/{amparoLegalId}/{modalidadeId}/{tipoInstrumentoConvocatorioId} | Excluir Conformidade Instrumento Convocatório, Modalidade de Contratação e Amparo Legal
+*ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi* | [**incluirRegistro5**](docs/Api/ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi.md#incluirregistro5) | **POST** /v1/instrumento-convocatorio-modalidade-amparo-legal | Inserir Conformidade Instrumento Convocatório, Modalidade de Contratação e Amparo Legal
+*ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi* | [**obterRegistro6**](docs/Api/ConformidadeInstrumentoConvocatrioModalidadeDeContrataoEAmparoLegalApi.md#obterregistro6) | **GET** /v1/instrumento-convocatorio-modalidade-amparo-legal/{amparoLegalId}/{modalidadeId}/{tipoInstrumentoConvocatorioId} | Consultar Conformidade Instrumento Convocatório, Modalidade de Contratação e Amparo Legal por código
+*ConformidadeModalidadeECritrioDeJulgamentoApi* | [**excluirModalidadeCriterioJulgamento**](docs/Api/ConformidadeModalidadeECritrioDeJulgamentoApi.md#excluirmodalidadecriteriojulgamento) | **DELETE** /v1/modalidade-criterio-julgamento/{modalidadeId}/{criterioJulgamentoId} | Excluir conformidade entre modalidade de contratação e critério de julgamento
+*ConformidadeModalidadeECritrioDeJulgamentoApi* | [**incluirModalidadeCriterioJulgamento**](docs/Api/ConformidadeModalidadeECritrioDeJulgamentoApi.md#incluirmodalidadecriteriojulgamento) | **POST** /v1/modalidade-criterio-julgamento | Inserir conformidade entre modalidade de contratação e critério de julgamento
+*ConformidadeModalidadeECritrioDeJulgamentoApi* | [**obterCriteriosJulgamentoPorModalidade**](docs/Api/ConformidadeModalidadeECritrioDeJulgamentoApi.md#obtercriteriosjulgamentopormodalidade) | **GET** /v1/modalidade-criterio-julgamento | Consultar conformidade entre modalidade de contratação e critério de julgamento
+*ConformidadeModalidadeECritrioDeJulgamentoApi* | [**obterModalidadeCriterioJulgamento**](docs/Api/ConformidadeModalidadeECritrioDeJulgamentoApi.md#obtermodalidadecriteriojulgamento) | **GET** /v1/modalidade-criterio-julgamento/{modalidadeId}/{criterioJulgamentoId} | Consultar conformidade entre modalidade de contratação e critério de julgamento por código
+*ConformidadeModalidadeEFonteOramentariaApi* | [**excluirModalidadeFonteOrcamentaria**](docs/Api/ConformidadeModalidadeEFonteOramentariaApi.md#excluirmodalidadefonteorcamentaria) | **DELETE** /v1/modalidade-fonte-orcamentaria/{modalidadeId}/{fonteOrcamentariaId} | Excluir conformidade entre modalidade de contratação e Fonte Orçamentaria
+*ConformidadeModalidadeEFonteOramentariaApi* | [**incluirModalidadeFonteOrcamentaria**](docs/Api/ConformidadeModalidadeEFonteOramentariaApi.md#incluirmodalidadefonteorcamentaria) | **POST** /v1/modalidade-fonte-orcamentaria | Inserir conformidade entre modalidade de contratação e Fonte Orçamentaria
+*ConformidadeModalidadeEFonteOramentariaApi* | [**obterFonteOrcamentariaPorModalidade**](docs/Api/ConformidadeModalidadeEFonteOramentariaApi.md#obterfonteorcamentariapormodalidade) | **GET** /v1/modalidade-fonte-orcamentaria | Consultar conformidade entre modalidade de contratação e Fonte Orçamentaria
+*ConformidadeModalidadeEFonteOramentariaApi* | [**obterModalidadeFonteOrcamentaria**](docs/Api/ConformidadeModalidadeEFonteOramentariaApi.md#obtermodalidadefonteorcamentaria) | **GET** /v1/modalidade-fonte-orcamentaria/{modalidadeId}/{fonteOrcamentariaId} | Consultar conformidade entre modalidade de contratação e Fonte Orçamentaria por código
+*ContrataoApi* | [**consultarCompra**](docs/Api/ContrataoApi.md#consultarcompra) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico | Consultar Histórico de Contratação
 *ContrataoApi* | [**consultarQuantidade**](docs/Api/ContrataoApi.md#consultarquantidade) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico/quantidade | Consultar Quantidade Histórico de Contratação
 *ContrataoApi* | [**getImagem**](docs/Api/ContrataoApi.md#getimagem) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem/{sequencialImagem} | Recuperar Imagem de um Item de uma Contratação
 *ContrataoApi* | [**getImagemLista**](docs/Api/ContrataoApi.md#getimagemlista) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem | Recuperar Imagens de um Item de uma Contratação
@@ -116,26 +143,55 @@ Class | Method | HTTP request | Description
 *ContrataoApi* | [**retificarCompraItemResultado**](docs/Api/ContrataoApi.md#retificarcompraitemresultado) | **PUT** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados/{sequencialResultado} | Retificar Resultado de Item de Contratação
 *ContrataoApi* | [**retificarParcialmenteCompra**](docs/Api/ContrataoApi.md#retificarparcialmentecompra) | **PATCH** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial} | Retificar parcialmente uma Contratação
 *ContrataoApi* | [**retificarParcialmenteCompraItem**](docs/Api/ContrataoApi.md#retificarparcialmentecompraitem) | **PATCH** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem} | Retificar Parcialmente um Item de Contratação
-*ContratoApi* | [**consultarContrato**](docs/Api/ContratoApi.md#consultarcontrato) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial} | Consultar Contrato
-*ContratoApi* | [**consultarContrato1**](docs/Api/ContratoApi.md#consultarcontrato1) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/historico | Consultar Histórico de Contrato
-*ContratoApi* | [**consultarContrato2**](docs/Api/ContratoApi.md#consultarcontrato2) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/historico/quantidade | Consultar Quantidade Histórico de Contrato
-*ContratoApi* | [**consultarContratosContratacao**](docs/Api/ContratoApi.md#consultarcontratoscontratacao) | **GET** /v1/orgaos/{cnpj}/contratos/contratacao/{anoContratacao}/{sequencialContratacao} | Consultar Contratos de uma Contratação
-*ContratoApi* | [**inserirArquivo1**](docs/Api/ContratoApi.md#inserirarquivo1) | **POST** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos | Inserir Documento de Contrato
-*ContratoApi* | [**inserirContrato**](docs/Api/ContratoApi.md#inserircontrato) | **POST** /v1/orgaos/{cnpj}/contratos | Inserir Contrato
-*ContratoApi* | [**recuperarArquivo1**](docs/Api/ContratoApi.md#recuperararquivo1) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/{sequencialDocumento} | Baixar Documento de Contrato
-*ContratoApi* | [**recuperarContratoDocumentoQuantidade**](docs/Api/ContratoApi.md#recuperarcontratodocumentoquantidade) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/quantidade | Consultar Quantidade de Documentos de Contrato
-*ContratoApi* | [**recuperarInformacoesDocumentosContrato**](docs/Api/ContratoApi.md#recuperarinformacoesdocumentoscontrato) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos | Consultar Documentos de Contrato
-*ContratoApi* | [**removerContrato**](docs/Api/ContratoApi.md#removercontrato) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial} | Excluir Contrato
-*ContratoApi* | [**removerDocumentoContrato1**](docs/Api/ContratoApi.md#removerdocumentocontrato1) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/{sequencialDocumento} | Excluir Documento de Contrato
-*ContratoApi* | [**retificarContrato**](docs/Api/ContratoApi.md#retificarcontrato) | **PUT** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial} | Retificar Contrato
+*ContratoEmpenhoApi* | [**consultarContrato**](docs/Api/ContratoEmpenhoApi.md#consultarcontrato) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial} | Consultar Contrato
+*ContratoEmpenhoApi* | [**consultarContrato1**](docs/Api/ContratoEmpenhoApi.md#consultarcontrato1) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/historico | Consultar Histórico de Contrato
+*ContratoEmpenhoApi* | [**consultarContrato2**](docs/Api/ContratoEmpenhoApi.md#consultarcontrato2) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/historico/quantidade | Consultar Quantidade Histórico de Contrato
+*ContratoEmpenhoApi* | [**consultarContratosContratacao**](docs/Api/ContratoEmpenhoApi.md#consultarcontratoscontratacao) | **GET** /v1/orgaos/{cnpj}/contratos/contratacao/{anoContratacao}/{sequencialContratacao} | Consultar Contratos de uma Contratação
+*ContratoEmpenhoApi* | [**inserirArquivo1**](docs/Api/ContratoEmpenhoApi.md#inserirarquivo1) | **POST** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos | Inserir Documento de Contrato
+*ContratoEmpenhoApi* | [**inserirContrato**](docs/Api/ContratoEmpenhoApi.md#inserircontrato) | **POST** /v1/orgaos/{cnpj}/contratos | Inserir Contrato
+*ContratoEmpenhoApi* | [**recuperarArquivo1**](docs/Api/ContratoEmpenhoApi.md#recuperararquivo1) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/{sequencialDocumento} | Baixar Documento de Contrato
+*ContratoEmpenhoApi* | [**recuperarContratoDocumentoQuantidade**](docs/Api/ContratoEmpenhoApi.md#recuperarcontratodocumentoquantidade) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/quantidade | Consultar Quantidade de Documentos de Contrato
+*ContratoEmpenhoApi* | [**recuperarInformacoesDocumentosContrato**](docs/Api/ContratoEmpenhoApi.md#recuperarinformacoesdocumentoscontrato) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos | Consultar Documentos de Contrato
+*ContratoEmpenhoApi* | [**removerContrato**](docs/Api/ContratoEmpenhoApi.md#removercontrato) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial} | Excluir Contrato
+*ContratoEmpenhoApi* | [**removerDocumentoContrato1**](docs/Api/ContratoEmpenhoApi.md#removerdocumentocontrato1) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos/{sequencialDocumento} | Excluir Documento de Contrato
+*ContratoEmpenhoApi* | [**retificarContrato**](docs/Api/ContratoEmpenhoApi.md#retificarcontrato) | **PUT** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial} | Retificar Contrato
 *CredenciamentoApi* | [**criarUsuarioCredenciamentoDeferido**](docs/Api/CredenciamentoApi.md#criarusuariocredenciamentodeferido) | **POST** /v1/credenciamentos/{ano}/{sequencial}/criarUsuario | Criar Usuário Credenciamento
-*CredenciamentoApi* | [**incluirCredenciamento**](docs/Api/CredenciamentoApi.md#incluircredenciamento) | **POST** /v1/credenciamentos | Inserir Credencimento
-*CredenciamentoApi* | [**recuperarCredenciamento**](docs/Api/CredenciamentoApi.md#recuperarcredenciamento) | **GET** /v1/credenciamentos/{ano}/{sequencial} | Consultar Credencimento
-*CredenciamentoApi* | [**recuperarCredenciamentoResponsavel**](docs/Api/CredenciamentoApi.md#recuperarcredenciamentoresponsavel) | **GET** /v1/credenciamentos/{ano}/{sequencial}/responsaveis | Consultar Credencimento Responsavel
-*CredenciamentoApi* | [**recuperarCredenciamentos**](docs/Api/CredenciamentoApi.md#recuperarcredenciamentos) | **GET** /v1/credenciamentos | Consultar Credencimentos
-*CredenciamentoApi* | [**recuperarQuantidadeCredenciamentos**](docs/Api/CredenciamentoApi.md#recuperarquantidadecredenciamentos) | **GET** /v1/credenciamentos/quantidade | Consultar Quantidade Credencimentos
+*CredenciamentoApi* | [**incluirCredenciamento**](docs/Api/CredenciamentoApi.md#incluircredenciamento) | **POST** /v1/credenciamentos | Inserir Credenciamento
+*CredenciamentoApi* | [**recuperarCredenciamento**](docs/Api/CredenciamentoApi.md#recuperarcredenciamento) | **GET** /v1/credenciamentos/{ano}/{sequencial} | Consultar Credenciamento
+*CredenciamentoApi* | [**recuperarCredenciamentoResponsavel**](docs/Api/CredenciamentoApi.md#recuperarcredenciamentoresponsavel) | **GET** /v1/credenciamentos/{ano}/{sequencial}/responsaveis | Consultar Credenciamento Responsavel
+*CredenciamentoApi* | [**recuperarCredenciamentos**](docs/Api/CredenciamentoApi.md#recuperarcredenciamentos) | **GET** /v1/credenciamentos | Consultar Credenciamentos
+*CredenciamentoApi* | [**recuperarQuantidadeCredenciamentos**](docs/Api/CredenciamentoApi.md#recuperarquantidadecredenciamentos) | **GET** /v1/credenciamentos/quantidade | Consultar Quantidade Credenciamentos
 *CredenciamentoApi* | [**retificarParcialmenteCredenciamento**](docs/Api/CredenciamentoApi.md#retificarparcialmentecredenciamento) | **PATCH** /v1/credenciamentos/{ano}/{sequencial} | Retificar Parcialmente Credenciamento
+*CritrioDeJulgamentoApi* | [**alterarParcialmenteRegistro5**](docs/Api/CritrioDeJulgamentoApi.md#alterarparcialmenteregistro5) | **PATCH** /v1/criterios-julgamentos/{id} | Alterar critério de julgamento
+*CritrioDeJulgamentoApi* | [**incluirRegistro7**](docs/Api/CritrioDeJulgamentoApi.md#incluirregistro7) | **POST** /v1/criterios-julgamentos | Inserir critério de julgamento
+*CritrioDeJulgamentoApi* | [**obterRegistro8**](docs/Api/CritrioDeJulgamentoApi.md#obterregistro8) | **GET** /v1/criterios-julgamentos/{id} | Consultar critério de julgamento por código
+*CritrioDeJulgamentoApi* | [**obterTodosRegistros5**](docs/Api/CritrioDeJulgamentoApi.md#obtertodosregistros5) | **GET** /v1/criterios-julgamentos | Consultar critérios de julgamentos
+*FonteOramentriaApi* | [**alterarParcialmenteRegistro4**](docs/Api/FonteOramentriaApi.md#alterarparcialmenteregistro4) | **PATCH** /v1/fontes-orcamentarias/{id} | Alterar fonte orçamentária
+*FonteOramentriaApi* | [**incluirRegistro6**](docs/Api/FonteOramentriaApi.md#incluirregistro6) | **POST** /v1/fontes-orcamentarias | Inserir fonte orçamentária
+*FonteOramentriaApi* | [**obterRegistro7**](docs/Api/FonteOramentriaApi.md#obterregistro7) | **GET** /v1/fontes-orcamentarias/{id} | Consultar fonte orçamentária por código
+*FonteOramentriaApi* | [**obterTodosRegistros4**](docs/Api/FonteOramentriaApi.md#obtertodosregistros4) | **GET** /v1/fontes-orcamentarias | Consultar fontes orçamentárias
+*FonteOramentriaDaContrataoApi* | [**excluirRegistro1**](docs/Api/FonteOramentriaDaContrataoApi.md#excluirregistro1) | **DELETE** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria | Excluir fonte orçamentária da contratação - Informe os códigos das fontes orçamentárias a ser excluídas, separados por vírgula
+*FonteOramentriaDaContrataoApi* | [**incluirRegistros**](docs/Api/FonteOramentriaDaContrataoApi.md#incluirregistros) | **POST** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria | Inserir fonte orçamentária da contratação - Informe os códigos das fontes orçamentárias separados por vírgula
+*FonteOramentriaDaContrataoApi* | [**obterRegistro3**](docs/Api/FonteOramentriaDaContrataoApi.md#obterregistro3) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria/{fonteOrcamentariaId} | Consultar fonte orçamentária da contratação
+*FonteOramentriaDaContrataoApi* | [**obterRegistros1**](docs/Api/FonteOramentriaDaContrataoApi.md#obterregistros1) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/fonte-orcamentaria | Consultar todas as fontes orçamentárias da contratação
+*InstrumentoConvocatrioApi* | [**alterarParcialmenteRegistro**](docs/Api/InstrumentoConvocatrioApi.md#alterarparcialmenteregistro) | **PATCH** /v1/tipos-instrumentos-convocatorios/{id} | Alterar instrumento convocatório
+*InstrumentoConvocatrioApi* | [**incluirRegistro**](docs/Api/InstrumentoConvocatrioApi.md#incluirregistro) | **POST** /v1/tipos-instrumentos-convocatorios | Inserir instrumento convocatório
+*InstrumentoConvocatrioApi* | [**obterRegistro**](docs/Api/InstrumentoConvocatrioApi.md#obterregistro) | **GET** /v1/tipos-instrumentos-convocatorios/{id} | Consultar instrumento convocatório por código
+*InstrumentoConvocatrioApi* | [**obterTodosRegistros**](docs/Api/InstrumentoConvocatrioApi.md#obtertodosregistros) | **GET** /v1/tipos-instrumentos-convocatorios | Consultar instrumentos convocatórios
+*InstrumentoDeCobranaDeContratoEmpenhoApi* | [**consultarInstrumentoCobranca**](docs/Api/InstrumentoDeCobranaDeContratoEmpenhoApi.md#consultarinstrumentocobranca) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca/{sequencialInstrumentoCobranca} | Consultar Instrumento de Cobrança de um Contrato/Empenho
+*InstrumentoDeCobranaDeContratoEmpenhoApi* | [**consultarInstrumentosCobranca**](docs/Api/InstrumentoDeCobranaDeContratoEmpenhoApi.md#consultarinstrumentoscobranca) | **GET** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca | Consultar Instrumentos de Cobrança de um Contrato/Empenho
+*InstrumentoDeCobranaDeContratoEmpenhoApi* | [**excluirInstrumentoCobranca**](docs/Api/InstrumentoDeCobranaDeContratoEmpenhoApi.md#excluirinstrumentocobranca) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca/{sequencialInstrumentoCobranca} | Excluir Instrumento de Cobrança de Contrato/Empenho
+*InstrumentoDeCobranaDeContratoEmpenhoApi* | [**inserirInstrumentoCobranca**](docs/Api/InstrumentoDeCobranaDeContratoEmpenhoApi.md#inseririnstrumentocobranca) | **POST** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca | Inserir Instrumento de Cobrança de um Contrato/Empenho
+*InstrumentoDeCobranaDeContratoEmpenhoApi* | [**retificarInstrumentoCobranca**](docs/Api/InstrumentoDeCobranaDeContratoEmpenhoApi.md#retificarinstrumentocobranca) | **PATCH** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencialContrato}/instrumentocobranca/{sequencialInstrumentoCobranca} | Retificar Parcialmente Instrumento de Cobrança de Contrato/Empenho
 *LoginNicoApi* | [**recuperarToken**](docs/Api/LoginNicoApi.md#recuperartoken) | **POST** /v1/login-unico/token | Recuperar token
+*ModalidadeApi* | [**alterarParcialmenteRegistro3**](docs/Api/ModalidadeApi.md#alterarparcialmenteregistro3) | **PATCH** /v1/modalidades/{id} | Alterar modalidade de contratação
+*ModalidadeApi* | [**incluirRegistro4**](docs/Api/ModalidadeApi.md#incluirregistro4) | **POST** /v1/modalidades | Inserir modalidade de contratação
+*ModalidadeApi* | [**obterRegistro5**](docs/Api/ModalidadeApi.md#obterregistro5) | **GET** /v1/modalidades/{id} | Consultar modalidade de contratação por código
+*ModalidadeApi* | [**obterTodosRegistros3**](docs/Api/ModalidadeApi.md#obtertodosregistros3) | **GET** /v1/modalidades | Consultar modalidades de contratação
+*ModoDeDisputaApi* | [**alterarParcialmenteRegistro2**](docs/Api/ModoDeDisputaApi.md#alterarparcialmenteregistro2) | **PATCH** /v1/modos-disputas/{id} | Alterar modo de disputa
+*ModoDeDisputaApi* | [**incluirRegistro3**](docs/Api/ModoDeDisputaApi.md#incluirregistro3) | **POST** /v1/modos-disputas | Inserir modo de disputa
+*ModoDeDisputaApi* | [**obterRegistro4**](docs/Api/ModoDeDisputaApi.md#obterregistro4) | **GET** /v1/modos-disputas/{id} | Consultar modo de disputa por código
+*ModoDeDisputaApi* | [**obterTodosRegistros2**](docs/Api/ModoDeDisputaApi.md#obtertodosregistros2) | **GET** /v1/modos-disputas | Consultar modos de disputas
 *PlanoDeContrataoApi* | [**consultarPlanoComItens**](docs/Api/PlanoDeContrataoApi.md#consultarplanocomitens) | **GET** /v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/itens/plano | Consultar Plano de Contratação com Itens
 *PlanoDeContrataoApi* | [**consultarPlanoConsolidado**](docs/Api/PlanoDeContrataoApi.md#consultarplanoconsolidado) | **GET** /v1/orgaos/{cnpj}/pca/{ano}/{sequencial}/consolidado | Consultar Plano de Contratação Consolidado
 *PlanoDeContrataoApi* | [**incluirPlano**](docs/Api/PlanoDeContrataoApi.md#incluirplano) | **POST** /v1/orgaos/{cnpj}/pca | Inserir Plano de Contratação
@@ -172,6 +228,10 @@ Class | Method | HTTP request | Description
 *TermoDeContratoApi* | [**removerContrato1**](docs/Api/TermoDeContratoApi.md#removercontrato1) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermoContrato} | Excluir Termo de Contrato
 *TermoDeContratoApi* | [**removerDocumentoContrato**](docs/Api/TermoDeContratoApi.md#removerdocumentocontrato) | **DELETE** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermo}/arquivos/{sequencialDocumento} | Excluir Documento de Termo de Contrato
 *TermoDeContratoApi* | [**retificarTermoContrato**](docs/Api/TermoDeContratoApi.md#retificartermocontrato) | **PUT** /v1/orgaos/{cnpj}/contratos/{ano}/{sequencial}/termos/{sequencialTermoContrato} | Retificar Termo de Contrato
+*TipoDeInstrumentoDeCobranaApi* | [**alterarParcialmenteRegistro1**](docs/Api/TipoDeInstrumentoDeCobranaApi.md#alterarparcialmenteregistro1) | **PATCH** /v1/tipos-instrumentos-cobranca/{id} | Alterar Tipo de Instrumento de Cobrança
+*TipoDeInstrumentoDeCobranaApi* | [**incluirRegistro1**](docs/Api/TipoDeInstrumentoDeCobranaApi.md#incluirregistro1) | **POST** /v1/tipos-instrumentos-cobranca | Inserir Tipo de Instrumento de Cobrança
+*TipoDeInstrumentoDeCobranaApi* | [**obterRegistro1**](docs/Api/TipoDeInstrumentoDeCobranaApi.md#obterregistro1) | **GET** /v1/tipos-instrumentos-cobranca/{id} | Consultar Tipo de Instrumento de Cobrança por Código
+*TipoDeInstrumentoDeCobranaApi* | [**obterTodosRegistros1**](docs/Api/TipoDeInstrumentoDeCobranaApi.md#obtertodosregistros1) | **GET** /v1/tipos-instrumentos-cobranca | Consultar Tipos de Instrumentos de Cobrança
 *UnidadeApi* | [**atualizarUnidadeOrgao**](docs/Api/UnidadeApi.md#atualizarunidadeorgao) | **PUT** /v1/orgaos/{cnpj}/unidades | Atualizar Unidade
 *UnidadeApi* | [**recuperarUnidadeOrgao**](docs/Api/UnidadeApi.md#recuperarunidadeorgao) | **GET** /v1/orgaos/{cnpj}/unidades/{codigoUnidade} | Consultar Unidade
 *UnidadeApi* | [**recuperarUnidadesOrgao**](docs/Api/UnidadeApi.md#recuperarunidadesorgao) | **GET** /v1/orgaos/{cnpj}/unidades | Consultar Unidades
@@ -193,50 +253,83 @@ Class | Method | HTTP request | Description
 - [AlterarCompraItemResultadoDTO](docs/Model/AlterarCompraItemResultadoDTO.md)
 - [AlterarCompraParcialDTO](docs/Model/AlterarCompraParcialDTO.md)
 - [AlterarContratoDTO](docs/Model/AlterarContratoDTO.md)
+- [AlterarParcialAmparoLegalDTO](docs/Model/AlterarParcialAmparoLegalDTO.md)
+- [AlterarParcialCatalogoDTO](docs/Model/AlterarParcialCatalogoDTO.md)
+- [AlterarParcialDominioGenericoDTO](docs/Model/AlterarParcialDominioGenericoDTO.md)
+- [AlterarParcialTipoInstrumentoConbrancaDTO](docs/Model/AlterarParcialTipoInstrumentoConbrancaDTO.md)
+- [AlterarParcialTipoInstrumentoConvocatorioDTO](docs/Model/AlterarParcialTipoInstrumentoConvocatorioDTO.md)
 - [AlterarTermoContratoDTO](docs/Model/AlterarTermoContratoDTO.md)
 - [AlterarUnidadeOrgaoDTO](docs/Model/AlterarUnidadeOrgaoDTO.md)
 - [AlterarUsuarioDTO](docs/Model/AlterarUsuarioDTO.md)
 - [AmparoLegal](docs/Model/AmparoLegal.md)
+- [AmparoLegalDTO](docs/Model/AmparoLegalDTO.md)
+- [AmparoLegalModalidadeInstrumentoConvocatorioCommand](docs/Model/AmparoLegalModalidadeInstrumentoConvocatorioCommand.md)
 - [AtaRegistroPreco](docs/Model/AtaRegistroPreco.md)
 - [AtaRegistroPrecoAlteracaoDTO](docs/Model/AtaRegistroPrecoAlteracaoDTO.md)
 - [AtaRegistroPrecoDTO](docs/Model/AtaRegistroPrecoDTO.md)
 - [AtaRegistroPrecoInclusaoDTO](docs/Model/AtaRegistroPrecoInclusaoDTO.md)
 - [CamposLoginDTO](docs/Model/CamposLoginDTO.md)
+- [CatalogoDTO](docs/Model/CatalogoDTO.md)
 - [Categoria](docs/Model/Categoria.md)
 - [Compra](docs/Model/Compra.md)
+- [ConsultarAmparoLegalModalidadeInstrumentoConvocatorioDTO](docs/Model/ConsultarAmparoLegalModalidadeInstrumentoConvocatorioDTO.md)
+- [ConsultarInstrumentoCobrancaDTO](docs/Model/ConsultarInstrumentoCobrancaDTO.md)
+- [ConsultarModalidadeCriterioJulgamentoDTO](docs/Model/ConsultarModalidadeCriterioJulgamentoDTO.md)
+- [ConsultarModalidadeFonteOrcamentariaDTO](docs/Model/ConsultarModalidadeFonteOrcamentariaDTO.md)
+- [ContratacaoFonteOrcamentariaDTO](docs/Model/ContratacaoFonteOrcamentariaDTO.md)
 - [CredenciaisDTO](docs/Model/CredenciaisDTO.md)
+- [DominioGenericoDTO](docs/Model/DominioGenericoDTO.md)
+- [DominioGenericoResumidoDTO](docs/Model/DominioGenericoResumidoDTO.md)
 - [EnteCredenciaisDTO](docs/Model/EnteCredenciaisDTO.md)
-- [ErroValidacaoDTO](docs/Model/ErroValidacaoDTO.md)
+- [EventoNotaFiscalConsultaDTO](docs/Model/EventoNotaFiscalConsultaDTO.md)
+- [ExcluirContratacaoFonteOrcamentariaDTO](docs/Model/ExcluirContratacaoFonteOrcamentariaDTO.md)
+- [ExcluirDominioGenericoDTO](docs/Model/ExcluirDominioGenericoDTO.md)
+- [ExcluirInstrumentoCobrancaContratoDTO](docs/Model/ExcluirInstrumentoCobrancaContratoDTO.md)
 - [ExclusaoDTO](docs/Model/ExclusaoDTO.md)
 - [ExclusaoItemPcaDTO](docs/Model/ExclusaoItemPcaDTO.md)
 - [ExclusaoListaItensPcaDTO](docs/Model/ExclusaoListaItensPcaDTO.md)
 - [Get400Response](docs/Model/Get400Response.md)
 - [IRecuperarPlanoItemDTO](docs/Model/IRecuperarPlanoItemDTO.md)
+- [IncluirAmparoLegalDTO](docs/Model/IncluirAmparoLegalDTO.md)
+- [IncluirCatalogoDTO](docs/Model/IncluirCatalogoDTO.md)
 - [IncluirCompraItemDTO](docs/Model/IncluirCompraItemDTO.md)
 - [IncluirCompraItemResultadoDTO](docs/Model/IncluirCompraItemResultadoDTO.md)
+- [IncluirContratacaoFonteOrcamentariaDTO](docs/Model/IncluirContratacaoFonteOrcamentariaDTO.md)
 - [IncluirContratoDTO](docs/Model/IncluirContratoDTO.md)
 - [IncluirCredenciamentoDTO](docs/Model/IncluirCredenciamentoDTO.md)
 - [IncluirCredenciamentoResponsavelDTO](docs/Model/IncluirCredenciamentoResponsavelDTO.md)
+- [IncluirDominioGenericoDTO](docs/Model/IncluirDominioGenericoDTO.md)
+- [IncluirInstrumentoCobrancaContratoDTO](docs/Model/IncluirInstrumentoCobrancaContratoDTO.md)
 - [IncluirOrgaoDTO](docs/Model/IncluirOrgaoDTO.md)
 - [IncluirPlanoContratacaoDTO](docs/Model/IncluirPlanoContratacaoDTO.md)
 - [IncluirPlanoContratacaoItemDTO](docs/Model/IncluirPlanoContratacaoItemDTO.md)
 - [IncluirTermoContratoDTO](docs/Model/IncluirTermoContratoDTO.md)
+- [IncluirTipoInstrumentoCobrancaDTO](docs/Model/IncluirTipoInstrumentoCobrancaDTO.md)
+- [IncluirTipoInstrumentoConvocatorioDTO](docs/Model/IncluirTipoInstrumentoConvocatorioDTO.md)
+- [IncluirTipoInstrumentoConvocatorioModoDisputaDTO](docs/Model/IncluirTipoInstrumentoConvocatorioModoDisputaDTO.md)
 - [IncluirUnidadeOrgaoDTO](docs/Model/IncluirUnidadeOrgaoDTO.md)
 - [IncluirUsuarioOrgaoDTO](docs/Model/IncluirUsuarioOrgaoDTO.md)
 - [InserirUsuarioDTO](docs/Model/InserirUsuarioDTO.md)
+- [ItemNotaFiscalConsultaDTO](docs/Model/ItemNotaFiscalConsultaDTO.md)
+- [Modalidade](docs/Model/Modalidade.md)
+- [ModalidadeCriterioJulgamentoDTO](docs/Model/ModalidadeCriterioJulgamentoDTO.md)
+- [ModalidadeFonteOrcamentariaDTO](docs/Model/ModalidadeFonteOrcamentariaDTO.md)
+- [ModoDisputa](docs/Model/ModoDisputa.md)
+- [MoedaResumidoDTO](docs/Model/MoedaResumidoDTO.md)
 - [Municipio](docs/Model/Municipio.md)
+- [NotaFiscalEletronicaConsultaDTO](docs/Model/NotaFiscalEletronicaConsultaDTO.md)
+- [Obrigatoriedade](docs/Model/Obrigatoriedade.md)
 - [OrgaoConsultaDTO](docs/Model/OrgaoConsultaDTO.md)
 - [OrgaoEntidade](docs/Model/OrgaoEntidade.md)
 - [OrgaoEntidadeDTO](docs/Model/OrgaoEntidadeDTO.md)
 - [PaginaRetornoAtaRegistroPrecoDTO](docs/Model/PaginaRetornoAtaRegistroPrecoDTO.md)
 - [PaginaRetornoRecuperarContratoDTO](docs/Model/PaginaRetornoRecuperarContratoDTO.md)
+- [PaisResumidoDTO](docs/Model/PaisResumidoDTO.md)
 - [PlanoContratacaoComItensDTO](docs/Model/PlanoContratacaoComItensDTO.md)
 - [PlanoContratacaoItemOrgaoToDTO](docs/Model/PlanoContratacaoItemOrgaoToDTO.md)
 - [PlanoContratacaoOrgaoDTO](docs/Model/PlanoContratacaoOrgaoDTO.md)
 - [PlanoSequencialConsolidadoDTO](docs/Model/PlanoSequencialConsolidadoDTO.md)
-- [RecuperarAmparoLegalDTO](docs/Model/RecuperarAmparoLegalDTO.md)
 - [RecuperarAtaRegistroPrecoDTO](docs/Model/RecuperarAtaRegistroPrecoDTO.md)
-- [RecuperarCompraDTO](docs/Model/RecuperarCompraDTO.md)
 - [RecuperarCompraItemResultadoDTO](docs/Model/RecuperarCompraItemResultadoDTO.md)
 - [RecuperarCompraItemSigiloDTO](docs/Model/RecuperarCompraItemSigiloDTO.md)
 - [RecuperarContratoDTO](docs/Model/RecuperarContratoDTO.md)
@@ -258,11 +351,17 @@ Class | Method | HTTP request | Description
 - [RecuperarUnidadeOrgaoDTO](docs/Model/RecuperarUnidadeOrgaoDTO.md)
 - [RecuperarValoresCategoriaItemPcaDTO](docs/Model/RecuperarValoresCategoriaItemPcaDTO.md)
 - [RespostaErroValidacaoDTO](docs/Model/RespostaErroValidacaoDTO.md)
+- [RetificarInstrumentoCobrancaContratoDTO](docs/Model/RetificarInstrumentoCobrancaContratoDTO.md)
 - [RetificarParcialCredenciamentoDTO](docs/Model/RetificarParcialCredenciamentoDTO.md)
 - [RetificarParcialPlanoContratacaoItemDTO](docs/Model/RetificarParcialPlanoContratacaoItemDTO.md)
 - [RetificarParcialPlanoContratacaoListaItensDTO](docs/Model/RetificarParcialPlanoContratacaoListaItensDTO.md)
 - [SequenciaisDTO](docs/Model/SequenciaisDTO.md)
+- [TipoAmparoLegal](docs/Model/TipoAmparoLegal.md)
 - [TipoContrato](docs/Model/TipoContrato.md)
+- [TipoInstrumentoCobrancaDTO](docs/Model/TipoInstrumentoCobrancaDTO.md)
+- [TipoInstrumentoConvocatorio](docs/Model/TipoInstrumentoConvocatorio.md)
+- [TipoInstrumentoConvocatorioDTO](docs/Model/TipoInstrumentoConvocatorioDTO.md)
+- [TipoInstrumentoConvocatorioModoDisputaDTO](docs/Model/TipoInstrumentoConvocatorioModoDisputaDTO.md)
 - [UF](docs/Model/UF.md)
 - [UnidadeOrgao](docs/Model/UnidadeOrgao.md)
 - [UnidadeOrgaoDTO](docs/Model/UnidadeOrgaoDTO.md)

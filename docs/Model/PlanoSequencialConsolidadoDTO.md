@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **valor_total** | **float** |  | [optional]
 **quantidade** | **float** |  | [optional]
 **data_atualizacao** | **\DateTime** |  | [optional]
+**data_atualizacao_global_pca** | **\DateTime** |  | [optional]
 **data_publicacao_pncp** | **\DateTime** |  | [optional]
 **codigo_unidade** | **string** |  | [optional]
 **nome_unidade** | **string** |  | [optional]

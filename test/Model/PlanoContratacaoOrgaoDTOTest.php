@@ -153,6 +153,15 @@ class PlanoContratacaoOrgaoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "data_atualizacao_global_pca"
+     */
+    public function testPropertyDataAtualizacaoGlobalPca()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "esfera"
      */
     public function testPropertyEsfera()

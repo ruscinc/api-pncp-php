@@ -99,18 +99,18 @@ class RecuperarOrgaoEntidadeDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "poder_id"
+     * Test attribute "esfera_id"
      */
-    public function testPropertyPoderId()
+    public function testPropertyEsferaId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "esfera_id"
+     * Test attribute "poder_id"
      */
-    public function testPropertyEsferaId()
+    public function testPropertyPoderId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

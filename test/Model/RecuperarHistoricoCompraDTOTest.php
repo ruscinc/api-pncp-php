@@ -117,24 +117,6 @@ class RecuperarHistoricoCompraDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "compra_orgao_cnpj"
-     */
-    public function testPropertyCompraOrgaoCnpj()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "compra_ano"
-     */
-    public function testPropertyCompraAno()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "compra_sequencial"
      */
     public function testPropertyCompraSequencial()
@@ -144,54 +126,9 @@ class RecuperarHistoricoCompraDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "usuario_nome"
-     */
-    public function testPropertyUsuarioNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tipo_log_manutencao_nome"
-     */
-    public function testPropertyTipoLogManutencaoNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "categoria_log_manutencao_nome"
-     */
-    public function testPropertyCategoriaLogManutencaoNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "item_numero"
-     */
-    public function testPropertyItemNumero()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "item_resultado_numero"
      */
     public function testPropertyItemResultadoNumero()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "item_resultado_sequencial"
-     */
-    public function testPropertyItemResultadoSequencial()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -219,6 +156,69 @@ class RecuperarHistoricoCompraDTOTest extends TestCase
      * Test attribute "documento_sequencial"
      */
     public function testPropertyDocumentoSequencial()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "tipo_log_manutencao_nome"
+     */
+    public function testPropertyTipoLogManutencaoNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "categoria_log_manutencao_nome"
+     */
+    public function testPropertyCategoriaLogManutencaoNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "compra_orgao_cnpj"
+     */
+    public function testPropertyCompraOrgaoCnpj()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "compra_ano"
+     */
+    public function testPropertyCompraAno()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "item_numero"
+     */
+    public function testPropertyItemNumero()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "item_resultado_sequencial"
+     */
+    public function testPropertyItemResultadoSequencial()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "usuario_nome"
+     */
+    public function testPropertyUsuarioNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

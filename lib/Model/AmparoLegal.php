@@ -61,8 +61,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'nome' => 'string',
         'descricao' => 'string',
+        'tipo_amparo_legal' => '\OpenAPI\Client\Model\TipoAmparoLegal',
         'data_inclusao' => '\DateTime',
-        'data_atualizacao' => '\DateTime'
+        'data_atualizacao' => '\DateTime',
+        'status_ativo' => 'bool',
+        'justificativa_atualizacao' => 'string'
     ];
 
     /**
@@ -76,8 +79,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int64',
         'nome' => null,
         'descricao' => null,
+        'tipo_amparo_legal' => null,
         'data_inclusao' => 'date-time',
-        'data_atualizacao' => 'date-time'
+        'data_atualizacao' => 'date-time',
+        'status_ativo' => null,
+        'justificativa_atualizacao' => null
     ];
 
     /**
@@ -89,8 +95,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => false,
 		'nome' => false,
 		'descricao' => false,
+		'tipo_amparo_legal' => false,
 		'data_inclusao' => false,
-		'data_atualizacao' => false
+		'data_atualizacao' => false,
+		'status_ativo' => false,
+		'justificativa_atualizacao' => false
     ];
 
     /**
@@ -182,8 +191,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'nome' => 'nome',
         'descricao' => 'descricao',
+        'tipo_amparo_legal' => 'tipoAmparoLegal',
         'data_inclusao' => 'dataInclusao',
-        'data_atualizacao' => 'dataAtualizacao'
+        'data_atualizacao' => 'dataAtualizacao',
+        'status_ativo' => 'statusAtivo',
+        'justificativa_atualizacao' => 'justificativaAtualizacao'
     ];
 
     /**
@@ -195,8 +207,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'nome' => 'setNome',
         'descricao' => 'setDescricao',
+        'tipo_amparo_legal' => 'setTipoAmparoLegal',
         'data_inclusao' => 'setDataInclusao',
-        'data_atualizacao' => 'setDataAtualizacao'
+        'data_atualizacao' => 'setDataAtualizacao',
+        'status_ativo' => 'setStatusAtivo',
+        'justificativa_atualizacao' => 'setJustificativaAtualizacao'
     ];
 
     /**
@@ -208,8 +223,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'nome' => 'getNome',
         'descricao' => 'getDescricao',
+        'tipo_amparo_legal' => 'getTipoAmparoLegal',
         'data_inclusao' => 'getDataInclusao',
-        'data_atualizacao' => 'getDataAtualizacao'
+        'data_atualizacao' => 'getDataAtualizacao',
+        'status_ativo' => 'getStatusAtivo',
+        'justificativa_atualizacao' => 'getJustificativaAtualizacao'
     ];
 
     /**
@@ -272,8 +290,11 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('nome', $data ?? [], null);
         $this->setIfExists('descricao', $data ?? [], null);
+        $this->setIfExists('tipo_amparo_legal', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('status_ativo', $data ?? [], null);
+        $this->setIfExists('justificativa_atualizacao', $data ?? [], null);
     }
 
     /**
@@ -400,6 +421,33 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets tipo_amparo_legal
+     *
+     * @return \OpenAPI\Client\Model\TipoAmparoLegal|null
+     */
+    public function getTipoAmparoLegal()
+    {
+        return $this->container['tipo_amparo_legal'];
+    }
+
+    /**
+     * Sets tipo_amparo_legal
+     *
+     * @param \OpenAPI\Client\Model\TipoAmparoLegal|null $tipo_amparo_legal tipo_amparo_legal
+     *
+     * @return self
+     */
+    public function setTipoAmparoLegal($tipo_amparo_legal)
+    {
+        if (is_null($tipo_amparo_legal)) {
+            throw new \InvalidArgumentException('non-nullable tipo_amparo_legal cannot be null');
+        }
+        $this->container['tipo_amparo_legal'] = $tipo_amparo_legal;
+
+        return $this;
+    }
+
+    /**
      * Gets data_inclusao
      *
      * @return \DateTime|null
@@ -449,6 +497,60 @@ class AmparoLegal implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_ativo
+     *
+     * @return bool|null
+     */
+    public function getStatusAtivo()
+    {
+        return $this->container['status_ativo'];
+    }
+
+    /**
+     * Sets status_ativo
+     *
+     * @param bool|null $status_ativo status_ativo
+     *
+     * @return self
+     */
+    public function setStatusAtivo($status_ativo)
+    {
+        if (is_null($status_ativo)) {
+            throw new \InvalidArgumentException('non-nullable status_ativo cannot be null');
+        }
+        $this->container['status_ativo'] = $status_ativo;
+
+        return $this;
+    }
+
+    /**
+     * Gets justificativa_atualizacao
+     *
+     * @return string|null
+     */
+    public function getJustificativaAtualizacao()
+    {
+        return $this->container['justificativa_atualizacao'];
+    }
+
+    /**
+     * Sets justificativa_atualizacao
+     *
+     * @param string|null $justificativa_atualizacao justificativa_atualizacao
+     *
+     * @return self
+     */
+    public function setJustificativaAtualizacao($justificativa_atualizacao)
+    {
+        if (is_null($justificativa_atualizacao)) {
+            throw new \InvalidArgumentException('non-nullable justificativa_atualizacao cannot be null');
+        }
+        $this->container['justificativa_atualizacao'] = $justificativa_atualizacao;
 
         return $this;
     }

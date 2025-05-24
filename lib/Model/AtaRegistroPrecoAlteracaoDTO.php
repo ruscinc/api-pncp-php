@@ -345,8 +345,8 @@ class AtaRegistroPrecoAlteracaoDTO implements ModelInterface, ArrayAccess, \Json
         if ($this->container['justificativa'] === null) {
             $invalidProperties[] = "'justificativa' can't be null";
         }
-        if ((mb_strlen($this->container['justificativa']) > 2048)) {
-            $invalidProperties[] = "invalid value for 'justificativa', the character length must be smaller than or equal to 2048.";
+        if ((mb_strlen($this->container['justificativa']) > 255)) {
+            $invalidProperties[] = "invalid value for 'justificativa', the character length must be smaller than or equal to 255.";
         }
 
         if ((mb_strlen($this->container['justificativa']) < 0)) {
@@ -579,8 +579,8 @@ class AtaRegistroPrecoAlteracaoDTO implements ModelInterface, ArrayAccess, \Json
         if (is_null($justificativa)) {
             throw new \InvalidArgumentException('non-nullable justificativa cannot be null');
         }
-        if ((mb_strlen($justificativa) > 2048)) {
-            throw new \InvalidArgumentException('invalid length for $justificativa when calling AtaRegistroPrecoAlteracaoDTO., must be smaller than or equal to 2048.');
+        if ((mb_strlen($justificativa) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $justificativa when calling AtaRegistroPrecoAlteracaoDTO., must be smaller than or equal to 255.');
         }
         if ((mb_strlen($justificativa) < 0)) {
             throw new \InvalidArgumentException('invalid length for $justificativa when calling AtaRegistroPrecoAlteracaoDTO., must be bigger than or equal to 0.');

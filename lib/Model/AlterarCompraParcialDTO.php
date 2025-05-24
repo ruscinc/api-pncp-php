@@ -58,9 +58,9 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tipo_instrumento_convocatorio_id' => 'string',
-        'modalidade_id' => 'string',
-        'modo_disputa_id' => 'string',
+        'tipo_instrumento_convocatorio_id' => 'int',
+        'modalidade_id' => 'int',
+        'modo_disputa_id' => 'int',
         'numero_compra' => 'string',
         'numero_processo' => 'string',
         'situacao_compra_id' => 'string',
@@ -74,6 +74,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         'data_encerramento_proposta' => '\DateTime',
         'codigo_unidade_compradora' => 'string',
         'link_sistema_origem' => 'string',
+        'link_processo_eletronico' => 'string',
         'justificativa' => 'string',
         'justificativa_presencial' => 'string'
     ];
@@ -86,9 +87,9 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tipo_instrumento_convocatorio_id' => null,
-        'modalidade_id' => null,
-        'modo_disputa_id' => null,
+        'tipo_instrumento_convocatorio_id' => 'int64',
+        'modalidade_id' => 'int64',
+        'modo_disputa_id' => 'int64',
         'numero_compra' => null,
         'numero_processo' => null,
         'situacao_compra_id' => null,
@@ -102,6 +103,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         'data_encerramento_proposta' => 'date-time',
         'codigo_unidade_compradora' => null,
         'link_sistema_origem' => null,
+        'link_processo_eletronico' => null,
         'justificativa' => null,
         'justificativa_presencial' => null
     ];
@@ -128,6 +130,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
 		'data_encerramento_proposta' => false,
 		'codigo_unidade_compradora' => false,
 		'link_sistema_origem' => false,
+		'link_processo_eletronico' => false,
 		'justificativa' => false,
 		'justificativa_presencial' => false
     ];
@@ -234,6 +237,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         'data_encerramento_proposta' => 'dataEncerramentoProposta',
         'codigo_unidade_compradora' => 'codigoUnidadeCompradora',
         'link_sistema_origem' => 'linkSistemaOrigem',
+        'link_processo_eletronico' => 'linkProcessoEletronico',
         'justificativa' => 'justificativa',
         'justificativa_presencial' => 'justificativaPresencial'
     ];
@@ -260,6 +264,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         'data_encerramento_proposta' => 'setDataEncerramentoProposta',
         'codigo_unidade_compradora' => 'setCodigoUnidadeCompradora',
         'link_sistema_origem' => 'setLinkSistemaOrigem',
+        'link_processo_eletronico' => 'setLinkProcessoEletronico',
         'justificativa' => 'setJustificativa',
         'justificativa_presencial' => 'setJustificativaPresencial'
     ];
@@ -286,6 +291,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         'data_encerramento_proposta' => 'getDataEncerramentoProposta',
         'codigo_unidade_compradora' => 'getCodigoUnidadeCompradora',
         'link_sistema_origem' => 'getLinkSistemaOrigem',
+        'link_processo_eletronico' => 'getLinkProcessoEletronico',
         'justificativa' => 'getJustificativa',
         'justificativa_presencial' => 'getJustificativaPresencial'
     ];
@@ -331,89 +337,10 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         return self::$openAPIModelName;
     }
 
-    public const TIPO_INSTRUMENTO_CONVOCATORIO_ID__1 = '1';
-    public const TIPO_INSTRUMENTO_CONVOCATORIO_ID__2 = '2';
-    public const TIPO_INSTRUMENTO_CONVOCATORIO_ID__3 = '3';
-    public const MODALIDADE_ID__1 = '1';
-    public const MODALIDADE_ID__2 = '2';
-    public const MODALIDADE_ID__3 = '3';
-    public const MODALIDADE_ID__4 = '4';
-    public const MODALIDADE_ID__5 = '5';
-    public const MODALIDADE_ID__6 = '6';
-    public const MODALIDADE_ID__7 = '7';
-    public const MODALIDADE_ID__8 = '8';
-    public const MODALIDADE_ID__9 = '9';
-    public const MODALIDADE_ID__10 = '10';
-    public const MODALIDADE_ID__11 = '11';
-    public const MODALIDADE_ID__12 = '12';
-    public const MODALIDADE_ID__13 = '13';
-    public const MODALIDADE_ID__14 = '14';
-    public const MODO_DISPUTA_ID__1 = '1';
-    public const MODO_DISPUTA_ID__2 = '2';
-    public const MODO_DISPUTA_ID__3 = '3';
-    public const MODO_DISPUTA_ID__4 = '4';
-    public const MODO_DISPUTA_ID__5 = '5';
-    public const MODO_DISPUTA_ID__6 = '6';
     public const SITUACAO_COMPRA_ID__1 = '1';
     public const SITUACAO_COMPRA_ID__2 = '2';
     public const SITUACAO_COMPRA_ID__3 = '3';
     public const SITUACAO_COMPRA_ID__4 = '4';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTipoInstrumentoConvocatorioIdAllowableValues()
-    {
-        return [
-            self::TIPO_INSTRUMENTO_CONVOCATORIO_ID__1,
-            self::TIPO_INSTRUMENTO_CONVOCATORIO_ID__2,
-            self::TIPO_INSTRUMENTO_CONVOCATORIO_ID__3,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getModalidadeIdAllowableValues()
-    {
-        return [
-            self::MODALIDADE_ID__1,
-            self::MODALIDADE_ID__2,
-            self::MODALIDADE_ID__3,
-            self::MODALIDADE_ID__4,
-            self::MODALIDADE_ID__5,
-            self::MODALIDADE_ID__6,
-            self::MODALIDADE_ID__7,
-            self::MODALIDADE_ID__8,
-            self::MODALIDADE_ID__9,
-            self::MODALIDADE_ID__10,
-            self::MODALIDADE_ID__11,
-            self::MODALIDADE_ID__12,
-            self::MODALIDADE_ID__13,
-            self::MODALIDADE_ID__14,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getModoDisputaIdAllowableValues()
-    {
-        return [
-            self::MODO_DISPUTA_ID__1,
-            self::MODO_DISPUTA_ID__2,
-            self::MODO_DISPUTA_ID__3,
-            self::MODO_DISPUTA_ID__4,
-            self::MODO_DISPUTA_ID__5,
-            self::MODO_DISPUTA_ID__6,
-        ];
-    }
 
     /**
      * Gets allowable values of the enum
@@ -461,6 +388,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('data_encerramento_proposta', $data ?? [], null);
         $this->setIfExists('codigo_unidade_compradora', $data ?? [], null);
         $this->setIfExists('link_sistema_origem', $data ?? [], null);
+        $this->setIfExists('link_processo_eletronico', $data ?? [], null);
         $this->setIfExists('justificativa', $data ?? [], null);
         $this->setIfExists('justificativa_presencial', $data ?? [], null);
     }
@@ -491,33 +419,6 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getTipoInstrumentoConvocatorioIdAllowableValues();
-        if (!is_null($this->container['tipo_instrumento_convocatorio_id']) && !in_array($this->container['tipo_instrumento_convocatorio_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'tipo_instrumento_convocatorio_id', must be one of '%s'",
-                $this->container['tipo_instrumento_convocatorio_id'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getModalidadeIdAllowableValues();
-        if (!is_null($this->container['modalidade_id']) && !in_array($this->container['modalidade_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'modalidade_id', must be one of '%s'",
-                $this->container['modalidade_id'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getModoDisputaIdAllowableValues();
-        if (!is_null($this->container['modo_disputa_id']) && !in_array($this->container['modo_disputa_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'modo_disputa_id', must be one of '%s'",
-                $this->container['modo_disputa_id'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         $allowedValues = $this->getSituacaoCompraIdAllowableValues();
         if (!is_null($this->container['situacao_compra_id']) && !in_array($this->container['situacao_compra_id'], $allowedValues, true)) {
@@ -554,7 +455,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets tipo_instrumento_convocatorio_id
      *
-     * @return string|null
+     * @return int|null
      */
     public function getTipoInstrumentoConvocatorioId()
     {
@@ -564,7 +465,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets tipo_instrumento_convocatorio_id
      *
-     * @param string|null $tipo_instrumento_convocatorio_id tipo_instrumento_convocatorio_id
+     * @param int|null $tipo_instrumento_convocatorio_id tipo_instrumento_convocatorio_id
      *
      * @return self
      */
@@ -572,16 +473,6 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($tipo_instrumento_convocatorio_id)) {
             throw new \InvalidArgumentException('non-nullable tipo_instrumento_convocatorio_id cannot be null');
-        }
-        $allowedValues = $this->getTipoInstrumentoConvocatorioIdAllowableValues();
-        if (!in_array($tipo_instrumento_convocatorio_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'tipo_instrumento_convocatorio_id', must be one of '%s'",
-                    $tipo_instrumento_convocatorio_id,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['tipo_instrumento_convocatorio_id'] = $tipo_instrumento_convocatorio_id;
 
@@ -591,7 +482,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets modalidade_id
      *
-     * @return string|null
+     * @return int|null
      */
     public function getModalidadeId()
     {
@@ -601,7 +492,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets modalidade_id
      *
-     * @param string|null $modalidade_id modalidade_id
+     * @param int|null $modalidade_id modalidade_id
      *
      * @return self
      */
@@ -609,16 +500,6 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($modalidade_id)) {
             throw new \InvalidArgumentException('non-nullable modalidade_id cannot be null');
-        }
-        $allowedValues = $this->getModalidadeIdAllowableValues();
-        if (!in_array($modalidade_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'modalidade_id', must be one of '%s'",
-                    $modalidade_id,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['modalidade_id'] = $modalidade_id;
 
@@ -628,7 +509,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets modo_disputa_id
      *
-     * @return string|null
+     * @return int|null
      */
     public function getModoDisputaId()
     {
@@ -638,7 +519,7 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets modo_disputa_id
      *
-     * @param string|null $modo_disputa_id modo_disputa_id
+     * @param int|null $modo_disputa_id modo_disputa_id
      *
      * @return self
      */
@@ -646,16 +527,6 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($modo_disputa_id)) {
             throw new \InvalidArgumentException('non-nullable modo_disputa_id cannot be null');
-        }
-        $allowedValues = $this->getModoDisputaIdAllowableValues();
-        if (!in_array($modo_disputa_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'modo_disputa_id', must be one of '%s'",
-                    $modo_disputa_id,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['modo_disputa_id'] = $modo_disputa_id;
 
@@ -1019,6 +890,33 @@ class AlterarCompraParcialDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable link_sistema_origem cannot be null');
         }
         $this->container['link_sistema_origem'] = $link_sistema_origem;
+
+        return $this;
+    }
+
+    /**
+     * Gets link_processo_eletronico
+     *
+     * @return string|null
+     */
+    public function getLinkProcessoEletronico()
+    {
+        return $this->container['link_processo_eletronico'];
+    }
+
+    /**
+     * Sets link_processo_eletronico
+     *
+     * @param string|null $link_processo_eletronico link_processo_eletronico
+     *
+     * @return self
+     */
+    public function setLinkProcessoEletronico($link_processo_eletronico)
+    {
+        if (is_null($link_processo_eletronico)) {
+            throw new \InvalidArgumentException('non-nullable link_processo_eletronico cannot be null');
+        }
+        $this->container['link_processo_eletronico'] = $link_processo_eletronico;
 
         return $this;
     }

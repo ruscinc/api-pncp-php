@@ -58,15 +58,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
+        'unidade_sub_rogada' => '\OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO',
         'orgao_sub_rogado' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'unidade_orgao' => '\OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO',
-        'unidade_sub_rogada' => '\OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO',
         'data_atualizacao' => '\DateTime',
+        'data_publicacao_pncp' => '\DateTime',
+        'informacao_complementar' => 'string',
+        'orgao_entidade' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'ni_fornecedor' => 'string',
         'tipo_pessoa' => 'string',
         'tipo_pessoa_sub_contratada' => 'string',
-        'data_publicacao_pncp' => '\DateTime',
-        'orgao_entidade' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'ano_contrato' => 'int',
         'sequencial_contrato' => 'int',
         'numero_retificacao' => 'int',
@@ -76,23 +77,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         'data_vigencia_inicio' => '\DateTime',
         'data_vigencia_fim' => '\DateTime',
         'categoria_processo' => '\OpenAPI\Client\Model\Categoria',
+        'processo' => 'string',
         'nome_razao_social_fornecedor' => 'string',
+        'receita' => 'bool',
+        'numero_parcelas' => 'int',
         'ni_fornecedor_sub_contratado' => 'string',
         'nome_fornecedor_sub_contratado' => 'string',
-        'informacao_complementar' => 'string',
-        'processo' => 'string',
-        'valor_acumulado' => 'float',
-        'identificador_cipi' => 'string',
-        'url_cipi' => 'string',
+        'objeto_contrato' => 'string',
         'valor_inicial' => 'float',
-        'numero_parcelas' => 'int',
         'valor_parcela' => 'float',
         'valor_global' => 'float',
+        'valor_acumulado' => 'float',
+        'data_atualizacao_global' => '\DateTime',
+        'identificador_cipi' => 'string',
+        'url_cipi' => 'string',
         'numero_controle_pncp' => 'string',
-        'receita' => 'bool',
-        'objeto_contrato' => 'string',
-        'usuario_nome' => 'string',
         'numero_controle_pncp_compra' => 'string',
+        'usuario_nome' => 'string',
         'codigo_pais_fornecedor' => 'string'
     ];
 
@@ -104,15 +105,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'unidade_sub_rogada' => null,
         'orgao_sub_rogado' => null,
         'unidade_orgao' => null,
-        'unidade_sub_rogada' => null,
         'data_atualizacao' => 'date-time',
+        'data_publicacao_pncp' => 'date-time',
+        'informacao_complementar' => null,
+        'orgao_entidade' => null,
         'ni_fornecedor' => null,
         'tipo_pessoa' => null,
         'tipo_pessoa_sub_contratada' => null,
-        'data_publicacao_pncp' => 'date-time',
-        'orgao_entidade' => null,
         'ano_contrato' => 'int32',
         'sequencial_contrato' => 'int32',
         'numero_retificacao' => 'int32',
@@ -122,23 +124,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         'data_vigencia_inicio' => 'date',
         'data_vigencia_fim' => 'date',
         'categoria_processo' => null,
+        'processo' => null,
         'nome_razao_social_fornecedor' => null,
+        'receita' => null,
+        'numero_parcelas' => 'int32',
         'ni_fornecedor_sub_contratado' => null,
         'nome_fornecedor_sub_contratado' => null,
-        'informacao_complementar' => null,
-        'processo' => null,
-        'valor_acumulado' => null,
-        'identificador_cipi' => null,
-        'url_cipi' => null,
+        'objeto_contrato' => null,
         'valor_inicial' => null,
-        'numero_parcelas' => 'int32',
         'valor_parcela' => null,
         'valor_global' => null,
+        'valor_acumulado' => null,
+        'data_atualizacao_global' => 'date-time',
+        'identificador_cipi' => null,
+        'url_cipi' => null,
         'numero_controle_pncp' => null,
-        'receita' => null,
-        'objeto_contrato' => null,
-        'usuario_nome' => null,
         'numero_controle_pncp_compra' => null,
+        'usuario_nome' => null,
         'codigo_pais_fornecedor' => null
     ];
 
@@ -148,15 +150,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'orgao_sub_rogado' => false,
+        'unidade_sub_rogada' => false,
+		'orgao_sub_rogado' => false,
 		'unidade_orgao' => false,
-		'unidade_sub_rogada' => false,
 		'data_atualizacao' => false,
+		'data_publicacao_pncp' => false,
+		'informacao_complementar' => false,
+		'orgao_entidade' => false,
 		'ni_fornecedor' => false,
 		'tipo_pessoa' => false,
 		'tipo_pessoa_sub_contratada' => false,
-		'data_publicacao_pncp' => false,
-		'orgao_entidade' => false,
 		'ano_contrato' => false,
 		'sequencial_contrato' => false,
 		'numero_retificacao' => false,
@@ -166,23 +169,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
 		'data_vigencia_inicio' => false,
 		'data_vigencia_fim' => false,
 		'categoria_processo' => false,
+		'processo' => false,
 		'nome_razao_social_fornecedor' => false,
+		'receita' => false,
+		'numero_parcelas' => false,
 		'ni_fornecedor_sub_contratado' => false,
 		'nome_fornecedor_sub_contratado' => false,
-		'informacao_complementar' => false,
-		'processo' => false,
-		'valor_acumulado' => false,
-		'identificador_cipi' => false,
-		'url_cipi' => false,
+		'objeto_contrato' => false,
 		'valor_inicial' => false,
-		'numero_parcelas' => false,
 		'valor_parcela' => false,
 		'valor_global' => false,
+		'valor_acumulado' => false,
+		'data_atualizacao_global' => false,
+		'identificador_cipi' => false,
+		'url_cipi' => false,
 		'numero_controle_pncp' => false,
-		'receita' => false,
-		'objeto_contrato' => false,
-		'usuario_nome' => false,
 		'numero_controle_pncp_compra' => false,
+		'usuario_nome' => false,
 		'codigo_pais_fornecedor' => false
     ];
 
@@ -272,15 +275,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
+        'unidade_sub_rogada' => 'unidadeSubRogada',
         'orgao_sub_rogado' => 'orgaoSubRogado',
         'unidade_orgao' => 'unidadeOrgao',
-        'unidade_sub_rogada' => 'unidadeSubRogada',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_publicacao_pncp' => 'dataPublicacaoPncp',
+        'informacao_complementar' => 'informacaoComplementar',
+        'orgao_entidade' => 'orgaoEntidade',
         'ni_fornecedor' => 'niFornecedor',
         'tipo_pessoa' => 'tipoPessoa',
         'tipo_pessoa_sub_contratada' => 'tipoPessoaSubContratada',
-        'data_publicacao_pncp' => 'dataPublicacaoPncp',
-        'orgao_entidade' => 'orgaoEntidade',
         'ano_contrato' => 'anoContrato',
         'sequencial_contrato' => 'sequencialContrato',
         'numero_retificacao' => 'numeroRetificacao',
@@ -290,23 +294,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         'data_vigencia_inicio' => 'dataVigenciaInicio',
         'data_vigencia_fim' => 'dataVigenciaFim',
         'categoria_processo' => 'categoriaProcesso',
+        'processo' => 'processo',
         'nome_razao_social_fornecedor' => 'nomeRazaoSocialFornecedor',
+        'receita' => 'receita',
+        'numero_parcelas' => 'numeroParcelas',
         'ni_fornecedor_sub_contratado' => 'niFornecedorSubContratado',
         'nome_fornecedor_sub_contratado' => 'nomeFornecedorSubContratado',
-        'informacao_complementar' => 'informacaoComplementar',
-        'processo' => 'processo',
-        'valor_acumulado' => 'valorAcumulado',
-        'identificador_cipi' => 'identificadorCipi',
-        'url_cipi' => 'urlCipi',
+        'objeto_contrato' => 'objetoContrato',
         'valor_inicial' => 'valorInicial',
-        'numero_parcelas' => 'numeroParcelas',
         'valor_parcela' => 'valorParcela',
         'valor_global' => 'valorGlobal',
+        'valor_acumulado' => 'valorAcumulado',
+        'data_atualizacao_global' => 'dataAtualizacaoGlobal',
+        'identificador_cipi' => 'identificadorCipi',
+        'url_cipi' => 'urlCipi',
         'numero_controle_pncp' => 'numeroControlePNCP',
-        'receita' => 'receita',
-        'objeto_contrato' => 'objetoContrato',
-        'usuario_nome' => 'usuarioNome',
         'numero_controle_pncp_compra' => 'numeroControlePncpCompra',
+        'usuario_nome' => 'usuarioNome',
         'codigo_pais_fornecedor' => 'codigoPaisFornecedor'
     ];
 
@@ -316,15 +320,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
+        'unidade_sub_rogada' => 'setUnidadeSubRogada',
         'orgao_sub_rogado' => 'setOrgaoSubRogado',
         'unidade_orgao' => 'setUnidadeOrgao',
-        'unidade_sub_rogada' => 'setUnidadeSubRogada',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_publicacao_pncp' => 'setDataPublicacaoPncp',
+        'informacao_complementar' => 'setInformacaoComplementar',
+        'orgao_entidade' => 'setOrgaoEntidade',
         'ni_fornecedor' => 'setNiFornecedor',
         'tipo_pessoa' => 'setTipoPessoa',
         'tipo_pessoa_sub_contratada' => 'setTipoPessoaSubContratada',
-        'data_publicacao_pncp' => 'setDataPublicacaoPncp',
-        'orgao_entidade' => 'setOrgaoEntidade',
         'ano_contrato' => 'setAnoContrato',
         'sequencial_contrato' => 'setSequencialContrato',
         'numero_retificacao' => 'setNumeroRetificacao',
@@ -334,23 +339,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         'data_vigencia_inicio' => 'setDataVigenciaInicio',
         'data_vigencia_fim' => 'setDataVigenciaFim',
         'categoria_processo' => 'setCategoriaProcesso',
+        'processo' => 'setProcesso',
         'nome_razao_social_fornecedor' => 'setNomeRazaoSocialFornecedor',
+        'receita' => 'setReceita',
+        'numero_parcelas' => 'setNumeroParcelas',
         'ni_fornecedor_sub_contratado' => 'setNiFornecedorSubContratado',
         'nome_fornecedor_sub_contratado' => 'setNomeFornecedorSubContratado',
-        'informacao_complementar' => 'setInformacaoComplementar',
-        'processo' => 'setProcesso',
-        'valor_acumulado' => 'setValorAcumulado',
-        'identificador_cipi' => 'setIdentificadorCipi',
-        'url_cipi' => 'setUrlCipi',
+        'objeto_contrato' => 'setObjetoContrato',
         'valor_inicial' => 'setValorInicial',
-        'numero_parcelas' => 'setNumeroParcelas',
         'valor_parcela' => 'setValorParcela',
         'valor_global' => 'setValorGlobal',
+        'valor_acumulado' => 'setValorAcumulado',
+        'data_atualizacao_global' => 'setDataAtualizacaoGlobal',
+        'identificador_cipi' => 'setIdentificadorCipi',
+        'url_cipi' => 'setUrlCipi',
         'numero_controle_pncp' => 'setNumeroControlePncp',
-        'receita' => 'setReceita',
-        'objeto_contrato' => 'setObjetoContrato',
-        'usuario_nome' => 'setUsuarioNome',
         'numero_controle_pncp_compra' => 'setNumeroControlePncpCompra',
+        'usuario_nome' => 'setUsuarioNome',
         'codigo_pais_fornecedor' => 'setCodigoPaisFornecedor'
     ];
 
@@ -360,15 +365,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
+        'unidade_sub_rogada' => 'getUnidadeSubRogada',
         'orgao_sub_rogado' => 'getOrgaoSubRogado',
         'unidade_orgao' => 'getUnidadeOrgao',
-        'unidade_sub_rogada' => 'getUnidadeSubRogada',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_publicacao_pncp' => 'getDataPublicacaoPncp',
+        'informacao_complementar' => 'getInformacaoComplementar',
+        'orgao_entidade' => 'getOrgaoEntidade',
         'ni_fornecedor' => 'getNiFornecedor',
         'tipo_pessoa' => 'getTipoPessoa',
         'tipo_pessoa_sub_contratada' => 'getTipoPessoaSubContratada',
-        'data_publicacao_pncp' => 'getDataPublicacaoPncp',
-        'orgao_entidade' => 'getOrgaoEntidade',
         'ano_contrato' => 'getAnoContrato',
         'sequencial_contrato' => 'getSequencialContrato',
         'numero_retificacao' => 'getNumeroRetificacao',
@@ -378,23 +384,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         'data_vigencia_inicio' => 'getDataVigenciaInicio',
         'data_vigencia_fim' => 'getDataVigenciaFim',
         'categoria_processo' => 'getCategoriaProcesso',
+        'processo' => 'getProcesso',
         'nome_razao_social_fornecedor' => 'getNomeRazaoSocialFornecedor',
+        'receita' => 'getReceita',
+        'numero_parcelas' => 'getNumeroParcelas',
         'ni_fornecedor_sub_contratado' => 'getNiFornecedorSubContratado',
         'nome_fornecedor_sub_contratado' => 'getNomeFornecedorSubContratado',
-        'informacao_complementar' => 'getInformacaoComplementar',
-        'processo' => 'getProcesso',
-        'valor_acumulado' => 'getValorAcumulado',
-        'identificador_cipi' => 'getIdentificadorCipi',
-        'url_cipi' => 'getUrlCipi',
+        'objeto_contrato' => 'getObjetoContrato',
         'valor_inicial' => 'getValorInicial',
-        'numero_parcelas' => 'getNumeroParcelas',
         'valor_parcela' => 'getValorParcela',
         'valor_global' => 'getValorGlobal',
+        'valor_acumulado' => 'getValorAcumulado',
+        'data_atualizacao_global' => 'getDataAtualizacaoGlobal',
+        'identificador_cipi' => 'getIdentificadorCipi',
+        'url_cipi' => 'getUrlCipi',
         'numero_controle_pncp' => 'getNumeroControlePncp',
-        'receita' => 'getReceita',
-        'objeto_contrato' => 'getObjetoContrato',
-        'usuario_nome' => 'getUsuarioNome',
         'numero_controle_pncp_compra' => 'getNumeroControlePncpCompra',
+        'usuario_nome' => 'getUsuarioNome',
         'codigo_pais_fornecedor' => 'getCodigoPaisFornecedor'
     ];
 
@@ -489,15 +495,16 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('unidade_sub_rogada', $data ?? [], null);
         $this->setIfExists('orgao_sub_rogado', $data ?? [], null);
         $this->setIfExists('unidade_orgao', $data ?? [], null);
-        $this->setIfExists('unidade_sub_rogada', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('informacao_complementar', $data ?? [], null);
+        $this->setIfExists('orgao_entidade', $data ?? [], null);
         $this->setIfExists('ni_fornecedor', $data ?? [], null);
         $this->setIfExists('tipo_pessoa', $data ?? [], null);
         $this->setIfExists('tipo_pessoa_sub_contratada', $data ?? [], null);
-        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
-        $this->setIfExists('orgao_entidade', $data ?? [], null);
         $this->setIfExists('ano_contrato', $data ?? [], null);
         $this->setIfExists('sequencial_contrato', $data ?? [], null);
         $this->setIfExists('numero_retificacao', $data ?? [], null);
@@ -507,23 +514,23 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('data_vigencia_inicio', $data ?? [], null);
         $this->setIfExists('data_vigencia_fim', $data ?? [], null);
         $this->setIfExists('categoria_processo', $data ?? [], null);
+        $this->setIfExists('processo', $data ?? [], null);
         $this->setIfExists('nome_razao_social_fornecedor', $data ?? [], null);
+        $this->setIfExists('receita', $data ?? [], null);
+        $this->setIfExists('numero_parcelas', $data ?? [], null);
         $this->setIfExists('ni_fornecedor_sub_contratado', $data ?? [], null);
         $this->setIfExists('nome_fornecedor_sub_contratado', $data ?? [], null);
-        $this->setIfExists('informacao_complementar', $data ?? [], null);
-        $this->setIfExists('processo', $data ?? [], null);
-        $this->setIfExists('valor_acumulado', $data ?? [], null);
-        $this->setIfExists('identificador_cipi', $data ?? [], null);
-        $this->setIfExists('url_cipi', $data ?? [], null);
+        $this->setIfExists('objeto_contrato', $data ?? [], null);
         $this->setIfExists('valor_inicial', $data ?? [], null);
-        $this->setIfExists('numero_parcelas', $data ?? [], null);
         $this->setIfExists('valor_parcela', $data ?? [], null);
         $this->setIfExists('valor_global', $data ?? [], null);
+        $this->setIfExists('valor_acumulado', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global', $data ?? [], null);
+        $this->setIfExists('identificador_cipi', $data ?? [], null);
+        $this->setIfExists('url_cipi', $data ?? [], null);
         $this->setIfExists('numero_controle_pncp', $data ?? [], null);
-        $this->setIfExists('receita', $data ?? [], null);
-        $this->setIfExists('objeto_contrato', $data ?? [], null);
-        $this->setIfExists('usuario_nome', $data ?? [], null);
         $this->setIfExists('numero_controle_pncp_compra', $data ?? [], null);
+        $this->setIfExists('usuario_nome', $data ?? [], null);
         $this->setIfExists('codigo_pais_fornecedor', $data ?? [], null);
     }
 
@@ -588,6 +595,33 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
+     * Gets unidade_sub_rogada
+     *
+     * @return \OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO|null
+     */
+    public function getUnidadeSubRogada()
+    {
+        return $this->container['unidade_sub_rogada'];
+    }
+
+    /**
+     * Sets unidade_sub_rogada
+     *
+     * @param \OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO|null $unidade_sub_rogada unidade_sub_rogada
+     *
+     * @return self
+     */
+    public function setUnidadeSubRogada($unidade_sub_rogada)
+    {
+        if (is_null($unidade_sub_rogada)) {
+            throw new \InvalidArgumentException('non-nullable unidade_sub_rogada cannot be null');
+        }
+        $this->container['unidade_sub_rogada'] = $unidade_sub_rogada;
+
+        return $this;
+    }
+
+    /**
      * Gets orgao_sub_rogado
      *
      * @return \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null
@@ -642,33 +676,6 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets unidade_sub_rogada
-     *
-     * @return \OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO|null
-     */
-    public function getUnidadeSubRogada()
-    {
-        return $this->container['unidade_sub_rogada'];
-    }
-
-    /**
-     * Sets unidade_sub_rogada
-     *
-     * @param \OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO|null $unidade_sub_rogada unidade_sub_rogada
-     *
-     * @return self
-     */
-    public function setUnidadeSubRogada($unidade_sub_rogada)
-    {
-        if (is_null($unidade_sub_rogada)) {
-            throw new \InvalidArgumentException('non-nullable unidade_sub_rogada cannot be null');
-        }
-        $this->container['unidade_sub_rogada'] = $unidade_sub_rogada;
-
-        return $this;
-    }
-
-    /**
      * Gets data_atualizacao
      *
      * @return \DateTime|null
@@ -691,6 +698,87 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_publicacao_pncp
+     *
+     * @return \DateTime|null
+     */
+    public function getDataPublicacaoPncp()
+    {
+        return $this->container['data_publicacao_pncp'];
+    }
+
+    /**
+     * Sets data_publicacao_pncp
+     *
+     * @param \DateTime|null $data_publicacao_pncp data_publicacao_pncp
+     *
+     * @return self
+     */
+    public function setDataPublicacaoPncp($data_publicacao_pncp)
+    {
+        if (is_null($data_publicacao_pncp)) {
+            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
+        }
+        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+
+        return $this;
+    }
+
+    /**
+     * Gets informacao_complementar
+     *
+     * @return string|null
+     */
+    public function getInformacaoComplementar()
+    {
+        return $this->container['informacao_complementar'];
+    }
+
+    /**
+     * Sets informacao_complementar
+     *
+     * @param string|null $informacao_complementar informacao_complementar
+     *
+     * @return self
+     */
+    public function setInformacaoComplementar($informacao_complementar)
+    {
+        if (is_null($informacao_complementar)) {
+            throw new \InvalidArgumentException('non-nullable informacao_complementar cannot be null');
+        }
+        $this->container['informacao_complementar'] = $informacao_complementar;
+
+        return $this;
+    }
+
+    /**
+     * Gets orgao_entidade
+     *
+     * @return \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null
+     */
+    public function getOrgaoEntidade()
+    {
+        return $this->container['orgao_entidade'];
+    }
+
+    /**
+     * Sets orgao_entidade
+     *
+     * @param \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null $orgao_entidade orgao_entidade
+     *
+     * @return self
+     */
+    public function setOrgaoEntidade($orgao_entidade)
+    {
+        if (is_null($orgao_entidade)) {
+            throw new \InvalidArgumentException('non-nullable orgao_entidade cannot be null');
+        }
+        $this->container['orgao_entidade'] = $orgao_entidade;
 
         return $this;
     }
@@ -792,60 +880,6 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             );
         }
         $this->container['tipo_pessoa_sub_contratada'] = $tipo_pessoa_sub_contratada;
-
-        return $this;
-    }
-
-    /**
-     * Gets data_publicacao_pncp
-     *
-     * @return \DateTime|null
-     */
-    public function getDataPublicacaoPncp()
-    {
-        return $this->container['data_publicacao_pncp'];
-    }
-
-    /**
-     * Sets data_publicacao_pncp
-     *
-     * @param \DateTime|null $data_publicacao_pncp data_publicacao_pncp
-     *
-     * @return self
-     */
-    public function setDataPublicacaoPncp($data_publicacao_pncp)
-    {
-        if (is_null($data_publicacao_pncp)) {
-            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
-        }
-        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
-
-        return $this;
-    }
-
-    /**
-     * Gets orgao_entidade
-     *
-     * @return \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null
-     */
-    public function getOrgaoEntidade()
-    {
-        return $this->container['orgao_entidade'];
-    }
-
-    /**
-     * Sets orgao_entidade
-     *
-     * @param \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null $orgao_entidade orgao_entidade
-     *
-     * @return self
-     */
-    public function setOrgaoEntidade($orgao_entidade)
-    {
-        if (is_null($orgao_entidade)) {
-            throw new \InvalidArgumentException('non-nullable orgao_entidade cannot be null');
-        }
-        $this->container['orgao_entidade'] = $orgao_entidade;
 
         return $this;
     }
@@ -1094,6 +1128,33 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
+     * Gets processo
+     *
+     * @return string|null
+     */
+    public function getProcesso()
+    {
+        return $this->container['processo'];
+    }
+
+    /**
+     * Sets processo
+     *
+     * @param string|null $processo processo
+     *
+     * @return self
+     */
+    public function setProcesso($processo)
+    {
+        if (is_null($processo)) {
+            throw new \InvalidArgumentException('non-nullable processo cannot be null');
+        }
+        $this->container['processo'] = $processo;
+
+        return $this;
+    }
+
+    /**
      * Gets nome_razao_social_fornecedor
      *
      * @return string|null
@@ -1116,6 +1177,60 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable nome_razao_social_fornecedor cannot be null');
         }
         $this->container['nome_razao_social_fornecedor'] = $nome_razao_social_fornecedor;
+
+        return $this;
+    }
+
+    /**
+     * Gets receita
+     *
+     * @return bool|null
+     */
+    public function getReceita()
+    {
+        return $this->container['receita'];
+    }
+
+    /**
+     * Sets receita
+     *
+     * @param bool|null $receita receita
+     *
+     * @return self
+     */
+    public function setReceita($receita)
+    {
+        if (is_null($receita)) {
+            throw new \InvalidArgumentException('non-nullable receita cannot be null');
+        }
+        $this->container['receita'] = $receita;
+
+        return $this;
+    }
+
+    /**
+     * Gets numero_parcelas
+     *
+     * @return int|null
+     */
+    public function getNumeroParcelas()
+    {
+        return $this->container['numero_parcelas'];
+    }
+
+    /**
+     * Sets numero_parcelas
+     *
+     * @param int|null $numero_parcelas numero_parcelas
+     *
+     * @return self
+     */
+    public function setNumeroParcelas($numero_parcelas)
+    {
+        if (is_null($numero_parcelas)) {
+            throw new \InvalidArgumentException('non-nullable numero_parcelas cannot be null');
+        }
+        $this->container['numero_parcelas'] = $numero_parcelas;
 
         return $this;
     }
@@ -1175,136 +1290,28 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets informacao_complementar
+     * Gets objeto_contrato
      *
      * @return string|null
      */
-    public function getInformacaoComplementar()
+    public function getObjetoContrato()
     {
-        return $this->container['informacao_complementar'];
+        return $this->container['objeto_contrato'];
     }
 
     /**
-     * Sets informacao_complementar
+     * Sets objeto_contrato
      *
-     * @param string|null $informacao_complementar informacao_complementar
+     * @param string|null $objeto_contrato objeto_contrato
      *
      * @return self
      */
-    public function setInformacaoComplementar($informacao_complementar)
+    public function setObjetoContrato($objeto_contrato)
     {
-        if (is_null($informacao_complementar)) {
-            throw new \InvalidArgumentException('non-nullable informacao_complementar cannot be null');
+        if (is_null($objeto_contrato)) {
+            throw new \InvalidArgumentException('non-nullable objeto_contrato cannot be null');
         }
-        $this->container['informacao_complementar'] = $informacao_complementar;
-
-        return $this;
-    }
-
-    /**
-     * Gets processo
-     *
-     * @return string|null
-     */
-    public function getProcesso()
-    {
-        return $this->container['processo'];
-    }
-
-    /**
-     * Sets processo
-     *
-     * @param string|null $processo processo
-     *
-     * @return self
-     */
-    public function setProcesso($processo)
-    {
-        if (is_null($processo)) {
-            throw new \InvalidArgumentException('non-nullable processo cannot be null');
-        }
-        $this->container['processo'] = $processo;
-
-        return $this;
-    }
-
-    /**
-     * Gets valor_acumulado
-     *
-     * @return float|null
-     */
-    public function getValorAcumulado()
-    {
-        return $this->container['valor_acumulado'];
-    }
-
-    /**
-     * Sets valor_acumulado
-     *
-     * @param float|null $valor_acumulado valor_acumulado
-     *
-     * @return self
-     */
-    public function setValorAcumulado($valor_acumulado)
-    {
-        if (is_null($valor_acumulado)) {
-            throw new \InvalidArgumentException('non-nullable valor_acumulado cannot be null');
-        }
-        $this->container['valor_acumulado'] = $valor_acumulado;
-
-        return $this;
-    }
-
-    /**
-     * Gets identificador_cipi
-     *
-     * @return string|null
-     */
-    public function getIdentificadorCipi()
-    {
-        return $this->container['identificador_cipi'];
-    }
-
-    /**
-     * Sets identificador_cipi
-     *
-     * @param string|null $identificador_cipi identificador_cipi
-     *
-     * @return self
-     */
-    public function setIdentificadorCipi($identificador_cipi)
-    {
-        if (is_null($identificador_cipi)) {
-            throw new \InvalidArgumentException('non-nullable identificador_cipi cannot be null');
-        }
-        $this->container['identificador_cipi'] = $identificador_cipi;
-
-        return $this;
-    }
-
-    /**
-     * Gets url_cipi
-     *
-     * @return string|null
-     */
-    public function getUrlCipi()
-    {
-        return $this->container['url_cipi'];
-    }
-
-    /**
-     * Sets url_cipi
-     *
-     * @param string|null $url_cipi url_cipi
-     *
-     * @return self
-     */
-    public function setUrlCipi($url_cipi)
-    {
-        if (is_null($url_cipi)) {
-            throw new \InvalidArgumentException('non-nullable url_cipi cannot be null');
-        }
-        $this->container['url_cipi'] = $url_cipi;
+        $this->container['objeto_contrato'] = $objeto_contrato;
 
         return $this;
     }
@@ -1332,33 +1339,6 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable valor_inicial cannot be null');
         }
         $this->container['valor_inicial'] = $valor_inicial;
-
-        return $this;
-    }
-
-    /**
-     * Gets numero_parcelas
-     *
-     * @return int|null
-     */
-    public function getNumeroParcelas()
-    {
-        return $this->container['numero_parcelas'];
-    }
-
-    /**
-     * Sets numero_parcelas
-     *
-     * @param int|null $numero_parcelas numero_parcelas
-     *
-     * @return self
-     */
-    public function setNumeroParcelas($numero_parcelas)
-    {
-        if (is_null($numero_parcelas)) {
-            throw new \InvalidArgumentException('non-nullable numero_parcelas cannot be null');
-        }
-        $this->container['numero_parcelas'] = $numero_parcelas;
 
         return $this;
     }
@@ -1418,6 +1398,114 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
+     * Gets valor_acumulado
+     *
+     * @return float|null
+     */
+    public function getValorAcumulado()
+    {
+        return $this->container['valor_acumulado'];
+    }
+
+    /**
+     * Sets valor_acumulado
+     *
+     * @param float|null $valor_acumulado valor_acumulado
+     *
+     * @return self
+     */
+    public function setValorAcumulado($valor_acumulado)
+    {
+        if (is_null($valor_acumulado)) {
+            throw new \InvalidArgumentException('non-nullable valor_acumulado cannot be null');
+        }
+        $this->container['valor_acumulado'] = $valor_acumulado;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_atualizacao_global
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobal()
+    {
+        return $this->container['data_atualizacao_global'];
+    }
+
+    /**
+     * Sets data_atualizacao_global
+     *
+     * @param \DateTime|null $data_atualizacao_global data_atualizacao_global
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobal($data_atualizacao_global)
+    {
+        if (is_null($data_atualizacao_global)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global cannot be null');
+        }
+        $this->container['data_atualizacao_global'] = $data_atualizacao_global;
+
+        return $this;
+    }
+
+    /**
+     * Gets identificador_cipi
+     *
+     * @return string|null
+     */
+    public function getIdentificadorCipi()
+    {
+        return $this->container['identificador_cipi'];
+    }
+
+    /**
+     * Sets identificador_cipi
+     *
+     * @param string|null $identificador_cipi identificador_cipi
+     *
+     * @return self
+     */
+    public function setIdentificadorCipi($identificador_cipi)
+    {
+        if (is_null($identificador_cipi)) {
+            throw new \InvalidArgumentException('non-nullable identificador_cipi cannot be null');
+        }
+        $this->container['identificador_cipi'] = $identificador_cipi;
+
+        return $this;
+    }
+
+    /**
+     * Gets url_cipi
+     *
+     * @return string|null
+     */
+    public function getUrlCipi()
+    {
+        return $this->container['url_cipi'];
+    }
+
+    /**
+     * Sets url_cipi
+     *
+     * @param string|null $url_cipi url_cipi
+     *
+     * @return self
+     */
+    public function setUrlCipi($url_cipi)
+    {
+        if (is_null($url_cipi)) {
+            throw new \InvalidArgumentException('non-nullable url_cipi cannot be null');
+        }
+        $this->container['url_cipi'] = $url_cipi;
+
+        return $this;
+    }
+
+    /**
      * Gets numero_controle_pncp
      *
      * @return string|null
@@ -1445,55 +1533,28 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets receita
-     *
-     * @return bool|null
-     */
-    public function getReceita()
-    {
-        return $this->container['receita'];
-    }
-
-    /**
-     * Sets receita
-     *
-     * @param bool|null $receita receita
-     *
-     * @return self
-     */
-    public function setReceita($receita)
-    {
-        if (is_null($receita)) {
-            throw new \InvalidArgumentException('non-nullable receita cannot be null');
-        }
-        $this->container['receita'] = $receita;
-
-        return $this;
-    }
-
-    /**
-     * Gets objeto_contrato
+     * Gets numero_controle_pncp_compra
      *
      * @return string|null
      */
-    public function getObjetoContrato()
+    public function getNumeroControlePncpCompra()
     {
-        return $this->container['objeto_contrato'];
+        return $this->container['numero_controle_pncp_compra'];
     }
 
     /**
-     * Sets objeto_contrato
+     * Sets numero_controle_pncp_compra
      *
-     * @param string|null $objeto_contrato objeto_contrato
+     * @param string|null $numero_controle_pncp_compra numero_controle_pncp_compra
      *
      * @return self
      */
-    public function setObjetoContrato($objeto_contrato)
+    public function setNumeroControlePncpCompra($numero_controle_pncp_compra)
     {
-        if (is_null($objeto_contrato)) {
-            throw new \InvalidArgumentException('non-nullable objeto_contrato cannot be null');
+        if (is_null($numero_controle_pncp_compra)) {
+            throw new \InvalidArgumentException('non-nullable numero_controle_pncp_compra cannot be null');
         }
-        $this->container['objeto_contrato'] = $objeto_contrato;
+        $this->container['numero_controle_pncp_compra'] = $numero_controle_pncp_compra;
 
         return $this;
     }
@@ -1521,33 +1582,6 @@ class RecuperarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable usuario_nome cannot be null');
         }
         $this->container['usuario_nome'] = $usuario_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets numero_controle_pncp_compra
-     *
-     * @return string|null
-     */
-    public function getNumeroControlePncpCompra()
-    {
-        return $this->container['numero_controle_pncp_compra'];
-    }
-
-    /**
-     * Sets numero_controle_pncp_compra
-     *
-     * @param string|null $numero_controle_pncp_compra numero_controle_pncp_compra
-     *
-     * @return self
-     */
-    public function setNumeroControlePncpCompra($numero_controle_pncp_compra)
-    {
-        if (is_null($numero_controle_pncp_compra)) {
-            throw new \InvalidArgumentException('non-nullable numero_controle_pncp_compra cannot be null');
-        }
-        $this->container['numero_controle_pncp_compra'] = $numero_controle_pncp_compra;
 
         return $this;
     }

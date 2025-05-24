@@ -58,40 +58,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'qualificacao_fornecedor' => 'bool',
-        'qualificacao_reajuste' => 'bool',
-        'informativo_observacao' => 'string',
         'data_atualizacao' => '\DateTime',
+        'data_publicacao_pncp' => '\DateTime',
+        'informacao_complementar' => 'string',
+        'orgao_entidade' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'fornecedor' => '\OpenAPI\Client\Model\RecuperarFornecedorDTO',
         'ni_fornecedor' => 'string',
         'tipo_pessoa' => 'string',
-        'fornecedor_sub_contratado' => '\OpenAPI\Client\Model\RecuperarFornecedorDTO',
         'tipo_pessoa_sub_contratada' => 'string',
         'sequencial_termo_contrato' => 'int',
         'data_inclusao' => '\DateTime',
-        'data_publicacao_pncp' => '\DateTime',
-        'fundamento_legal' => 'string',
-        'valor_acrescido' => 'float',
-        'prazo_aditado_dias' => 'int',
-        'qualificacao_acrescimo_supressao' => 'bool',
-        'qualificacao_vigencia' => 'bool',
-        'orgao_entidade' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
+        'fornecedor_sub_contratado' => '\OpenAPI\Client\Model\RecuperarFornecedorDTO',
         'unidade' => '\OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO',
         'unidade_subrogada' => '\OpenAPI\Client\Model\RecuperarUnidadeOrgaoDTO',
         'data_assinatura' => '\DateTime',
         'data_vigencia_inicio' => '\DateTime',
         'data_vigencia_fim' => '\DateTime',
+        'processo' => 'string',
         'nome_razao_social_fornecedor' => 'string',
+        'numero_termo_contrato' => 'string',
+        'numero_parcelas' => 'int',
         'ni_fornecedor_sub_contratado' => 'string',
         'nome_fornecedor_sub_contratado' => 'string',
-        'numero_termo_contrato' => 'string',
-        'informacao_complementar' => 'string',
-        'processo' => 'string',
-        'numero_parcelas' => 'int',
         'valor_parcela' => 'float',
         'valor_global' => 'float',
+        'qualificacao_acrescimo_supressao' => 'bool',
+        'qualificacao_vigencia' => 'bool',
+        'qualificacao_fornecedor' => 'bool',
+        'qualificacao_reajuste' => 'bool',
+        'prazo_aditado_dias' => 'int',
+        'informativo_observacao' => 'string',
         'orgao_subrogado' => '\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO',
         'objeto_termo_contrato' => 'string',
+        'fundamento_legal' => 'string',
+        'valor_acrescido' => 'float',
         'tipo_termo_contrato_nome' => 'string'
     ];
 
@@ -103,40 +103,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'qualificacao_fornecedor' => null,
-        'qualificacao_reajuste' => null,
-        'informativo_observacao' => null,
         'data_atualizacao' => 'date-time',
+        'data_publicacao_pncp' => 'date-time',
+        'informacao_complementar' => null,
+        'orgao_entidade' => null,
         'fornecedor' => null,
         'ni_fornecedor' => null,
         'tipo_pessoa' => null,
-        'fornecedor_sub_contratado' => null,
         'tipo_pessoa_sub_contratada' => null,
         'sequencial_termo_contrato' => 'int32',
         'data_inclusao' => 'date-time',
-        'data_publicacao_pncp' => 'date-time',
-        'fundamento_legal' => null,
-        'valor_acrescido' => null,
-        'prazo_aditado_dias' => 'int32',
-        'qualificacao_acrescimo_supressao' => null,
-        'qualificacao_vigencia' => null,
-        'orgao_entidade' => null,
+        'fornecedor_sub_contratado' => null,
         'unidade' => null,
         'unidade_subrogada' => null,
         'data_assinatura' => 'date',
         'data_vigencia_inicio' => 'date',
         'data_vigencia_fim' => 'date',
+        'processo' => null,
         'nome_razao_social_fornecedor' => null,
+        'numero_termo_contrato' => null,
+        'numero_parcelas' => 'int32',
         'ni_fornecedor_sub_contratado' => null,
         'nome_fornecedor_sub_contratado' => null,
-        'numero_termo_contrato' => null,
-        'informacao_complementar' => null,
-        'processo' => null,
-        'numero_parcelas' => 'int32',
         'valor_parcela' => null,
         'valor_global' => null,
+        'qualificacao_acrescimo_supressao' => null,
+        'qualificacao_vigencia' => null,
+        'qualificacao_fornecedor' => null,
+        'qualificacao_reajuste' => null,
+        'prazo_aditado_dias' => 'int32',
+        'informativo_observacao' => null,
         'orgao_subrogado' => null,
         'objeto_termo_contrato' => null,
+        'fundamento_legal' => null,
+        'valor_acrescido' => null,
         'tipo_termo_contrato_nome' => null
     ];
 
@@ -146,40 +146,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'qualificacao_fornecedor' => false,
-		'qualificacao_reajuste' => false,
-		'informativo_observacao' => false,
-		'data_atualizacao' => false,
+        'data_atualizacao' => false,
+		'data_publicacao_pncp' => false,
+		'informacao_complementar' => false,
+		'orgao_entidade' => false,
 		'fornecedor' => false,
 		'ni_fornecedor' => false,
 		'tipo_pessoa' => false,
-		'fornecedor_sub_contratado' => false,
 		'tipo_pessoa_sub_contratada' => false,
 		'sequencial_termo_contrato' => false,
 		'data_inclusao' => false,
-		'data_publicacao_pncp' => false,
-		'fundamento_legal' => false,
-		'valor_acrescido' => false,
-		'prazo_aditado_dias' => false,
-		'qualificacao_acrescimo_supressao' => false,
-		'qualificacao_vigencia' => false,
-		'orgao_entidade' => false,
+		'fornecedor_sub_contratado' => false,
 		'unidade' => false,
 		'unidade_subrogada' => false,
 		'data_assinatura' => false,
 		'data_vigencia_inicio' => false,
 		'data_vigencia_fim' => false,
+		'processo' => false,
 		'nome_razao_social_fornecedor' => false,
+		'numero_termo_contrato' => false,
+		'numero_parcelas' => false,
 		'ni_fornecedor_sub_contratado' => false,
 		'nome_fornecedor_sub_contratado' => false,
-		'numero_termo_contrato' => false,
-		'informacao_complementar' => false,
-		'processo' => false,
-		'numero_parcelas' => false,
 		'valor_parcela' => false,
 		'valor_global' => false,
+		'qualificacao_acrescimo_supressao' => false,
+		'qualificacao_vigencia' => false,
+		'qualificacao_fornecedor' => false,
+		'qualificacao_reajuste' => false,
+		'prazo_aditado_dias' => false,
+		'informativo_observacao' => false,
 		'orgao_subrogado' => false,
 		'objeto_termo_contrato' => false,
+		'fundamento_legal' => false,
+		'valor_acrescido' => false,
 		'tipo_termo_contrato_nome' => false
     ];
 
@@ -269,40 +269,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'qualificacao_fornecedor' => 'qualificacaoFornecedor',
-        'qualificacao_reajuste' => 'qualificacaoReajuste',
-        'informativo_observacao' => 'informativoObservacao',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_publicacao_pncp' => 'dataPublicacaoPncp',
+        'informacao_complementar' => 'informacaoComplementar',
+        'orgao_entidade' => 'orgaoEntidade',
         'fornecedor' => 'fornecedor',
         'ni_fornecedor' => 'niFornecedor',
         'tipo_pessoa' => 'tipoPessoa',
-        'fornecedor_sub_contratado' => 'fornecedorSubContratado',
         'tipo_pessoa_sub_contratada' => 'tipoPessoaSubContratada',
         'sequencial_termo_contrato' => 'sequencialTermoContrato',
         'data_inclusao' => 'dataInclusao',
-        'data_publicacao_pncp' => 'dataPublicacaoPncp',
-        'fundamento_legal' => 'fundamentoLegal',
-        'valor_acrescido' => 'valorAcrescido',
-        'prazo_aditado_dias' => 'prazoAditadoDias',
-        'qualificacao_acrescimo_supressao' => 'qualificacaoAcrescimoSupressao',
-        'qualificacao_vigencia' => 'qualificacaoVigencia',
-        'orgao_entidade' => 'orgaoEntidade',
+        'fornecedor_sub_contratado' => 'fornecedorSubContratado',
         'unidade' => 'unidade',
         'unidade_subrogada' => 'unidadeSubrogada',
         'data_assinatura' => 'dataAssinatura',
         'data_vigencia_inicio' => 'dataVigenciaInicio',
         'data_vigencia_fim' => 'dataVigenciaFim',
+        'processo' => 'processo',
         'nome_razao_social_fornecedor' => 'nomeRazaoSocialFornecedor',
+        'numero_termo_contrato' => 'numeroTermoContrato',
+        'numero_parcelas' => 'numeroParcelas',
         'ni_fornecedor_sub_contratado' => 'niFornecedorSubContratado',
         'nome_fornecedor_sub_contratado' => 'nomeFornecedorSubContratado',
-        'numero_termo_contrato' => 'numeroTermoContrato',
-        'informacao_complementar' => 'informacaoComplementar',
-        'processo' => 'processo',
-        'numero_parcelas' => 'numeroParcelas',
         'valor_parcela' => 'valorParcela',
         'valor_global' => 'valorGlobal',
+        'qualificacao_acrescimo_supressao' => 'qualificacaoAcrescimoSupressao',
+        'qualificacao_vigencia' => 'qualificacaoVigencia',
+        'qualificacao_fornecedor' => 'qualificacaoFornecedor',
+        'qualificacao_reajuste' => 'qualificacaoReajuste',
+        'prazo_aditado_dias' => 'prazoAditadoDias',
+        'informativo_observacao' => 'informativoObservacao',
         'orgao_subrogado' => 'orgaoSubrogado',
         'objeto_termo_contrato' => 'objetoTermoContrato',
+        'fundamento_legal' => 'fundamentoLegal',
+        'valor_acrescido' => 'valorAcrescido',
         'tipo_termo_contrato_nome' => 'tipoTermoContratoNome'
     ];
 
@@ -312,40 +312,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'qualificacao_fornecedor' => 'setQualificacaoFornecedor',
-        'qualificacao_reajuste' => 'setQualificacaoReajuste',
-        'informativo_observacao' => 'setInformativoObservacao',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_publicacao_pncp' => 'setDataPublicacaoPncp',
+        'informacao_complementar' => 'setInformacaoComplementar',
+        'orgao_entidade' => 'setOrgaoEntidade',
         'fornecedor' => 'setFornecedor',
         'ni_fornecedor' => 'setNiFornecedor',
         'tipo_pessoa' => 'setTipoPessoa',
-        'fornecedor_sub_contratado' => 'setFornecedorSubContratado',
         'tipo_pessoa_sub_contratada' => 'setTipoPessoaSubContratada',
         'sequencial_termo_contrato' => 'setSequencialTermoContrato',
         'data_inclusao' => 'setDataInclusao',
-        'data_publicacao_pncp' => 'setDataPublicacaoPncp',
-        'fundamento_legal' => 'setFundamentoLegal',
-        'valor_acrescido' => 'setValorAcrescido',
-        'prazo_aditado_dias' => 'setPrazoAditadoDias',
-        'qualificacao_acrescimo_supressao' => 'setQualificacaoAcrescimoSupressao',
-        'qualificacao_vigencia' => 'setQualificacaoVigencia',
-        'orgao_entidade' => 'setOrgaoEntidade',
+        'fornecedor_sub_contratado' => 'setFornecedorSubContratado',
         'unidade' => 'setUnidade',
         'unidade_subrogada' => 'setUnidadeSubrogada',
         'data_assinatura' => 'setDataAssinatura',
         'data_vigencia_inicio' => 'setDataVigenciaInicio',
         'data_vigencia_fim' => 'setDataVigenciaFim',
+        'processo' => 'setProcesso',
         'nome_razao_social_fornecedor' => 'setNomeRazaoSocialFornecedor',
+        'numero_termo_contrato' => 'setNumeroTermoContrato',
+        'numero_parcelas' => 'setNumeroParcelas',
         'ni_fornecedor_sub_contratado' => 'setNiFornecedorSubContratado',
         'nome_fornecedor_sub_contratado' => 'setNomeFornecedorSubContratado',
-        'numero_termo_contrato' => 'setNumeroTermoContrato',
-        'informacao_complementar' => 'setInformacaoComplementar',
-        'processo' => 'setProcesso',
-        'numero_parcelas' => 'setNumeroParcelas',
         'valor_parcela' => 'setValorParcela',
         'valor_global' => 'setValorGlobal',
+        'qualificacao_acrescimo_supressao' => 'setQualificacaoAcrescimoSupressao',
+        'qualificacao_vigencia' => 'setQualificacaoVigencia',
+        'qualificacao_fornecedor' => 'setQualificacaoFornecedor',
+        'qualificacao_reajuste' => 'setQualificacaoReajuste',
+        'prazo_aditado_dias' => 'setPrazoAditadoDias',
+        'informativo_observacao' => 'setInformativoObservacao',
         'orgao_subrogado' => 'setOrgaoSubrogado',
         'objeto_termo_contrato' => 'setObjetoTermoContrato',
+        'fundamento_legal' => 'setFundamentoLegal',
+        'valor_acrescido' => 'setValorAcrescido',
         'tipo_termo_contrato_nome' => 'setTipoTermoContratoNome'
     ];
 
@@ -355,40 +355,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'qualificacao_fornecedor' => 'getQualificacaoFornecedor',
-        'qualificacao_reajuste' => 'getQualificacaoReajuste',
-        'informativo_observacao' => 'getInformativoObservacao',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_publicacao_pncp' => 'getDataPublicacaoPncp',
+        'informacao_complementar' => 'getInformacaoComplementar',
+        'orgao_entidade' => 'getOrgaoEntidade',
         'fornecedor' => 'getFornecedor',
         'ni_fornecedor' => 'getNiFornecedor',
         'tipo_pessoa' => 'getTipoPessoa',
-        'fornecedor_sub_contratado' => 'getFornecedorSubContratado',
         'tipo_pessoa_sub_contratada' => 'getTipoPessoaSubContratada',
         'sequencial_termo_contrato' => 'getSequencialTermoContrato',
         'data_inclusao' => 'getDataInclusao',
-        'data_publicacao_pncp' => 'getDataPublicacaoPncp',
-        'fundamento_legal' => 'getFundamentoLegal',
-        'valor_acrescido' => 'getValorAcrescido',
-        'prazo_aditado_dias' => 'getPrazoAditadoDias',
-        'qualificacao_acrescimo_supressao' => 'getQualificacaoAcrescimoSupressao',
-        'qualificacao_vigencia' => 'getQualificacaoVigencia',
-        'orgao_entidade' => 'getOrgaoEntidade',
+        'fornecedor_sub_contratado' => 'getFornecedorSubContratado',
         'unidade' => 'getUnidade',
         'unidade_subrogada' => 'getUnidadeSubrogada',
         'data_assinatura' => 'getDataAssinatura',
         'data_vigencia_inicio' => 'getDataVigenciaInicio',
         'data_vigencia_fim' => 'getDataVigenciaFim',
+        'processo' => 'getProcesso',
         'nome_razao_social_fornecedor' => 'getNomeRazaoSocialFornecedor',
+        'numero_termo_contrato' => 'getNumeroTermoContrato',
+        'numero_parcelas' => 'getNumeroParcelas',
         'ni_fornecedor_sub_contratado' => 'getNiFornecedorSubContratado',
         'nome_fornecedor_sub_contratado' => 'getNomeFornecedorSubContratado',
-        'numero_termo_contrato' => 'getNumeroTermoContrato',
-        'informacao_complementar' => 'getInformacaoComplementar',
-        'processo' => 'getProcesso',
-        'numero_parcelas' => 'getNumeroParcelas',
         'valor_parcela' => 'getValorParcela',
         'valor_global' => 'getValorGlobal',
+        'qualificacao_acrescimo_supressao' => 'getQualificacaoAcrescimoSupressao',
+        'qualificacao_vigencia' => 'getQualificacaoVigencia',
+        'qualificacao_fornecedor' => 'getQualificacaoFornecedor',
+        'qualificacao_reajuste' => 'getQualificacaoReajuste',
+        'prazo_aditado_dias' => 'getPrazoAditadoDias',
+        'informativo_observacao' => 'getInformativoObservacao',
         'orgao_subrogado' => 'getOrgaoSubrogado',
         'objeto_termo_contrato' => 'getObjetoTermoContrato',
+        'fundamento_legal' => 'getFundamentoLegal',
+        'valor_acrescido' => 'getValorAcrescido',
         'tipo_termo_contrato_nome' => 'getTipoTermoContratoNome'
     ];
 
@@ -483,40 +483,40 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('qualificacao_fornecedor', $data ?? [], null);
-        $this->setIfExists('qualificacao_reajuste', $data ?? [], null);
-        $this->setIfExists('informativo_observacao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('informacao_complementar', $data ?? [], null);
+        $this->setIfExists('orgao_entidade', $data ?? [], null);
         $this->setIfExists('fornecedor', $data ?? [], null);
         $this->setIfExists('ni_fornecedor', $data ?? [], null);
         $this->setIfExists('tipo_pessoa', $data ?? [], null);
-        $this->setIfExists('fornecedor_sub_contratado', $data ?? [], null);
         $this->setIfExists('tipo_pessoa_sub_contratada', $data ?? [], null);
         $this->setIfExists('sequencial_termo_contrato', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
-        $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
-        $this->setIfExists('fundamento_legal', $data ?? [], null);
-        $this->setIfExists('valor_acrescido', $data ?? [], null);
-        $this->setIfExists('prazo_aditado_dias', $data ?? [], null);
-        $this->setIfExists('qualificacao_acrescimo_supressao', $data ?? [], null);
-        $this->setIfExists('qualificacao_vigencia', $data ?? [], null);
-        $this->setIfExists('orgao_entidade', $data ?? [], null);
+        $this->setIfExists('fornecedor_sub_contratado', $data ?? [], null);
         $this->setIfExists('unidade', $data ?? [], null);
         $this->setIfExists('unidade_subrogada', $data ?? [], null);
         $this->setIfExists('data_assinatura', $data ?? [], null);
         $this->setIfExists('data_vigencia_inicio', $data ?? [], null);
         $this->setIfExists('data_vigencia_fim', $data ?? [], null);
+        $this->setIfExists('processo', $data ?? [], null);
         $this->setIfExists('nome_razao_social_fornecedor', $data ?? [], null);
+        $this->setIfExists('numero_termo_contrato', $data ?? [], null);
+        $this->setIfExists('numero_parcelas', $data ?? [], null);
         $this->setIfExists('ni_fornecedor_sub_contratado', $data ?? [], null);
         $this->setIfExists('nome_fornecedor_sub_contratado', $data ?? [], null);
-        $this->setIfExists('numero_termo_contrato', $data ?? [], null);
-        $this->setIfExists('informacao_complementar', $data ?? [], null);
-        $this->setIfExists('processo', $data ?? [], null);
-        $this->setIfExists('numero_parcelas', $data ?? [], null);
         $this->setIfExists('valor_parcela', $data ?? [], null);
         $this->setIfExists('valor_global', $data ?? [], null);
+        $this->setIfExists('qualificacao_acrescimo_supressao', $data ?? [], null);
+        $this->setIfExists('qualificacao_vigencia', $data ?? [], null);
+        $this->setIfExists('qualificacao_fornecedor', $data ?? [], null);
+        $this->setIfExists('qualificacao_reajuste', $data ?? [], null);
+        $this->setIfExists('prazo_aditado_dias', $data ?? [], null);
+        $this->setIfExists('informativo_observacao', $data ?? [], null);
         $this->setIfExists('orgao_subrogado', $data ?? [], null);
         $this->setIfExists('objeto_termo_contrato', $data ?? [], null);
+        $this->setIfExists('fundamento_legal', $data ?? [], null);
+        $this->setIfExists('valor_acrescido', $data ?? [], null);
         $this->setIfExists('tipo_termo_contrato_nome', $data ?? [], null);
     }
 
@@ -581,87 +581,6 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets qualificacao_fornecedor
-     *
-     * @return bool|null
-     */
-    public function getQualificacaoFornecedor()
-    {
-        return $this->container['qualificacao_fornecedor'];
-    }
-
-    /**
-     * Sets qualificacao_fornecedor
-     *
-     * @param bool|null $qualificacao_fornecedor qualificacao_fornecedor
-     *
-     * @return self
-     */
-    public function setQualificacaoFornecedor($qualificacao_fornecedor)
-    {
-        if (is_null($qualificacao_fornecedor)) {
-            throw new \InvalidArgumentException('non-nullable qualificacao_fornecedor cannot be null');
-        }
-        $this->container['qualificacao_fornecedor'] = $qualificacao_fornecedor;
-
-        return $this;
-    }
-
-    /**
-     * Gets qualificacao_reajuste
-     *
-     * @return bool|null
-     */
-    public function getQualificacaoReajuste()
-    {
-        return $this->container['qualificacao_reajuste'];
-    }
-
-    /**
-     * Sets qualificacao_reajuste
-     *
-     * @param bool|null $qualificacao_reajuste qualificacao_reajuste
-     *
-     * @return self
-     */
-    public function setQualificacaoReajuste($qualificacao_reajuste)
-    {
-        if (is_null($qualificacao_reajuste)) {
-            throw new \InvalidArgumentException('non-nullable qualificacao_reajuste cannot be null');
-        }
-        $this->container['qualificacao_reajuste'] = $qualificacao_reajuste;
-
-        return $this;
-    }
-
-    /**
-     * Gets informativo_observacao
-     *
-     * @return string|null
-     */
-    public function getInformativoObservacao()
-    {
-        return $this->container['informativo_observacao'];
-    }
-
-    /**
-     * Sets informativo_observacao
-     *
-     * @param string|null $informativo_observacao informativo_observacao
-     *
-     * @return self
-     */
-    public function setInformativoObservacao($informativo_observacao)
-    {
-        if (is_null($informativo_observacao)) {
-            throw new \InvalidArgumentException('non-nullable informativo_observacao cannot be null');
-        }
-        $this->container['informativo_observacao'] = $informativo_observacao;
-
-        return $this;
-    }
-
-    /**
      * Gets data_atualizacao
      *
      * @return \DateTime|null
@@ -684,6 +603,87 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_publicacao_pncp
+     *
+     * @return \DateTime|null
+     */
+    public function getDataPublicacaoPncp()
+    {
+        return $this->container['data_publicacao_pncp'];
+    }
+
+    /**
+     * Sets data_publicacao_pncp
+     *
+     * @param \DateTime|null $data_publicacao_pncp data_publicacao_pncp
+     *
+     * @return self
+     */
+    public function setDataPublicacaoPncp($data_publicacao_pncp)
+    {
+        if (is_null($data_publicacao_pncp)) {
+            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
+        }
+        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+
+        return $this;
+    }
+
+    /**
+     * Gets informacao_complementar
+     *
+     * @return string|null
+     */
+    public function getInformacaoComplementar()
+    {
+        return $this->container['informacao_complementar'];
+    }
+
+    /**
+     * Sets informacao_complementar
+     *
+     * @param string|null $informacao_complementar informacao_complementar
+     *
+     * @return self
+     */
+    public function setInformacaoComplementar($informacao_complementar)
+    {
+        if (is_null($informacao_complementar)) {
+            throw new \InvalidArgumentException('non-nullable informacao_complementar cannot be null');
+        }
+        $this->container['informacao_complementar'] = $informacao_complementar;
+
+        return $this;
+    }
+
+    /**
+     * Gets orgao_entidade
+     *
+     * @return \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null
+     */
+    public function getOrgaoEntidade()
+    {
+        return $this->container['orgao_entidade'];
+    }
+
+    /**
+     * Sets orgao_entidade
+     *
+     * @param \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null $orgao_entidade orgao_entidade
+     *
+     * @return self
+     */
+    public function setOrgaoEntidade($orgao_entidade)
+    {
+        if (is_null($orgao_entidade)) {
+            throw new \InvalidArgumentException('non-nullable orgao_entidade cannot be null');
+        }
+        $this->container['orgao_entidade'] = $orgao_entidade;
 
         return $this;
     }
@@ -780,33 +780,6 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets fornecedor_sub_contratado
-     *
-     * @return \OpenAPI\Client\Model\RecuperarFornecedorDTO|null
-     */
-    public function getFornecedorSubContratado()
-    {
-        return $this->container['fornecedor_sub_contratado'];
-    }
-
-    /**
-     * Sets fornecedor_sub_contratado
-     *
-     * @param \OpenAPI\Client\Model\RecuperarFornecedorDTO|null $fornecedor_sub_contratado fornecedor_sub_contratado
-     *
-     * @return self
-     */
-    public function setFornecedorSubContratado($fornecedor_sub_contratado)
-    {
-        if (is_null($fornecedor_sub_contratado)) {
-            throw new \InvalidArgumentException('non-nullable fornecedor_sub_contratado cannot be null');
-        }
-        $this->container['fornecedor_sub_contratado'] = $fornecedor_sub_contratado;
-
-        return $this;
-    }
-
-    /**
      * Gets tipo_pessoa_sub_contratada
      *
      * @return string|null
@@ -898,190 +871,28 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets data_publicacao_pncp
+     * Gets fornecedor_sub_contratado
      *
-     * @return \DateTime|null
+     * @return \OpenAPI\Client\Model\RecuperarFornecedorDTO|null
      */
-    public function getDataPublicacaoPncp()
+    public function getFornecedorSubContratado()
     {
-        return $this->container['data_publicacao_pncp'];
+        return $this->container['fornecedor_sub_contratado'];
     }
 
     /**
-     * Sets data_publicacao_pncp
+     * Sets fornecedor_sub_contratado
      *
-     * @param \DateTime|null $data_publicacao_pncp data_publicacao_pncp
+     * @param \OpenAPI\Client\Model\RecuperarFornecedorDTO|null $fornecedor_sub_contratado fornecedor_sub_contratado
      *
      * @return self
      */
-    public function setDataPublicacaoPncp($data_publicacao_pncp)
+    public function setFornecedorSubContratado($fornecedor_sub_contratado)
     {
-        if (is_null($data_publicacao_pncp)) {
-            throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
+        if (is_null($fornecedor_sub_contratado)) {
+            throw new \InvalidArgumentException('non-nullable fornecedor_sub_contratado cannot be null');
         }
-        $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
-
-        return $this;
-    }
-
-    /**
-     * Gets fundamento_legal
-     *
-     * @return string|null
-     */
-    public function getFundamentoLegal()
-    {
-        return $this->container['fundamento_legal'];
-    }
-
-    /**
-     * Sets fundamento_legal
-     *
-     * @param string|null $fundamento_legal fundamento_legal
-     *
-     * @return self
-     */
-    public function setFundamentoLegal($fundamento_legal)
-    {
-        if (is_null($fundamento_legal)) {
-            throw new \InvalidArgumentException('non-nullable fundamento_legal cannot be null');
-        }
-        $this->container['fundamento_legal'] = $fundamento_legal;
-
-        return $this;
-    }
-
-    /**
-     * Gets valor_acrescido
-     *
-     * @return float|null
-     */
-    public function getValorAcrescido()
-    {
-        return $this->container['valor_acrescido'];
-    }
-
-    /**
-     * Sets valor_acrescido
-     *
-     * @param float|null $valor_acrescido valor_acrescido
-     *
-     * @return self
-     */
-    public function setValorAcrescido($valor_acrescido)
-    {
-        if (is_null($valor_acrescido)) {
-            throw new \InvalidArgumentException('non-nullable valor_acrescido cannot be null');
-        }
-        $this->container['valor_acrescido'] = $valor_acrescido;
-
-        return $this;
-    }
-
-    /**
-     * Gets prazo_aditado_dias
-     *
-     * @return int|null
-     */
-    public function getPrazoAditadoDias()
-    {
-        return $this->container['prazo_aditado_dias'];
-    }
-
-    /**
-     * Sets prazo_aditado_dias
-     *
-     * @param int|null $prazo_aditado_dias prazo_aditado_dias
-     *
-     * @return self
-     */
-    public function setPrazoAditadoDias($prazo_aditado_dias)
-    {
-        if (is_null($prazo_aditado_dias)) {
-            throw new \InvalidArgumentException('non-nullable prazo_aditado_dias cannot be null');
-        }
-        $this->container['prazo_aditado_dias'] = $prazo_aditado_dias;
-
-        return $this;
-    }
-
-    /**
-     * Gets qualificacao_acrescimo_supressao
-     *
-     * @return bool|null
-     */
-    public function getQualificacaoAcrescimoSupressao()
-    {
-        return $this->container['qualificacao_acrescimo_supressao'];
-    }
-
-    /**
-     * Sets qualificacao_acrescimo_supressao
-     *
-     * @param bool|null $qualificacao_acrescimo_supressao qualificacao_acrescimo_supressao
-     *
-     * @return self
-     */
-    public function setQualificacaoAcrescimoSupressao($qualificacao_acrescimo_supressao)
-    {
-        if (is_null($qualificacao_acrescimo_supressao)) {
-            throw new \InvalidArgumentException('non-nullable qualificacao_acrescimo_supressao cannot be null');
-        }
-        $this->container['qualificacao_acrescimo_supressao'] = $qualificacao_acrescimo_supressao;
-
-        return $this;
-    }
-
-    /**
-     * Gets qualificacao_vigencia
-     *
-     * @return bool|null
-     */
-    public function getQualificacaoVigencia()
-    {
-        return $this->container['qualificacao_vigencia'];
-    }
-
-    /**
-     * Sets qualificacao_vigencia
-     *
-     * @param bool|null $qualificacao_vigencia qualificacao_vigencia
-     *
-     * @return self
-     */
-    public function setQualificacaoVigencia($qualificacao_vigencia)
-    {
-        if (is_null($qualificacao_vigencia)) {
-            throw new \InvalidArgumentException('non-nullable qualificacao_vigencia cannot be null');
-        }
-        $this->container['qualificacao_vigencia'] = $qualificacao_vigencia;
-
-        return $this;
-    }
-
-    /**
-     * Gets orgao_entidade
-     *
-     * @return \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null
-     */
-    public function getOrgaoEntidade()
-    {
-        return $this->container['orgao_entidade'];
-    }
-
-    /**
-     * Sets orgao_entidade
-     *
-     * @param \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null $orgao_entidade orgao_entidade
-     *
-     * @return self
-     */
-    public function setOrgaoEntidade($orgao_entidade)
-    {
-        if (is_null($orgao_entidade)) {
-            throw new \InvalidArgumentException('non-nullable orgao_entidade cannot be null');
-        }
-        $this->container['orgao_entidade'] = $orgao_entidade;
+        $this->container['fornecedor_sub_contratado'] = $fornecedor_sub_contratado;
 
         return $this;
     }
@@ -1222,6 +1033,33 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
+     * Gets processo
+     *
+     * @return string|null
+     */
+    public function getProcesso()
+    {
+        return $this->container['processo'];
+    }
+
+    /**
+     * Sets processo
+     *
+     * @param string|null $processo processo
+     *
+     * @return self
+     */
+    public function setProcesso($processo)
+    {
+        if (is_null($processo)) {
+            throw new \InvalidArgumentException('non-nullable processo cannot be null');
+        }
+        $this->container['processo'] = $processo;
+
+        return $this;
+    }
+
+    /**
      * Gets nome_razao_social_fornecedor
      *
      * @return string|null
@@ -1244,6 +1082,60 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable nome_razao_social_fornecedor cannot be null');
         }
         $this->container['nome_razao_social_fornecedor'] = $nome_razao_social_fornecedor;
+
+        return $this;
+    }
+
+    /**
+     * Gets numero_termo_contrato
+     *
+     * @return string|null
+     */
+    public function getNumeroTermoContrato()
+    {
+        return $this->container['numero_termo_contrato'];
+    }
+
+    /**
+     * Sets numero_termo_contrato
+     *
+     * @param string|null $numero_termo_contrato numero_termo_contrato
+     *
+     * @return self
+     */
+    public function setNumeroTermoContrato($numero_termo_contrato)
+    {
+        if (is_null($numero_termo_contrato)) {
+            throw new \InvalidArgumentException('non-nullable numero_termo_contrato cannot be null');
+        }
+        $this->container['numero_termo_contrato'] = $numero_termo_contrato;
+
+        return $this;
+    }
+
+    /**
+     * Gets numero_parcelas
+     *
+     * @return int|null
+     */
+    public function getNumeroParcelas()
+    {
+        return $this->container['numero_parcelas'];
+    }
+
+    /**
+     * Sets numero_parcelas
+     *
+     * @param int|null $numero_parcelas numero_parcelas
+     *
+     * @return self
+     */
+    public function setNumeroParcelas($numero_parcelas)
+    {
+        if (is_null($numero_parcelas)) {
+            throw new \InvalidArgumentException('non-nullable numero_parcelas cannot be null');
+        }
+        $this->container['numero_parcelas'] = $numero_parcelas;
 
         return $this;
     }
@@ -1303,114 +1195,6 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets numero_termo_contrato
-     *
-     * @return string|null
-     */
-    public function getNumeroTermoContrato()
-    {
-        return $this->container['numero_termo_contrato'];
-    }
-
-    /**
-     * Sets numero_termo_contrato
-     *
-     * @param string|null $numero_termo_contrato numero_termo_contrato
-     *
-     * @return self
-     */
-    public function setNumeroTermoContrato($numero_termo_contrato)
-    {
-        if (is_null($numero_termo_contrato)) {
-            throw new \InvalidArgumentException('non-nullable numero_termo_contrato cannot be null');
-        }
-        $this->container['numero_termo_contrato'] = $numero_termo_contrato;
-
-        return $this;
-    }
-
-    /**
-     * Gets informacao_complementar
-     *
-     * @return string|null
-     */
-    public function getInformacaoComplementar()
-    {
-        return $this->container['informacao_complementar'];
-    }
-
-    /**
-     * Sets informacao_complementar
-     *
-     * @param string|null $informacao_complementar informacao_complementar
-     *
-     * @return self
-     */
-    public function setInformacaoComplementar($informacao_complementar)
-    {
-        if (is_null($informacao_complementar)) {
-            throw new \InvalidArgumentException('non-nullable informacao_complementar cannot be null');
-        }
-        $this->container['informacao_complementar'] = $informacao_complementar;
-
-        return $this;
-    }
-
-    /**
-     * Gets processo
-     *
-     * @return string|null
-     */
-    public function getProcesso()
-    {
-        return $this->container['processo'];
-    }
-
-    /**
-     * Sets processo
-     *
-     * @param string|null $processo processo
-     *
-     * @return self
-     */
-    public function setProcesso($processo)
-    {
-        if (is_null($processo)) {
-            throw new \InvalidArgumentException('non-nullable processo cannot be null');
-        }
-        $this->container['processo'] = $processo;
-
-        return $this;
-    }
-
-    /**
-     * Gets numero_parcelas
-     *
-     * @return int|null
-     */
-    public function getNumeroParcelas()
-    {
-        return $this->container['numero_parcelas'];
-    }
-
-    /**
-     * Sets numero_parcelas
-     *
-     * @param int|null $numero_parcelas numero_parcelas
-     *
-     * @return self
-     */
-    public function setNumeroParcelas($numero_parcelas)
-    {
-        if (is_null($numero_parcelas)) {
-            throw new \InvalidArgumentException('non-nullable numero_parcelas cannot be null');
-        }
-        $this->container['numero_parcelas'] = $numero_parcelas;
-
-        return $this;
-    }
-
-    /**
      * Gets valor_parcela
      *
      * @return float|null
@@ -1465,6 +1249,168 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
+     * Gets qualificacao_acrescimo_supressao
+     *
+     * @return bool|null
+     */
+    public function getQualificacaoAcrescimoSupressao()
+    {
+        return $this->container['qualificacao_acrescimo_supressao'];
+    }
+
+    /**
+     * Sets qualificacao_acrescimo_supressao
+     *
+     * @param bool|null $qualificacao_acrescimo_supressao qualificacao_acrescimo_supressao
+     *
+     * @return self
+     */
+    public function setQualificacaoAcrescimoSupressao($qualificacao_acrescimo_supressao)
+    {
+        if (is_null($qualificacao_acrescimo_supressao)) {
+            throw new \InvalidArgumentException('non-nullable qualificacao_acrescimo_supressao cannot be null');
+        }
+        $this->container['qualificacao_acrescimo_supressao'] = $qualificacao_acrescimo_supressao;
+
+        return $this;
+    }
+
+    /**
+     * Gets qualificacao_vigencia
+     *
+     * @return bool|null
+     */
+    public function getQualificacaoVigencia()
+    {
+        return $this->container['qualificacao_vigencia'];
+    }
+
+    /**
+     * Sets qualificacao_vigencia
+     *
+     * @param bool|null $qualificacao_vigencia qualificacao_vigencia
+     *
+     * @return self
+     */
+    public function setQualificacaoVigencia($qualificacao_vigencia)
+    {
+        if (is_null($qualificacao_vigencia)) {
+            throw new \InvalidArgumentException('non-nullable qualificacao_vigencia cannot be null');
+        }
+        $this->container['qualificacao_vigencia'] = $qualificacao_vigencia;
+
+        return $this;
+    }
+
+    /**
+     * Gets qualificacao_fornecedor
+     *
+     * @return bool|null
+     */
+    public function getQualificacaoFornecedor()
+    {
+        return $this->container['qualificacao_fornecedor'];
+    }
+
+    /**
+     * Sets qualificacao_fornecedor
+     *
+     * @param bool|null $qualificacao_fornecedor qualificacao_fornecedor
+     *
+     * @return self
+     */
+    public function setQualificacaoFornecedor($qualificacao_fornecedor)
+    {
+        if (is_null($qualificacao_fornecedor)) {
+            throw new \InvalidArgumentException('non-nullable qualificacao_fornecedor cannot be null');
+        }
+        $this->container['qualificacao_fornecedor'] = $qualificacao_fornecedor;
+
+        return $this;
+    }
+
+    /**
+     * Gets qualificacao_reajuste
+     *
+     * @return bool|null
+     */
+    public function getQualificacaoReajuste()
+    {
+        return $this->container['qualificacao_reajuste'];
+    }
+
+    /**
+     * Sets qualificacao_reajuste
+     *
+     * @param bool|null $qualificacao_reajuste qualificacao_reajuste
+     *
+     * @return self
+     */
+    public function setQualificacaoReajuste($qualificacao_reajuste)
+    {
+        if (is_null($qualificacao_reajuste)) {
+            throw new \InvalidArgumentException('non-nullable qualificacao_reajuste cannot be null');
+        }
+        $this->container['qualificacao_reajuste'] = $qualificacao_reajuste;
+
+        return $this;
+    }
+
+    /**
+     * Gets prazo_aditado_dias
+     *
+     * @return int|null
+     */
+    public function getPrazoAditadoDias()
+    {
+        return $this->container['prazo_aditado_dias'];
+    }
+
+    /**
+     * Sets prazo_aditado_dias
+     *
+     * @param int|null $prazo_aditado_dias prazo_aditado_dias
+     *
+     * @return self
+     */
+    public function setPrazoAditadoDias($prazo_aditado_dias)
+    {
+        if (is_null($prazo_aditado_dias)) {
+            throw new \InvalidArgumentException('non-nullable prazo_aditado_dias cannot be null');
+        }
+        $this->container['prazo_aditado_dias'] = $prazo_aditado_dias;
+
+        return $this;
+    }
+
+    /**
+     * Gets informativo_observacao
+     *
+     * @return string|null
+     */
+    public function getInformativoObservacao()
+    {
+        return $this->container['informativo_observacao'];
+    }
+
+    /**
+     * Sets informativo_observacao
+     *
+     * @param string|null $informativo_observacao informativo_observacao
+     *
+     * @return self
+     */
+    public function setInformativoObservacao($informativo_observacao)
+    {
+        if (is_null($informativo_observacao)) {
+            throw new \InvalidArgumentException('non-nullable informativo_observacao cannot be null');
+        }
+        $this->container['informativo_observacao'] = $informativo_observacao;
+
+        return $this;
+    }
+
+    /**
      * Gets orgao_subrogado
      *
      * @return \OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO|null
@@ -1514,6 +1460,60 @@ class RecuperarTermoContratoDTO implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable objeto_termo_contrato cannot be null');
         }
         $this->container['objeto_termo_contrato'] = $objeto_termo_contrato;
+
+        return $this;
+    }
+
+    /**
+     * Gets fundamento_legal
+     *
+     * @return string|null
+     */
+    public function getFundamentoLegal()
+    {
+        return $this->container['fundamento_legal'];
+    }
+
+    /**
+     * Sets fundamento_legal
+     *
+     * @param string|null $fundamento_legal fundamento_legal
+     *
+     * @return self
+     */
+    public function setFundamentoLegal($fundamento_legal)
+    {
+        if (is_null($fundamento_legal)) {
+            throw new \InvalidArgumentException('non-nullable fundamento_legal cannot be null');
+        }
+        $this->container['fundamento_legal'] = $fundamento_legal;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_acrescido
+     *
+     * @return float|null
+     */
+    public function getValorAcrescido()
+    {
+        return $this->container['valor_acrescido'];
+    }
+
+    /**
+     * Sets valor_acrescido
+     *
+     * @param float|null $valor_acrescido valor_acrescido
+     *
+     * @return self
+     */
+    public function setValorAcrescido($valor_acrescido)
+    {
+        if (is_null($valor_acrescido)) {
+            throw new \InvalidArgumentException('non-nullable valor_acrescido cannot be null');
+        }
+        $this->container['valor_acrescido'] = $valor_acrescido;
 
         return $this;
     }

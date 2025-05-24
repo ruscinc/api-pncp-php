@@ -62,18 +62,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
         'tipo_log_manutencao' => 'string',
         'categoria_log_manutencao' => 'string',
         'log_manutencao_data_inclusao' => '\DateTime',
-        'compra_orgao_cnpj' => 'string',
-        'compra_ano' => 'int',
         'compra_sequencial' => 'int',
-        'usuario_nome' => 'string',
-        'tipo_log_manutencao_nome' => 'string',
-        'categoria_log_manutencao_nome' => 'string',
-        'item_numero' => 'int',
         'item_resultado_numero' => 'int',
-        'item_resultado_sequencial' => 'int',
         'documento_tipo' => 'string',
         'documento_titulo' => 'string',
-        'documento_sequencial' => 'int'
+        'documento_sequencial' => 'int',
+        'tipo_log_manutencao_nome' => 'string',
+        'categoria_log_manutencao_nome' => 'string',
+        'compra_orgao_cnpj' => 'string',
+        'compra_ano' => 'int',
+        'item_numero' => 'int',
+        'item_resultado_sequencial' => 'int',
+        'usuario_nome' => 'string'
     ];
 
     /**
@@ -88,18 +88,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
         'tipo_log_manutencao' => null,
         'categoria_log_manutencao' => null,
         'log_manutencao_data_inclusao' => 'date-time',
-        'compra_orgao_cnpj' => null,
-        'compra_ano' => 'int32',
         'compra_sequencial' => 'int32',
-        'usuario_nome' => null,
-        'tipo_log_manutencao_nome' => null,
-        'categoria_log_manutencao_nome' => null,
-        'item_numero' => 'int32',
         'item_resultado_numero' => 'int32',
-        'item_resultado_sequencial' => 'int32',
         'documento_tipo' => null,
         'documento_titulo' => null,
-        'documento_sequencial' => 'int32'
+        'documento_sequencial' => 'int32',
+        'tipo_log_manutencao_nome' => null,
+        'categoria_log_manutencao_nome' => null,
+        'compra_orgao_cnpj' => null,
+        'compra_ano' => 'int32',
+        'item_numero' => 'int32',
+        'item_resultado_sequencial' => 'int32',
+        'usuario_nome' => null
     ];
 
     /**
@@ -112,18 +112,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
 		'tipo_log_manutencao' => false,
 		'categoria_log_manutencao' => false,
 		'log_manutencao_data_inclusao' => false,
-		'compra_orgao_cnpj' => false,
-		'compra_ano' => false,
 		'compra_sequencial' => false,
-		'usuario_nome' => false,
-		'tipo_log_manutencao_nome' => false,
-		'categoria_log_manutencao_nome' => false,
-		'item_numero' => false,
 		'item_resultado_numero' => false,
-		'item_resultado_sequencial' => false,
 		'documento_tipo' => false,
 		'documento_titulo' => false,
-		'documento_sequencial' => false
+		'documento_sequencial' => false,
+		'tipo_log_manutencao_nome' => false,
+		'categoria_log_manutencao_nome' => false,
+		'compra_orgao_cnpj' => false,
+		'compra_ano' => false,
+		'item_numero' => false,
+		'item_resultado_sequencial' => false,
+		'usuario_nome' => false
     ];
 
     /**
@@ -216,18 +216,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
         'tipo_log_manutencao' => 'tipoLogManutencao',
         'categoria_log_manutencao' => 'categoriaLogManutencao',
         'log_manutencao_data_inclusao' => 'logManutencaoDataInclusao',
-        'compra_orgao_cnpj' => 'compraOrgaoCnpj',
-        'compra_ano' => 'compraAno',
         'compra_sequencial' => 'compraSequencial',
-        'usuario_nome' => 'usuarioNome',
-        'tipo_log_manutencao_nome' => 'tipoLogManutencaoNome',
-        'categoria_log_manutencao_nome' => 'categoriaLogManutencaoNome',
-        'item_numero' => 'itemNumero',
         'item_resultado_numero' => 'itemResultadoNumero',
-        'item_resultado_sequencial' => 'itemResultadoSequencial',
         'documento_tipo' => 'documentoTipo',
         'documento_titulo' => 'documentoTitulo',
-        'documento_sequencial' => 'documentoSequencial'
+        'documento_sequencial' => 'documentoSequencial',
+        'tipo_log_manutencao_nome' => 'tipoLogManutencaoNome',
+        'categoria_log_manutencao_nome' => 'categoriaLogManutencaoNome',
+        'compra_orgao_cnpj' => 'compraOrgaoCnpj',
+        'compra_ano' => 'compraAno',
+        'item_numero' => 'itemNumero',
+        'item_resultado_sequencial' => 'itemResultadoSequencial',
+        'usuario_nome' => 'usuarioNome'
     ];
 
     /**
@@ -240,18 +240,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
         'tipo_log_manutencao' => 'setTipoLogManutencao',
         'categoria_log_manutencao' => 'setCategoriaLogManutencao',
         'log_manutencao_data_inclusao' => 'setLogManutencaoDataInclusao',
-        'compra_orgao_cnpj' => 'setCompraOrgaoCnpj',
-        'compra_ano' => 'setCompraAno',
         'compra_sequencial' => 'setCompraSequencial',
-        'usuario_nome' => 'setUsuarioNome',
-        'tipo_log_manutencao_nome' => 'setTipoLogManutencaoNome',
-        'categoria_log_manutencao_nome' => 'setCategoriaLogManutencaoNome',
-        'item_numero' => 'setItemNumero',
         'item_resultado_numero' => 'setItemResultadoNumero',
-        'item_resultado_sequencial' => 'setItemResultadoSequencial',
         'documento_tipo' => 'setDocumentoTipo',
         'documento_titulo' => 'setDocumentoTitulo',
-        'documento_sequencial' => 'setDocumentoSequencial'
+        'documento_sequencial' => 'setDocumentoSequencial',
+        'tipo_log_manutencao_nome' => 'setTipoLogManutencaoNome',
+        'categoria_log_manutencao_nome' => 'setCategoriaLogManutencaoNome',
+        'compra_orgao_cnpj' => 'setCompraOrgaoCnpj',
+        'compra_ano' => 'setCompraAno',
+        'item_numero' => 'setItemNumero',
+        'item_resultado_sequencial' => 'setItemResultadoSequencial',
+        'usuario_nome' => 'setUsuarioNome'
     ];
 
     /**
@@ -264,18 +264,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
         'tipo_log_manutencao' => 'getTipoLogManutencao',
         'categoria_log_manutencao' => 'getCategoriaLogManutencao',
         'log_manutencao_data_inclusao' => 'getLogManutencaoDataInclusao',
-        'compra_orgao_cnpj' => 'getCompraOrgaoCnpj',
-        'compra_ano' => 'getCompraAno',
         'compra_sequencial' => 'getCompraSequencial',
-        'usuario_nome' => 'getUsuarioNome',
-        'tipo_log_manutencao_nome' => 'getTipoLogManutencaoNome',
-        'categoria_log_manutencao_nome' => 'getCategoriaLogManutencaoNome',
-        'item_numero' => 'getItemNumero',
         'item_resultado_numero' => 'getItemResultadoNumero',
-        'item_resultado_sequencial' => 'getItemResultadoSequencial',
         'documento_tipo' => 'getDocumentoTipo',
         'documento_titulo' => 'getDocumentoTitulo',
-        'documento_sequencial' => 'getDocumentoSequencial'
+        'documento_sequencial' => 'getDocumentoSequencial',
+        'tipo_log_manutencao_nome' => 'getTipoLogManutencaoNome',
+        'categoria_log_manutencao_nome' => 'getCategoriaLogManutencaoNome',
+        'compra_orgao_cnpj' => 'getCompraOrgaoCnpj',
+        'compra_ano' => 'getCompraAno',
+        'item_numero' => 'getItemNumero',
+        'item_resultado_sequencial' => 'getItemResultadoSequencial',
+        'usuario_nome' => 'getUsuarioNome'
     ];
 
     /**
@@ -336,6 +336,7 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
     public const CATEGORIA_LOG_MANUTENCAO__12 = '12';
     public const CATEGORIA_LOG_MANUTENCAO__13 = '13';
     public const CATEGORIA_LOG_MANUTENCAO__14 = '14';
+    public const CATEGORIA_LOG_MANUTENCAO__15 = '15';
 
     /**
      * Gets allowable values of the enum
@@ -373,6 +374,7 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
             self::CATEGORIA_LOG_MANUTENCAO__12,
             self::CATEGORIA_LOG_MANUTENCAO__13,
             self::CATEGORIA_LOG_MANUTENCAO__14,
+            self::CATEGORIA_LOG_MANUTENCAO__15,
         ];
     }
 
@@ -395,18 +397,18 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
         $this->setIfExists('tipo_log_manutencao', $data ?? [], null);
         $this->setIfExists('categoria_log_manutencao', $data ?? [], null);
         $this->setIfExists('log_manutencao_data_inclusao', $data ?? [], null);
-        $this->setIfExists('compra_orgao_cnpj', $data ?? [], null);
-        $this->setIfExists('compra_ano', $data ?? [], null);
         $this->setIfExists('compra_sequencial', $data ?? [], null);
-        $this->setIfExists('usuario_nome', $data ?? [], null);
-        $this->setIfExists('tipo_log_manutencao_nome', $data ?? [], null);
-        $this->setIfExists('categoria_log_manutencao_nome', $data ?? [], null);
-        $this->setIfExists('item_numero', $data ?? [], null);
         $this->setIfExists('item_resultado_numero', $data ?? [], null);
-        $this->setIfExists('item_resultado_sequencial', $data ?? [], null);
         $this->setIfExists('documento_tipo', $data ?? [], null);
         $this->setIfExists('documento_titulo', $data ?? [], null);
         $this->setIfExists('documento_sequencial', $data ?? [], null);
+        $this->setIfExists('tipo_log_manutencao_nome', $data ?? [], null);
+        $this->setIfExists('categoria_log_manutencao_nome', $data ?? [], null);
+        $this->setIfExists('compra_orgao_cnpj', $data ?? [], null);
+        $this->setIfExists('compra_ano', $data ?? [], null);
+        $this->setIfExists('item_numero', $data ?? [], null);
+        $this->setIfExists('item_resultado_sequencial', $data ?? [], null);
+        $this->setIfExists('usuario_nome', $data ?? [], null);
     }
 
     /**
@@ -598,60 +600,6 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets compra_orgao_cnpj
-     *
-     * @return string|null
-     */
-    public function getCompraOrgaoCnpj()
-    {
-        return $this->container['compra_orgao_cnpj'];
-    }
-
-    /**
-     * Sets compra_orgao_cnpj
-     *
-     * @param string|null $compra_orgao_cnpj compra_orgao_cnpj
-     *
-     * @return self
-     */
-    public function setCompraOrgaoCnpj($compra_orgao_cnpj)
-    {
-        if (is_null($compra_orgao_cnpj)) {
-            throw new \InvalidArgumentException('non-nullable compra_orgao_cnpj cannot be null');
-        }
-        $this->container['compra_orgao_cnpj'] = $compra_orgao_cnpj;
-
-        return $this;
-    }
-
-    /**
-     * Gets compra_ano
-     *
-     * @return int|null
-     */
-    public function getCompraAno()
-    {
-        return $this->container['compra_ano'];
-    }
-
-    /**
-     * Sets compra_ano
-     *
-     * @param int|null $compra_ano compra_ano
-     *
-     * @return self
-     */
-    public function setCompraAno($compra_ano)
-    {
-        if (is_null($compra_ano)) {
-            throw new \InvalidArgumentException('non-nullable compra_ano cannot be null');
-        }
-        $this->container['compra_ano'] = $compra_ano;
-
-        return $this;
-    }
-
-    /**
      * Gets compra_sequencial
      *
      * @return int|null
@@ -679,114 +627,6 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets usuario_nome
-     *
-     * @return string|null
-     */
-    public function getUsuarioNome()
-    {
-        return $this->container['usuario_nome'];
-    }
-
-    /**
-     * Sets usuario_nome
-     *
-     * @param string|null $usuario_nome usuario_nome
-     *
-     * @return self
-     */
-    public function setUsuarioNome($usuario_nome)
-    {
-        if (is_null($usuario_nome)) {
-            throw new \InvalidArgumentException('non-nullable usuario_nome cannot be null');
-        }
-        $this->container['usuario_nome'] = $usuario_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets tipo_log_manutencao_nome
-     *
-     * @return string|null
-     */
-    public function getTipoLogManutencaoNome()
-    {
-        return $this->container['tipo_log_manutencao_nome'];
-    }
-
-    /**
-     * Sets tipo_log_manutencao_nome
-     *
-     * @param string|null $tipo_log_manutencao_nome tipo_log_manutencao_nome
-     *
-     * @return self
-     */
-    public function setTipoLogManutencaoNome($tipo_log_manutencao_nome)
-    {
-        if (is_null($tipo_log_manutencao_nome)) {
-            throw new \InvalidArgumentException('non-nullable tipo_log_manutencao_nome cannot be null');
-        }
-        $this->container['tipo_log_manutencao_nome'] = $tipo_log_manutencao_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets categoria_log_manutencao_nome
-     *
-     * @return string|null
-     */
-    public function getCategoriaLogManutencaoNome()
-    {
-        return $this->container['categoria_log_manutencao_nome'];
-    }
-
-    /**
-     * Sets categoria_log_manutencao_nome
-     *
-     * @param string|null $categoria_log_manutencao_nome categoria_log_manutencao_nome
-     *
-     * @return self
-     */
-    public function setCategoriaLogManutencaoNome($categoria_log_manutencao_nome)
-    {
-        if (is_null($categoria_log_manutencao_nome)) {
-            throw new \InvalidArgumentException('non-nullable categoria_log_manutencao_nome cannot be null');
-        }
-        $this->container['categoria_log_manutencao_nome'] = $categoria_log_manutencao_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets item_numero
-     *
-     * @return int|null
-     */
-    public function getItemNumero()
-    {
-        return $this->container['item_numero'];
-    }
-
-    /**
-     * Sets item_numero
-     *
-     * @param int|null $item_numero item_numero
-     *
-     * @return self
-     */
-    public function setItemNumero($item_numero)
-    {
-        if (is_null($item_numero)) {
-            throw new \InvalidArgumentException('non-nullable item_numero cannot be null');
-        }
-        $this->container['item_numero'] = $item_numero;
-
-        return $this;
-    }
-
-    /**
      * Gets item_resultado_numero
      *
      * @return int|null
@@ -809,33 +649,6 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
             throw new \InvalidArgumentException('non-nullable item_resultado_numero cannot be null');
         }
         $this->container['item_resultado_numero'] = $item_resultado_numero;
-
-        return $this;
-    }
-
-    /**
-     * Gets item_resultado_sequencial
-     *
-     * @return int|null
-     */
-    public function getItemResultadoSequencial()
-    {
-        return $this->container['item_resultado_sequencial'];
-    }
-
-    /**
-     * Sets item_resultado_sequencial
-     *
-     * @param int|null $item_resultado_sequencial item_resultado_sequencial
-     *
-     * @return self
-     */
-    public function setItemResultadoSequencial($item_resultado_sequencial)
-    {
-        if (is_null($item_resultado_sequencial)) {
-            throw new \InvalidArgumentException('non-nullable item_resultado_sequencial cannot be null');
-        }
-        $this->container['item_resultado_sequencial'] = $item_resultado_sequencial;
 
         return $this;
     }
@@ -917,6 +730,195 @@ class RecuperarHistoricoCompraDTO implements ModelInterface, ArrayAccess, \JsonS
             throw new \InvalidArgumentException('non-nullable documento_sequencial cannot be null');
         }
         $this->container['documento_sequencial'] = $documento_sequencial;
+
+        return $this;
+    }
+
+    /**
+     * Gets tipo_log_manutencao_nome
+     *
+     * @return string|null
+     */
+    public function getTipoLogManutencaoNome()
+    {
+        return $this->container['tipo_log_manutencao_nome'];
+    }
+
+    /**
+     * Sets tipo_log_manutencao_nome
+     *
+     * @param string|null $tipo_log_manutencao_nome tipo_log_manutencao_nome
+     *
+     * @return self
+     */
+    public function setTipoLogManutencaoNome($tipo_log_manutencao_nome)
+    {
+        if (is_null($tipo_log_manutencao_nome)) {
+            throw new \InvalidArgumentException('non-nullable tipo_log_manutencao_nome cannot be null');
+        }
+        $this->container['tipo_log_manutencao_nome'] = $tipo_log_manutencao_nome;
+
+        return $this;
+    }
+
+    /**
+     * Gets categoria_log_manutencao_nome
+     *
+     * @return string|null
+     */
+    public function getCategoriaLogManutencaoNome()
+    {
+        return $this->container['categoria_log_manutencao_nome'];
+    }
+
+    /**
+     * Sets categoria_log_manutencao_nome
+     *
+     * @param string|null $categoria_log_manutencao_nome categoria_log_manutencao_nome
+     *
+     * @return self
+     */
+    public function setCategoriaLogManutencaoNome($categoria_log_manutencao_nome)
+    {
+        if (is_null($categoria_log_manutencao_nome)) {
+            throw new \InvalidArgumentException('non-nullable categoria_log_manutencao_nome cannot be null');
+        }
+        $this->container['categoria_log_manutencao_nome'] = $categoria_log_manutencao_nome;
+
+        return $this;
+    }
+
+    /**
+     * Gets compra_orgao_cnpj
+     *
+     * @return string|null
+     */
+    public function getCompraOrgaoCnpj()
+    {
+        return $this->container['compra_orgao_cnpj'];
+    }
+
+    /**
+     * Sets compra_orgao_cnpj
+     *
+     * @param string|null $compra_orgao_cnpj compra_orgao_cnpj
+     *
+     * @return self
+     */
+    public function setCompraOrgaoCnpj($compra_orgao_cnpj)
+    {
+        if (is_null($compra_orgao_cnpj)) {
+            throw new \InvalidArgumentException('non-nullable compra_orgao_cnpj cannot be null');
+        }
+        $this->container['compra_orgao_cnpj'] = $compra_orgao_cnpj;
+
+        return $this;
+    }
+
+    /**
+     * Gets compra_ano
+     *
+     * @return int|null
+     */
+    public function getCompraAno()
+    {
+        return $this->container['compra_ano'];
+    }
+
+    /**
+     * Sets compra_ano
+     *
+     * @param int|null $compra_ano compra_ano
+     *
+     * @return self
+     */
+    public function setCompraAno($compra_ano)
+    {
+        if (is_null($compra_ano)) {
+            throw new \InvalidArgumentException('non-nullable compra_ano cannot be null');
+        }
+        $this->container['compra_ano'] = $compra_ano;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_numero
+     *
+     * @return int|null
+     */
+    public function getItemNumero()
+    {
+        return $this->container['item_numero'];
+    }
+
+    /**
+     * Sets item_numero
+     *
+     * @param int|null $item_numero item_numero
+     *
+     * @return self
+     */
+    public function setItemNumero($item_numero)
+    {
+        if (is_null($item_numero)) {
+            throw new \InvalidArgumentException('non-nullable item_numero cannot be null');
+        }
+        $this->container['item_numero'] = $item_numero;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_resultado_sequencial
+     *
+     * @return int|null
+     */
+    public function getItemResultadoSequencial()
+    {
+        return $this->container['item_resultado_sequencial'];
+    }
+
+    /**
+     * Sets item_resultado_sequencial
+     *
+     * @param int|null $item_resultado_sequencial item_resultado_sequencial
+     *
+     * @return self
+     */
+    public function setItemResultadoSequencial($item_resultado_sequencial)
+    {
+        if (is_null($item_resultado_sequencial)) {
+            throw new \InvalidArgumentException('non-nullable item_resultado_sequencial cannot be null');
+        }
+        $this->container['item_resultado_sequencial'] = $item_resultado_sequencial;
+
+        return $this;
+    }
+
+    /**
+     * Gets usuario_nome
+     *
+     * @return string|null
+     */
+    public function getUsuarioNome()
+    {
+        return $this->container['usuario_nome'];
+    }
+
+    /**
+     * Sets usuario_nome
+     *
+     * @param string|null $usuario_nome usuario_nome
+     *
+     * @return self
+     */
+    public function setUsuarioNome($usuario_nome)
+    {
+        if (is_null($usuario_nome)) {
+            throw new \InvalidArgumentException('non-nullable usuario_nome cannot be null');
+        }
+        $this->container['usuario_nome'] = $usuario_nome;
 
         return $this;
     }

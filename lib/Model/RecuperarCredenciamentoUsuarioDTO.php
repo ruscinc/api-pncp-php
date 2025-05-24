@@ -58,12 +58,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
+        'id' => 'int',
         'administrador' => 'bool',
         'login' => 'string',
         'nome' => 'string',
-        'cpf_cnpj' => 'string',
         'email' => 'string',
-        'id' => 'int'
+        'cpf_cnpj' => 'string'
     ];
 
     /**
@@ -74,12 +74,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'id' => 'int64',
         'administrador' => null,
         'login' => null,
         'nome' => null,
-        'cpf_cnpj' => null,
         'email' => null,
-        'id' => 'int64'
+        'cpf_cnpj' => null
     ];
 
     /**
@@ -88,12 +88,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'administrador' => false,
+        'id' => false,
+		'administrador' => false,
 		'login' => false,
 		'nome' => false,
-		'cpf_cnpj' => false,
 		'email' => false,
-		'id' => false
+		'cpf_cnpj' => false
     ];
 
     /**
@@ -182,12 +182,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'administrador' => 'administrador',
         'login' => 'login',
         'nome' => 'nome',
-        'cpf_cnpj' => 'cpfCnpj',
         'email' => 'email',
-        'id' => 'id'
+        'cpf_cnpj' => 'cpfCnpj'
     ];
 
     /**
@@ -196,12 +196,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'administrador' => 'setAdministrador',
         'login' => 'setLogin',
         'nome' => 'setNome',
-        'cpf_cnpj' => 'setCpfCnpj',
         'email' => 'setEmail',
-        'id' => 'setId'
+        'cpf_cnpj' => 'setCpfCnpj'
     ];
 
     /**
@@ -210,12 +210,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'administrador' => 'getAdministrador',
         'login' => 'getLogin',
         'nome' => 'getNome',
-        'cpf_cnpj' => 'getCpfCnpj',
         'email' => 'getEmail',
-        'id' => 'getId'
+        'cpf_cnpj' => 'getCpfCnpj'
     ];
 
     /**
@@ -275,12 +275,12 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('administrador', $data ?? [], null);
         $this->setIfExists('login', $data ?? [], null);
         $this->setIfExists('nome', $data ?? [], null);
-        $this->setIfExists('cpf_cnpj', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('cpf_cnpj', $data ?? [], null);
     }
 
     /**
@@ -324,6 +324,33 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return int|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets administrador
@@ -407,33 +434,6 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
     }
 
     /**
-     * Gets cpf_cnpj
-     *
-     * @return string|null
-     */
-    public function getCpfCnpj()
-    {
-        return $this->container['cpf_cnpj'];
-    }
-
-    /**
-     * Sets cpf_cnpj
-     *
-     * @param string|null $cpf_cnpj cpf_cnpj
-     *
-     * @return self
-     */
-    public function setCpfCnpj($cpf_cnpj)
-    {
-        if (is_null($cpf_cnpj)) {
-            throw new \InvalidArgumentException('non-nullable cpf_cnpj cannot be null');
-        }
-        $this->container['cpf_cnpj'] = $cpf_cnpj;
-
-        return $this;
-    }
-
-    /**
      * Gets email
      *
      * @return string|null
@@ -461,28 +461,28 @@ class RecuperarCredenciamentoUsuarioDTO implements ModelInterface, ArrayAccess, 
     }
 
     /**
-     * Gets id
+     * Gets cpf_cnpj
      *
-     * @return int|null
+     * @return string|null
      */
-    public function getId()
+    public function getCpfCnpj()
     {
-        return $this->container['id'];
+        return $this->container['cpf_cnpj'];
     }
 
     /**
-     * Sets id
+     * Sets cpf_cnpj
      *
-     * @param int|null $id id
+     * @param string|null $cpf_cnpj cpf_cnpj
      *
      * @return self
      */
-    public function setId($id)
+    public function setCpfCnpj($cpf_cnpj)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($cpf_cnpj)) {
+            throw new \InvalidArgumentException('non-nullable cpf_cnpj cannot be null');
         }
-        $this->container['id'] = $id;
+        $this->container['cpf_cnpj'] = $cpf_cnpj;
 
         return $this;
     }

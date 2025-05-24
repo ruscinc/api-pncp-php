@@ -90,18 +90,18 @@ class PlanoContratacaoComItensDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "unidade_responsavel"
+     * Test attribute "uasg"
      */
-    public function testPropertyUnidadeResponsavel()
+    public function testPropertyUasg()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "uasg"
+     * Test attribute "unidade_responsavel"
      */
-    public function testPropertyUasg()
+    public function testPropertyUnidadeResponsavel()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

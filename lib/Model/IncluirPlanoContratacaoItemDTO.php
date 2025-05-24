@@ -59,7 +59,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'numero_item' => 'int',
-        'categoria_item_pca' => 'string',
+        'categoria_item_pca' => 'int',
         'descricao' => 'string',
         'unidade_fornecimento' => 'string',
         'quantidade' => 'float',
@@ -70,7 +70,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
         'data_desejada' => '\DateTime',
         'grupo_contratacao_codigo' => 'string',
         'grupo_contratacao_nome' => 'string',
-        'catalogo' => 'string',
+        'catalogo' => 'int',
         'classificacao_catalogo' => 'string',
         'codigo_item' => 'string',
         'classificacao_superior_codigo' => 'string',
@@ -88,7 +88,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPIFormats = [
         'numero_item' => 'int32',
-        'categoria_item_pca' => null,
+        'categoria_item_pca' => 'int64',
         'descricao' => null,
         'unidade_fornecimento' => null,
         'quantidade' => null,
@@ -99,7 +99,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
         'data_desejada' => 'date',
         'grupo_contratacao_codigo' => null,
         'grupo_contratacao_nome' => null,
-        'catalogo' => null,
+        'catalogo' => 'int64',
         'classificacao_catalogo' => null,
         'codigo_item' => null,
         'classificacao_superior_codigo' => null,
@@ -337,50 +337,8 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
         return self::$openAPIModelName;
     }
 
-    public const CATEGORIA_ITEM_PCA__1 = '1';
-    public const CATEGORIA_ITEM_PCA__2 = '2';
-    public const CATEGORIA_ITEM_PCA__3 = '3';
-    public const CATEGORIA_ITEM_PCA__4 = '4';
-    public const CATEGORIA_ITEM_PCA__5 = '5';
-    public const CATEGORIA_ITEM_PCA__6 = '6';
-    public const CATEGORIA_ITEM_PCA__7 = '7';
-    public const CATEGORIA_ITEM_PCA__8 = '8';
-    public const CATALOGO__1 = '1';
-    public const CATALOGO__2 = '2';
     public const CLASSIFICACAO_CATALOGO__1 = '1';
     public const CLASSIFICACAO_CATALOGO__2 = '2';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCategoriaItemPcaAllowableValues()
-    {
-        return [
-            self::CATEGORIA_ITEM_PCA__1,
-            self::CATEGORIA_ITEM_PCA__2,
-            self::CATEGORIA_ITEM_PCA__3,
-            self::CATEGORIA_ITEM_PCA__4,
-            self::CATEGORIA_ITEM_PCA__5,
-            self::CATEGORIA_ITEM_PCA__6,
-            self::CATEGORIA_ITEM_PCA__7,
-            self::CATEGORIA_ITEM_PCA__8,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCatalogoAllowableValues()
-    {
-        return [
-            self::CATALOGO__1,
-            self::CATALOGO__2,
-        ];
-    }
 
     /**
      * Gets allowable values of the enum
@@ -464,15 +422,6 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
         if ($this->container['categoria_item_pca'] === null) {
             $invalidProperties[] = "'categoria_item_pca' can't be null";
         }
-        $allowedValues = $this->getCategoriaItemPcaAllowableValues();
-        if (!is_null($this->container['categoria_item_pca']) && !in_array($this->container['categoria_item_pca'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'categoria_item_pca', must be one of '%s'",
-                $this->container['categoria_item_pca'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if (!is_null($this->container['descricao']) && (mb_strlen($this->container['descricao']) > 2048)) {
             $invalidProperties[] = "invalid value for 'descricao', the character length must be smaller than or equal to 2048.";
         }
@@ -550,15 +499,6 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
         if ($this->container['catalogo'] === null) {
             $invalidProperties[] = "'catalogo' can't be null";
         }
-        $allowedValues = $this->getCatalogoAllowableValues();
-        if (!is_null($this->container['catalogo']) && !in_array($this->container['catalogo'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'catalogo', must be one of '%s'",
-                $this->container['catalogo'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['classificacao_catalogo'] === null) {
             $invalidProperties[] = "'classificacao_catalogo' can't be null";
         }
@@ -662,7 +602,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets categoria_item_pca
      *
-     * @return string
+     * @return int
      */
     public function getCategoriaItemPca()
     {
@@ -672,7 +612,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets categoria_item_pca
      *
-     * @param string $categoria_item_pca categoria_item_pca
+     * @param int $categoria_item_pca categoria_item_pca
      *
      * @return self
      */
@@ -680,16 +620,6 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
     {
         if (is_null($categoria_item_pca)) {
             throw new \InvalidArgumentException('non-nullable categoria_item_pca cannot be null');
-        }
-        $allowedValues = $this->getCategoriaItemPcaAllowableValues();
-        if (!in_array($categoria_item_pca, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'categoria_item_pca', must be one of '%s'",
-                    $categoria_item_pca,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['categoria_item_pca'] = $categoria_item_pca;
 
@@ -1024,7 +954,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets catalogo
      *
-     * @return string
+     * @return int
      */
     public function getCatalogo()
     {
@@ -1034,7 +964,7 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets catalogo
      *
-     * @param string $catalogo catalogo
+     * @param int $catalogo catalogo
      *
      * @return self
      */
@@ -1042,16 +972,6 @@ class IncluirPlanoContratacaoItemDTO implements ModelInterface, ArrayAccess, \Js
     {
         if (is_null($catalogo)) {
             throw new \InvalidArgumentException('non-nullable catalogo cannot be null');
-        }
-        $allowedValues = $this->getCatalogoAllowableValues();
-        if (!in_array($catalogo, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'catalogo', must be one of '%s'",
-                    $catalogo,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['catalogo'] = $catalogo;
 

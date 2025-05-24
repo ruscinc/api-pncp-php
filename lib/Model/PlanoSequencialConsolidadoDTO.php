@@ -61,6 +61,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_total' => 'float',
         'quantidade' => 'float',
         'data_atualizacao' => '\DateTime',
+        'data_atualizacao_global_pca' => '\DateTime',
         'data_publicacao_pncp' => '\DateTime',
         'codigo_unidade' => 'string',
         'nome_unidade' => 'string',
@@ -84,6 +85,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_total' => null,
         'quantidade' => null,
         'data_atualizacao' => 'date-time',
+        'data_atualizacao_global_pca' => 'date-time',
         'data_publicacao_pncp' => 'date-time',
         'codigo_unidade' => null,
         'nome_unidade' => null,
@@ -105,6 +107,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_total' => false,
 		'quantidade' => false,
 		'data_atualizacao' => false,
+		'data_atualizacao_global_pca' => false,
 		'data_publicacao_pncp' => false,
 		'codigo_unidade' => false,
 		'nome_unidade' => false,
@@ -206,6 +209,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_total' => 'valorTotal',
         'quantidade' => 'quantidade',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_atualizacao_global_pca' => 'dataAtualizacaoGlobalPCA',
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
         'codigo_unidade' => 'codigoUnidade',
         'nome_unidade' => 'nomeUnidade',
@@ -227,6 +231,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_total' => 'setValorTotal',
         'quantidade' => 'setQuantidade',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_atualizacao_global_pca' => 'setDataAtualizacaoGlobalPca',
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
         'codigo_unidade' => 'setCodigoUnidade',
         'nome_unidade' => 'setNomeUnidade',
@@ -248,6 +253,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_total' => 'getValorTotal',
         'quantidade' => 'getQuantidade',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_atualizacao_global_pca' => 'getDataAtualizacaoGlobalPca',
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
         'codigo_unidade' => 'getCodigoUnidade',
         'nome_unidade' => 'getNomeUnidade',
@@ -320,6 +326,7 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('valor_total', $data ?? [], null);
         $this->setIfExists('quantidade', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global_pca', $data ?? [], null);
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
         $this->setIfExists('codigo_unidade', $data ?? [], null);
         $this->setIfExists('nome_unidade', $data ?? [], null);
@@ -451,6 +458,33 @@ class PlanoSequencialConsolidadoDTO implements ModelInterface, ArrayAccess, \Jso
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_atualizacao_global_pca
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobalPca()
+    {
+        return $this->container['data_atualizacao_global_pca'];
+    }
+
+    /**
+     * Sets data_atualizacao_global_pca
+     *
+     * @param \DateTime|null $data_atualizacao_global_pca data_atualizacao_global_pca
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobalPca($data_atualizacao_global_pca)
+    {
+        if (is_null($data_atualizacao_global_pca)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global_pca cannot be null');
+        }
+        $this->container['data_atualizacao_global_pca'] = $data_atualizacao_global_pca;
 
         return $this;
     }

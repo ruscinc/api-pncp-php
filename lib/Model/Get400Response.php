@@ -58,7 +58,7 @@ class Get400Response implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'erros' => '\OpenAPI\Client\Model\ErroValidacaoDTO[]'
+        'erros' => 'object[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class Get400Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets erros
      *
-     * @return \OpenAPI\Client\Model\ErroValidacaoDTO[]|null
+     * @return object[]|null
      */
     public function getErros()
     {
@@ -303,7 +303,7 @@ class Get400Response implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets erros
      *
-     * @param \OpenAPI\Client\Model\ErroValidacaoDTO[]|null $erros erros
+     * @param object[]|null $erros erros
      *
      * @return self
      */

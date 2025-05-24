@@ -64,16 +64,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
         'log_manutencao_data_inclusao' => '\DateTime',
         'sequencial_termo_contrato' => 'int',
         'numero_termo_contrato' => 'string',
-        'usuario_nome' => 'string',
-        'titulo_documento_termo_contrato' => 'string',
-        'tipo_log_manutencao_nome' => 'string',
-        'categoria_log_manutencao_nome' => 'string',
+        'sequencial_instrumento_cobranca' => 'int',
+        'sequencial_documento_termo_contrato' => 'int',
         'contrato_orgao_cnpj' => 'string',
         'contrato_ano' => 'int',
         'contrato_sequencial' => 'int',
         'sequencial_documento_contrato' => 'int',
+        'tipo_log_manutencao_nome' => 'string',
+        'categoria_log_manutencao_nome' => 'string',
         'titulo_documento_contrato' => 'string',
-        'sequencial_documento_termo_contrato' => 'int'
+        'titulo_documento_termo_contrato' => 'string',
+        'usuario_nome' => 'string'
     ];
 
     /**
@@ -90,16 +91,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
         'log_manutencao_data_inclusao' => 'date-time',
         'sequencial_termo_contrato' => 'int32',
         'numero_termo_contrato' => null,
-        'usuario_nome' => null,
-        'titulo_documento_termo_contrato' => null,
-        'tipo_log_manutencao_nome' => null,
-        'categoria_log_manutencao_nome' => null,
+        'sequencial_instrumento_cobranca' => 'int32',
+        'sequencial_documento_termo_contrato' => 'int32',
         'contrato_orgao_cnpj' => null,
         'contrato_ano' => 'int32',
         'contrato_sequencial' => 'int32',
         'sequencial_documento_contrato' => 'int32',
+        'tipo_log_manutencao_nome' => null,
+        'categoria_log_manutencao_nome' => null,
         'titulo_documento_contrato' => null,
-        'sequencial_documento_termo_contrato' => 'int32'
+        'titulo_documento_termo_contrato' => null,
+        'usuario_nome' => null
     ];
 
     /**
@@ -114,16 +116,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
 		'log_manutencao_data_inclusao' => false,
 		'sequencial_termo_contrato' => false,
 		'numero_termo_contrato' => false,
-		'usuario_nome' => false,
-		'titulo_documento_termo_contrato' => false,
-		'tipo_log_manutencao_nome' => false,
-		'categoria_log_manutencao_nome' => false,
+		'sequencial_instrumento_cobranca' => false,
+		'sequencial_documento_termo_contrato' => false,
 		'contrato_orgao_cnpj' => false,
 		'contrato_ano' => false,
 		'contrato_sequencial' => false,
 		'sequencial_documento_contrato' => false,
+		'tipo_log_manutencao_nome' => false,
+		'categoria_log_manutencao_nome' => false,
 		'titulo_documento_contrato' => false,
-		'sequencial_documento_termo_contrato' => false
+		'titulo_documento_termo_contrato' => false,
+		'usuario_nome' => false
     ];
 
     /**
@@ -218,16 +221,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
         'log_manutencao_data_inclusao' => 'logManutencaoDataInclusao',
         'sequencial_termo_contrato' => 'sequencialTermoContrato',
         'numero_termo_contrato' => 'numeroTermoContrato',
-        'usuario_nome' => 'usuarioNome',
-        'titulo_documento_termo_contrato' => 'tituloDocumentoTermoContrato',
-        'tipo_log_manutencao_nome' => 'tipoLogManutencaoNome',
-        'categoria_log_manutencao_nome' => 'categoriaLogManutencaoNome',
+        'sequencial_instrumento_cobranca' => 'sequencialInstrumentoCobranca',
+        'sequencial_documento_termo_contrato' => 'sequencialDocumentoTermoContrato',
         'contrato_orgao_cnpj' => 'contratoOrgaoCnpj',
         'contrato_ano' => 'contratoAno',
         'contrato_sequencial' => 'contratoSequencial',
         'sequencial_documento_contrato' => 'sequencialDocumentoContrato',
+        'tipo_log_manutencao_nome' => 'tipoLogManutencaoNome',
+        'categoria_log_manutencao_nome' => 'categoriaLogManutencaoNome',
         'titulo_documento_contrato' => 'tituloDocumentoContrato',
-        'sequencial_documento_termo_contrato' => 'sequencialDocumentoTermoContrato'
+        'titulo_documento_termo_contrato' => 'tituloDocumentoTermoContrato',
+        'usuario_nome' => 'usuarioNome'
     ];
 
     /**
@@ -242,16 +246,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
         'log_manutencao_data_inclusao' => 'setLogManutencaoDataInclusao',
         'sequencial_termo_contrato' => 'setSequencialTermoContrato',
         'numero_termo_contrato' => 'setNumeroTermoContrato',
-        'usuario_nome' => 'setUsuarioNome',
-        'titulo_documento_termo_contrato' => 'setTituloDocumentoTermoContrato',
-        'tipo_log_manutencao_nome' => 'setTipoLogManutencaoNome',
-        'categoria_log_manutencao_nome' => 'setCategoriaLogManutencaoNome',
+        'sequencial_instrumento_cobranca' => 'setSequencialInstrumentoCobranca',
+        'sequencial_documento_termo_contrato' => 'setSequencialDocumentoTermoContrato',
         'contrato_orgao_cnpj' => 'setContratoOrgaoCnpj',
         'contrato_ano' => 'setContratoAno',
         'contrato_sequencial' => 'setContratoSequencial',
         'sequencial_documento_contrato' => 'setSequencialDocumentoContrato',
+        'tipo_log_manutencao_nome' => 'setTipoLogManutencaoNome',
+        'categoria_log_manutencao_nome' => 'setCategoriaLogManutencaoNome',
         'titulo_documento_contrato' => 'setTituloDocumentoContrato',
-        'sequencial_documento_termo_contrato' => 'setSequencialDocumentoTermoContrato'
+        'titulo_documento_termo_contrato' => 'setTituloDocumentoTermoContrato',
+        'usuario_nome' => 'setUsuarioNome'
     ];
 
     /**
@@ -266,16 +271,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
         'log_manutencao_data_inclusao' => 'getLogManutencaoDataInclusao',
         'sequencial_termo_contrato' => 'getSequencialTermoContrato',
         'numero_termo_contrato' => 'getNumeroTermoContrato',
-        'usuario_nome' => 'getUsuarioNome',
-        'titulo_documento_termo_contrato' => 'getTituloDocumentoTermoContrato',
-        'tipo_log_manutencao_nome' => 'getTipoLogManutencaoNome',
-        'categoria_log_manutencao_nome' => 'getCategoriaLogManutencaoNome',
+        'sequencial_instrumento_cobranca' => 'getSequencialInstrumentoCobranca',
+        'sequencial_documento_termo_contrato' => 'getSequencialDocumentoTermoContrato',
         'contrato_orgao_cnpj' => 'getContratoOrgaoCnpj',
         'contrato_ano' => 'getContratoAno',
         'contrato_sequencial' => 'getContratoSequencial',
         'sequencial_documento_contrato' => 'getSequencialDocumentoContrato',
+        'tipo_log_manutencao_nome' => 'getTipoLogManutencaoNome',
+        'categoria_log_manutencao_nome' => 'getCategoriaLogManutencaoNome',
         'titulo_documento_contrato' => 'getTituloDocumentoContrato',
-        'sequencial_documento_termo_contrato' => 'getSequencialDocumentoTermoContrato'
+        'titulo_documento_termo_contrato' => 'getTituloDocumentoTermoContrato',
+        'usuario_nome' => 'getUsuarioNome'
     ];
 
     /**
@@ -336,6 +342,7 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
     public const CATEGORIA_LOG_MANUTENCAO__12 = '12';
     public const CATEGORIA_LOG_MANUTENCAO__13 = '13';
     public const CATEGORIA_LOG_MANUTENCAO__14 = '14';
+    public const CATEGORIA_LOG_MANUTENCAO__15 = '15';
 
     /**
      * Gets allowable values of the enum
@@ -373,6 +380,7 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
             self::CATEGORIA_LOG_MANUTENCAO__12,
             self::CATEGORIA_LOG_MANUTENCAO__13,
             self::CATEGORIA_LOG_MANUTENCAO__14,
+            self::CATEGORIA_LOG_MANUTENCAO__15,
         ];
     }
 
@@ -397,16 +405,17 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('log_manutencao_data_inclusao', $data ?? [], null);
         $this->setIfExists('sequencial_termo_contrato', $data ?? [], null);
         $this->setIfExists('numero_termo_contrato', $data ?? [], null);
-        $this->setIfExists('usuario_nome', $data ?? [], null);
-        $this->setIfExists('titulo_documento_termo_contrato', $data ?? [], null);
-        $this->setIfExists('tipo_log_manutencao_nome', $data ?? [], null);
-        $this->setIfExists('categoria_log_manutencao_nome', $data ?? [], null);
+        $this->setIfExists('sequencial_instrumento_cobranca', $data ?? [], null);
+        $this->setIfExists('sequencial_documento_termo_contrato', $data ?? [], null);
         $this->setIfExists('contrato_orgao_cnpj', $data ?? [], null);
         $this->setIfExists('contrato_ano', $data ?? [], null);
         $this->setIfExists('contrato_sequencial', $data ?? [], null);
         $this->setIfExists('sequencial_documento_contrato', $data ?? [], null);
+        $this->setIfExists('tipo_log_manutencao_nome', $data ?? [], null);
+        $this->setIfExists('categoria_log_manutencao_nome', $data ?? [], null);
         $this->setIfExists('titulo_documento_contrato', $data ?? [], null);
-        $this->setIfExists('sequencial_documento_termo_contrato', $data ?? [], null);
+        $this->setIfExists('titulo_documento_termo_contrato', $data ?? [], null);
+        $this->setIfExists('usuario_nome', $data ?? [], null);
     }
 
     /**
@@ -652,109 +661,55 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets usuario_nome
+     * Gets sequencial_instrumento_cobranca
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getUsuarioNome()
+    public function getSequencialInstrumentoCobranca()
     {
-        return $this->container['usuario_nome'];
+        return $this->container['sequencial_instrumento_cobranca'];
     }
 
     /**
-     * Sets usuario_nome
+     * Sets sequencial_instrumento_cobranca
      *
-     * @param string|null $usuario_nome usuario_nome
+     * @param int|null $sequencial_instrumento_cobranca sequencial_instrumento_cobranca
      *
      * @return self
      */
-    public function setUsuarioNome($usuario_nome)
+    public function setSequencialInstrumentoCobranca($sequencial_instrumento_cobranca)
     {
-        if (is_null($usuario_nome)) {
-            throw new \InvalidArgumentException('non-nullable usuario_nome cannot be null');
+        if (is_null($sequencial_instrumento_cobranca)) {
+            throw new \InvalidArgumentException('non-nullable sequencial_instrumento_cobranca cannot be null');
         }
-        $this->container['usuario_nome'] = $usuario_nome;
+        $this->container['sequencial_instrumento_cobranca'] = $sequencial_instrumento_cobranca;
 
         return $this;
     }
 
     /**
-     * Gets titulo_documento_termo_contrato
+     * Gets sequencial_documento_termo_contrato
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getTituloDocumentoTermoContrato()
+    public function getSequencialDocumentoTermoContrato()
     {
-        return $this->container['titulo_documento_termo_contrato'];
+        return $this->container['sequencial_documento_termo_contrato'];
     }
 
     /**
-     * Sets titulo_documento_termo_contrato
+     * Sets sequencial_documento_termo_contrato
      *
-     * @param string|null $titulo_documento_termo_contrato titulo_documento_termo_contrato
+     * @param int|null $sequencial_documento_termo_contrato sequencial_documento_termo_contrato
      *
      * @return self
      */
-    public function setTituloDocumentoTermoContrato($titulo_documento_termo_contrato)
+    public function setSequencialDocumentoTermoContrato($sequencial_documento_termo_contrato)
     {
-        if (is_null($titulo_documento_termo_contrato)) {
-            throw new \InvalidArgumentException('non-nullable titulo_documento_termo_contrato cannot be null');
+        if (is_null($sequencial_documento_termo_contrato)) {
+            throw new \InvalidArgumentException('non-nullable sequencial_documento_termo_contrato cannot be null');
         }
-        $this->container['titulo_documento_termo_contrato'] = $titulo_documento_termo_contrato;
-
-        return $this;
-    }
-
-    /**
-     * Gets tipo_log_manutencao_nome
-     *
-     * @return string|null
-     */
-    public function getTipoLogManutencaoNome()
-    {
-        return $this->container['tipo_log_manutencao_nome'];
-    }
-
-    /**
-     * Sets tipo_log_manutencao_nome
-     *
-     * @param string|null $tipo_log_manutencao_nome tipo_log_manutencao_nome
-     *
-     * @return self
-     */
-    public function setTipoLogManutencaoNome($tipo_log_manutencao_nome)
-    {
-        if (is_null($tipo_log_manutencao_nome)) {
-            throw new \InvalidArgumentException('non-nullable tipo_log_manutencao_nome cannot be null');
-        }
-        $this->container['tipo_log_manutencao_nome'] = $tipo_log_manutencao_nome;
-
-        return $this;
-    }
-
-    /**
-     * Gets categoria_log_manutencao_nome
-     *
-     * @return string|null
-     */
-    public function getCategoriaLogManutencaoNome()
-    {
-        return $this->container['categoria_log_manutencao_nome'];
-    }
-
-    /**
-     * Sets categoria_log_manutencao_nome
-     *
-     * @param string|null $categoria_log_manutencao_nome categoria_log_manutencao_nome
-     *
-     * @return self
-     */
-    public function setCategoriaLogManutencaoNome($categoria_log_manutencao_nome)
-    {
-        if (is_null($categoria_log_manutencao_nome)) {
-            throw new \InvalidArgumentException('non-nullable categoria_log_manutencao_nome cannot be null');
-        }
-        $this->container['categoria_log_manutencao_nome'] = $categoria_log_manutencao_nome;
+        $this->container['sequencial_documento_termo_contrato'] = $sequencial_documento_termo_contrato;
 
         return $this;
     }
@@ -868,6 +823,60 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
+     * Gets tipo_log_manutencao_nome
+     *
+     * @return string|null
+     */
+    public function getTipoLogManutencaoNome()
+    {
+        return $this->container['tipo_log_manutencao_nome'];
+    }
+
+    /**
+     * Sets tipo_log_manutencao_nome
+     *
+     * @param string|null $tipo_log_manutencao_nome tipo_log_manutencao_nome
+     *
+     * @return self
+     */
+    public function setTipoLogManutencaoNome($tipo_log_manutencao_nome)
+    {
+        if (is_null($tipo_log_manutencao_nome)) {
+            throw new \InvalidArgumentException('non-nullable tipo_log_manutencao_nome cannot be null');
+        }
+        $this->container['tipo_log_manutencao_nome'] = $tipo_log_manutencao_nome;
+
+        return $this;
+    }
+
+    /**
+     * Gets categoria_log_manutencao_nome
+     *
+     * @return string|null
+     */
+    public function getCategoriaLogManutencaoNome()
+    {
+        return $this->container['categoria_log_manutencao_nome'];
+    }
+
+    /**
+     * Sets categoria_log_manutencao_nome
+     *
+     * @param string|null $categoria_log_manutencao_nome categoria_log_manutencao_nome
+     *
+     * @return self
+     */
+    public function setCategoriaLogManutencaoNome($categoria_log_manutencao_nome)
+    {
+        if (is_null($categoria_log_manutencao_nome)) {
+            throw new \InvalidArgumentException('non-nullable categoria_log_manutencao_nome cannot be null');
+        }
+        $this->container['categoria_log_manutencao_nome'] = $categoria_log_manutencao_nome;
+
+        return $this;
+    }
+
+    /**
      * Gets titulo_documento_contrato
      *
      * @return string|null
@@ -895,28 +904,55 @@ class RecuperarHistoricoContratoDTO implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets sequencial_documento_termo_contrato
+     * Gets titulo_documento_termo_contrato
      *
-     * @return int|null
+     * @return string|null
      */
-    public function getSequencialDocumentoTermoContrato()
+    public function getTituloDocumentoTermoContrato()
     {
-        return $this->container['sequencial_documento_termo_contrato'];
+        return $this->container['titulo_documento_termo_contrato'];
     }
 
     /**
-     * Sets sequencial_documento_termo_contrato
+     * Sets titulo_documento_termo_contrato
      *
-     * @param int|null $sequencial_documento_termo_contrato sequencial_documento_termo_contrato
+     * @param string|null $titulo_documento_termo_contrato titulo_documento_termo_contrato
      *
      * @return self
      */
-    public function setSequencialDocumentoTermoContrato($sequencial_documento_termo_contrato)
+    public function setTituloDocumentoTermoContrato($titulo_documento_termo_contrato)
     {
-        if (is_null($sequencial_documento_termo_contrato)) {
-            throw new \InvalidArgumentException('non-nullable sequencial_documento_termo_contrato cannot be null');
+        if (is_null($titulo_documento_termo_contrato)) {
+            throw new \InvalidArgumentException('non-nullable titulo_documento_termo_contrato cannot be null');
         }
-        $this->container['sequencial_documento_termo_contrato'] = $sequencial_documento_termo_contrato;
+        $this->container['titulo_documento_termo_contrato'] = $titulo_documento_termo_contrato;
+
+        return $this;
+    }
+
+    /**
+     * Gets usuario_nome
+     *
+     * @return string|null
+     */
+    public function getUsuarioNome()
+    {
+        return $this->container['usuario_nome'];
+    }
+
+    /**
+     * Sets usuario_nome
+     *
+     * @param string|null $usuario_nome usuario_nome
+     *
+     * @return self
+     */
+    public function setUsuarioNome($usuario_nome)
+    {
+        if (is_null($usuario_nome)) {
+            throw new \InvalidArgumentException('non-nullable usuario_nome cannot be null');
+        }
+        $this->container['usuario_nome'] = $usuario_nome;
 
         return $this;
     }

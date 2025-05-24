@@ -75,9 +75,6 @@ class ContrataoApi
         'consultarCompra' => [
             'application/json',
         ],
-        'consultarCompra1' => [
-            'application/json',
-        ],
         'consultarQuantidade' => [
             'application/json',
         ],
@@ -201,531 +198,6 @@ class ContrataoApi
     /**
      * Operation consultarCompra
      *
-     * Consultar Contratação
-     *
-     * @param  string $cnpj cnpj (required)
-     * @param  int $ano ano (required)
-     * @param  int $sequencial sequencial (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Get400Response|array<string,string>|array<string,string>|string|string|\OpenAPI\Client\Model\RecuperarCompraDTO
-     */
-    public function consultarCompra($cnpj, $ano, $sequencial, string $contentType = self::contentTypes['consultarCompra'][0])
-    {
-        list($response) = $this->consultarCompraWithHttpInfo($cnpj, $ano, $sequencial, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation consultarCompraWithHttpInfo
-     *
-     * Consultar Contratação
-     *
-     * @param  string $cnpj (required)
-     * @param  int $ano (required)
-     * @param  int $sequencial (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Get400Response|array<string,string>|array<string,string>|string|string|\OpenAPI\Client\Model\RecuperarCompraDTO, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function consultarCompraWithHttpInfo($cnpj, $ano, $sequencial, string $contentType = self::contentTypes['consultarCompra'][0])
-    {
-        $request = $this->consultarCompraRequest($cnpj, $ano, $sequencial, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 400:
-                    if ('\OpenAPI\Client\Model\Get400Response' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Get400Response' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                 );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Get400Response', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 422:
-                    if ('array<string,string>' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('array<string,string>' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                 );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'array<string,string>', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 204:
-                    if ('array<string,string>' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('array<string,string>' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                 );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'array<string,string>', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 500:
-                    if ('string' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('string' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                 );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'string', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('string' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('string' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                 );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'string', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 200:
-                    if ('\OpenAPI\Client\Model\RecuperarCompraDTO' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RecuperarCompraDTO' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                 );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RecuperarCompraDTO', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\OpenAPI\Client\Model\RecuperarCompraDTO';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Get400Response',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 422:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'array<string,string>',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'array<string,string>',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'string',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'string',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RecuperarCompraDTO',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation consultarCompraAsync
-     *
-     * Consultar Contratação
-     *
-     * @param  string $cnpj (required)
-     * @param  int $ano (required)
-     * @param  int $sequencial (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function consultarCompraAsync($cnpj, $ano, $sequencial, string $contentType = self::contentTypes['consultarCompra'][0])
-    {
-        return $this->consultarCompraAsyncWithHttpInfo($cnpj, $ano, $sequencial, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation consultarCompraAsyncWithHttpInfo
-     *
-     * Consultar Contratação
-     *
-     * @param  string $cnpj (required)
-     * @param  int $ano (required)
-     * @param  int $sequencial (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function consultarCompraAsyncWithHttpInfo($cnpj, $ano, $sequencial, string $contentType = self::contentTypes['consultarCompra'][0])
-    {
-        $returnType = '\OpenAPI\Client\Model\RecuperarCompraDTO';
-        $request = $this->consultarCompraRequest($cnpj, $ano, $sequencial, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'consultarCompra'
-     *
-     * @param  string $cnpj (required)
-     * @param  int $ano (required)
-     * @param  int $sequencial (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function consultarCompraRequest($cnpj, $ano, $sequencial, string $contentType = self::contentTypes['consultarCompra'][0])
-    {
-
-        // verify the required parameter 'cnpj' is set
-        if ($cnpj === null || (is_array($cnpj) && count($cnpj) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $cnpj when calling consultarCompra'
-            );
-        }
-
-        // verify the required parameter 'ano' is set
-        if ($ano === null || (is_array($ano) && count($ano) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $ano when calling consultarCompra'
-            );
-        }
-
-        // verify the required parameter 'sequencial' is set
-        if ($sequencial === null || (is_array($sequencial) && count($sequencial) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $sequencial when calling consultarCompra'
-            );
-        }
-        if ($sequencial < 1) {
-            throw new \InvalidArgumentException('invalid value for "$sequencial" when calling ContrataoApi.consultarCompra, must be bigger than or equal to 1.');
-        }
-        
-
-        $resourcePath = '/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($cnpj !== null) {
-            $resourcePath = str_replace(
-                '{' . 'cnpj' . '}',
-                ObjectSerializer::toPathValue($cnpj),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($ano !== null) {
-            $resourcePath = str_replace(
-                '{' . 'ano' . '}',
-                ObjectSerializer::toPathValue($ano),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($sequencial !== null) {
-            $resourcePath = str_replace(
-                '{' . 'sequencial' . '}',
-                ObjectSerializer::toPathValue($sequencial),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['*/*', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation consultarCompra1
-     *
      * Consultar Histórico de Contratação
      *
      * @param  string $cnpj cnpj (required)
@@ -733,20 +205,20 @@ class ContrataoApi
      * @param  int $sequencial sequencial (required)
      * @param  int $pagina pagina (optional)
      * @param  int $tamanho_pagina tamanho_pagina (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra1'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\Get400Response|array<string,string>|array<string,string>|string|string|\OpenAPI\Client\Model\RecuperarHistoricoCompraDTO[]
      */
-    public function consultarCompra1($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra1'][0])
+    public function consultarCompra($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra'][0])
     {
-        list($response) = $this->consultarCompra1WithHttpInfo($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType);
+        list($response) = $this->consultarCompraWithHttpInfo($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType);
         return $response;
     }
 
     /**
-     * Operation consultarCompra1WithHttpInfo
+     * Operation consultarCompraWithHttpInfo
      *
      * Consultar Histórico de Contratação
      *
@@ -755,15 +227,15 @@ class ContrataoApi
      * @param  int $sequencial (required)
      * @param  int $pagina (optional)
      * @param  int $tamanho_pagina (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra1'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\Get400Response|array<string,string>|array<string,string>|string|string|\OpenAPI\Client\Model\RecuperarHistoricoCompraDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function consultarCompra1WithHttpInfo($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra1'][0])
+    public function consultarCompraWithHttpInfo($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra'][0])
     {
-        $request = $this->consultarCompra1Request($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType);
+        $request = $this->consultarCompraRequest($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1049,7 +521,7 @@ class ContrataoApi
     }
 
     /**
-     * Operation consultarCompra1Async
+     * Operation consultarCompraAsync
      *
      * Consultar Histórico de Contratação
      *
@@ -1058,14 +530,14 @@ class ContrataoApi
      * @param  int $sequencial (required)
      * @param  int $pagina (optional)
      * @param  int $tamanho_pagina (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra1'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function consultarCompra1Async($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra1'][0])
+    public function consultarCompraAsync($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra'][0])
     {
-        return $this->consultarCompra1AsyncWithHttpInfo($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType)
+        return $this->consultarCompraAsyncWithHttpInfo($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1074,7 +546,7 @@ class ContrataoApi
     }
 
     /**
-     * Operation consultarCompra1AsyncWithHttpInfo
+     * Operation consultarCompraAsyncWithHttpInfo
      *
      * Consultar Histórico de Contratação
      *
@@ -1083,15 +555,15 @@ class ContrataoApi
      * @param  int $sequencial (required)
      * @param  int $pagina (optional)
      * @param  int $tamanho_pagina (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra1'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function consultarCompra1AsyncWithHttpInfo($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra1'][0])
+    public function consultarCompraAsyncWithHttpInfo($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra'][0])
     {
         $returnType = '\OpenAPI\Client\Model\RecuperarHistoricoCompraDTO[]';
-        $request = $this->consultarCompra1Request($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType);
+        $request = $this->consultarCompraRequest($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1130,51 +602,51 @@ class ContrataoApi
     }
 
     /**
-     * Create request for operation 'consultarCompra1'
+     * Create request for operation 'consultarCompra'
      *
      * @param  string $cnpj (required)
      * @param  int $ano (required)
      * @param  int $sequencial (required)
      * @param  int $pagina (optional)
      * @param  int $tamanho_pagina (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra1'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['consultarCompra'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function consultarCompra1Request($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra1'][0])
+    public function consultarCompraRequest($cnpj, $ano, $sequencial, $pagina = null, $tamanho_pagina = null, string $contentType = self::contentTypes['consultarCompra'][0])
     {
 
         // verify the required parameter 'cnpj' is set
         if ($cnpj === null || (is_array($cnpj) && count($cnpj) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $cnpj when calling consultarCompra1'
+                'Missing the required parameter $cnpj when calling consultarCompra'
             );
         }
 
         // verify the required parameter 'ano' is set
         if ($ano === null || (is_array($ano) && count($ano) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ano when calling consultarCompra1'
+                'Missing the required parameter $ano when calling consultarCompra'
             );
         }
 
         // verify the required parameter 'sequencial' is set
         if ($sequencial === null || (is_array($sequencial) && count($sequencial) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sequencial when calling consultarCompra1'
+                'Missing the required parameter $sequencial when calling consultarCompra'
             );
         }
         if ($sequencial < 1) {
-            throw new \InvalidArgumentException('invalid value for "$sequencial" when calling ContrataoApi.consultarCompra1, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for "$sequencial" when calling ContrataoApi.consultarCompra, must be bigger than or equal to 1.');
         }
         
         if ($pagina !== null && $pagina < 1) {
-            throw new \InvalidArgumentException('invalid value for "$pagina" when calling ContrataoApi.consultarCompra1, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for "$pagina" when calling ContrataoApi.consultarCompra, must be bigger than or equal to 1.');
         }
         
         if ($tamanho_pagina !== null && $tamanho_pagina < 1) {
-            throw new \InvalidArgumentException('invalid value for "$tamanho_pagina" when calling ContrataoApi.consultarCompra1, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for "$tamanho_pagina" when calling ContrataoApi.consultarCompra, must be bigger than or equal to 1.');
         }
         
 
@@ -2921,7 +2393,7 @@ class ContrataoApi
      * @param  string $cnpj cnpj (required)
      * @param  string $titulo_documento titulo_documento (required)
      * @param  int $tipo_documento_id tipo_documento_id (required)
-     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;: [    {      \\\&quot;numeroItem\\\&quot;: 1,      \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,      \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;incentivoProdutivoBasico\\\&quot;: true,      \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;quantidade\\\&quot;: 1,      \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,      \\\&quot;valorTotal\\\&quot;: 100.00,      \\\&quot;orcamentoSigiloso\\\&quot;: true,      \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;itemCategoriaId\\\&quot;: 1,      \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;    }  ],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;} (required)
+     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;:  [{  \\\&quot;numeroItem\\\&quot;: 1,  \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,  \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;incentivoProdutivoBasico\\\&quot;: true,  \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;quantidade\\\&quot;: 1,  \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,  \\\&quot;valorTotal\\\&quot;: 100.00,  \\\&quot;orcamentoSigiloso\\\&quot;: true,  \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;itemCategoriaId\\\&quot;: 1,  \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;aplicabilidadeMargemPreferencia\\\&quot;: false,  \\\&quot;percentualMargemPreferenciaNormal\\\&quot;: 0.001,  \\\&quot;percentualMargemPreferenciaAdicional\\\&quot;: 0.001,  \\\&quot;catalogoId\\\&quot;: 1,  \\\&quot;categoriaItemCatalogoId\\\&quot;: 1,  \\\&quot;catalogoCodigoItem\\\&quot;: 1,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;  }],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkProcessoEletronico\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;fontesOrcamentarias\\\&quot;: [1, 2] } (required)
      * @param  \SplFileObject $documento documento (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['incluirCompra'] to see the possible values for this operation
      *
@@ -2943,7 +2415,7 @@ class ContrataoApi
      * @param  string $cnpj (required)
      * @param  string $titulo_documento (required)
      * @param  int $tipo_documento_id (required)
-     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;: [    {      \\\&quot;numeroItem\\\&quot;: 1,      \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,      \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;incentivoProdutivoBasico\\\&quot;: true,      \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;quantidade\\\&quot;: 1,      \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,      \\\&quot;valorTotal\\\&quot;: 100.00,      \\\&quot;orcamentoSigiloso\\\&quot;: true,      \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;itemCategoriaId\\\&quot;: 1,      \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;    }  ],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;} (required)
+     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;:  [{  \\\&quot;numeroItem\\\&quot;: 1,  \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,  \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;incentivoProdutivoBasico\\\&quot;: true,  \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;quantidade\\\&quot;: 1,  \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,  \\\&quot;valorTotal\\\&quot;: 100.00,  \\\&quot;orcamentoSigiloso\\\&quot;: true,  \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;itemCategoriaId\\\&quot;: 1,  \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;aplicabilidadeMargemPreferencia\\\&quot;: false,  \\\&quot;percentualMargemPreferenciaNormal\\\&quot;: 0.001,  \\\&quot;percentualMargemPreferenciaAdicional\\\&quot;: 0.001,  \\\&quot;catalogoId\\\&quot;: 1,  \\\&quot;categoriaItemCatalogoId\\\&quot;: 1,  \\\&quot;catalogoCodigoItem\\\&quot;: 1,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;  }],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkProcessoEletronico\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;fontesOrcamentarias\\\&quot;: [1, 2] } (required)
      * @param  \SplFileObject $documento (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['incluirCompra'] to see the possible values for this operation
      *
@@ -3246,7 +2718,7 @@ class ContrataoApi
      * @param  string $cnpj (required)
      * @param  string $titulo_documento (required)
      * @param  int $tipo_documento_id (required)
-     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;: [    {      \\\&quot;numeroItem\\\&quot;: 1,      \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,      \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;incentivoProdutivoBasico\\\&quot;: true,      \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;quantidade\\\&quot;: 1,      \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,      \\\&quot;valorTotal\\\&quot;: 100.00,      \\\&quot;orcamentoSigiloso\\\&quot;: true,      \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;itemCategoriaId\\\&quot;: 1,      \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;    }  ],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;} (required)
+     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;:  [{  \\\&quot;numeroItem\\\&quot;: 1,  \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,  \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;incentivoProdutivoBasico\\\&quot;: true,  \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;quantidade\\\&quot;: 1,  \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,  \\\&quot;valorTotal\\\&quot;: 100.00,  \\\&quot;orcamentoSigiloso\\\&quot;: true,  \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;itemCategoriaId\\\&quot;: 1,  \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;aplicabilidadeMargemPreferencia\\\&quot;: false,  \\\&quot;percentualMargemPreferenciaNormal\\\&quot;: 0.001,  \\\&quot;percentualMargemPreferenciaAdicional\\\&quot;: 0.001,  \\\&quot;catalogoId\\\&quot;: 1,  \\\&quot;categoriaItemCatalogoId\\\&quot;: 1,  \\\&quot;catalogoCodigoItem\\\&quot;: 1,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;  }],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkProcessoEletronico\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;fontesOrcamentarias\\\&quot;: [1, 2] } (required)
      * @param  \SplFileObject $documento (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['incluirCompra'] to see the possible values for this operation
      *
@@ -3271,7 +2743,7 @@ class ContrataoApi
      * @param  string $cnpj (required)
      * @param  string $titulo_documento (required)
      * @param  int $tipo_documento_id (required)
-     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;: [    {      \\\&quot;numeroItem\\\&quot;: 1,      \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,      \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;incentivoProdutivoBasico\\\&quot;: true,      \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;quantidade\\\&quot;: 1,      \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,      \\\&quot;valorTotal\\\&quot;: 100.00,      \\\&quot;orcamentoSigiloso\\\&quot;: true,      \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;itemCategoriaId\\\&quot;: 1,      \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;    }  ],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;} (required)
+     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;:  [{  \\\&quot;numeroItem\\\&quot;: 1,  \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,  \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;incentivoProdutivoBasico\\\&quot;: true,  \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;quantidade\\\&quot;: 1,  \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,  \\\&quot;valorTotal\\\&quot;: 100.00,  \\\&quot;orcamentoSigiloso\\\&quot;: true,  \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;itemCategoriaId\\\&quot;: 1,  \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;aplicabilidadeMargemPreferencia\\\&quot;: false,  \\\&quot;percentualMargemPreferenciaNormal\\\&quot;: 0.001,  \\\&quot;percentualMargemPreferenciaAdicional\\\&quot;: 0.001,  \\\&quot;catalogoId\\\&quot;: 1,  \\\&quot;categoriaItemCatalogoId\\\&quot;: 1,  \\\&quot;catalogoCodigoItem\\\&quot;: 1,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;  }],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkProcessoEletronico\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;fontesOrcamentarias\\\&quot;: [1, 2] } (required)
      * @param  \SplFileObject $documento (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['incluirCompra'] to see the possible values for this operation
      *
@@ -3325,7 +2797,7 @@ class ContrataoApi
      * @param  string $cnpj (required)
      * @param  string $titulo_documento (required)
      * @param  int $tipo_documento_id (required)
-     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;: [    {      \\\&quot;numeroItem\\\&quot;: 1,      \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,      \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;incentivoProdutivoBasico\\\&quot;: true,      \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;quantidade\\\&quot;: 1,      \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,      \\\&quot;valorTotal\\\&quot;: 100.00,      \\\&quot;orcamentoSigiloso\\\&quot;: true,      \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;itemCategoriaId\\\&quot;: 1,      \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;    }  ],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;} (required)
+     * @param  \SplFileObject $compra O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;:  [{  \\\&quot;numeroItem\\\&quot;: 1,  \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,  \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;incentivoProdutivoBasico\\\&quot;: true,  \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;quantidade\\\&quot;: 1,  \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,  \\\&quot;valorTotal\\\&quot;: 100.00,  \\\&quot;orcamentoSigiloso\\\&quot;: true,  \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;itemCategoriaId\\\&quot;: 1,  \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;aplicabilidadeMargemPreferencia\\\&quot;: false,  \\\&quot;percentualMargemPreferenciaNormal\\\&quot;: 0.001,  \\\&quot;percentualMargemPreferenciaAdicional\\\&quot;: 0.001,  \\\&quot;catalogoId\\\&quot;: 1,  \\\&quot;categoriaItemCatalogoId\\\&quot;: 1,  \\\&quot;catalogoCodigoItem\\\&quot;: 1,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;  }],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkProcessoEletronico\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;fontesOrcamentarias\\\&quot;: [1, 2] } (required)
      * @param  \SplFileObject $documento (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['incluirCompra'] to see the possible values for this operation
      *

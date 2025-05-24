@@ -81,7 +81,17 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
         'data_inclusao' => '\DateTime',
         'data_atualizacao' => '\DateTime',
         'tem_resultado' => 'bool',
-        'imagem' => 'int'
+        'imagem' => 'int',
+        'aplicabilidade_margem_preferencia_normal' => 'bool',
+        'aplicabilidade_margem_preferencia_adicional' => 'bool',
+        'percentual_margem_preferencia_normal' => 'float',
+        'percentual_margem_preferencia_adicional' => 'float',
+        'ncm_nbs_codigo' => 'string',
+        'ncm_nbs_descricao' => 'string',
+        'catalogo' => '\OpenAPI\Client\Model\CatalogoDTO',
+        'categoria_item_catalogo' => '\OpenAPI\Client\Model\DominioGenericoDTO',
+        'catalogo_codigo_item' => 'string',
+        'informacao_complementar' => 'string'
     ];
 
     /**
@@ -115,7 +125,17 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
         'data_inclusao' => 'date-time',
         'data_atualizacao' => 'date-time',
         'tem_resultado' => null,
-        'imagem' => 'int32'
+        'imagem' => 'int32',
+        'aplicabilidade_margem_preferencia_normal' => null,
+        'aplicabilidade_margem_preferencia_adicional' => null,
+        'percentual_margem_preferencia_normal' => null,
+        'percentual_margem_preferencia_adicional' => null,
+        'ncm_nbs_codigo' => null,
+        'ncm_nbs_descricao' => null,
+        'catalogo' => null,
+        'categoria_item_catalogo' => null,
+        'catalogo_codigo_item' => null,
+        'informacao_complementar' => null
     ];
 
     /**
@@ -147,7 +167,17 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
 		'data_inclusao' => false,
 		'data_atualizacao' => false,
 		'tem_resultado' => false,
-		'imagem' => false
+		'imagem' => false,
+		'aplicabilidade_margem_preferencia_normal' => false,
+		'aplicabilidade_margem_preferencia_adicional' => false,
+		'percentual_margem_preferencia_normal' => false,
+		'percentual_margem_preferencia_adicional' => false,
+		'ncm_nbs_codigo' => false,
+		'ncm_nbs_descricao' => false,
+		'catalogo' => false,
+		'categoria_item_catalogo' => false,
+		'catalogo_codigo_item' => false,
+		'informacao_complementar' => false
     ];
 
     /**
@@ -259,7 +289,17 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
         'data_inclusao' => 'dataInclusao',
         'data_atualizacao' => 'dataAtualizacao',
         'tem_resultado' => 'temResultado',
-        'imagem' => 'imagem'
+        'imagem' => 'imagem',
+        'aplicabilidade_margem_preferencia_normal' => 'aplicabilidadeMargemPreferenciaNormal',
+        'aplicabilidade_margem_preferencia_adicional' => 'aplicabilidadeMargemPreferenciaAdicional',
+        'percentual_margem_preferencia_normal' => 'percentualMargemPreferenciaNormal',
+        'percentual_margem_preferencia_adicional' => 'percentualMargemPreferenciaAdicional',
+        'ncm_nbs_codigo' => 'ncmNbsCodigo',
+        'ncm_nbs_descricao' => 'ncmNbsDescricao',
+        'catalogo' => 'catalogo',
+        'categoria_item_catalogo' => 'categoriaItemCatalogo',
+        'catalogo_codigo_item' => 'catalogoCodigoItem',
+        'informacao_complementar' => 'informacaoComplementar'
     ];
 
     /**
@@ -291,7 +331,17 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
         'data_inclusao' => 'setDataInclusao',
         'data_atualizacao' => 'setDataAtualizacao',
         'tem_resultado' => 'setTemResultado',
-        'imagem' => 'setImagem'
+        'imagem' => 'setImagem',
+        'aplicabilidade_margem_preferencia_normal' => 'setAplicabilidadeMargemPreferenciaNormal',
+        'aplicabilidade_margem_preferencia_adicional' => 'setAplicabilidadeMargemPreferenciaAdicional',
+        'percentual_margem_preferencia_normal' => 'setPercentualMargemPreferenciaNormal',
+        'percentual_margem_preferencia_adicional' => 'setPercentualMargemPreferenciaAdicional',
+        'ncm_nbs_codigo' => 'setNcmNbsCodigo',
+        'ncm_nbs_descricao' => 'setNcmNbsDescricao',
+        'catalogo' => 'setCatalogo',
+        'categoria_item_catalogo' => 'setCategoriaItemCatalogo',
+        'catalogo_codigo_item' => 'setCatalogoCodigoItem',
+        'informacao_complementar' => 'setInformacaoComplementar'
     ];
 
     /**
@@ -323,7 +373,17 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
         'data_inclusao' => 'getDataInclusao',
         'data_atualizacao' => 'getDataAtualizacao',
         'tem_resultado' => 'getTemResultado',
-        'imagem' => 'getImagem'
+        'imagem' => 'getImagem',
+        'aplicabilidade_margem_preferencia_normal' => 'getAplicabilidadeMargemPreferenciaNormal',
+        'aplicabilidade_margem_preferencia_adicional' => 'getAplicabilidadeMargemPreferenciaAdicional',
+        'percentual_margem_preferencia_normal' => 'getPercentualMargemPreferenciaNormal',
+        'percentual_margem_preferencia_adicional' => 'getPercentualMargemPreferenciaAdicional',
+        'ncm_nbs_codigo' => 'getNcmNbsCodigo',
+        'ncm_nbs_descricao' => 'getNcmNbsDescricao',
+        'catalogo' => 'getCatalogo',
+        'categoria_item_catalogo' => 'getCategoriaItemCatalogo',
+        'catalogo_codigo_item' => 'getCatalogoCodigoItem',
+        'informacao_complementar' => 'getInformacaoComplementar'
     ];
 
     /**
@@ -464,6 +524,16 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('data_atualizacao', $data ?? [], null);
         $this->setIfExists('tem_resultado', $data ?? [], null);
         $this->setIfExists('imagem', $data ?? [], null);
+        $this->setIfExists('aplicabilidade_margem_preferencia_normal', $data ?? [], null);
+        $this->setIfExists('aplicabilidade_margem_preferencia_adicional', $data ?? [], null);
+        $this->setIfExists('percentual_margem_preferencia_normal', $data ?? [], null);
+        $this->setIfExists('percentual_margem_preferencia_adicional', $data ?? [], null);
+        $this->setIfExists('ncm_nbs_codigo', $data ?? [], null);
+        $this->setIfExists('ncm_nbs_descricao', $data ?? [], null);
+        $this->setIfExists('catalogo', $data ?? [], null);
+        $this->setIfExists('categoria_item_catalogo', $data ?? [], null);
+        $this->setIfExists('catalogo_codigo_item', $data ?? [], null);
+        $this->setIfExists('informacao_complementar', $data ?? [], null);
     }
 
     /**
@@ -1209,6 +1279,276 @@ class RecuperarCompraItemSigiloDTO implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable imagem cannot be null');
         }
         $this->container['imagem'] = $imagem;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicabilidade_margem_preferencia_normal
+     *
+     * @return bool|null
+     */
+    public function getAplicabilidadeMargemPreferenciaNormal()
+    {
+        return $this->container['aplicabilidade_margem_preferencia_normal'];
+    }
+
+    /**
+     * Sets aplicabilidade_margem_preferencia_normal
+     *
+     * @param bool|null $aplicabilidade_margem_preferencia_normal aplicabilidade_margem_preferencia_normal
+     *
+     * @return self
+     */
+    public function setAplicabilidadeMargemPreferenciaNormal($aplicabilidade_margem_preferencia_normal)
+    {
+        if (is_null($aplicabilidade_margem_preferencia_normal)) {
+            throw new \InvalidArgumentException('non-nullable aplicabilidade_margem_preferencia_normal cannot be null');
+        }
+        $this->container['aplicabilidade_margem_preferencia_normal'] = $aplicabilidade_margem_preferencia_normal;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicabilidade_margem_preferencia_adicional
+     *
+     * @return bool|null
+     */
+    public function getAplicabilidadeMargemPreferenciaAdicional()
+    {
+        return $this->container['aplicabilidade_margem_preferencia_adicional'];
+    }
+
+    /**
+     * Sets aplicabilidade_margem_preferencia_adicional
+     *
+     * @param bool|null $aplicabilidade_margem_preferencia_adicional aplicabilidade_margem_preferencia_adicional
+     *
+     * @return self
+     */
+    public function setAplicabilidadeMargemPreferenciaAdicional($aplicabilidade_margem_preferencia_adicional)
+    {
+        if (is_null($aplicabilidade_margem_preferencia_adicional)) {
+            throw new \InvalidArgumentException('non-nullable aplicabilidade_margem_preferencia_adicional cannot be null');
+        }
+        $this->container['aplicabilidade_margem_preferencia_adicional'] = $aplicabilidade_margem_preferencia_adicional;
+
+        return $this;
+    }
+
+    /**
+     * Gets percentual_margem_preferencia_normal
+     *
+     * @return float|null
+     */
+    public function getPercentualMargemPreferenciaNormal()
+    {
+        return $this->container['percentual_margem_preferencia_normal'];
+    }
+
+    /**
+     * Sets percentual_margem_preferencia_normal
+     *
+     * @param float|null $percentual_margem_preferencia_normal percentual_margem_preferencia_normal
+     *
+     * @return self
+     */
+    public function setPercentualMargemPreferenciaNormal($percentual_margem_preferencia_normal)
+    {
+        if (is_null($percentual_margem_preferencia_normal)) {
+            throw new \InvalidArgumentException('non-nullable percentual_margem_preferencia_normal cannot be null');
+        }
+        $this->container['percentual_margem_preferencia_normal'] = $percentual_margem_preferencia_normal;
+
+        return $this;
+    }
+
+    /**
+     * Gets percentual_margem_preferencia_adicional
+     *
+     * @return float|null
+     */
+    public function getPercentualMargemPreferenciaAdicional()
+    {
+        return $this->container['percentual_margem_preferencia_adicional'];
+    }
+
+    /**
+     * Sets percentual_margem_preferencia_adicional
+     *
+     * @param float|null $percentual_margem_preferencia_adicional percentual_margem_preferencia_adicional
+     *
+     * @return self
+     */
+    public function setPercentualMargemPreferenciaAdicional($percentual_margem_preferencia_adicional)
+    {
+        if (is_null($percentual_margem_preferencia_adicional)) {
+            throw new \InvalidArgumentException('non-nullable percentual_margem_preferencia_adicional cannot be null');
+        }
+        $this->container['percentual_margem_preferencia_adicional'] = $percentual_margem_preferencia_adicional;
+
+        return $this;
+    }
+
+    /**
+     * Gets ncm_nbs_codigo
+     *
+     * @return string|null
+     */
+    public function getNcmNbsCodigo()
+    {
+        return $this->container['ncm_nbs_codigo'];
+    }
+
+    /**
+     * Sets ncm_nbs_codigo
+     *
+     * @param string|null $ncm_nbs_codigo ncm_nbs_codigo
+     *
+     * @return self
+     */
+    public function setNcmNbsCodigo($ncm_nbs_codigo)
+    {
+        if (is_null($ncm_nbs_codigo)) {
+            throw new \InvalidArgumentException('non-nullable ncm_nbs_codigo cannot be null');
+        }
+        $this->container['ncm_nbs_codigo'] = $ncm_nbs_codigo;
+
+        return $this;
+    }
+
+    /**
+     * Gets ncm_nbs_descricao
+     *
+     * @return string|null
+     */
+    public function getNcmNbsDescricao()
+    {
+        return $this->container['ncm_nbs_descricao'];
+    }
+
+    /**
+     * Sets ncm_nbs_descricao
+     *
+     * @param string|null $ncm_nbs_descricao ncm_nbs_descricao
+     *
+     * @return self
+     */
+    public function setNcmNbsDescricao($ncm_nbs_descricao)
+    {
+        if (is_null($ncm_nbs_descricao)) {
+            throw new \InvalidArgumentException('non-nullable ncm_nbs_descricao cannot be null');
+        }
+        $this->container['ncm_nbs_descricao'] = $ncm_nbs_descricao;
+
+        return $this;
+    }
+
+    /**
+     * Gets catalogo
+     *
+     * @return \OpenAPI\Client\Model\CatalogoDTO|null
+     */
+    public function getCatalogo()
+    {
+        return $this->container['catalogo'];
+    }
+
+    /**
+     * Sets catalogo
+     *
+     * @param \OpenAPI\Client\Model\CatalogoDTO|null $catalogo catalogo
+     *
+     * @return self
+     */
+    public function setCatalogo($catalogo)
+    {
+        if (is_null($catalogo)) {
+            throw new \InvalidArgumentException('non-nullable catalogo cannot be null');
+        }
+        $this->container['catalogo'] = $catalogo;
+
+        return $this;
+    }
+
+    /**
+     * Gets categoria_item_catalogo
+     *
+     * @return \OpenAPI\Client\Model\DominioGenericoDTO|null
+     */
+    public function getCategoriaItemCatalogo()
+    {
+        return $this->container['categoria_item_catalogo'];
+    }
+
+    /**
+     * Sets categoria_item_catalogo
+     *
+     * @param \OpenAPI\Client\Model\DominioGenericoDTO|null $categoria_item_catalogo categoria_item_catalogo
+     *
+     * @return self
+     */
+    public function setCategoriaItemCatalogo($categoria_item_catalogo)
+    {
+        if (is_null($categoria_item_catalogo)) {
+            throw new \InvalidArgumentException('non-nullable categoria_item_catalogo cannot be null');
+        }
+        $this->container['categoria_item_catalogo'] = $categoria_item_catalogo;
+
+        return $this;
+    }
+
+    /**
+     * Gets catalogo_codigo_item
+     *
+     * @return string|null
+     */
+    public function getCatalogoCodigoItem()
+    {
+        return $this->container['catalogo_codigo_item'];
+    }
+
+    /**
+     * Sets catalogo_codigo_item
+     *
+     * @param string|null $catalogo_codigo_item catalogo_codigo_item
+     *
+     * @return self
+     */
+    public function setCatalogoCodigoItem($catalogo_codigo_item)
+    {
+        if (is_null($catalogo_codigo_item)) {
+            throw new \InvalidArgumentException('non-nullable catalogo_codigo_item cannot be null');
+        }
+        $this->container['catalogo_codigo_item'] = $catalogo_codigo_item;
+
+        return $this;
+    }
+
+    /**
+     * Gets informacao_complementar
+     *
+     * @return string|null
+     */
+    public function getInformacaoComplementar()
+    {
+        return $this->container['informacao_complementar'];
+    }
+
+    /**
+     * Sets informacao_complementar
+     *
+     * @param string|null $informacao_complementar informacao_complementar
+     *
+     * @return self
+     */
+    public function setInformacaoComplementar($informacao_complementar)
+    {
+        if (is_null($informacao_complementar)) {
+            throw new \InvalidArgumentException('non-nullable informacao_complementar cannot be null');
+        }
+        $this->container['informacao_complementar'] = $informacao_complementar;
 
         return $this;
     }

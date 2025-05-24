@@ -66,9 +66,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         'esfera_id' => 'string',
         'validado' => 'bool',
         'data_validacao' => '\DateTime',
+        'codigo_natureza_juridica' => 'string',
+        'nome_fantasia' => 'string',
+        'situacao_cadastral' => 'string',
+        'motivo_situacao_cadastral' => 'string',
+        'data_situacao_cadastral' => '\DateTime',
         'data_inclusao' => '\DateTime',
-        'data_atualizacao' => '\DateTime',
-        'codigo_natureza_juridica' => 'string'
+        'data_atualizacao' => '\DateTime'
     ];
 
     /**
@@ -87,9 +91,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         'esfera_id' => null,
         'validado' => null,
         'data_validacao' => 'date-time',
+        'codigo_natureza_juridica' => null,
+        'nome_fantasia' => null,
+        'situacao_cadastral' => null,
+        'motivo_situacao_cadastral' => null,
+        'data_situacao_cadastral' => 'date',
         'data_inclusao' => 'date-time',
-        'data_atualizacao' => 'date-time',
-        'codigo_natureza_juridica' => null
+        'data_atualizacao' => 'date-time'
     ];
 
     /**
@@ -106,9 +114,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
 		'esfera_id' => false,
 		'validado' => false,
 		'data_validacao' => false,
+		'codigo_natureza_juridica' => false,
+		'nome_fantasia' => false,
+		'situacao_cadastral' => false,
+		'motivo_situacao_cadastral' => false,
+		'data_situacao_cadastral' => false,
 		'data_inclusao' => false,
-		'data_atualizacao' => false,
-		'codigo_natureza_juridica' => false
+		'data_atualizacao' => false
     ];
 
     /**
@@ -205,9 +217,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         'esfera_id' => 'esferaId',
         'validado' => 'validado',
         'data_validacao' => 'dataValidacao',
+        'codigo_natureza_juridica' => 'codigoNaturezaJuridica',
+        'nome_fantasia' => 'nomeFantasia',
+        'situacao_cadastral' => 'situacaoCadastral',
+        'motivo_situacao_cadastral' => 'motivoSituacaoCadastral',
+        'data_situacao_cadastral' => 'dataSituacaoCadastral',
         'data_inclusao' => 'dataInclusao',
-        'data_atualizacao' => 'dataAtualizacao',
-        'codigo_natureza_juridica' => 'codigoNaturezaJuridica'
+        'data_atualizacao' => 'dataAtualizacao'
     ];
 
     /**
@@ -224,9 +240,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         'esfera_id' => 'setEsferaId',
         'validado' => 'setValidado',
         'data_validacao' => 'setDataValidacao',
+        'codigo_natureza_juridica' => 'setCodigoNaturezaJuridica',
+        'nome_fantasia' => 'setNomeFantasia',
+        'situacao_cadastral' => 'setSituacaoCadastral',
+        'motivo_situacao_cadastral' => 'setMotivoSituacaoCadastral',
+        'data_situacao_cadastral' => 'setDataSituacaoCadastral',
         'data_inclusao' => 'setDataInclusao',
-        'data_atualizacao' => 'setDataAtualizacao',
-        'codigo_natureza_juridica' => 'setCodigoNaturezaJuridica'
+        'data_atualizacao' => 'setDataAtualizacao'
     ];
 
     /**
@@ -243,9 +263,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         'esfera_id' => 'getEsferaId',
         'validado' => 'getValidado',
         'data_validacao' => 'getDataValidacao',
+        'codigo_natureza_juridica' => 'getCodigoNaturezaJuridica',
+        'nome_fantasia' => 'getNomeFantasia',
+        'situacao_cadastral' => 'getSituacaoCadastral',
+        'motivo_situacao_cadastral' => 'getMotivoSituacaoCadastral',
+        'data_situacao_cadastral' => 'getDataSituacaoCadastral',
         'data_inclusao' => 'getDataInclusao',
-        'data_atualizacao' => 'getDataAtualizacao',
-        'codigo_natureza_juridica' => 'getCodigoNaturezaJuridica'
+        'data_atualizacao' => 'getDataAtualizacao'
     ];
 
     /**
@@ -313,9 +337,13 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('esfera_id', $data ?? [], null);
         $this->setIfExists('validado', $data ?? [], null);
         $this->setIfExists('data_validacao', $data ?? [], null);
+        $this->setIfExists('codigo_natureza_juridica', $data ?? [], null);
+        $this->setIfExists('nome_fantasia', $data ?? [], null);
+        $this->setIfExists('situacao_cadastral', $data ?? [], null);
+        $this->setIfExists('motivo_situacao_cadastral', $data ?? [], null);
+        $this->setIfExists('data_situacao_cadastral', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
-        $this->setIfExists('codigo_natureza_juridica', $data ?? [], null);
     }
 
     /**
@@ -345,8 +373,8 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['razao_social']) && (mb_strlen($this->container['razao_social']) > 100)) {
-            $invalidProperties[] = "invalid value for 'razao_social', the character length must be smaller than or equal to 100.";
+        if (!is_null($this->container['razao_social']) && (mb_strlen($this->container['razao_social']) > 255)) {
+            $invalidProperties[] = "invalid value for 'razao_social', the character length must be smaller than or equal to 255.";
         }
 
         if (!is_null($this->container['razao_social']) && (mb_strlen($this->container['razao_social']) < 1)) {
@@ -444,8 +472,8 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
         if (is_null($razao_social)) {
             throw new \InvalidArgumentException('non-nullable razao_social cannot be null');
         }
-        if ((mb_strlen($razao_social) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $razao_social when calling OrgaoEntidade., must be smaller than or equal to 100.');
+        if ((mb_strlen($razao_social) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $razao_social when calling OrgaoEntidade., must be smaller than or equal to 255.');
         }
         if ((mb_strlen($razao_social) < 1)) {
             throw new \InvalidArgumentException('invalid length for $razao_social when calling OrgaoEntidade., must be bigger than or equal to 1.');
@@ -592,6 +620,141 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets codigo_natureza_juridica
+     *
+     * @return string|null
+     */
+    public function getCodigoNaturezaJuridica()
+    {
+        return $this->container['codigo_natureza_juridica'];
+    }
+
+    /**
+     * Sets codigo_natureza_juridica
+     *
+     * @param string|null $codigo_natureza_juridica codigo_natureza_juridica
+     *
+     * @return self
+     */
+    public function setCodigoNaturezaJuridica($codigo_natureza_juridica)
+    {
+        if (is_null($codigo_natureza_juridica)) {
+            throw new \InvalidArgumentException('non-nullable codigo_natureza_juridica cannot be null');
+        }
+        $this->container['codigo_natureza_juridica'] = $codigo_natureza_juridica;
+
+        return $this;
+    }
+
+    /**
+     * Gets nome_fantasia
+     *
+     * @return string|null
+     */
+    public function getNomeFantasia()
+    {
+        return $this->container['nome_fantasia'];
+    }
+
+    /**
+     * Sets nome_fantasia
+     *
+     * @param string|null $nome_fantasia nome_fantasia
+     *
+     * @return self
+     */
+    public function setNomeFantasia($nome_fantasia)
+    {
+        if (is_null($nome_fantasia)) {
+            throw new \InvalidArgumentException('non-nullable nome_fantasia cannot be null');
+        }
+        $this->container['nome_fantasia'] = $nome_fantasia;
+
+        return $this;
+    }
+
+    /**
+     * Gets situacao_cadastral
+     *
+     * @return string|null
+     */
+    public function getSituacaoCadastral()
+    {
+        return $this->container['situacao_cadastral'];
+    }
+
+    /**
+     * Sets situacao_cadastral
+     *
+     * @param string|null $situacao_cadastral situacao_cadastral
+     *
+     * @return self
+     */
+    public function setSituacaoCadastral($situacao_cadastral)
+    {
+        if (is_null($situacao_cadastral)) {
+            throw new \InvalidArgumentException('non-nullable situacao_cadastral cannot be null');
+        }
+        $this->container['situacao_cadastral'] = $situacao_cadastral;
+
+        return $this;
+    }
+
+    /**
+     * Gets motivo_situacao_cadastral
+     *
+     * @return string|null
+     */
+    public function getMotivoSituacaoCadastral()
+    {
+        return $this->container['motivo_situacao_cadastral'];
+    }
+
+    /**
+     * Sets motivo_situacao_cadastral
+     *
+     * @param string|null $motivo_situacao_cadastral motivo_situacao_cadastral
+     *
+     * @return self
+     */
+    public function setMotivoSituacaoCadastral($motivo_situacao_cadastral)
+    {
+        if (is_null($motivo_situacao_cadastral)) {
+            throw new \InvalidArgumentException('non-nullable motivo_situacao_cadastral cannot be null');
+        }
+        $this->container['motivo_situacao_cadastral'] = $motivo_situacao_cadastral;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_situacao_cadastral
+     *
+     * @return \DateTime|null
+     */
+    public function getDataSituacaoCadastral()
+    {
+        return $this->container['data_situacao_cadastral'];
+    }
+
+    /**
+     * Sets data_situacao_cadastral
+     *
+     * @param \DateTime|null $data_situacao_cadastral data_situacao_cadastral
+     *
+     * @return self
+     */
+    public function setDataSituacaoCadastral($data_situacao_cadastral)
+    {
+        if (is_null($data_situacao_cadastral)) {
+            throw new \InvalidArgumentException('non-nullable data_situacao_cadastral cannot be null');
+        }
+        $this->container['data_situacao_cadastral'] = $data_situacao_cadastral;
+
+        return $this;
+    }
+
+    /**
      * Gets data_inclusao
      *
      * @return \DateTime|null
@@ -641,33 +804,6 @@ class OrgaoEntidade implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
-
-        return $this;
-    }
-
-    /**
-     * Gets codigo_natureza_juridica
-     *
-     * @return string|null
-     */
-    public function getCodigoNaturezaJuridica()
-    {
-        return $this->container['codigo_natureza_juridica'];
-    }
-
-    /**
-     * Sets codigo_natureza_juridica
-     *
-     * @param string|null $codigo_natureza_juridica codigo_natureza_juridica
-     *
-     * @return self
-     */
-    public function setCodigoNaturezaJuridica($codigo_natureza_juridica)
-    {
-        if (is_null($codigo_natureza_juridica)) {
-            throw new \InvalidArgumentException('non-nullable codigo_natureza_juridica cannot be null');
-        }
-        $this->container['codigo_natureza_juridica'] = $codigo_natureza_juridica;
 
         return $this;
     }

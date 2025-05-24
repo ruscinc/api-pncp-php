@@ -517,6 +517,14 @@ class AlterarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializab
         if ($this->container['nome_razao_social_fornecedor'] === null) {
             $invalidProperties[] = "'nome_razao_social_fornecedor' can't be null";
         }
+        if ((mb_strlen($this->container['nome_razao_social_fornecedor']) > 255)) {
+            $invalidProperties[] = "invalid value for 'nome_razao_social_fornecedor', the character length must be smaller than or equal to 255.";
+        }
+
+        if ((mb_strlen($this->container['nome_razao_social_fornecedor']) < 0)) {
+            $invalidProperties[] = "invalid value for 'nome_razao_social_fornecedor', the character length must be bigger than or equal to 0.";
+        }
+
         if ($this->container['receita'] === null) {
             $invalidProperties[] = "'receita' can't be null";
         }
@@ -563,6 +571,14 @@ class AlterarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializab
         if ($this->container['data_vigencia_fim'] === null) {
             $invalidProperties[] = "'data_vigencia_fim' can't be null";
         }
+        if (!is_null($this->container['nome_razao_social_fornecedor_sub_contratado']) && (mb_strlen($this->container['nome_razao_social_fornecedor_sub_contratado']) > 255)) {
+            $invalidProperties[] = "invalid value for 'nome_razao_social_fornecedor_sub_contratado', the character length must be smaller than or equal to 255.";
+        }
+
+        if (!is_null($this->container['nome_razao_social_fornecedor_sub_contratado']) && (mb_strlen($this->container['nome_razao_social_fornecedor_sub_contratado']) < 0)) {
+            $invalidProperties[] = "invalid value for 'nome_razao_social_fornecedor_sub_contratado', the character length must be bigger than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -858,6 +874,13 @@ class AlterarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializab
         if (is_null($nome_razao_social_fornecedor)) {
             throw new \InvalidArgumentException('non-nullable nome_razao_social_fornecedor cannot be null');
         }
+        if ((mb_strlen($nome_razao_social_fornecedor) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $nome_razao_social_fornecedor when calling AlterarContratoDTO., must be smaller than or equal to 255.');
+        }
+        if ((mb_strlen($nome_razao_social_fornecedor) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $nome_razao_social_fornecedor when calling AlterarContratoDTO., must be bigger than or equal to 0.');
+        }
+
         $this->container['nome_razao_social_fornecedor'] = $nome_razao_social_fornecedor;
 
         return $this;
@@ -1256,6 +1279,13 @@ class AlterarContratoDTO implements ModelInterface, ArrayAccess, \JsonSerializab
         if (is_null($nome_razao_social_fornecedor_sub_contratado)) {
             throw new \InvalidArgumentException('non-nullable nome_razao_social_fornecedor_sub_contratado cannot be null');
         }
+        if ((mb_strlen($nome_razao_social_fornecedor_sub_contratado) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $nome_razao_social_fornecedor_sub_contratado when calling AlterarContratoDTO., must be smaller than or equal to 255.');
+        }
+        if ((mb_strlen($nome_razao_social_fornecedor_sub_contratado) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $nome_razao_social_fornecedor_sub_contratado when calling AlterarContratoDTO., must be bigger than or equal to 0.');
+        }
+
         $this->container['nome_razao_social_fornecedor_sub_contratado'] = $nome_razao_social_fornecedor_sub_contratado;
 
         return $this;

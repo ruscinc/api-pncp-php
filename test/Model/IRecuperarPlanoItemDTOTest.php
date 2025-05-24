@@ -81,6 +81,24 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "pdm_codigo"
+     */
+    public function testPropertyPdmCodigo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "categoria_item_pca_nome"
+     */
+    public function testPropertyCategoriaItemPcaNome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "codigo_unidade"
      */
     public function testPropertyCodigoUnidade()
@@ -99,63 +117,9 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "valor_total"
-     */
-    public function testPropertyValorTotal()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "cnpj"
-     */
-    public function testPropertyCnpj()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ano_pca"
-     */
-    public function testPropertyAnoPca()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "data_atualizacao"
      */
     public function testPropertyDataAtualizacao()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sequencial_pca"
-     */
-    public function testPropertySequencialPca()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "quantidade"
-     */
-    public function testPropertyQuantidade()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data_inclusao"
-     */
-    public function testPropertyDataInclusao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -171,6 +135,51 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "sequencial_pca"
+     */
+    public function testPropertySequencialPca()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "cnpj"
+     */
+    public function testPropertyCnpj()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "quantidade"
+     */
+    public function testPropertyQuantidade()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_total"
+     */
+    public function testPropertyValorTotal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ano_pca"
+     */
+    public function testPropertyAnoPca()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "data_desejada"
      */
     public function testPropertyDataDesejada()
@@ -180,18 +189,27 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "numero_item"
+     * Test attribute "descricao"
      */
-    public function testPropertyNumeroItem()
+    public function testPropertyDescricao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "pdm_codigo"
+     * Test attribute "data_inclusao"
      */
-    public function testPropertyPdmCodigo()
+    public function testPropertyDataInclusao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numero_item"
+     */
+    public function testPropertyNumeroItem()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -243,15 +261,6 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "descricao"
-     */
-    public function testPropertyDescricao()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "classificacao_superior_codigo"
      */
     public function testPropertyClassificacaoSuperiorCodigo()
@@ -297,18 +306,18 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "nome_classificacao"
+     * Test attribute "nome_catalogo"
      */
-    public function testPropertyNomeClassificacao()
+    public function testPropertyNomeCatalogo()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "categoria_item_pcaid"
+     * Test attribute "nome_classificacao"
      */
-    public function testPropertyCategoriaItemPcaid()
+    public function testPropertyNomeClassificacao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -324,27 +333,18 @@ class IRecuperarPlanoItemDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "categoria_item_pcaid"
+     */
+    public function testPropertyCategoriaItemPcaid()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "classificacao_catalogo_id"
      */
     public function testPropertyClassificacaoCatalogoId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "nome_catalogo"
-     */
-    public function testPropertyNomeCatalogo()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "categoria_item_pca_nome"
-     */
-    public function testPropertyCategoriaItemPcaNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

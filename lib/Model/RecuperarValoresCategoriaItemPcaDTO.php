@@ -58,7 +58,7 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'categoria_item_id' => 'string',
+        'categoria_item_id' => 'int',
         'quantidade_itens' => 'int',
         'valor_total' => 'float',
         'categoria_item_nome' => 'string'
@@ -72,7 +72,7 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'categoria_item_id' => null,
+        'categoria_item_id' => 'int64',
         'quantidade_itens' => 'int64',
         'valor_total' => null,
         'categoria_item_nome' => null
@@ -247,33 +247,6 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    public const CATEGORIA_ITEM_ID__1 = '1';
-    public const CATEGORIA_ITEM_ID__2 = '2';
-    public const CATEGORIA_ITEM_ID__3 = '3';
-    public const CATEGORIA_ITEM_ID__4 = '4';
-    public const CATEGORIA_ITEM_ID__5 = '5';
-    public const CATEGORIA_ITEM_ID__6 = '6';
-    public const CATEGORIA_ITEM_ID__7 = '7';
-    public const CATEGORIA_ITEM_ID__8 = '8';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCategoriaItemIdAllowableValues()
-    {
-        return [
-            self::CATEGORIA_ITEM_ID__1,
-            self::CATEGORIA_ITEM_ID__2,
-            self::CATEGORIA_ITEM_ID__3,
-            self::CATEGORIA_ITEM_ID__4,
-            self::CATEGORIA_ITEM_ID__5,
-            self::CATEGORIA_ITEM_ID__6,
-            self::CATEGORIA_ITEM_ID__7,
-            self::CATEGORIA_ITEM_ID__8,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -323,15 +296,6 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getCategoriaItemIdAllowableValues();
-        if (!is_null($this->container['categoria_item_id']) && !in_array($this->container['categoria_item_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'categoria_item_id', must be one of '%s'",
-                $this->container['categoria_item_id'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -350,7 +314,7 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
     /**
      * Gets categoria_item_id
      *
-     * @return string|null
+     * @return int|null
      */
     public function getCategoriaItemId()
     {
@@ -360,7 +324,7 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
     /**
      * Sets categoria_item_id
      *
-     * @param string|null $categoria_item_id categoria_item_id
+     * @param int|null $categoria_item_id categoria_item_id
      *
      * @return self
      */
@@ -368,16 +332,6 @@ class RecuperarValoresCategoriaItemPcaDTO implements ModelInterface, ArrayAccess
     {
         if (is_null($categoria_item_id)) {
             throw new \InvalidArgumentException('non-nullable categoria_item_id cannot be null');
-        }
-        $allowedValues = $this->getCategoriaItemIdAllowableValues();
-        if (!in_array($categoria_item_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'categoria_item_id', must be one of '%s'",
-                    $categoria_item_id,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['categoria_item_id'] = $categoria_item_id;
 

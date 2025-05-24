@@ -67,6 +67,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelado' => 'bool',
         'data_inclusao' => '\DateTime',
         'data_atualizacao' => '\DateTime',
+        'data_atualizacao_global' => '\DateTime',
         'data_vigencia_inicio' => '\DateTime',
         'data_vigencia_fim' => '\DateTime',
         'sequencial_ata' => 'int',
@@ -93,6 +94,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelado' => null,
         'data_inclusao' => 'date-time',
         'data_atualizacao' => 'date-time',
+        'data_atualizacao_global' => 'date-time',
         'data_vigencia_inicio' => 'date',
         'data_vigencia_fim' => 'date',
         'sequencial_ata' => 'int32',
@@ -117,6 +119,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
 		'cancelado' => false,
 		'data_inclusao' => false,
 		'data_atualizacao' => false,
+		'data_atualizacao_global' => false,
 		'data_vigencia_inicio' => false,
 		'data_vigencia_fim' => false,
 		'sequencial_ata' => false,
@@ -221,6 +224,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelado' => 'cancelado',
         'data_inclusao' => 'dataInclusao',
         'data_atualizacao' => 'dataAtualizacao',
+        'data_atualizacao_global' => 'dataAtualizacaoGlobal',
         'data_vigencia_inicio' => 'dataVigenciaInicio',
         'data_vigencia_fim' => 'dataVigenciaFim',
         'sequencial_ata' => 'sequencialAta',
@@ -245,6 +249,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelado' => 'setCancelado',
         'data_inclusao' => 'setDataInclusao',
         'data_atualizacao' => 'setDataAtualizacao',
+        'data_atualizacao_global' => 'setDataAtualizacaoGlobal',
         'data_vigencia_inicio' => 'setDataVigenciaInicio',
         'data_vigencia_fim' => 'setDataVigenciaFim',
         'sequencial_ata' => 'setSequencialAta',
@@ -269,6 +274,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelado' => 'getCancelado',
         'data_inclusao' => 'getDataInclusao',
         'data_atualizacao' => 'getDataAtualizacao',
+        'data_atualizacao_global' => 'getDataAtualizacaoGlobal',
         'data_vigencia_inicio' => 'getDataVigenciaInicio',
         'data_vigencia_fim' => 'getDataVigenciaFim',
         'sequencial_ata' => 'getSequencialAta',
@@ -344,6 +350,7 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('cancelado', $data ?? [], null);
         $this->setIfExists('data_inclusao', $data ?? [], null);
         $this->setIfExists('data_atualizacao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao_global', $data ?? [], null);
         $this->setIfExists('data_vigencia_inicio', $data ?? [], null);
         $this->setIfExists('data_vigencia_fim', $data ?? [], null);
         $this->setIfExists('sequencial_ata', $data ?? [], null);
@@ -640,6 +647,33 @@ class AtaRegistroPreco implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
         }
         $this->container['data_atualizacao'] = $data_atualizacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_atualizacao_global
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacaoGlobal()
+    {
+        return $this->container['data_atualizacao_global'];
+    }
+
+    /**
+     * Sets data_atualizacao_global
+     *
+     * @param \DateTime|null $data_atualizacao_global data_atualizacao_global
+     *
+     * @return self
+     */
+    public function setDataAtualizacaoGlobal($data_atualizacao_global)
+    {
+        if (is_null($data_atualizacao_global)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao_global cannot be null');
+        }
+        $this->container['data_atualizacao_global'] = $data_atualizacao_global;
 
         return $this;
     }

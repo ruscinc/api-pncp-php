@@ -108,6 +108,15 @@ class PlanoSequencialConsolidadoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "data_atualizacao_global_pca"
+     */
+    public function testPropertyDataAtualizacaoGlobalPca()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "data_publicacao_pncp"
      */
     public function testPropertyDataPublicacaoPncp()

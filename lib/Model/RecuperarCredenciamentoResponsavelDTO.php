@@ -59,8 +59,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
       */
     protected static $openAPITypes = [
         'data_inclusao' => '\DateTime',
-        'responsavel_telefone' => 'string',
         'responsavel_nome' => 'string',
+        'responsavel_telefone' => 'string',
         'responsavel_email' => 'string',
         'responsavel_cpf' => 'string'
     ];
@@ -74,8 +74,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
       */
     protected static $openAPIFormats = [
         'data_inclusao' => 'date-time',
-        'responsavel_telefone' => null,
         'responsavel_nome' => null,
+        'responsavel_telefone' => null,
         'responsavel_email' => null,
         'responsavel_cpf' => null
     ];
@@ -87,8 +87,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
       */
     protected static array $openAPINullables = [
         'data_inclusao' => false,
-		'responsavel_telefone' => false,
 		'responsavel_nome' => false,
+		'responsavel_telefone' => false,
 		'responsavel_email' => false,
 		'responsavel_cpf' => false
     ];
@@ -180,8 +180,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
      */
     protected static $attributeMap = [
         'data_inclusao' => 'dataInclusao',
-        'responsavel_telefone' => 'responsavelTelefone',
         'responsavel_nome' => 'responsavelNome',
+        'responsavel_telefone' => 'responsavelTelefone',
         'responsavel_email' => 'responsavelEmail',
         'responsavel_cpf' => 'responsavelCpf'
     ];
@@ -193,8 +193,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
      */
     protected static $setters = [
         'data_inclusao' => 'setDataInclusao',
-        'responsavel_telefone' => 'setResponsavelTelefone',
         'responsavel_nome' => 'setResponsavelNome',
+        'responsavel_telefone' => 'setResponsavelTelefone',
         'responsavel_email' => 'setResponsavelEmail',
         'responsavel_cpf' => 'setResponsavelCpf'
     ];
@@ -206,8 +206,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
      */
     protected static $getters = [
         'data_inclusao' => 'getDataInclusao',
-        'responsavel_telefone' => 'getResponsavelTelefone',
         'responsavel_nome' => 'getResponsavelNome',
+        'responsavel_telefone' => 'getResponsavelTelefone',
         'responsavel_email' => 'getResponsavelEmail',
         'responsavel_cpf' => 'getResponsavelCpf'
     ];
@@ -270,8 +270,8 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->setIfExists('data_inclusao', $data ?? [], null);
-        $this->setIfExists('responsavel_telefone', $data ?? [], null);
         $this->setIfExists('responsavel_nome', $data ?? [], null);
+        $this->setIfExists('responsavel_telefone', $data ?? [], null);
         $this->setIfExists('responsavel_email', $data ?? [], null);
         $this->setIfExists('responsavel_cpf', $data ?? [], null);
     }
@@ -346,33 +346,6 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
     }
 
     /**
-     * Gets responsavel_telefone
-     *
-     * @return string|null
-     */
-    public function getResponsavelTelefone()
-    {
-        return $this->container['responsavel_telefone'];
-    }
-
-    /**
-     * Sets responsavel_telefone
-     *
-     * @param string|null $responsavel_telefone responsavel_telefone
-     *
-     * @return self
-     */
-    public function setResponsavelTelefone($responsavel_telefone)
-    {
-        if (is_null($responsavel_telefone)) {
-            throw new \InvalidArgumentException('non-nullable responsavel_telefone cannot be null');
-        }
-        $this->container['responsavel_telefone'] = $responsavel_telefone;
-
-        return $this;
-    }
-
-    /**
      * Gets responsavel_nome
      *
      * @return string|null
@@ -395,6 +368,33 @@ class RecuperarCredenciamentoResponsavelDTO implements ModelInterface, ArrayAcce
             throw new \InvalidArgumentException('non-nullable responsavel_nome cannot be null');
         }
         $this->container['responsavel_nome'] = $responsavel_nome;
+
+        return $this;
+    }
+
+    /**
+     * Gets responsavel_telefone
+     *
+     * @return string|null
+     */
+    public function getResponsavelTelefone()
+    {
+        return $this->container['responsavel_telefone'];
+    }
+
+    /**
+     * Sets responsavel_telefone
+     *
+     * @param string|null $responsavel_telefone responsavel_telefone
+     *
+     * @return self
+     */
+    public function setResponsavelTelefone($responsavel_telefone)
+    {
+        if (is_null($responsavel_telefone)) {
+            throw new \InvalidArgumentException('non-nullable responsavel_telefone cannot be null');
+        }
+        $this->container['responsavel_telefone'] = $responsavel_telefone;
 
         return $this;
     }

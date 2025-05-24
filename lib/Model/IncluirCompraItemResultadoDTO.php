@@ -62,6 +62,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_unitario_homologado' => 'float',
         'valor_total_homologado' => 'float',
         'percentual_desconto' => 'float',
+        'aplicacao_margem_preferencia' => 'bool',
+        'amparo_legal_margem_preferencia_id' => 'int',
+        'aplicacao_beneficio_me_epp' => 'bool',
+        'aplicacao_criterio_desempate' => 'bool',
+        'amparo_legal_criterio_desempate_id' => 'int',
+        'simbolo_moeda_estrangeira' => 'string',
+        'data_cotacao_moeda_estrangeira' => '\DateTime',
+        'timezone_cotacao_moeda_estrangeira' => 'string',
+        'valor_nominal_moeda_estrangeira' => 'float',
+        'pais_origem_produto_servico_id' => 'string',
         'tipo_pessoa_id' => 'string',
         'ni_fornecedor' => 'string',
         'nome_razao_social_fornecedor' => 'string',
@@ -85,6 +95,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_unitario_homologado' => null,
         'valor_total_homologado' => null,
         'percentual_desconto' => null,
+        'aplicacao_margem_preferencia' => null,
+        'amparo_legal_margem_preferencia_id' => 'int64',
+        'aplicacao_beneficio_me_epp' => null,
+        'aplicacao_criterio_desempate' => null,
+        'amparo_legal_criterio_desempate_id' => 'int64',
+        'simbolo_moeda_estrangeira' => null,
+        'data_cotacao_moeda_estrangeira' => 'date-time',
+        'timezone_cotacao_moeda_estrangeira' => null,
+        'valor_nominal_moeda_estrangeira' => null,
+        'pais_origem_produto_servico_id' => null,
         'tipo_pessoa_id' => null,
         'ni_fornecedor' => null,
         'nome_razao_social_fornecedor' => null,
@@ -106,6 +126,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
 		'valor_unitario_homologado' => false,
 		'valor_total_homologado' => false,
 		'percentual_desconto' => false,
+		'aplicacao_margem_preferencia' => false,
+		'amparo_legal_margem_preferencia_id' => false,
+		'aplicacao_beneficio_me_epp' => false,
+		'aplicacao_criterio_desempate' => false,
+		'amparo_legal_criterio_desempate_id' => false,
+		'simbolo_moeda_estrangeira' => false,
+		'data_cotacao_moeda_estrangeira' => false,
+		'timezone_cotacao_moeda_estrangeira' => false,
+		'valor_nominal_moeda_estrangeira' => false,
+		'pais_origem_produto_servico_id' => false,
 		'tipo_pessoa_id' => false,
 		'ni_fornecedor' => false,
 		'nome_razao_social_fornecedor' => false,
@@ -207,6 +237,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_unitario_homologado' => 'valorUnitarioHomologado',
         'valor_total_homologado' => 'valorTotalHomologado',
         'percentual_desconto' => 'percentualDesconto',
+        'aplicacao_margem_preferencia' => 'aplicacaoMargemPreferencia',
+        'amparo_legal_margem_preferencia_id' => 'amparoLegalMargemPreferenciaId',
+        'aplicacao_beneficio_me_epp' => 'aplicacaoBeneficioMeEpp',
+        'aplicacao_criterio_desempate' => 'aplicacaoCriterioDesempate',
+        'amparo_legal_criterio_desempate_id' => 'amparoLegalCriterioDesempateId',
+        'simbolo_moeda_estrangeira' => 'simboloMoedaEstrangeira',
+        'data_cotacao_moeda_estrangeira' => 'dataCotacaoMoedaEstrangeira',
+        'timezone_cotacao_moeda_estrangeira' => 'timezoneCotacaoMoedaEstrangeira',
+        'valor_nominal_moeda_estrangeira' => 'valorNominalMoedaEstrangeira',
+        'pais_origem_produto_servico_id' => 'paisOrigemProdutoServicoId',
         'tipo_pessoa_id' => 'tipoPessoaId',
         'ni_fornecedor' => 'niFornecedor',
         'nome_razao_social_fornecedor' => 'nomeRazaoSocialFornecedor',
@@ -228,6 +268,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_unitario_homologado' => 'setValorUnitarioHomologado',
         'valor_total_homologado' => 'setValorTotalHomologado',
         'percentual_desconto' => 'setPercentualDesconto',
+        'aplicacao_margem_preferencia' => 'setAplicacaoMargemPreferencia',
+        'amparo_legal_margem_preferencia_id' => 'setAmparoLegalMargemPreferenciaId',
+        'aplicacao_beneficio_me_epp' => 'setAplicacaoBeneficioMeEpp',
+        'aplicacao_criterio_desempate' => 'setAplicacaoCriterioDesempate',
+        'amparo_legal_criterio_desempate_id' => 'setAmparoLegalCriterioDesempateId',
+        'simbolo_moeda_estrangeira' => 'setSimboloMoedaEstrangeira',
+        'data_cotacao_moeda_estrangeira' => 'setDataCotacaoMoedaEstrangeira',
+        'timezone_cotacao_moeda_estrangeira' => 'setTimezoneCotacaoMoedaEstrangeira',
+        'valor_nominal_moeda_estrangeira' => 'setValorNominalMoedaEstrangeira',
+        'pais_origem_produto_servico_id' => 'setPaisOrigemProdutoServicoId',
         'tipo_pessoa_id' => 'setTipoPessoaId',
         'ni_fornecedor' => 'setNiFornecedor',
         'nome_razao_social_fornecedor' => 'setNomeRazaoSocialFornecedor',
@@ -249,6 +299,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         'valor_unitario_homologado' => 'getValorUnitarioHomologado',
         'valor_total_homologado' => 'getValorTotalHomologado',
         'percentual_desconto' => 'getPercentualDesconto',
+        'aplicacao_margem_preferencia' => 'getAplicacaoMargemPreferencia',
+        'amparo_legal_margem_preferencia_id' => 'getAmparoLegalMargemPreferenciaId',
+        'aplicacao_beneficio_me_epp' => 'getAplicacaoBeneficioMeEpp',
+        'aplicacao_criterio_desempate' => 'getAplicacaoCriterioDesempate',
+        'amparo_legal_criterio_desempate_id' => 'getAmparoLegalCriterioDesempateId',
+        'simbolo_moeda_estrangeira' => 'getSimboloMoedaEstrangeira',
+        'data_cotacao_moeda_estrangeira' => 'getDataCotacaoMoedaEstrangeira',
+        'timezone_cotacao_moeda_estrangeira' => 'getTimezoneCotacaoMoedaEstrangeira',
+        'valor_nominal_moeda_estrangeira' => 'getValorNominalMoedaEstrangeira',
+        'pais_origem_produto_servico_id' => 'getPaisOrigemProdutoServicoId',
         'tipo_pessoa_id' => 'getTipoPessoaId',
         'ni_fornecedor' => 'getNiFornecedor',
         'nome_razao_social_fornecedor' => 'getNomeRazaoSocialFornecedor',
@@ -309,202 +369,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     public const PORTE_FORNECEDOR_ID__3 = '3';
     public const PORTE_FORNECEDOR_ID__4 = '4';
     public const PORTE_FORNECEDOR_ID__5 = '5';
-    public const CODIGO_PAIS_AFG = 'AFG';
-    public const CODIGO_PAIS_ZAF = 'ZAF';
-    public const CODIGO_PAIS_ALB = 'ALB';
-    public const CODIGO_PAIS_DEU = 'DEU';
-    public const CODIGO_PAIS__AND = 'AND';
-    public const CODIGO_PAIS_AGO = 'AGO';
-    public const CODIGO_PAIS_ATG = 'ATG';
-    public const CODIGO_PAIS_SAU = 'SAU';
-    public const CODIGO_PAIS_DZA = 'DZA';
-    public const CODIGO_PAIS_ARG = 'ARG';
-    public const CODIGO_PAIS_ARM = 'ARM';
-    public const CODIGO_PAIS_AUS = 'AUS';
-    public const CODIGO_PAIS_AUT = 'AUT';
-    public const CODIGO_PAIS_AZE = 'AZE';
-    public const CODIGO_PAIS_BHS = 'BHS';
-    public const CODIGO_PAIS_BGD = 'BGD';
-    public const CODIGO_PAIS_BRB = 'BRB';
-    public const CODIGO_PAIS_BHR = 'BHR';
-    public const CODIGO_PAIS_BEL = 'BEL';
-    public const CODIGO_PAIS_BLZ = 'BLZ';
-    public const CODIGO_PAIS_BEN = 'BEN';
-    public const CODIGO_PAIS_BLR = 'BLR';
-    public const CODIGO_PAIS_BOL = 'BOL';
-    public const CODIGO_PAIS_BIH = 'BIH';
-    public const CODIGO_PAIS_BWA = 'BWA';
-    public const CODIGO_PAIS_BRA = 'BRA';
-    public const CODIGO_PAIS_BRN = 'BRN';
-    public const CODIGO_PAIS_BGR = 'BGR';
-    public const CODIGO_PAIS_BFA = 'BFA';
-    public const CODIGO_PAIS_BDI = 'BDI';
-    public const CODIGO_PAIS_BTN = 'BTN';
-    public const CODIGO_PAIS_CPV = 'CPV';
-    public const CODIGO_PAIS_CMR = 'CMR';
-    public const CODIGO_PAIS_KHM = 'KHM';
-    public const CODIGO_PAIS_CAN = 'CAN';
-    public const CODIGO_PAIS_QAT = 'QAT';
-    public const CODIGO_PAIS_KAZ = 'KAZ';
-    public const CODIGO_PAIS_TCD = 'TCD';
-    public const CODIGO_PAIS_CHL = 'CHL';
-    public const CODIGO_PAIS_CHN = 'CHN';
-    public const CODIGO_PAIS_CYP = 'CYP';
-    public const CODIGO_PAIS_COL = 'COL';
-    public const CODIGO_PAIS_COM = 'COM';
-    public const CODIGO_PAIS_COG = 'COG';
-    public const CODIGO_PAIS_PRK = 'PRK';
-    public const CODIGO_PAIS_KOR = 'KOR';
-    public const CODIGO_PAIS_CIV = 'CIV';
-    public const CODIGO_PAIS_CRI = 'CRI';
-    public const CODIGO_PAIS_HRV = 'HRV';
-    public const CODIGO_PAIS_KWT = 'KWT';
-    public const CODIGO_PAIS_CUB = 'CUB';
-    public const CODIGO_PAIS_DNK = 'DNK';
-    public const CODIGO_PAIS_DMA = 'DMA';
-    public const CODIGO_PAIS_EGY = 'EGY';
-    public const CODIGO_PAIS_ARE = 'ARE';
-    public const CODIGO_PAIS_ECU = 'ECU';
-    public const CODIGO_PAIS_ERI = 'ERI';
-    public const CODIGO_PAIS_SVK = 'SVK';
-    public const CODIGO_PAIS_SVN = 'SVN';
-    public const CODIGO_PAIS_ESP = 'ESP';
-    public const CODIGO_PAIS_SWZ = 'SWZ';
-    public const CODIGO_PAIS_PSE = 'PSE';
-    public const CODIGO_PAIS_USA = 'USA';
-    public const CODIGO_PAIS_EST = 'EST';
-    public const CODIGO_PAIS_ETH = 'ETH';
-    public const CODIGO_PAIS_FJI = 'FJI';
-    public const CODIGO_PAIS_PHL = 'PHL';
-    public const CODIGO_PAIS_FIN = 'FIN';
-    public const CODIGO_PAIS_FRA = 'FRA';
-    public const CODIGO_PAIS_GAB = 'GAB';
-    public const CODIGO_PAIS_GMB = 'GMB';
-    public const CODIGO_PAIS_GHA = 'GHA';
-    public const CODIGO_PAIS_GEO = 'GEO';
-    public const CODIGO_PAIS_GRD = 'GRD';
-    public const CODIGO_PAIS_GRC = 'GRC';
-    public const CODIGO_PAIS_GTM = 'GTM';
-    public const CODIGO_PAIS_GUY = 'GUY';
-    public const CODIGO_PAIS_GIN = 'GIN';
-    public const CODIGO_PAIS_GNQ = 'GNQ';
-    public const CODIGO_PAIS_GNB = 'GNB';
-    public const CODIGO_PAIS_HTI = 'HTI';
-    public const CODIGO_PAIS_HND = 'HND';
-    public const CODIGO_PAIS_HUN = 'HUN';
-    public const CODIGO_PAIS_YEM = 'YEM';
-    public const CODIGO_PAIS_MHL = 'MHL';
-    public const CODIGO_PAIS_IND = 'IND';
-    public const CODIGO_PAIS_IDN = 'IDN';
-    public const CODIGO_PAIS_IRN = 'IRN';
-    public const CODIGO_PAIS_IRQ = 'IRQ';
-    public const CODIGO_PAIS_IRL = 'IRL';
-    public const CODIGO_PAIS_ISL = 'ISL';
-    public const CODIGO_PAIS_ISR = 'ISR';
-    public const CODIGO_PAIS_ITA = 'ITA';
-    public const CODIGO_PAIS_JAM = 'JAM';
-    public const CODIGO_PAIS_JPN = 'JPN';
-    public const CODIGO_PAIS_DJI = 'DJI';
-    public const CODIGO_PAIS_JOR = 'JOR';
-    public const CODIGO_PAIS_LAO = 'LAO';
-    public const CODIGO_PAIS_LSO = 'LSO';
-    public const CODIGO_PAIS_LVA = 'LVA';
-    public const CODIGO_PAIS_LBN = 'LBN';
-    public const CODIGO_PAIS_LBR = 'LBR';
-    public const CODIGO_PAIS_LBY = 'LBY';
-    public const CODIGO_PAIS_LIE = 'LIE';
-    public const CODIGO_PAIS_LTU = 'LTU';
-    public const CODIGO_PAIS_LUX = 'LUX';
-    public const CODIGO_PAIS_MKD = 'MKD';
-    public const CODIGO_PAIS_MDG = 'MDG';
-    public const CODIGO_PAIS_MYS = 'MYS';
-    public const CODIGO_PAIS_MWI = 'MWI';
-    public const CODIGO_PAIS_MDV = 'MDV';
-    public const CODIGO_PAIS_MLI = 'MLI';
-    public const CODIGO_PAIS_MLT = 'MLT';
-    public const CODIGO_PAIS_MAR = 'MAR';
-    public const CODIGO_PAIS_MUS = 'MUS';
-    public const CODIGO_PAIS_MRT = 'MRT';
-    public const CODIGO_PAIS_MEX = 'MEX';
-    public const CODIGO_PAIS_MMR = 'MMR';
-    public const CODIGO_PAIS_FSM = 'FSM';
-    public const CODIGO_PAIS_MOZ = 'MOZ';
-    public const CODIGO_PAIS_MDA = 'MDA';
-    public const CODIGO_PAIS_MCO = 'MCO';
-    public const CODIGO_PAIS_MNG = 'MNG';
-    public const CODIGO_PAIS_MNE = 'MNE';
-    public const CODIGO_PAIS_NAM = 'NAM';
-    public const CODIGO_PAIS_NRU = 'NRU';
-    public const CODIGO_PAIS_NPL = 'NPL';
-    public const CODIGO_PAIS_NIC = 'NIC';
-    public const CODIGO_PAIS_NER = 'NER';
-    public const CODIGO_PAIS_NGA = 'NGA';
-    public const CODIGO_PAIS_NOR = 'NOR';
-    public const CODIGO_PAIS_NZL = 'NZL';
-    public const CODIGO_PAIS_OMN = 'OMN';
-    public const CODIGO_PAIS_NLD = 'NLD';
-    public const CODIGO_PAIS_PLW = 'PLW';
-    public const CODIGO_PAIS_PAN = 'PAN';
-    public const CODIGO_PAIS_PNG = 'PNG';
-    public const CODIGO_PAIS_PAK = 'PAK';
-    public const CODIGO_PAIS_PRY = 'PRY';
-    public const CODIGO_PAIS_PER = 'PER';
-    public const CODIGO_PAIS_POL = 'POL';
-    public const CODIGO_PAIS_PRT = 'PRT';
-    public const CODIGO_PAIS_KEN = 'KEN';
-    public const CODIGO_PAIS_KGZ = 'KGZ';
-    public const CODIGO_PAIS_KIR = 'KIR';
-    public const CODIGO_PAIS_GBR = 'GBR';
-    public const CODIGO_PAIS_CAF = 'CAF';
-    public const CODIGO_PAIS_CZE = 'CZE';
-    public const CODIGO_PAIS_COD = 'COD';
-    public const CODIGO_PAIS_DOM = 'DOM';
-    public const CODIGO_PAIS_ROU = 'ROU';
-    public const CODIGO_PAIS_RWA = 'RWA';
-    public const CODIGO_PAIS_RUS = 'RUS';
-    public const CODIGO_PAIS_SLB = 'SLB';
-    public const CODIGO_PAIS_SLV = 'SLV';
-    public const CODIGO_PAIS_WSM = 'WSM';
-    public const CODIGO_PAIS_LCA = 'LCA';
-    public const CODIGO_PAIS_KNA = 'KNA';
-    public const CODIGO_PAIS_SMR = 'SMR';
-    public const CODIGO_PAIS_STP = 'STP';
-    public const CODIGO_PAIS_VCT = 'VCT';
-    public const CODIGO_PAIS_SYC = 'SYC';
-    public const CODIGO_PAIS_SEN = 'SEN';
-    public const CODIGO_PAIS_SLE = 'SLE';
-    public const CODIGO_PAIS_SRB = 'SRB';
-    public const CODIGO_PAIS_SGP = 'SGP';
-    public const CODIGO_PAIS_SYR = 'SYR';
-    public const CODIGO_PAIS_SOM = 'SOM';
-    public const CODIGO_PAIS_LKA = 'LKA';
-    public const CODIGO_PAIS_SDN = 'SDN';
-    public const CODIGO_PAIS_SSD = 'SSD';
-    public const CODIGO_PAIS_SWE = 'SWE';
-    public const CODIGO_PAIS_CHE = 'CHE';
-    public const CODIGO_PAIS_SUR = 'SUR';
-    public const CODIGO_PAIS_THA = 'THA';
-    public const CODIGO_PAIS_TWN = 'TWN';
-    public const CODIGO_PAIS_TJK = 'TJK';
-    public const CODIGO_PAIS_TZA = 'TZA';
-    public const CODIGO_PAIS_TLS = 'TLS';
-    public const CODIGO_PAIS_TGO = 'TGO';
-    public const CODIGO_PAIS_TON = 'TON';
-    public const CODIGO_PAIS_TTO = 'TTO';
-    public const CODIGO_PAIS_TUN = 'TUN';
-    public const CODIGO_PAIS_TKM = 'TKM';
-    public const CODIGO_PAIS_TUR = 'TUR';
-    public const CODIGO_PAIS_TUV = 'TUV';
-    public const CODIGO_PAIS_UKR = 'UKR';
-    public const CODIGO_PAIS_UGA = 'UGA';
-    public const CODIGO_PAIS_URY = 'URY';
-    public const CODIGO_PAIS_UZB = 'UZB';
-    public const CODIGO_PAIS_VUT = 'VUT';
-    public const CODIGO_PAIS_VAT = 'VAT';
-    public const CODIGO_PAIS_VEN = 'VEN';
-    public const CODIGO_PAIS_VNM = 'VNM';
-    public const CODIGO_PAIS_ZMB = 'ZMB';
-    public const CODIGO_PAIS_ZWE = 'ZWE';
 
     /**
      * Gets allowable values of the enum
@@ -537,213 +401,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCodigoPaisAllowableValues()
-    {
-        return [
-            self::CODIGO_PAIS_AFG,
-            self::CODIGO_PAIS_ZAF,
-            self::CODIGO_PAIS_ALB,
-            self::CODIGO_PAIS_DEU,
-            self::CODIGO_PAIS__AND,
-            self::CODIGO_PAIS_AGO,
-            self::CODIGO_PAIS_ATG,
-            self::CODIGO_PAIS_SAU,
-            self::CODIGO_PAIS_DZA,
-            self::CODIGO_PAIS_ARG,
-            self::CODIGO_PAIS_ARM,
-            self::CODIGO_PAIS_AUS,
-            self::CODIGO_PAIS_AUT,
-            self::CODIGO_PAIS_AZE,
-            self::CODIGO_PAIS_BHS,
-            self::CODIGO_PAIS_BGD,
-            self::CODIGO_PAIS_BRB,
-            self::CODIGO_PAIS_BHR,
-            self::CODIGO_PAIS_BEL,
-            self::CODIGO_PAIS_BLZ,
-            self::CODIGO_PAIS_BEN,
-            self::CODIGO_PAIS_BLR,
-            self::CODIGO_PAIS_BOL,
-            self::CODIGO_PAIS_BIH,
-            self::CODIGO_PAIS_BWA,
-            self::CODIGO_PAIS_BRA,
-            self::CODIGO_PAIS_BRN,
-            self::CODIGO_PAIS_BGR,
-            self::CODIGO_PAIS_BFA,
-            self::CODIGO_PAIS_BDI,
-            self::CODIGO_PAIS_BTN,
-            self::CODIGO_PAIS_CPV,
-            self::CODIGO_PAIS_CMR,
-            self::CODIGO_PAIS_KHM,
-            self::CODIGO_PAIS_CAN,
-            self::CODIGO_PAIS_QAT,
-            self::CODIGO_PAIS_KAZ,
-            self::CODIGO_PAIS_TCD,
-            self::CODIGO_PAIS_CHL,
-            self::CODIGO_PAIS_CHN,
-            self::CODIGO_PAIS_CYP,
-            self::CODIGO_PAIS_COL,
-            self::CODIGO_PAIS_COM,
-            self::CODIGO_PAIS_COG,
-            self::CODIGO_PAIS_PRK,
-            self::CODIGO_PAIS_KOR,
-            self::CODIGO_PAIS_CIV,
-            self::CODIGO_PAIS_CRI,
-            self::CODIGO_PAIS_HRV,
-            self::CODIGO_PAIS_KWT,
-            self::CODIGO_PAIS_CUB,
-            self::CODIGO_PAIS_DNK,
-            self::CODIGO_PAIS_DMA,
-            self::CODIGO_PAIS_EGY,
-            self::CODIGO_PAIS_ARE,
-            self::CODIGO_PAIS_ECU,
-            self::CODIGO_PAIS_ERI,
-            self::CODIGO_PAIS_SVK,
-            self::CODIGO_PAIS_SVN,
-            self::CODIGO_PAIS_ESP,
-            self::CODIGO_PAIS_SWZ,
-            self::CODIGO_PAIS_PSE,
-            self::CODIGO_PAIS_USA,
-            self::CODIGO_PAIS_EST,
-            self::CODIGO_PAIS_ETH,
-            self::CODIGO_PAIS_FJI,
-            self::CODIGO_PAIS_PHL,
-            self::CODIGO_PAIS_FIN,
-            self::CODIGO_PAIS_FRA,
-            self::CODIGO_PAIS_GAB,
-            self::CODIGO_PAIS_GMB,
-            self::CODIGO_PAIS_GHA,
-            self::CODIGO_PAIS_GEO,
-            self::CODIGO_PAIS_GRD,
-            self::CODIGO_PAIS_GRC,
-            self::CODIGO_PAIS_GTM,
-            self::CODIGO_PAIS_GUY,
-            self::CODIGO_PAIS_GIN,
-            self::CODIGO_PAIS_GNQ,
-            self::CODIGO_PAIS_GNB,
-            self::CODIGO_PAIS_HTI,
-            self::CODIGO_PAIS_HND,
-            self::CODIGO_PAIS_HUN,
-            self::CODIGO_PAIS_YEM,
-            self::CODIGO_PAIS_MHL,
-            self::CODIGO_PAIS_IND,
-            self::CODIGO_PAIS_IDN,
-            self::CODIGO_PAIS_IRN,
-            self::CODIGO_PAIS_IRQ,
-            self::CODIGO_PAIS_IRL,
-            self::CODIGO_PAIS_ISL,
-            self::CODIGO_PAIS_ISR,
-            self::CODIGO_PAIS_ITA,
-            self::CODIGO_PAIS_JAM,
-            self::CODIGO_PAIS_JPN,
-            self::CODIGO_PAIS_DJI,
-            self::CODIGO_PAIS_JOR,
-            self::CODIGO_PAIS_LAO,
-            self::CODIGO_PAIS_LSO,
-            self::CODIGO_PAIS_LVA,
-            self::CODIGO_PAIS_LBN,
-            self::CODIGO_PAIS_LBR,
-            self::CODIGO_PAIS_LBY,
-            self::CODIGO_PAIS_LIE,
-            self::CODIGO_PAIS_LTU,
-            self::CODIGO_PAIS_LUX,
-            self::CODIGO_PAIS_MKD,
-            self::CODIGO_PAIS_MDG,
-            self::CODIGO_PAIS_MYS,
-            self::CODIGO_PAIS_MWI,
-            self::CODIGO_PAIS_MDV,
-            self::CODIGO_PAIS_MLI,
-            self::CODIGO_PAIS_MLT,
-            self::CODIGO_PAIS_MAR,
-            self::CODIGO_PAIS_MUS,
-            self::CODIGO_PAIS_MRT,
-            self::CODIGO_PAIS_MEX,
-            self::CODIGO_PAIS_MMR,
-            self::CODIGO_PAIS_FSM,
-            self::CODIGO_PAIS_MOZ,
-            self::CODIGO_PAIS_MDA,
-            self::CODIGO_PAIS_MCO,
-            self::CODIGO_PAIS_MNG,
-            self::CODIGO_PAIS_MNE,
-            self::CODIGO_PAIS_NAM,
-            self::CODIGO_PAIS_NRU,
-            self::CODIGO_PAIS_NPL,
-            self::CODIGO_PAIS_NIC,
-            self::CODIGO_PAIS_NER,
-            self::CODIGO_PAIS_NGA,
-            self::CODIGO_PAIS_NOR,
-            self::CODIGO_PAIS_NZL,
-            self::CODIGO_PAIS_OMN,
-            self::CODIGO_PAIS_NLD,
-            self::CODIGO_PAIS_PLW,
-            self::CODIGO_PAIS_PAN,
-            self::CODIGO_PAIS_PNG,
-            self::CODIGO_PAIS_PAK,
-            self::CODIGO_PAIS_PRY,
-            self::CODIGO_PAIS_PER,
-            self::CODIGO_PAIS_POL,
-            self::CODIGO_PAIS_PRT,
-            self::CODIGO_PAIS_KEN,
-            self::CODIGO_PAIS_KGZ,
-            self::CODIGO_PAIS_KIR,
-            self::CODIGO_PAIS_GBR,
-            self::CODIGO_PAIS_CAF,
-            self::CODIGO_PAIS_CZE,
-            self::CODIGO_PAIS_COD,
-            self::CODIGO_PAIS_DOM,
-            self::CODIGO_PAIS_ROU,
-            self::CODIGO_PAIS_RWA,
-            self::CODIGO_PAIS_RUS,
-            self::CODIGO_PAIS_SLB,
-            self::CODIGO_PAIS_SLV,
-            self::CODIGO_PAIS_WSM,
-            self::CODIGO_PAIS_LCA,
-            self::CODIGO_PAIS_KNA,
-            self::CODIGO_PAIS_SMR,
-            self::CODIGO_PAIS_STP,
-            self::CODIGO_PAIS_VCT,
-            self::CODIGO_PAIS_SYC,
-            self::CODIGO_PAIS_SEN,
-            self::CODIGO_PAIS_SLE,
-            self::CODIGO_PAIS_SRB,
-            self::CODIGO_PAIS_SGP,
-            self::CODIGO_PAIS_SYR,
-            self::CODIGO_PAIS_SOM,
-            self::CODIGO_PAIS_LKA,
-            self::CODIGO_PAIS_SDN,
-            self::CODIGO_PAIS_SSD,
-            self::CODIGO_PAIS_SWE,
-            self::CODIGO_PAIS_CHE,
-            self::CODIGO_PAIS_SUR,
-            self::CODIGO_PAIS_THA,
-            self::CODIGO_PAIS_TWN,
-            self::CODIGO_PAIS_TJK,
-            self::CODIGO_PAIS_TZA,
-            self::CODIGO_PAIS_TLS,
-            self::CODIGO_PAIS_TGO,
-            self::CODIGO_PAIS_TON,
-            self::CODIGO_PAIS_TTO,
-            self::CODIGO_PAIS_TUN,
-            self::CODIGO_PAIS_TKM,
-            self::CODIGO_PAIS_TUR,
-            self::CODIGO_PAIS_TUV,
-            self::CODIGO_PAIS_UKR,
-            self::CODIGO_PAIS_UGA,
-            self::CODIGO_PAIS_URY,
-            self::CODIGO_PAIS_UZB,
-            self::CODIGO_PAIS_VUT,
-            self::CODIGO_PAIS_VAT,
-            self::CODIGO_PAIS_VEN,
-            self::CODIGO_PAIS_VNM,
-            self::CODIGO_PAIS_ZMB,
-            self::CODIGO_PAIS_ZWE,
-        ];
-    }
-
-    /**
      * Associative array for storing property values
      *
      * @var mixed[]
@@ -762,6 +419,16 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('valor_unitario_homologado', $data ?? [], null);
         $this->setIfExists('valor_total_homologado', $data ?? [], null);
         $this->setIfExists('percentual_desconto', $data ?? [], null);
+        $this->setIfExists('aplicacao_margem_preferencia', $data ?? [], null);
+        $this->setIfExists('amparo_legal_margem_preferencia_id', $data ?? [], null);
+        $this->setIfExists('aplicacao_beneficio_me_epp', $data ?? [], null);
+        $this->setIfExists('aplicacao_criterio_desempate', $data ?? [], null);
+        $this->setIfExists('amparo_legal_criterio_desempate_id', $data ?? [], null);
+        $this->setIfExists('simbolo_moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('data_cotacao_moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('timezone_cotacao_moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('valor_nominal_moeda_estrangeira', $data ?? [], null);
+        $this->setIfExists('pais_origem_produto_servico_id', $data ?? [], null);
         $this->setIfExists('tipo_pessoa_id', $data ?? [], null);
         $this->setIfExists('ni_fornecedor', $data ?? [], null);
         $this->setIfExists('nome_razao_social_fornecedor', $data ?? [], null);
@@ -800,37 +467,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if ($this->container['quantidade_homologada'] === null) {
-            $invalidProperties[] = "'quantidade_homologada' can't be null";
-        }
-        if (($this->container['quantidade_homologada'] < 0.0)) {
-            $invalidProperties[] = "invalid value for 'quantidade_homologada', must be bigger than or equal to 0.0.";
-        }
-
-        if ($this->container['valor_unitario_homologado'] === null) {
-            $invalidProperties[] = "'valor_unitario_homologado' can't be null";
-        }
-        if (($this->container['valor_unitario_homologado'] < 0.0)) {
-            $invalidProperties[] = "invalid value for 'valor_unitario_homologado', must be bigger than or equal to 0.0.";
-        }
-
-        if ($this->container['valor_total_homologado'] === null) {
-            $invalidProperties[] = "'valor_total_homologado' can't be null";
-        }
-        if (($this->container['valor_total_homologado'] < 0.0)) {
-            $invalidProperties[] = "invalid value for 'valor_total_homologado', must be bigger than or equal to 0.0.";
-        }
-
-        if ($this->container['percentual_desconto'] === null) {
-            $invalidProperties[] = "'percentual_desconto' can't be null";
-        }
-        if (($this->container['percentual_desconto'] < 0.0)) {
-            $invalidProperties[] = "invalid value for 'percentual_desconto', must be bigger than or equal to 0.0.";
-        }
-
-        if ($this->container['tipo_pessoa_id'] === null) {
-            $invalidProperties[] = "'tipo_pessoa_id' can't be null";
-        }
         $allowedValues = $this->getTipoPessoaIdAllowableValues();
         if (!is_null($this->container['tipo_pessoa_id']) && !in_array($this->container['tipo_pessoa_id'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -840,15 +476,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
             );
         }
 
-        if ($this->container['ni_fornecedor'] === null) {
-            $invalidProperties[] = "'ni_fornecedor' can't be null";
-        }
-        if ($this->container['nome_razao_social_fornecedor'] === null) {
-            $invalidProperties[] = "'nome_razao_social_fornecedor' can't be null";
-        }
-        if ($this->container['porte_fornecedor_id'] === null) {
-            $invalidProperties[] = "'porte_fornecedor_id' can't be null";
-        }
         $allowedValues = $this->getPorteFornecedorIdAllowableValues();
         if (!is_null($this->container['porte_fornecedor_id']) && !in_array($this->container['porte_fornecedor_id'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -856,32 +483,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
                 $this->container['porte_fornecedor_id'],
                 implode("', '", $allowedValues)
             );
-        }
-
-        if ($this->container['codigo_pais'] === null) {
-            $invalidProperties[] = "'codigo_pais' can't be null";
-        }
-        $allowedValues = $this->getCodigoPaisAllowableValues();
-        if (!is_null($this->container['codigo_pais']) && !in_array($this->container['codigo_pais'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'codigo_pais', must be one of '%s'",
-                $this->container['codigo_pais'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['indicador_subcontratacao'] === null) {
-            $invalidProperties[] = "'indicador_subcontratacao' can't be null";
-        }
-        if (!is_null($this->container['ordem_classificacao_srp']) && ($this->container['ordem_classificacao_srp'] < 1)) {
-            $invalidProperties[] = "invalid value for 'ordem_classificacao_srp', must be bigger than or equal to 1.";
-        }
-
-        if ($this->container['data_resultado'] === null) {
-            $invalidProperties[] = "'data_resultado' can't be null";
-        }
-        if (!is_null($this->container['natureza_juridica_id']) && !preg_match("/\\d{4}/", $this->container['natureza_juridica_id'])) {
-            $invalidProperties[] = "invalid value for 'natureza_juridica_id', must be conform to the pattern /\\d{4}/.";
         }
 
         return $invalidProperties;
@@ -902,7 +503,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets quantidade_homologada
      *
-     * @return float
+     * @return float|null
      */
     public function getQuantidadeHomologada()
     {
@@ -912,7 +513,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets quantidade_homologada
      *
-     * @param float $quantidade_homologada quantidade_homologada
+     * @param float|null $quantidade_homologada quantidade_homologada
      *
      * @return self
      */
@@ -921,11 +522,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         if (is_null($quantidade_homologada)) {
             throw new \InvalidArgumentException('non-nullable quantidade_homologada cannot be null');
         }
-
-        if (($quantidade_homologada < 0.0)) {
-            throw new \InvalidArgumentException('invalid value for $quantidade_homologada when calling IncluirCompraItemResultadoDTO., must be bigger than or equal to 0.0.');
-        }
-
         $this->container['quantidade_homologada'] = $quantidade_homologada;
 
         return $this;
@@ -934,7 +530,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets valor_unitario_homologado
      *
-     * @return float
+     * @return float|null
      */
     public function getValorUnitarioHomologado()
     {
@@ -944,7 +540,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets valor_unitario_homologado
      *
-     * @param float $valor_unitario_homologado valor_unitario_homologado
+     * @param float|null $valor_unitario_homologado valor_unitario_homologado
      *
      * @return self
      */
@@ -953,11 +549,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         if (is_null($valor_unitario_homologado)) {
             throw new \InvalidArgumentException('non-nullable valor_unitario_homologado cannot be null');
         }
-
-        if (($valor_unitario_homologado < 0.0)) {
-            throw new \InvalidArgumentException('invalid value for $valor_unitario_homologado when calling IncluirCompraItemResultadoDTO., must be bigger than or equal to 0.0.');
-        }
-
         $this->container['valor_unitario_homologado'] = $valor_unitario_homologado;
 
         return $this;
@@ -966,7 +557,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets valor_total_homologado
      *
-     * @return float
+     * @return float|null
      */
     public function getValorTotalHomologado()
     {
@@ -976,7 +567,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets valor_total_homologado
      *
-     * @param float $valor_total_homologado valor_total_homologado
+     * @param float|null $valor_total_homologado valor_total_homologado
      *
      * @return self
      */
@@ -985,11 +576,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         if (is_null($valor_total_homologado)) {
             throw new \InvalidArgumentException('non-nullable valor_total_homologado cannot be null');
         }
-
-        if (($valor_total_homologado < 0.0)) {
-            throw new \InvalidArgumentException('invalid value for $valor_total_homologado when calling IncluirCompraItemResultadoDTO., must be bigger than or equal to 0.0.');
-        }
-
         $this->container['valor_total_homologado'] = $valor_total_homologado;
 
         return $this;
@@ -998,7 +584,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets percentual_desconto
      *
-     * @return float
+     * @return float|null
      */
     public function getPercentualDesconto()
     {
@@ -1008,7 +594,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets percentual_desconto
      *
-     * @param float $percentual_desconto percentual_desconto
+     * @param float|null $percentual_desconto percentual_desconto
      *
      * @return self
      */
@@ -1017,12 +603,277 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         if (is_null($percentual_desconto)) {
             throw new \InvalidArgumentException('non-nullable percentual_desconto cannot be null');
         }
-
-        if (($percentual_desconto < 0.0)) {
-            throw new \InvalidArgumentException('invalid value for $percentual_desconto when calling IncluirCompraItemResultadoDTO., must be bigger than or equal to 0.0.');
-        }
-
         $this->container['percentual_desconto'] = $percentual_desconto;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicacao_margem_preferencia
+     *
+     * @return bool|null
+     */
+    public function getAplicacaoMargemPreferencia()
+    {
+        return $this->container['aplicacao_margem_preferencia'];
+    }
+
+    /**
+     * Sets aplicacao_margem_preferencia
+     *
+     * @param bool|null $aplicacao_margem_preferencia aplicacao_margem_preferencia
+     *
+     * @return self
+     */
+    public function setAplicacaoMargemPreferencia($aplicacao_margem_preferencia)
+    {
+        if (is_null($aplicacao_margem_preferencia)) {
+            throw new \InvalidArgumentException('non-nullable aplicacao_margem_preferencia cannot be null');
+        }
+        $this->container['aplicacao_margem_preferencia'] = $aplicacao_margem_preferencia;
+
+        return $this;
+    }
+
+    /**
+     * Gets amparo_legal_margem_preferencia_id
+     *
+     * @return int|null
+     */
+    public function getAmparoLegalMargemPreferenciaId()
+    {
+        return $this->container['amparo_legal_margem_preferencia_id'];
+    }
+
+    /**
+     * Sets amparo_legal_margem_preferencia_id
+     *
+     * @param int|null $amparo_legal_margem_preferencia_id amparo_legal_margem_preferencia_id
+     *
+     * @return self
+     */
+    public function setAmparoLegalMargemPreferenciaId($amparo_legal_margem_preferencia_id)
+    {
+        if (is_null($amparo_legal_margem_preferencia_id)) {
+            throw new \InvalidArgumentException('non-nullable amparo_legal_margem_preferencia_id cannot be null');
+        }
+        $this->container['amparo_legal_margem_preferencia_id'] = $amparo_legal_margem_preferencia_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicacao_beneficio_me_epp
+     *
+     * @return bool|null
+     */
+    public function getAplicacaoBeneficioMeEpp()
+    {
+        return $this->container['aplicacao_beneficio_me_epp'];
+    }
+
+    /**
+     * Sets aplicacao_beneficio_me_epp
+     *
+     * @param bool|null $aplicacao_beneficio_me_epp aplicacao_beneficio_me_epp
+     *
+     * @return self
+     */
+    public function setAplicacaoBeneficioMeEpp($aplicacao_beneficio_me_epp)
+    {
+        if (is_null($aplicacao_beneficio_me_epp)) {
+            throw new \InvalidArgumentException('non-nullable aplicacao_beneficio_me_epp cannot be null');
+        }
+        $this->container['aplicacao_beneficio_me_epp'] = $aplicacao_beneficio_me_epp;
+
+        return $this;
+    }
+
+    /**
+     * Gets aplicacao_criterio_desempate
+     *
+     * @return bool|null
+     */
+    public function getAplicacaoCriterioDesempate()
+    {
+        return $this->container['aplicacao_criterio_desempate'];
+    }
+
+    /**
+     * Sets aplicacao_criterio_desempate
+     *
+     * @param bool|null $aplicacao_criterio_desempate aplicacao_criterio_desempate
+     *
+     * @return self
+     */
+    public function setAplicacaoCriterioDesempate($aplicacao_criterio_desempate)
+    {
+        if (is_null($aplicacao_criterio_desempate)) {
+            throw new \InvalidArgumentException('non-nullable aplicacao_criterio_desempate cannot be null');
+        }
+        $this->container['aplicacao_criterio_desempate'] = $aplicacao_criterio_desempate;
+
+        return $this;
+    }
+
+    /**
+     * Gets amparo_legal_criterio_desempate_id
+     *
+     * @return int|null
+     */
+    public function getAmparoLegalCriterioDesempateId()
+    {
+        return $this->container['amparo_legal_criterio_desempate_id'];
+    }
+
+    /**
+     * Sets amparo_legal_criterio_desempate_id
+     *
+     * @param int|null $amparo_legal_criterio_desempate_id amparo_legal_criterio_desempate_id
+     *
+     * @return self
+     */
+    public function setAmparoLegalCriterioDesempateId($amparo_legal_criterio_desempate_id)
+    {
+        if (is_null($amparo_legal_criterio_desempate_id)) {
+            throw new \InvalidArgumentException('non-nullable amparo_legal_criterio_desempate_id cannot be null');
+        }
+        $this->container['amparo_legal_criterio_desempate_id'] = $amparo_legal_criterio_desempate_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets simbolo_moeda_estrangeira
+     *
+     * @return string|null
+     */
+    public function getSimboloMoedaEstrangeira()
+    {
+        return $this->container['simbolo_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets simbolo_moeda_estrangeira
+     *
+     * @param string|null $simbolo_moeda_estrangeira simbolo_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setSimboloMoedaEstrangeira($simbolo_moeda_estrangeira)
+    {
+        if (is_null($simbolo_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable simbolo_moeda_estrangeira cannot be null');
+        }
+        $this->container['simbolo_moeda_estrangeira'] = $simbolo_moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_cotacao_moeda_estrangeira
+     *
+     * @return \DateTime|null
+     */
+    public function getDataCotacaoMoedaEstrangeira()
+    {
+        return $this->container['data_cotacao_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets data_cotacao_moeda_estrangeira
+     *
+     * @param \DateTime|null $data_cotacao_moeda_estrangeira data_cotacao_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setDataCotacaoMoedaEstrangeira($data_cotacao_moeda_estrangeira)
+    {
+        if (is_null($data_cotacao_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable data_cotacao_moeda_estrangeira cannot be null');
+        }
+        $this->container['data_cotacao_moeda_estrangeira'] = $data_cotacao_moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets timezone_cotacao_moeda_estrangeira
+     *
+     * @return string|null
+     */
+    public function getTimezoneCotacaoMoedaEstrangeira()
+    {
+        return $this->container['timezone_cotacao_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets timezone_cotacao_moeda_estrangeira
+     *
+     * @param string|null $timezone_cotacao_moeda_estrangeira timezone_cotacao_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setTimezoneCotacaoMoedaEstrangeira($timezone_cotacao_moeda_estrangeira)
+    {
+        if (is_null($timezone_cotacao_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable timezone_cotacao_moeda_estrangeira cannot be null');
+        }
+        $this->container['timezone_cotacao_moeda_estrangeira'] = $timezone_cotacao_moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets valor_nominal_moeda_estrangeira
+     *
+     * @return float|null
+     */
+    public function getValorNominalMoedaEstrangeira()
+    {
+        return $this->container['valor_nominal_moeda_estrangeira'];
+    }
+
+    /**
+     * Sets valor_nominal_moeda_estrangeira
+     *
+     * @param float|null $valor_nominal_moeda_estrangeira valor_nominal_moeda_estrangeira
+     *
+     * @return self
+     */
+    public function setValorNominalMoedaEstrangeira($valor_nominal_moeda_estrangeira)
+    {
+        if (is_null($valor_nominal_moeda_estrangeira)) {
+            throw new \InvalidArgumentException('non-nullable valor_nominal_moeda_estrangeira cannot be null');
+        }
+        $this->container['valor_nominal_moeda_estrangeira'] = $valor_nominal_moeda_estrangeira;
+
+        return $this;
+    }
+
+    /**
+     * Gets pais_origem_produto_servico_id
+     *
+     * @return string|null
+     */
+    public function getPaisOrigemProdutoServicoId()
+    {
+        return $this->container['pais_origem_produto_servico_id'];
+    }
+
+    /**
+     * Sets pais_origem_produto_servico_id
+     *
+     * @param string|null $pais_origem_produto_servico_id pais_origem_produto_servico_id
+     *
+     * @return self
+     */
+    public function setPaisOrigemProdutoServicoId($pais_origem_produto_servico_id)
+    {
+        if (is_null($pais_origem_produto_servico_id)) {
+            throw new \InvalidArgumentException('non-nullable pais_origem_produto_servico_id cannot be null');
+        }
+        $this->container['pais_origem_produto_servico_id'] = $pais_origem_produto_servico_id;
 
         return $this;
     }
@@ -1030,7 +881,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets tipo_pessoa_id
      *
-     * @return string
+     * @return string|null
      */
     public function getTipoPessoaId()
     {
@@ -1040,7 +891,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets tipo_pessoa_id
      *
-     * @param string $tipo_pessoa_id tipo_pessoa_id
+     * @param string|null $tipo_pessoa_id tipo_pessoa_id
      *
      * @return self
      */
@@ -1067,7 +918,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets ni_fornecedor
      *
-     * @return string
+     * @return string|null
      */
     public function getNiFornecedor()
     {
@@ -1077,7 +928,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets ni_fornecedor
      *
-     * @param string $ni_fornecedor ni_fornecedor
+     * @param string|null $ni_fornecedor ni_fornecedor
      *
      * @return self
      */
@@ -1094,7 +945,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets nome_razao_social_fornecedor
      *
-     * @return string
+     * @return string|null
      */
     public function getNomeRazaoSocialFornecedor()
     {
@@ -1104,7 +955,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets nome_razao_social_fornecedor
      *
-     * @param string $nome_razao_social_fornecedor nome_razao_social_fornecedor
+     * @param string|null $nome_razao_social_fornecedor nome_razao_social_fornecedor
      *
      * @return self
      */
@@ -1121,7 +972,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets porte_fornecedor_id
      *
-     * @return string
+     * @return string|null
      */
     public function getPorteFornecedorId()
     {
@@ -1131,7 +982,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets porte_fornecedor_id
      *
-     * @param string $porte_fornecedor_id porte_fornecedor_id
+     * @param string|null $porte_fornecedor_id porte_fornecedor_id
      *
      * @return self
      */
@@ -1158,7 +1009,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets codigo_pais
      *
-     * @return string
+     * @return string|null
      */
     public function getCodigoPais()
     {
@@ -1168,7 +1019,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets codigo_pais
      *
-     * @param string $codigo_pais codigo_pais
+     * @param string|null $codigo_pais codigo_pais
      *
      * @return self
      */
@@ -1176,16 +1027,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     {
         if (is_null($codigo_pais)) {
             throw new \InvalidArgumentException('non-nullable codigo_pais cannot be null');
-        }
-        $allowedValues = $this->getCodigoPaisAllowableValues();
-        if (!in_array($codigo_pais, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'codigo_pais', must be one of '%s'",
-                    $codigo_pais,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['codigo_pais'] = $codigo_pais;
 
@@ -1195,7 +1036,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets indicador_subcontratacao
      *
-     * @return bool
+     * @return bool|null
      */
     public function getIndicadorSubcontratacao()
     {
@@ -1205,7 +1046,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets indicador_subcontratacao
      *
-     * @param bool $indicador_subcontratacao indicador_subcontratacao
+     * @param bool|null $indicador_subcontratacao indicador_subcontratacao
      *
      * @return self
      */
@@ -1241,11 +1082,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         if (is_null($ordem_classificacao_srp)) {
             throw new \InvalidArgumentException('non-nullable ordem_classificacao_srp cannot be null');
         }
-
-        if (($ordem_classificacao_srp < 1)) {
-            throw new \InvalidArgumentException('invalid value for $ordem_classificacao_srp when calling IncluirCompraItemResultadoDTO., must be bigger than or equal to 1.');
-        }
-
         $this->container['ordem_classificacao_srp'] = $ordem_classificacao_srp;
 
         return $this;
@@ -1254,7 +1090,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets data_resultado
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getDataResultado()
     {
@@ -1264,7 +1100,7 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets data_resultado
      *
-     * @param \DateTime $data_resultado data_resultado
+     * @param \DateTime|null $data_resultado data_resultado
      *
      * @return self
      */
@@ -1300,11 +1136,6 @@ class IncluirCompraItemResultadoDTO implements ModelInterface, ArrayAccess, \Jso
         if (is_null($natureza_juridica_id)) {
             throw new \InvalidArgumentException('non-nullable natureza_juridica_id cannot be null');
         }
-
-        if ((!preg_match("/\\d{4}/", ObjectSerializer::toString($natureza_juridica_id)))) {
-            throw new \InvalidArgumentException("invalid value for \$natureza_juridica_id when calling IncluirCompraItemResultadoDTO., must conform to the pattern /\\d{4}/.");
-        }
-
         $this->container['natureza_juridica_id'] = $natureza_juridica_id;
 
         return $this;

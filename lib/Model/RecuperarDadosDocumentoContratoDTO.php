@@ -61,8 +61,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         'uri' => 'string',
         'url' => 'string',
         'sequencial_documento' => 'int',
-        'cnpj' => 'string',
         'data_publicacao_pncp' => '\DateTime',
+        'cnpj' => 'string',
         'ano_compra' => 'int',
         'sequencial_compra' => 'int',
         'titulo' => 'string',
@@ -80,8 +80,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         'uri' => 'uri',
         'url' => null,
         'sequencial_documento' => 'int32',
-        'cnpj' => null,
         'data_publicacao_pncp' => 'date-time',
+        'cnpj' => null,
         'ano_compra' => 'int32',
         'sequencial_compra' => 'int32',
         'titulo' => null,
@@ -97,8 +97,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         'uri' => false,
 		'url' => false,
 		'sequencial_documento' => false,
-		'cnpj' => false,
 		'data_publicacao_pncp' => false,
+		'cnpj' => false,
 		'ano_compra' => false,
 		'sequencial_compra' => false,
 		'titulo' => false,
@@ -194,8 +194,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         'uri' => 'uri',
         'url' => 'url',
         'sequencial_documento' => 'sequencialDocumento',
-        'cnpj' => 'cnpj',
         'data_publicacao_pncp' => 'dataPublicacaoPncp',
+        'cnpj' => 'cnpj',
         'ano_compra' => 'anoCompra',
         'sequencial_compra' => 'sequencialCompra',
         'titulo' => 'titulo',
@@ -211,8 +211,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         'uri' => 'setUri',
         'url' => 'setUrl',
         'sequencial_documento' => 'setSequencialDocumento',
-        'cnpj' => 'setCnpj',
         'data_publicacao_pncp' => 'setDataPublicacaoPncp',
+        'cnpj' => 'setCnpj',
         'ano_compra' => 'setAnoCompra',
         'sequencial_compra' => 'setSequencialCompra',
         'titulo' => 'setTitulo',
@@ -228,8 +228,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         'uri' => 'getUri',
         'url' => 'getUrl',
         'sequencial_documento' => 'getSequencialDocumento',
-        'cnpj' => 'getCnpj',
         'data_publicacao_pncp' => 'getDataPublicacaoPncp',
+        'cnpj' => 'getCnpj',
         'ano_compra' => 'getAnoCompra',
         'sequencial_compra' => 'getSequencialCompra',
         'titulo' => 'getTitulo',
@@ -296,8 +296,8 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
         $this->setIfExists('uri', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
         $this->setIfExists('sequencial_documento', $data ?? [], null);
-        $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('data_publicacao_pncp', $data ?? [], null);
+        $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('ano_compra', $data ?? [], null);
         $this->setIfExists('sequencial_compra', $data ?? [], null);
         $this->setIfExists('titulo', $data ?? [], null);
@@ -428,33 +428,6 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
     }
 
     /**
-     * Gets cnpj
-     *
-     * @return string|null
-     */
-    public function getCnpj()
-    {
-        return $this->container['cnpj'];
-    }
-
-    /**
-     * Sets cnpj
-     *
-     * @param string|null $cnpj cnpj
-     *
-     * @return self
-     */
-    public function setCnpj($cnpj)
-    {
-        if (is_null($cnpj)) {
-            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
-        }
-        $this->container['cnpj'] = $cnpj;
-
-        return $this;
-    }
-
-    /**
      * Gets data_publicacao_pncp
      *
      * @return \DateTime|null
@@ -477,6 +450,33 @@ class RecuperarDadosDocumentoContratoDTO implements ModelInterface, ArrayAccess,
             throw new \InvalidArgumentException('non-nullable data_publicacao_pncp cannot be null');
         }
         $this->container['data_publicacao_pncp'] = $data_publicacao_pncp;
+
+        return $this;
+    }
+
+    /**
+     * Gets cnpj
+     *
+     * @return string|null
+     */
+    public function getCnpj()
+    {
+        return $this->container['cnpj'];
+    }
+
+    /**
+     * Sets cnpj
+     *
+     * @param string|null $cnpj cnpj
+     *
+     * @return self
+     */
+    public function setCnpj($cnpj)
+    {
+        if (is_null($cnpj)) {
+            throw new \InvalidArgumentException('non-nullable cnpj cannot be null');
+        }
+        $this->container['cnpj'] = $cnpj;
 
         return $this;
     }

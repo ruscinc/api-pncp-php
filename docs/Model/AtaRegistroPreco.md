@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **cancelado** | **bool** |  | [optional]
 **data_inclusao** | **\DateTime** |  | [optional]
 **data_atualizacao** | **\DateTime** |  | [optional]
+**data_atualizacao_global** | **\DateTime** |  | [optional]
 **data_vigencia_inicio** | **\DateTime** |  | [optional]
 **data_vigencia_fim** | **\DateTime** |  | [optional]
 **sequencial_ata** | **int** |  | [optional]

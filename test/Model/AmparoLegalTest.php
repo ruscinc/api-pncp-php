@@ -108,6 +108,15 @@ class AmparoLegalTest extends TestCase
     }
 
     /**
+     * Test attribute "tipo_amparo_legal"
+     */
+    public function testPropertyTipoAmparoLegal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "data_inclusao"
      */
     public function testPropertyDataInclusao()
@@ -120,6 +129,24 @@ class AmparoLegalTest extends TestCase
      * Test attribute "data_atualizacao"
      */
     public function testPropertyDataAtualizacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status_ativo"
+     */
+    public function testPropertyStatusAtivo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "justificativa_atualizacao"
+     */
+    public function testPropertyJustificativaAtualizacao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

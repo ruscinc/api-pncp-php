@@ -4,8 +4,7 @@ All URIs are relative to https://treina.pncp.gov.br/api/pncp, except if the oper
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**consultarCompra()**](ContrataoApi.md#consultarCompra) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial} | Consultar Contratação |
-| [**consultarCompra1()**](ContrataoApi.md#consultarCompra1) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico | Consultar Histórico de Contratação |
+| [**consultarCompra()**](ContrataoApi.md#consultarCompra) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico | Consultar Histórico de Contratação |
 | [**consultarQuantidade()**](ContrataoApi.md#consultarQuantidade) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/historico/quantidade | Consultar Quantidade Histórico de Contratação |
 | [**getImagem()**](ContrataoApi.md#getImagem) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem/{sequencialImagem} | Recuperar Imagem de um Item de uma Contratação |
 | [**getImagemLista()**](ContrataoApi.md#getImagemLista) | **GET** /v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/imagem | Recuperar Imagens de um Item de uma Contratação |
@@ -35,65 +34,7 @@ All URIs are relative to https://treina.pncp.gov.br/api/pncp, except if the oper
 ## `consultarCompra()`
 
 ```php
-consultarCompra($cnpj, $ano, $sequencial): \OpenAPI\Client\Model\RecuperarCompraDTO
-```
-
-Consultar Contratação
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\ContrataoApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$cnpj = 'cnpj_example'; // string
-$ano = 56; // int
-$sequencial = 56; // int
-
-try {
-    $result = $apiInstance->consultarCompra($cnpj, $ano, $sequencial);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ContrataoApi->consultarCompra: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **cnpj** | **string**|  | |
-| **ano** | **int**|  | |
-| **sequencial** | **int**|  | |
-
-### Return type
-
-[**\OpenAPI\Client\Model\RecuperarCompraDTO**](../Model/RecuperarCompraDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `*/*`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `consultarCompra1()`
-
-```php
-consultarCompra1($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina): \OpenAPI\Client\Model\RecuperarHistoricoCompraDTO[]
+consultarCompra($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina): \OpenAPI\Client\Model\RecuperarHistoricoCompraDTO[]
 ```
 
 Consultar Histórico de Contratação
@@ -118,10 +59,10 @@ $pagina = 56; // int
 $tamanho_pagina = 56; // int
 
 try {
-    $result = $apiInstance->consultarCompra1($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina);
+    $result = $apiInstance->consultarCompra($cnpj, $ano, $sequencial, $pagina, $tamanho_pagina);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContrataoApi->consultarCompra1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContrataoApi->consultarCompra: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -360,7 +301,7 @@ $apiInstance = new OpenAPI\Client\Api\ContrataoApi(
 $cnpj = 'cnpj_example'; // string
 $titulo_documento = 'titulo_documento_example'; // string
 $tipo_documento_id = 56; // int
-$compra = "/path/to/file.txt"; // \SplFileObject | O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\"anoCompra\\\": 2021,  \\\"itensCompra\\\": [    {      \\\"numeroItem\\\": 1,      \\\"materialOuServico\\\": \\\"M\\\",      \\\"tipoBeneficioId\\\": \\\"1\\\",      \\\"incentivoProdutivoBasico\\\": true,      \\\"descricao\\\": \\\"string\\\",      \\\"quantidade\\\": 1,      \\\"unidadeMedida\\\": \\\"string\\\",      \\\"valorUnitarioEstimado\\\": 100.00,      \\\"valorTotal\\\": 100.00,      \\\"orcamentoSigiloso\\\": true,      \\\"criterioJulgamentoId\\\": \\\"1\\\",      \\\"itemCategoriaId\\\": 1,      \\\"patrimonio\\\": \\\"string\\\",      \\\"codigoRegistroImobiliario\\\": \\\"string\\\"    }  ],  \\\"tipoInstrumentoConvocatorioId\\\": \\\"1\\\",  \\\"modalidadeId\\\": \\\"1\\\",  \\\"modoDisputaId\\\": \\\"1\\\",  \\\"numeroCompra\\\": \\\"string\\\",  \\\"numeroProcesso\\\": \\\"string\\\",  \\\"objetoCompra\\\": \\\"string\\\",  \\\"informacaoComplementar\\\": \\\"string\\\",  \\\"amparoLegalId\\\": 1,  \\\"srp\\\": true,  \\\"dataAberturaProposta\\\": \\\"2022-01-18T14:30:01\\\",  \\\"dataEncerramentoProposta\\\": \\\"2022-01-18T14:30:01\\\",  \\\"codigoUnidadeCompradora\\\": \\\"string\\\",  \\\"linkSistemaOrigem\\\": \\\"string\\\",  \\\"justificativaPresencial\\\": \\\"string\\\"}
+$compra = "/path/to/file.txt"; // \SplFileObject | O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\"anoCompra\\\": 2021,  \\\"itensCompra\\\":  [{  \\\"numeroItem\\\": 1,  \\\"materialOuServico\\\": \\\"M\\\",  \\\"tipoBeneficioId\\\": \\\"1\\\",  \\\"incentivoProdutivoBasico\\\": true,  \\\"descricao\\\": \\\"string\\\",  \\\"quantidade\\\": 1,  \\\"unidadeMedida\\\": \\\"string\\\",  \\\"valorUnitarioEstimado\\\": 100.00,  \\\"valorTotal\\\": 100.00,  \\\"orcamentoSigiloso\\\": true,  \\\"criterioJulgamentoId\\\": \\\"1\\\",  \\\"itemCategoriaId\\\": 1,  \\\"patrimonio\\\": \\\"string\\\",  \\\"codigoRegistroImobiliario\\\": \\\"string\\\",  \\\"aplicabilidadeMargemPreferencia\\\": false,  \\\"percentualMargemPreferenciaNormal\\\": 0.001,  \\\"percentualMargemPreferenciaAdicional\\\": 0.001,  \\\"catalogoId\\\": 1,  \\\"categoriaItemCatalogoId\\\": 1,  \\\"catalogoCodigoItem\\\": 1,  \\\"informacaoComplementar\\\": \\\"string\\\"  }],  \\\"tipoInstrumentoConvocatorioId\\\": \\\"1\\\",  \\\"modalidadeId\\\": \\\"1\\\",  \\\"modoDisputaId\\\": \\\"1\\\",  \\\"numeroCompra\\\": \\\"string\\\",  \\\"numeroProcesso\\\": \\\"string\\\",  \\\"objetoCompra\\\": \\\"string\\\",  \\\"informacaoComplementar\\\": \\\"string\\\",  \\\"amparoLegalId\\\": 1,  \\\"srp\\\": true,  \\\"dataAberturaProposta\\\": \\\"2022-01-18T14:30:01\\\",  \\\"dataEncerramentoProposta\\\": \\\"2022-01-18T14:30:01\\\",  \\\"codigoUnidadeCompradora\\\": \\\"string\\\",  \\\"linkSistemaOrigem\\\": \\\"string\\\",  \\\"linkProcessoEletronico\\\": \\\"string\\\",  \\\"justificativaPresencial\\\": \\\"string\\\",  \\\"fontesOrcamentarias\\\": [1, 2] }
 $documento = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -378,7 +319,7 @@ try {
 | **cnpj** | **string**|  | |
 | **titulo_documento** | **string**|  | |
 | **tipo_documento_id** | **int**|  | |
-| **compra** | **\SplFileObject****\SplFileObject**| O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;: [    {      \\\&quot;numeroItem\\\&quot;: 1,      \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,      \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;incentivoProdutivoBasico\\\&quot;: true,      \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;quantidade\\\&quot;: 1,      \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,      \\\&quot;valorTotal\\\&quot;: 100.00,      \\\&quot;orcamentoSigiloso\\\&quot;: true,      \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,      \\\&quot;itemCategoriaId\\\&quot;: 1,      \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,      \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;    }  ],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;} | |
+| **compra** | **\SplFileObject****\SplFileObject**| O arquivo com os dados da compra deve utilizar o formato JSON, conforme o exemplo: {  \\\&quot;anoCompra\\\&quot;: 2021,  \\\&quot;itensCompra\\\&quot;:  [{  \\\&quot;numeroItem\\\&quot;: 1,  \\\&quot;materialOuServico\\\&quot;: \\\&quot;M\\\&quot;,  \\\&quot;tipoBeneficioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;incentivoProdutivoBasico\\\&quot;: true,  \\\&quot;descricao\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;quantidade\\\&quot;: 1,  \\\&quot;unidadeMedida\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;valorUnitarioEstimado\\\&quot;: 100.00,  \\\&quot;valorTotal\\\&quot;: 100.00,  \\\&quot;orcamentoSigiloso\\\&quot;: true,  \\\&quot;criterioJulgamentoId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;itemCategoriaId\\\&quot;: 1,  \\\&quot;patrimonio\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;codigoRegistroImobiliario\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;aplicabilidadeMargemPreferencia\\\&quot;: false,  \\\&quot;percentualMargemPreferenciaNormal\\\&quot;: 0.001,  \\\&quot;percentualMargemPreferenciaAdicional\\\&quot;: 0.001,  \\\&quot;catalogoId\\\&quot;: 1,  \\\&quot;categoriaItemCatalogoId\\\&quot;: 1,  \\\&quot;catalogoCodigoItem\\\&quot;: 1,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;  }],  \\\&quot;tipoInstrumentoConvocatorioId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modalidadeId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;modoDisputaId\\\&quot;: \\\&quot;1\\\&quot;,  \\\&quot;numeroCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;numeroProcesso\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;objetoCompra\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;informacaoComplementar\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;amparoLegalId\\\&quot;: 1,  \\\&quot;srp\\\&quot;: true,  \\\&quot;dataAberturaProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;dataEncerramentoProposta\\\&quot;: \\\&quot;2022-01-18T14:30:01\\\&quot;,  \\\&quot;codigoUnidadeCompradora\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkSistemaOrigem\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;linkProcessoEletronico\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;justificativaPresencial\\\&quot;: \\\&quot;string\\\&quot;,  \\\&quot;fontesOrcamentarias\\\&quot;: [1, 2] } | |
 | **documento** | **\SplFileObject****\SplFileObject**|  | |
 
 ### Return type

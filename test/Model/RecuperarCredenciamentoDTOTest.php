@@ -81,24 +81,6 @@ class RecuperarCredenciamentoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "usuario_deferimento"
-     */
-    public function testPropertyUsuarioDeferimento()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "usuario_analise_processo"
-     */
-    public function testPropertyUsuarioAnaliseProcesso()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
@@ -111,15 +93,6 @@ class RecuperarCredenciamentoDTOTest extends TestCase
      * Test attribute "cnpj"
      */
     public function testPropertyCnpj()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data_inclusao"
-     */
-    public function testPropertyDataInclusao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -144,9 +117,63 @@ class RecuperarCredenciamentoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "data_inclusao"
+     */
+    public function testPropertyDataInclusao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "excluido"
      */
     public function testPropertyExcluido()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "urledital_credenciamento"
+     */
+    public function testPropertyUrleditalCredenciamento()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "responsavel_cadastro_telefone"
+     */
+    public function testPropertyResponsavelCadastroTelefone()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "url_contrato"
+     */
+    public function testPropertyUrlContrato()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "responsavel_cadastro_cpf"
+     */
+    public function testPropertyResponsavelCadastroCpf()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "responsavel_cadastro_nome"
+     */
+    public function testPropertyResponsavelCadastroNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -180,54 +207,9 @@ class RecuperarCredenciamentoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "url_ata"
      */
-    public function testPropertyEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "responsavel_cadastro_email"
-     */
-    public function testPropertyResponsavelCadastroEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "nome_sistema"
-     */
-    public function testPropertyNomeSistema()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "justificativa_analise"
-     */
-    public function testPropertyJustificativaAnalise()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data_deferimento"
-     */
-    public function testPropertyDataDeferimento()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "usuario_treinamento_id"
-     */
-    public function testPropertyUsuarioTreinamentoId()
+    public function testPropertyUrlAta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -243,135 +225,9 @@ class RecuperarCredenciamentoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "login_treinamento"
-     */
-    public function testPropertyLoginTreinamento()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "justificativa_deferimento"
-     */
-    public function testPropertyJustificativaDeferimento()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "termos_declaracao_aceite"
-     */
-    public function testPropertyTermosDeclaracaoAceite()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "url_sistema"
      */
     public function testPropertyUrlSistema()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "responsavel_cadastro_nome"
-     */
-    public function testPropertyResponsavelCadastroNome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "responsavel_cadastro_cpf"
-     */
-    public function testPropertyResponsavelCadastroCpf()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "responsavel_cadastro_telefone"
-     */
-    public function testPropertyResponsavelCadastroTelefone()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "esfera_federal"
-     */
-    public function testPropertyEsferaFederal()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ufs"
-     */
-    public function testPropertyUfs()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "esfera_estadual"
-     */
-    public function testPropertyEsferaEstadual()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "esfera_municipal"
-     */
-    public function testPropertyEsferaMunicipal()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "edital_credenciamento"
-     */
-    public function testPropertyEditalCredenciamento()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "urledital_credenciamento"
-     */
-    public function testPropertyUrleditalCredenciamento()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "aviso_contratacao_direta"
-     */
-    public function testPropertyAvisoContratacaoDireta()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "url_aviso_contratacao_direta"
-     */
-    public function testPropertyUrlAvisoContratacaoDireta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -387,36 +243,27 @@ class RecuperarCredenciamentoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "url_edital_licitacao"
+     * Test attribute "aviso_contratacao_direta"
      */
-    public function testPropertyUrlEditalLicitacao()
+    public function testPropertyAvisoContratacaoDireta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "url_ata"
+     * Test attribute "edital_credenciamento"
      */
-    public function testPropertyUrlAta()
+    public function testPropertyEditalCredenciamento()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "url_contrato"
+     * Test attribute "login_treinamento"
      */
-    public function testPropertyUrlContrato()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "esfera_distrital"
-     */
-    public function testPropertyEsferaDistrital()
+    public function testPropertyLoginTreinamento()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -432,9 +279,162 @@ class RecuperarCredenciamentoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "esfera_distrital"
+     */
+    public function testPropertyEsferaDistrital()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "esfera_municipal"
+     */
+    public function testPropertyEsferaMunicipal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "esfera_estadual"
+     */
+    public function testPropertyEsferaEstadual()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "nome_sistema"
+     */
+    public function testPropertyNomeSistema()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data_deferimento"
+     */
+    public function testPropertyDataDeferimento()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "justificativa_analise"
+     */
+    public function testPropertyJustificativaAnalise()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "usuario_treinamento_id"
+     */
+    public function testPropertyUsuarioTreinamentoId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "responsavel_cadastro_email"
+     */
+    public function testPropertyResponsavelCadastroEmail()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "url_edital_licitacao"
+     */
+    public function testPropertyUrlEditalLicitacao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "url_aviso_contratacao_direta"
+     */
+    public function testPropertyUrlAvisoContratacaoDireta()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "justificativa_deferimento"
+     */
+    public function testPropertyJustificativaDeferimento()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ufs"
+     */
+    public function testPropertyUfs()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "esfera_federal"
+     */
+    public function testPropertyEsferaFederal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "termos_declaracao_aceite"
+     */
+    public function testPropertyTermosDeclaracaoAceite()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "usuario_analise_processo"
+     */
+    public function testPropertyUsuarioAnaliseProcesso()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "usuario_credenciado"
      */
     public function testPropertyUsuarioCredenciado()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "usuario_deferimento"
+     */
+    public function testPropertyUsuarioDeferimento()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

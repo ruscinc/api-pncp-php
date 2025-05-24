@@ -90,18 +90,18 @@ class RecuperarCredenciamentoResponsavelDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "responsavel_telefone"
+     * Test attribute "responsavel_nome"
      */
-    public function testPropertyResponsavelTelefone()
+    public function testPropertyResponsavelNome()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "responsavel_nome"
+     * Test attribute "responsavel_telefone"
      */
-    public function testPropertyResponsavelNome()
+    public function testPropertyResponsavelTelefone()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -75,22 +75,10 @@ class ContrataoApiTest extends TestCase
     /**
      * Test case for consultarCompra
      *
-     * Consultar Contratação.
-     *
-     */
-    public function testConsultarCompra()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for consultarCompra1
-     *
      * Consultar Histórico de Contratação.
      *
      */
-    public function testConsultarCompra1()
+    public function testConsultarCompra()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

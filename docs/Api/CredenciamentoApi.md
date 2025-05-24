@@ -5,11 +5,11 @@ All URIs are relative to https://treina.pncp.gov.br/api/pncp, except if the oper
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**criarUsuarioCredenciamentoDeferido()**](CredenciamentoApi.md#criarUsuarioCredenciamentoDeferido) | **POST** /v1/credenciamentos/{ano}/{sequencial}/criarUsuario | Criar Usuário Credenciamento |
-| [**incluirCredenciamento()**](CredenciamentoApi.md#incluirCredenciamento) | **POST** /v1/credenciamentos | Inserir Credencimento |
-| [**recuperarCredenciamento()**](CredenciamentoApi.md#recuperarCredenciamento) | **GET** /v1/credenciamentos/{ano}/{sequencial} | Consultar Credencimento |
-| [**recuperarCredenciamentoResponsavel()**](CredenciamentoApi.md#recuperarCredenciamentoResponsavel) | **GET** /v1/credenciamentos/{ano}/{sequencial}/responsaveis | Consultar Credencimento Responsavel |
-| [**recuperarCredenciamentos()**](CredenciamentoApi.md#recuperarCredenciamentos) | **GET** /v1/credenciamentos | Consultar Credencimentos |
-| [**recuperarQuantidadeCredenciamentos()**](CredenciamentoApi.md#recuperarQuantidadeCredenciamentos) | **GET** /v1/credenciamentos/quantidade | Consultar Quantidade Credencimentos |
+| [**incluirCredenciamento()**](CredenciamentoApi.md#incluirCredenciamento) | **POST** /v1/credenciamentos | Inserir Credenciamento |
+| [**recuperarCredenciamento()**](CredenciamentoApi.md#recuperarCredenciamento) | **GET** /v1/credenciamentos/{ano}/{sequencial} | Consultar Credenciamento |
+| [**recuperarCredenciamentoResponsavel()**](CredenciamentoApi.md#recuperarCredenciamentoResponsavel) | **GET** /v1/credenciamentos/{ano}/{sequencial}/responsaveis | Consultar Credenciamento Responsavel |
+| [**recuperarCredenciamentos()**](CredenciamentoApi.md#recuperarCredenciamentos) | **GET** /v1/credenciamentos | Consultar Credenciamentos |
+| [**recuperarQuantidadeCredenciamentos()**](CredenciamentoApi.md#recuperarQuantidadeCredenciamentos) | **GET** /v1/credenciamentos/quantidade | Consultar Quantidade Credenciamentos |
 | [**retificarParcialmenteCredenciamento()**](CredenciamentoApi.md#retificarParcialmenteCredenciamento) | **PATCH** /v1/credenciamentos/{ano}/{sequencial} | Retificar Parcialmente Credenciamento |
 
 
@@ -81,7 +81,7 @@ try {
 incluirCredenciamento($id_token, $incluir_credenciamento_dto): object
 ```
 
-Inserir Credencimento
+Inserir Credenciamento
 
 ### Example
 
@@ -141,7 +141,7 @@ try {
 recuperarCredenciamento($ano, $sequencial): \OpenAPI\Client\Model\RecuperarCredenciamentoDTO
 ```
 
-Consultar Credencimento
+Consultar Credenciamento
 
 ### Example
 
@@ -201,7 +201,7 @@ try {
 recuperarCredenciamentoResponsavel($ano, $sequencial): \OpenAPI\Client\Model\RecuperarCredenciamentoResponsavelDTO[]
 ```
 
-Consultar Credencimento Responsavel
+Consultar Credenciamento Responsavel
 
 ### Example
 
@@ -261,7 +261,7 @@ try {
 recuperarCredenciamentos($status, $pesquisa, $pagina, $tamanho_pagina): \OpenAPI\Client\Model\RecuperarCredenciamentoDTO[]
 ```
 
-Consultar Credencimentos
+Consultar Credenciamentos
 
 ### Example
 
@@ -325,7 +325,7 @@ try {
 recuperarQuantidadeCredenciamentos($status, $pesquisa): int
 ```
 
-Consultar Quantidade Credencimentos
+Consultar Quantidade Credenciamentos
 
 ### Example
 

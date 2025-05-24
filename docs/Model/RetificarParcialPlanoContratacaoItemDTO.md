@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**categoria_item_pca** | **string** |  | [optional]
-**catalogo** | **string** |  | [optional]
+**categoria_item_pca** | **int** |  | [optional]
+**catalogo** | **int** |  | [optional]
 **classificacao_superior_codigo** | **string** |  | [optional]
 **classificacao_superior_nome** | **string** |  | [optional]
 **pdm_codigo** | **string** |  | [optional]

@@ -171,6 +171,15 @@ class RecuperarAtaRegistroPrecoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "data_atualizacao_global"
+     */
+    public function testPropertyDataAtualizacaoGlobal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sequencial_ata"
      */
     public function testPropertySequencialAta()
@@ -183,15 +192,6 @@ class RecuperarAtaRegistroPrecoDTOTest extends TestCase
      * Test attribute "numero_controle_pncp"
      */
     public function testPropertyNumeroControlePncp()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ata"
-     */
-    public function testPropertyAta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -59,8 +59,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'itens' => '\OpenAPI\Client\Model\IRecuperarPlanoItemDTO[]',
-        'unidade_responsavel' => 'string',
-        'uasg' => 'string'
+        'uasg' => 'string',
+        'unidade_responsavel' => 'string'
     ];
 
     /**
@@ -72,8 +72,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'itens' => null,
-        'unidade_responsavel' => null,
-        'uasg' => null
+        'uasg' => null,
+        'unidade_responsavel' => null
     ];
 
     /**
@@ -83,8 +83,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'itens' => false,
-		'unidade_responsavel' => false,
-		'uasg' => false
+		'uasg' => false,
+		'unidade_responsavel' => false
     ];
 
     /**
@@ -174,8 +174,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'itens' => 'itens',
-        'unidade_responsavel' => 'unidadeResponsavel',
-        'uasg' => 'uasg'
+        'uasg' => 'uasg',
+        'unidade_responsavel' => 'unidadeResponsavel'
     ];
 
     /**
@@ -185,8 +185,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'itens' => 'setItens',
-        'unidade_responsavel' => 'setUnidadeResponsavel',
-        'uasg' => 'setUasg'
+        'uasg' => 'setUasg',
+        'unidade_responsavel' => 'setUnidadeResponsavel'
     ];
 
     /**
@@ -196,8 +196,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'itens' => 'getItens',
-        'unidade_responsavel' => 'getUnidadeResponsavel',
-        'uasg' => 'getUasg'
+        'uasg' => 'getUasg',
+        'unidade_responsavel' => 'getUnidadeResponsavel'
     ];
 
     /**
@@ -258,8 +258,8 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
     public function __construct(array $data = null)
     {
         $this->setIfExists('itens', $data ?? [], null);
-        $this->setIfExists('unidade_responsavel', $data ?? [], null);
         $this->setIfExists('uasg', $data ?? [], null);
+        $this->setIfExists('unidade_responsavel', $data ?? [], null);
     }
 
     /**
@@ -332,33 +332,6 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets unidade_responsavel
-     *
-     * @return string|null
-     */
-    public function getUnidadeResponsavel()
-    {
-        return $this->container['unidade_responsavel'];
-    }
-
-    /**
-     * Sets unidade_responsavel
-     *
-     * @param string|null $unidade_responsavel unidade_responsavel
-     *
-     * @return self
-     */
-    public function setUnidadeResponsavel($unidade_responsavel)
-    {
-        if (is_null($unidade_responsavel)) {
-            throw new \InvalidArgumentException('non-nullable unidade_responsavel cannot be null');
-        }
-        $this->container['unidade_responsavel'] = $unidade_responsavel;
-
-        return $this;
-    }
-
-    /**
      * Gets uasg
      *
      * @return string|null
@@ -381,6 +354,33 @@ class PlanoContratacaoComItensDTO implements ModelInterface, ArrayAccess, \JsonS
             throw new \InvalidArgumentException('non-nullable uasg cannot be null');
         }
         $this->container['uasg'] = $uasg;
+
+        return $this;
+    }
+
+    /**
+     * Gets unidade_responsavel
+     *
+     * @return string|null
+     */
+    public function getUnidadeResponsavel()
+    {
+        return $this->container['unidade_responsavel'];
+    }
+
+    /**
+     * Sets unidade_responsavel
+     *
+     * @param string|null $unidade_responsavel unidade_responsavel
+     *
+     * @return self
+     */
+    public function setUnidadeResponsavel($unidade_responsavel)
+    {
+        if (is_null($unidade_responsavel)) {
+            throw new \InvalidArgumentException('non-nullable unidade_responsavel cannot be null');
+        }
+        $this->container['unidade_responsavel'] = $unidade_responsavel;
 
         return $this;
     }

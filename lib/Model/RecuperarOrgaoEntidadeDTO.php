@@ -60,8 +60,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPITypes = [
         'cnpj' => 'string',
         'razao_social' => 'string',
-        'poder_id' => 'string',
-        'esfera_id' => 'string'
+        'esfera_id' => 'string',
+        'poder_id' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPIFormats = [
         'cnpj' => null,
         'razao_social' => null,
-        'poder_id' => null,
-        'esfera_id' => null
+        'esfera_id' => null,
+        'poder_id' => null
     ];
 
     /**
@@ -86,8 +86,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     protected static array $openAPINullables = [
         'cnpj' => false,
 		'razao_social' => false,
-		'poder_id' => false,
-		'esfera_id' => false
+		'esfera_id' => false,
+		'poder_id' => false
     ];
 
     /**
@@ -178,8 +178,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     protected static $attributeMap = [
         'cnpj' => 'cnpj',
         'razao_social' => 'razaoSocial',
-        'poder_id' => 'poderId',
-        'esfera_id' => 'esferaId'
+        'esfera_id' => 'esferaId',
+        'poder_id' => 'poderId'
     ];
 
     /**
@@ -190,8 +190,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     protected static $setters = [
         'cnpj' => 'setCnpj',
         'razao_social' => 'setRazaoSocial',
-        'poder_id' => 'setPoderId',
-        'esfera_id' => 'setEsferaId'
+        'esfera_id' => 'setEsferaId',
+        'poder_id' => 'setPoderId'
     ];
 
     /**
@@ -202,8 +202,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     protected static $getters = [
         'cnpj' => 'getCnpj',
         'razao_social' => 'getRazaoSocial',
-        'poder_id' => 'getPoderId',
-        'esfera_id' => 'getEsferaId'
+        'esfera_id' => 'getEsferaId',
+        'poder_id' => 'getPoderId'
     ];
 
     /**
@@ -265,8 +265,8 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     {
         $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('razao_social', $data ?? [], null);
-        $this->setIfExists('poder_id', $data ?? [], null);
         $this->setIfExists('esfera_id', $data ?? [], null);
+        $this->setIfExists('poder_id', $data ?? [], null);
     }
 
     /**
@@ -366,33 +366,6 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets poder_id
-     *
-     * @return string|null
-     */
-    public function getPoderId()
-    {
-        return $this->container['poder_id'];
-    }
-
-    /**
-     * Sets poder_id
-     *
-     * @param string|null $poder_id poder_id
-     *
-     * @return self
-     */
-    public function setPoderId($poder_id)
-    {
-        if (is_null($poder_id)) {
-            throw new \InvalidArgumentException('non-nullable poder_id cannot be null');
-        }
-        $this->container['poder_id'] = $poder_id;
-
-        return $this;
-    }
-
-    /**
      * Gets esfera_id
      *
      * @return string|null
@@ -415,6 +388,33 @@ class RecuperarOrgaoEntidadeDTO implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable esfera_id cannot be null');
         }
         $this->container['esfera_id'] = $esfera_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets poder_id
+     *
+     * @return string|null
+     */
+    public function getPoderId()
+    {
+        return $this->container['poder_id'];
+    }
+
+    /**
+     * Sets poder_id
+     *
+     * @param string|null $poder_id poder_id
+     *
+     * @return self
+     */
+    public function setPoderId($poder_id)
+    {
+        if (is_null($poder_id)) {
+            throw new \InvalidArgumentException('non-nullable poder_id cannot be null');
+        }
+        $this->container['poder_id'] = $poder_id;
 
         return $this;
     }

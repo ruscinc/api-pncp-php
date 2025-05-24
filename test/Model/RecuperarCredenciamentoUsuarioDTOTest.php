@@ -81,6 +81,15 @@ class RecuperarCredenciamentoUsuarioDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "administrador"
      */
     public function testPropertyAdministrador()
@@ -108,15 +117,6 @@ class RecuperarCredenciamentoUsuarioDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "cpf_cnpj"
-     */
-    public function testPropertyCpfCnpj()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "email"
      */
     public function testPropertyEmail()
@@ -126,9 +126,9 @@ class RecuperarCredenciamentoUsuarioDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "cpf_cnpj"
      */
-    public function testPropertyId()
+    public function testPropertyCpfCnpj()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

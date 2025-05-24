@@ -672,7 +672,7 @@ class CredenciamentoApi
     /**
      * Operation incluirCredenciamento
      *
-     * Inserir Credencimento
+     * Inserir Credenciamento
      *
      * @param  string $id_token id_token (required)
      * @param  \OpenAPI\Client\Model\IncluirCredenciamentoDTO $incluir_credenciamento_dto incluir_credenciamento_dto (required)
@@ -691,7 +691,7 @@ class CredenciamentoApi
     /**
      * Operation incluirCredenciamentoWithHttpInfo
      *
-     * Inserir Credencimento
+     * Inserir Credenciamento
      *
      * @param  string $id_token (required)
      * @param  \OpenAPI\Client\Model\IncluirCredenciamentoDTO $incluir_credenciamento_dto (required)
@@ -991,7 +991,7 @@ class CredenciamentoApi
     /**
      * Operation incluirCredenciamentoAsync
      *
-     * Inserir Credencimento
+     * Inserir Credenciamento
      *
      * @param  string $id_token (required)
      * @param  \OpenAPI\Client\Model\IncluirCredenciamentoDTO $incluir_credenciamento_dto (required)
@@ -1013,7 +1013,7 @@ class CredenciamentoApi
     /**
      * Operation incluirCredenciamentoAsyncWithHttpInfo
      *
-     * Inserir Credencimento
+     * Inserir Credenciamento
      *
      * @param  string $id_token (required)
      * @param  \OpenAPI\Client\Model\IncluirCredenciamentoDTO $incluir_credenciamento_dto (required)
@@ -1173,7 +1173,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamento
      *
-     * Consultar Credencimento
+     * Consultar Credenciamento
      *
      * @param  int $ano ano (required)
      * @param  int $sequencial sequencial (required)
@@ -1192,7 +1192,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoWithHttpInfo
      *
-     * Consultar Credencimento
+     * Consultar Credenciamento
      *
      * @param  int $ano (required)
      * @param  int $sequencial (required)
@@ -1492,7 +1492,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoAsync
      *
-     * Consultar Credencimento
+     * Consultar Credenciamento
      *
      * @param  int $ano (required)
      * @param  int $sequencial (required)
@@ -1514,7 +1514,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoAsyncWithHttpInfo
      *
-     * Consultar Credencimento
+     * Consultar Credenciamento
      *
      * @param  int $ano (required)
      * @param  int $sequencial (required)
@@ -1682,7 +1682,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoResponsavel
      *
-     * Consultar Credencimento Responsavel
+     * Consultar Credenciamento Responsavel
      *
      * @param  int $ano ano (required)
      * @param  int $sequencial sequencial (required)
@@ -1701,7 +1701,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoResponsavelWithHttpInfo
      *
-     * Consultar Credencimento Responsavel
+     * Consultar Credenciamento Responsavel
      *
      * @param  int $ano (required)
      * @param  int $sequencial (required)
@@ -2001,7 +2001,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoResponsavelAsync
      *
-     * Consultar Credencimento Responsavel
+     * Consultar Credenciamento Responsavel
      *
      * @param  int $ano (required)
      * @param  int $sequencial (required)
@@ -2023,7 +2023,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentoResponsavelAsyncWithHttpInfo
      *
-     * Consultar Credencimento Responsavel
+     * Consultar Credenciamento Responsavel
      *
      * @param  int $ano (required)
      * @param  int $sequencial (required)
@@ -2188,7 +2188,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentos
      *
-     * Consultar Credencimentos
+     * Consultar Credenciamentos
      *
      * @param  string $status status (optional)
      * @param  string $pesquisa pesquisa (optional)
@@ -2209,7 +2209,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentosWithHttpInfo
      *
-     * Consultar Credencimentos
+     * Consultar Credenciamentos
      *
      * @param  string $status (optional)
      * @param  string $pesquisa (optional)
@@ -2511,7 +2511,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentosAsync
      *
-     * Consultar Credencimentos
+     * Consultar Credenciamentos
      *
      * @param  string $status (optional)
      * @param  string $pesquisa (optional)
@@ -2535,7 +2535,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarCredenciamentosAsyncWithHttpInfo
      *
-     * Consultar Credencimentos
+     * Consultar Credenciamentos
      *
      * @param  string $status (optional)
      * @param  string $pesquisa (optional)
@@ -2720,7 +2720,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarQuantidadeCredenciamentos
      *
-     * Consultar Quantidade Credencimentos
+     * Consultar Quantidade Credenciamentos
      *
      * @param  string $status status (optional)
      * @param  string $pesquisa pesquisa (optional)
@@ -2739,7 +2739,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarQuantidadeCredenciamentosWithHttpInfo
      *
-     * Consultar Quantidade Credencimentos
+     * Consultar Quantidade Credenciamentos
      *
      * @param  string $status (optional)
      * @param  string $pesquisa (optional)
@@ -3039,7 +3039,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarQuantidadeCredenciamentosAsync
      *
-     * Consultar Quantidade Credencimentos
+     * Consultar Quantidade Credenciamentos
      *
      * @param  string $status (optional)
      * @param  string $pesquisa (optional)
@@ -3061,7 +3061,7 @@ class CredenciamentoApi
     /**
      * Operation recuperarQuantidadeCredenciamentosAsyncWithHttpInfo
      *
-     * Consultar Quantidade Credencimentos
+     * Consultar Quantidade Credenciamentos
      *
      * @param  string $status (optional)
      * @param  string $pesquisa (optional)

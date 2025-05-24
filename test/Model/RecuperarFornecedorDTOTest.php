@@ -81,6 +81,15 @@ class RecuperarFornecedorDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "ni_fornecedor"
      */
     public function testPropertyNiFornecedor()
@@ -102,15 +111,6 @@ class RecuperarFornecedorDTOTest extends TestCase
      * Test attribute "tipo_pessoa_id"
      */
     public function testPropertyTipoPessoaId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

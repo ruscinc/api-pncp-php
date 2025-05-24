@@ -108,18 +108,18 @@ class RecuperarDadosDocumentoContratoDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "cnpj"
+     * Test attribute "data_publicacao_pncp"
      */
-    public function testPropertyCnpj()
+    public function testPropertyDataPublicacaoPncp()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data_publicacao_pncp"
+     * Test attribute "cnpj"
      */
-    public function testPropertyDataPublicacaoPncp()
+    public function testPropertyCnpj()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

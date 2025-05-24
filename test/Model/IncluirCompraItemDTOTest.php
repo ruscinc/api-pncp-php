@@ -205,4 +205,94 @@ class IncluirCompraItemDTOTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "aplicabilidade_margem_preferencia_normal"
+     */
+    public function testPropertyAplicabilidadeMargemPreferenciaNormal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aplicabilidade_margem_preferencia_adicional"
+     */
+    public function testPropertyAplicabilidadeMargemPreferenciaAdicional()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "percentual_margem_preferencia_normal"
+     */
+    public function testPropertyPercentualMargemPreferenciaNormal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "percentual_margem_preferencia_adicional"
+     */
+    public function testPropertyPercentualMargemPreferenciaAdicional()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ncm_nbs_codigo"
+     */
+    public function testPropertyNcmNbsCodigo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ncm_nbs_descricao"
+     */
+    public function testPropertyNcmNbsDescricao()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "catalogo_id"
+     */
+    public function testPropertyCatalogoId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "categoria_item_catalogo_id"
+     */
+    public function testPropertyCategoriaItemCatalogoId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "catalogo_codigo_item"
+     */
+    public function testPropertyCatalogoCodigoItem()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "informacao_complementar"
+     */
+    public function testPropertyInformacaoComplementar()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

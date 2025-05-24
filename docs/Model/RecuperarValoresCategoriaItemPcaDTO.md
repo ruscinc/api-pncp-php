@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**categoria_item_id** | **string** |  | [optional]
+**categoria_item_id** | **int** |  | [optional]
 **quantidade_itens** | **int** |  | [optional]
 **valor_total** | **float** |  | [optional]
 **categoria_item_nome** | **string** |  | [optional]

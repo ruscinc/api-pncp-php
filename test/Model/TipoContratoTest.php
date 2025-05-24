@@ -97,4 +97,13 @@ class TipoContratoTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "status_ativo"
+     */
+    public function testPropertyStatusAtivo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

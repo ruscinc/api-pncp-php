@@ -171,6 +171,15 @@ class AtaRegistroPrecoDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "data_atualizacao_global"
+     */
+    public function testPropertyDataAtualizacaoGlobal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sequencial_ata"
      */
     public function testPropertySequencialAta()

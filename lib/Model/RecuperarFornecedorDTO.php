@@ -58,10 +58,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
+        'id' => 'int',
         'ni_fornecedor' => 'string',
         'nome_razao_social' => 'string',
-        'tipo_pessoa_id' => 'string',
-        'id' => 'int'
+        'tipo_pessoa_id' => 'string'
     ];
 
     /**
@@ -72,10 +72,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'id' => 'int64',
         'ni_fornecedor' => null,
         'nome_razao_social' => null,
-        'tipo_pessoa_id' => null,
-        'id' => 'int64'
+        'tipo_pessoa_id' => null
     ];
 
     /**
@@ -84,10 +84,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'ni_fornecedor' => false,
+        'id' => false,
+		'ni_fornecedor' => false,
 		'nome_razao_social' => false,
-		'tipo_pessoa_id' => false,
-		'id' => false
+		'tipo_pessoa_id' => false
     ];
 
     /**
@@ -176,10 +176,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'ni_fornecedor' => 'niFornecedor',
         'nome_razao_social' => 'nomeRazaoSocial',
-        'tipo_pessoa_id' => 'tipoPessoaId',
-        'id' => 'id'
+        'tipo_pessoa_id' => 'tipoPessoaId'
     ];
 
     /**
@@ -188,10 +188,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'ni_fornecedor' => 'setNiFornecedor',
         'nome_razao_social' => 'setNomeRazaoSocial',
-        'tipo_pessoa_id' => 'setTipoPessoaId',
-        'id' => 'setId'
+        'tipo_pessoa_id' => 'setTipoPessoaId'
     ];
 
     /**
@@ -200,10 +200,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'ni_fornecedor' => 'getNiFornecedor',
         'nome_razao_social' => 'getNomeRazaoSocial',
-        'tipo_pessoa_id' => 'getTipoPessoaId',
-        'id' => 'getId'
+        'tipo_pessoa_id' => 'getTipoPessoaId'
     ];
 
     /**
@@ -280,10 +280,10 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('ni_fornecedor', $data ?? [], null);
         $this->setIfExists('nome_razao_social', $data ?? [], null);
         $this->setIfExists('tipo_pessoa_id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -336,6 +336,33 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return int|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets ni_fornecedor
@@ -424,33 +451,6 @@ class RecuperarFornecedorDTO implements ModelInterface, ArrayAccess, \JsonSerial
             );
         }
         $this->container['tipo_pessoa_id'] = $tipo_pessoa_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

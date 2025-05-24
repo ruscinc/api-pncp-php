@@ -216,6 +216,15 @@ class CompraTest extends TestCase
     }
 
     /**
+     * Test attribute "data_atualizacao_global"
+     */
+    public function testPropertyDataAtualizacaoGlobal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sequencial_compra"
      */
     public function testPropertySequencialCompra()
@@ -297,6 +306,15 @@ class CompraTest extends TestCase
     }
 
     /**
+     * Test attribute "link_processo_eletronico"
+     */
+    public function testPropertyLinkProcessoEletronico()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "excluido"
      */
     public function testPropertyExcluido()
@@ -318,6 +336,33 @@ class CompraTest extends TestCase
      * Test attribute "justificativa_presencial"
      */
     public function testPropertyJustificativaPresencial()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_total"
+     */
+    public function testPropertyValorTotal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valor_total_homologado"
+     */
+    public function testPropertyValorTotalHomologado()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "indicador_orcamento_sigiloso"
+     */
+    public function testPropertyIndicadorOrcamentoSigiloso()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

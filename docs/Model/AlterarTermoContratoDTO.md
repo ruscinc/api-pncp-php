@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **qualificacao_fornecedor** | **bool** |  |
 **qualificacao_informativo** | **bool** |  |
 **qualificacao_reajuste** | **bool** |  |
-**data_assinatura** | **\DateTime** |  |
+**data_assinatura** | **string** |  |
 **ni_fornecedor** | **string** |  | [optional]
 **tipo_pessoa_fornecedor** | **string** |  | [optional]
 **nome_razao_social_fornecedor** | **string** |  | [optional]

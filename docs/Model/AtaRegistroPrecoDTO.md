@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **data_publicacao_pncp** | **\DateTime** |  | [optional]
 **data_inclusao** | **\DateTime** |  | [optional]
 **data_atualizacao** | **\DateTime** |  | [optional]
+**data_atualizacao_global** | **\DateTime** |  | [optional]
 **sequencial_ata** | **int** |  | [optional]
 **numero_controle_pncp** | **string** |  | [optional]
 **orgao_entidade** | [**\OpenAPI\Client\Model\RecuperarOrgaoEntidadeDTO**](RecuperarOrgaoEntidadeDTO.md) |  | [optional]

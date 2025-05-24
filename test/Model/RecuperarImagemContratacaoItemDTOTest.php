@@ -90,6 +90,42 @@ class RecuperarImagemContratacaoItemDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "data_publicacao_pncp"
+     */
+    public function testPropertyDataPublicacaoPncp()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numero_item"
+     */
+    public function testPropertyNumeroItem()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "titulo"
+     */
+    public function testPropertyTitulo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "texto_alternativo"
+     */
+    public function testPropertyTextoAlternativo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "legenda"
      */
     public function testPropertyLegenda()
@@ -111,42 +147,6 @@ class RecuperarImagemContratacaoItemDTOTest extends TestCase
      * Test attribute "sequencial_imagem"
      */
     public function testPropertySequencialImagem()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data_publicacao_pncp"
-     */
-    public function testPropertyDataPublicacaoPncp()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "numero_item"
-     */
-    public function testPropertyNumeroItem()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "texto_alternativo"
-     */
-    public function testPropertyTextoAlternativo()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "titulo"
-     */
-    public function testPropertyTitulo()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **numero_item** | **int** |  |
-**categoria_item_pca** | **string** |  |
+**categoria_item_pca** | **int** |  |
 **descricao** | **string** |  | [optional]
 **unidade_fornecimento** | **string** |  |
 **quantidade** | **float** |  |
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **data_desejada** | **\DateTime** |  |
 **grupo_contratacao_codigo** | **string** |  | [optional]
 **grupo_contratacao_nome** | **string** |  | [optional]
-**catalogo** | **string** |  |
+**catalogo** | **int** |  |
 **classificacao_catalogo** | **string** |  |
 **codigo_item** | **string** |  | [optional]
 **classificacao_superior_codigo** | **string** |  |

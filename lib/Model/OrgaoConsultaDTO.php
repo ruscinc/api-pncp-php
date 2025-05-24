@@ -59,7 +59,18 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'cnpj' => 'string',
-        'razao_social' => 'string'
+        'razao_social' => 'string',
+        'nome_fantasia' => 'string',
+        'codigo_natureza_juridica' => 'string',
+        'situacao_cadastral' => 'string',
+        'motivo_situacao_cadastral' => 'string',
+        'data_situacao_cadastral' => '\DateTime',
+        'poder_id' => 'string',
+        'esfera_id' => 'string',
+        'data_validacao' => '\DateTime',
+        'validado' => 'bool',
+        'data_inclusao' => '\DateTime',
+        'data_atualizacao' => '\DateTime'
     ];
 
     /**
@@ -71,7 +82,18 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'cnpj' => null,
-        'razao_social' => null
+        'razao_social' => null,
+        'nome_fantasia' => null,
+        'codigo_natureza_juridica' => null,
+        'situacao_cadastral' => null,
+        'motivo_situacao_cadastral' => null,
+        'data_situacao_cadastral' => 'date',
+        'poder_id' => null,
+        'esfera_id' => null,
+        'data_validacao' => 'date-time',
+        'validado' => null,
+        'data_inclusao' => 'date-time',
+        'data_atualizacao' => 'date-time'
     ];
 
     /**
@@ -81,7 +103,18 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'cnpj' => false,
-		'razao_social' => false
+		'razao_social' => false,
+		'nome_fantasia' => false,
+		'codigo_natureza_juridica' => false,
+		'situacao_cadastral' => false,
+		'motivo_situacao_cadastral' => false,
+		'data_situacao_cadastral' => false,
+		'poder_id' => false,
+		'esfera_id' => false,
+		'data_validacao' => false,
+		'validado' => false,
+		'data_inclusao' => false,
+		'data_atualizacao' => false
     ];
 
     /**
@@ -171,7 +204,18 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'cnpj' => 'cnpj',
-        'razao_social' => 'razaoSocial'
+        'razao_social' => 'razaoSocial',
+        'nome_fantasia' => 'nomeFantasia',
+        'codigo_natureza_juridica' => 'codigoNaturezaJuridica',
+        'situacao_cadastral' => 'situacaoCadastral',
+        'motivo_situacao_cadastral' => 'motivoSituacaoCadastral',
+        'data_situacao_cadastral' => 'dataSituacaoCadastral',
+        'poder_id' => 'poderId',
+        'esfera_id' => 'esferaId',
+        'data_validacao' => 'dataValidacao',
+        'validado' => 'validado',
+        'data_inclusao' => 'dataInclusao',
+        'data_atualizacao' => 'dataAtualizacao'
     ];
 
     /**
@@ -181,7 +225,18 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'cnpj' => 'setCnpj',
-        'razao_social' => 'setRazaoSocial'
+        'razao_social' => 'setRazaoSocial',
+        'nome_fantasia' => 'setNomeFantasia',
+        'codigo_natureza_juridica' => 'setCodigoNaturezaJuridica',
+        'situacao_cadastral' => 'setSituacaoCadastral',
+        'motivo_situacao_cadastral' => 'setMotivoSituacaoCadastral',
+        'data_situacao_cadastral' => 'setDataSituacaoCadastral',
+        'poder_id' => 'setPoderId',
+        'esfera_id' => 'setEsferaId',
+        'data_validacao' => 'setDataValidacao',
+        'validado' => 'setValidado',
+        'data_inclusao' => 'setDataInclusao',
+        'data_atualizacao' => 'setDataAtualizacao'
     ];
 
     /**
@@ -191,7 +246,18 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'cnpj' => 'getCnpj',
-        'razao_social' => 'getRazaoSocial'
+        'razao_social' => 'getRazaoSocial',
+        'nome_fantasia' => 'getNomeFantasia',
+        'codigo_natureza_juridica' => 'getCodigoNaturezaJuridica',
+        'situacao_cadastral' => 'getSituacaoCadastral',
+        'motivo_situacao_cadastral' => 'getMotivoSituacaoCadastral',
+        'data_situacao_cadastral' => 'getDataSituacaoCadastral',
+        'poder_id' => 'getPoderId',
+        'esfera_id' => 'getEsferaId',
+        'data_validacao' => 'getDataValidacao',
+        'validado' => 'getValidado',
+        'data_inclusao' => 'getDataInclusao',
+        'data_atualizacao' => 'getDataAtualizacao'
     ];
 
     /**
@@ -253,6 +319,17 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('cnpj', $data ?? [], null);
         $this->setIfExists('razao_social', $data ?? [], null);
+        $this->setIfExists('nome_fantasia', $data ?? [], null);
+        $this->setIfExists('codigo_natureza_juridica', $data ?? [], null);
+        $this->setIfExists('situacao_cadastral', $data ?? [], null);
+        $this->setIfExists('motivo_situacao_cadastral', $data ?? [], null);
+        $this->setIfExists('data_situacao_cadastral', $data ?? [], null);
+        $this->setIfExists('poder_id', $data ?? [], null);
+        $this->setIfExists('esfera_id', $data ?? [], null);
+        $this->setIfExists('data_validacao', $data ?? [], null);
+        $this->setIfExists('validado', $data ?? [], null);
+        $this->setIfExists('data_inclusao', $data ?? [], null);
+        $this->setIfExists('data_atualizacao', $data ?? [], null);
     }
 
     /**
@@ -347,6 +424,303 @@ class OrgaoConsultaDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable razao_social cannot be null');
         }
         $this->container['razao_social'] = $razao_social;
+
+        return $this;
+    }
+
+    /**
+     * Gets nome_fantasia
+     *
+     * @return string|null
+     */
+    public function getNomeFantasia()
+    {
+        return $this->container['nome_fantasia'];
+    }
+
+    /**
+     * Sets nome_fantasia
+     *
+     * @param string|null $nome_fantasia nome_fantasia
+     *
+     * @return self
+     */
+    public function setNomeFantasia($nome_fantasia)
+    {
+        if (is_null($nome_fantasia)) {
+            throw new \InvalidArgumentException('non-nullable nome_fantasia cannot be null');
+        }
+        $this->container['nome_fantasia'] = $nome_fantasia;
+
+        return $this;
+    }
+
+    /**
+     * Gets codigo_natureza_juridica
+     *
+     * @return string|null
+     */
+    public function getCodigoNaturezaJuridica()
+    {
+        return $this->container['codigo_natureza_juridica'];
+    }
+
+    /**
+     * Sets codigo_natureza_juridica
+     *
+     * @param string|null $codigo_natureza_juridica codigo_natureza_juridica
+     *
+     * @return self
+     */
+    public function setCodigoNaturezaJuridica($codigo_natureza_juridica)
+    {
+        if (is_null($codigo_natureza_juridica)) {
+            throw new \InvalidArgumentException('non-nullable codigo_natureza_juridica cannot be null');
+        }
+        $this->container['codigo_natureza_juridica'] = $codigo_natureza_juridica;
+
+        return $this;
+    }
+
+    /**
+     * Gets situacao_cadastral
+     *
+     * @return string|null
+     */
+    public function getSituacaoCadastral()
+    {
+        return $this->container['situacao_cadastral'];
+    }
+
+    /**
+     * Sets situacao_cadastral
+     *
+     * @param string|null $situacao_cadastral situacao_cadastral
+     *
+     * @return self
+     */
+    public function setSituacaoCadastral($situacao_cadastral)
+    {
+        if (is_null($situacao_cadastral)) {
+            throw new \InvalidArgumentException('non-nullable situacao_cadastral cannot be null');
+        }
+        $this->container['situacao_cadastral'] = $situacao_cadastral;
+
+        return $this;
+    }
+
+    /**
+     * Gets motivo_situacao_cadastral
+     *
+     * @return string|null
+     */
+    public function getMotivoSituacaoCadastral()
+    {
+        return $this->container['motivo_situacao_cadastral'];
+    }
+
+    /**
+     * Sets motivo_situacao_cadastral
+     *
+     * @param string|null $motivo_situacao_cadastral motivo_situacao_cadastral
+     *
+     * @return self
+     */
+    public function setMotivoSituacaoCadastral($motivo_situacao_cadastral)
+    {
+        if (is_null($motivo_situacao_cadastral)) {
+            throw new \InvalidArgumentException('non-nullable motivo_situacao_cadastral cannot be null');
+        }
+        $this->container['motivo_situacao_cadastral'] = $motivo_situacao_cadastral;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_situacao_cadastral
+     *
+     * @return \DateTime|null
+     */
+    public function getDataSituacaoCadastral()
+    {
+        return $this->container['data_situacao_cadastral'];
+    }
+
+    /**
+     * Sets data_situacao_cadastral
+     *
+     * @param \DateTime|null $data_situacao_cadastral data_situacao_cadastral
+     *
+     * @return self
+     */
+    public function setDataSituacaoCadastral($data_situacao_cadastral)
+    {
+        if (is_null($data_situacao_cadastral)) {
+            throw new \InvalidArgumentException('non-nullable data_situacao_cadastral cannot be null');
+        }
+        $this->container['data_situacao_cadastral'] = $data_situacao_cadastral;
+
+        return $this;
+    }
+
+    /**
+     * Gets poder_id
+     *
+     * @return string|null
+     */
+    public function getPoderId()
+    {
+        return $this->container['poder_id'];
+    }
+
+    /**
+     * Sets poder_id
+     *
+     * @param string|null $poder_id poder_id
+     *
+     * @return self
+     */
+    public function setPoderId($poder_id)
+    {
+        if (is_null($poder_id)) {
+            throw new \InvalidArgumentException('non-nullable poder_id cannot be null');
+        }
+        $this->container['poder_id'] = $poder_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets esfera_id
+     *
+     * @return string|null
+     */
+    public function getEsferaId()
+    {
+        return $this->container['esfera_id'];
+    }
+
+    /**
+     * Sets esfera_id
+     *
+     * @param string|null $esfera_id esfera_id
+     *
+     * @return self
+     */
+    public function setEsferaId($esfera_id)
+    {
+        if (is_null($esfera_id)) {
+            throw new \InvalidArgumentException('non-nullable esfera_id cannot be null');
+        }
+        $this->container['esfera_id'] = $esfera_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_validacao
+     *
+     * @return \DateTime|null
+     */
+    public function getDataValidacao()
+    {
+        return $this->container['data_validacao'];
+    }
+
+    /**
+     * Sets data_validacao
+     *
+     * @param \DateTime|null $data_validacao data_validacao
+     *
+     * @return self
+     */
+    public function setDataValidacao($data_validacao)
+    {
+        if (is_null($data_validacao)) {
+            throw new \InvalidArgumentException('non-nullable data_validacao cannot be null');
+        }
+        $this->container['data_validacao'] = $data_validacao;
+
+        return $this;
+    }
+
+    /**
+     * Gets validado
+     *
+     * @return bool|null
+     */
+    public function getValidado()
+    {
+        return $this->container['validado'];
+    }
+
+    /**
+     * Sets validado
+     *
+     * @param bool|null $validado validado
+     *
+     * @return self
+     */
+    public function setValidado($validado)
+    {
+        if (is_null($validado)) {
+            throw new \InvalidArgumentException('non-nullable validado cannot be null');
+        }
+        $this->container['validado'] = $validado;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_inclusao
+     *
+     * @return \DateTime|null
+     */
+    public function getDataInclusao()
+    {
+        return $this->container['data_inclusao'];
+    }
+
+    /**
+     * Sets data_inclusao
+     *
+     * @param \DateTime|null $data_inclusao data_inclusao
+     *
+     * @return self
+     */
+    public function setDataInclusao($data_inclusao)
+    {
+        if (is_null($data_inclusao)) {
+            throw new \InvalidArgumentException('non-nullable data_inclusao cannot be null');
+        }
+        $this->container['data_inclusao'] = $data_inclusao;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_atualizacao
+     *
+     * @return \DateTime|null
+     */
+    public function getDataAtualizacao()
+    {
+        return $this->container['data_atualizacao'];
+    }
+
+    /**
+     * Sets data_atualizacao
+     *
+     * @param \DateTime|null $data_atualizacao data_atualizacao
+     *
+     * @return self
+     */
+    public function setDataAtualizacao($data_atualizacao)
+    {
+        if (is_null($data_atualizacao)) {
+            throw new \InvalidArgumentException('non-nullable data_atualizacao cannot be null');
+        }
+        $this->container['data_atualizacao'] = $data_atualizacao;
 
         return $this;
     }

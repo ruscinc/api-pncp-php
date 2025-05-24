@@ -87,7 +87,7 @@ class CredenciamentoApiTest extends TestCase
     /**
      * Test case for incluirCredenciamento
      *
-     * Inserir Credencimento.
+     * Inserir Credenciamento.
      *
      */
     public function testIncluirCredenciamento()
@@ -99,7 +99,7 @@ class CredenciamentoApiTest extends TestCase
     /**
      * Test case for recuperarCredenciamento
      *
-     * Consultar Credencimento.
+     * Consultar Credenciamento.
      *
      */
     public function testRecuperarCredenciamento()
@@ -111,7 +111,7 @@ class CredenciamentoApiTest extends TestCase
     /**
      * Test case for recuperarCredenciamentoResponsavel
      *
-     * Consultar Credencimento Responsavel.
+     * Consultar Credenciamento Responsavel.
      *
      */
     public function testRecuperarCredenciamentoResponsavel()
@@ -123,7 +123,7 @@ class CredenciamentoApiTest extends TestCase
     /**
      * Test case for recuperarCredenciamentos
      *
-     * Consultar Credencimentos.
+     * Consultar Credenciamentos.
      *
      */
     public function testRecuperarCredenciamentos()
@@ -135,7 +135,7 @@ class CredenciamentoApiTest extends TestCase
     /**
      * Test case for recuperarQuantidadeCredenciamentos
      *
-     * Consultar Quantidade Credencimentos.
+     * Consultar Quantidade Credenciamentos.
      *
      */
     public function testRecuperarQuantidadeCredenciamentos()

@@ -108,18 +108,18 @@ class RecuperarDadosDocumentoCompraDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "cnpj"
+     * Test attribute "data_publicacao_pncp"
      */
-    public function testPropertyCnpj()
+    public function testPropertyDataPublicacaoPncp()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data_publicacao_pncp"
+     * Test attribute "cnpj"
      */
-    public function testPropertyDataPublicacaoPncp()
+    public function testPropertyCnpj()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -144,18 +144,18 @@ class RecuperarDadosDocumentoCompraDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "titulo"
+     * Test attribute "status_ativo"
      */
-    public function testPropertyTitulo()
+    public function testPropertyStatusAtivo()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "status_ativo"
+     * Test attribute "titulo"
      */
-    public function testPropertyStatusAtivo()
+    public function testPropertyTitulo()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -171,18 +171,18 @@ class RecuperarDadosDocumentoCompraDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "tipo_documento_descricao"
+     * Test attribute "tipo_documento_id"
      */
-    public function testPropertyTipoDocumentoDescricao()
+    public function testPropertyTipoDocumentoId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "tipo_documento_id"
+     * Test attribute "tipo_documento_descricao"
      */
-    public function testPropertyTipoDocumentoId()
+    public function testPropertyTipoDocumentoDescricao()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
